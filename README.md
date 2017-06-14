@@ -17,7 +17,7 @@ npm install oembed-parser
 ### Usage
 
 ```
-import {extract} = require('oembed-parser');
+var {extract} = require('oembed-parser');
 
 let url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
 
@@ -27,6 +27,11 @@ extract(url).then((data) => {
   console.log(err);
 });
 ```
+
+#### Provider list
+
+List of resource providers is a clone of [oembed.com](http://oembed.com/providers.json) and available [here](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
+
 
 ## Test
 
