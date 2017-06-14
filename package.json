@@ -1,0 +1,50 @@
+{
+  "version": "0.0.1",
+  "name": "oembed-parser",
+  "description": "Get oEmbed data from given URL.",
+  "homepage": "https://www.npmjs.com/package/oembed-parser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndaidong/oembed-parser"
+  },
+  "author": "@ndaidong",
+  "main": "./index.js",
+  "engines": {
+    "node": ">= 6.0"
+  },
+  "scripts": {
+    "lint": "eslint ./src ./test",
+    "nsp": "nsp check --output checkstyle",
+    "start": "DEBUG=*:* node index",
+    "tape": "nyc tape test/start.js | tap-spec",
+    "tape:debug": "DEBUG=*:* nyc tape test/start.js | tap-spec",
+    "report": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "pretest": "npm run lint && npm run nsp",
+    "test": "npm run tape",
+    "posttest": "CODECOV_TOKEN=8218dc4b-2299-4592-8510-f48d25d92b06 npm run report",
+    "reset": "node reset"
+  },
+  "dependencies": {
+    "bellajs": "7.x.x",
+    "node-fetch": "1.x.x",
+    "promise-wtf": "1.x.x"
+  },
+  "devDependencies": {
+    "codecov": "2.x.x",
+    "eslint": "4.x.x",
+    "eslint-config-ggc": "1.x.x",
+    "nock": "9.x.x",
+    "nsp": "2.x.x",
+    "nyc": "11.x.x",
+    "sinon": "2.x.x",
+    "tap-spec": "4.x.x",
+    "tape": "4.x.x"
+  },
+  "keywords": [
+    "oembed",
+    "extractor",
+    "parser",
+    "util"
+  ],
+  "license": "MIT"
+}
