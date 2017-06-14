@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
