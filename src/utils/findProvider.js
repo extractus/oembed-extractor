@@ -1,10 +1,15 @@
 // utils -> findProvider
 
-var {
-  URL
-} = require('url');
 
 var providerList = require('./providers.json');
+
+var getHostname = (url) => {
+  let match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+  if (match && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
+    return match[2];
+  }
+  return null;
+};
 
 var providers = providerList.map((item) => {
   let {
@@ -19,8 +24,8 @@ var providers = providerList.map((item) => {
     url
   } = endpoint;
 
-  let {hostname} = new URL(url);
-  let domain = hostname.replace('www.', '');
+  let hostname = getHostname(url);
+  let domain = hostname ? hostname.replace('www.', '') : '';
 
   return {
     provider_name,
@@ -29,6 +34,8 @@ var providers = providerList.map((item) => {
     domain,
     url
   };
+}).filter((item) => {
+  return item.domain !== '';
 });
 
 var findProvider = (url) => {
