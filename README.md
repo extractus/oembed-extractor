@@ -28,6 +28,17 @@ extract(url).then((data) => {
 });
 ```
 
+### APIs
+
+#### .extract(String URL)
+
+Return a Promise object.
+
+#### .hasProvider(String URL)
+
+Return boolean. True if the URL matches with any provider in the list.
+
+
 #### Provider list
 
 List of resource providers is a clone of [oembed.com](http://oembed.com/providers.json) and available [here](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
