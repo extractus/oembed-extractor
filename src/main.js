@@ -19,6 +19,11 @@ var extract = (url) => {
   });
 };
 
+var hasProvider = (url) => {
+  return findProvider(url) !== null;
+};
+
 module.exports = {
-  extract
+  extract,
+  hasProvider
 };

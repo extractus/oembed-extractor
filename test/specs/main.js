@@ -4,10 +4,19 @@
  */
 
 var test = require('tape');
-var bella = require('bellajs');
+
+var {
+  hasProperty,
+  isObject,
+  isString,
+  isFunction
+} = require('bellajs');
 
 var AP = require('../../index');
-var extract = AP.extract;
+var {
+  extract,
+  hasProvider
+} = AP;
 
 var hasRequiredKeys = (o) => {
   let structure = [
@@ -19,7 +28,7 @@ var hasRequiredKeys = (o) => {
   ];
 
   return structure.every((k) => {
-    return bella.hasProperty(o, k);
+    return hasProperty(o, k);
   });
 };
 
@@ -31,15 +40,15 @@ var hasRequiredKeys = (o) => {
 
     extract(url).then((art) => {
       t.comment('(Call returned result is R, so:)');
-      t.ok(bella.isObject(art), 'R must be an object.');
+      t.ok(isObject(art), 'R must be an object.');
       t.ok(hasRequiredKeys(art), 'R must have all required keys.');
-      t.ok(bella.isString(art.type), 'R.type must be a string.');
+      t.ok(isString(art.type), 'R.type must be a string.');
       t.ok(art.type.length > 0, 'R.type is not empty.');
-      t.ok(bella.isString(art.html), 'R.html must be a string.');
+      t.ok(isString(art.html), 'R.html must be a string.');
       t.ok(art.html.length > 0, 'R.html is not empty.');
-      t.ok(bella.isString(art.provider_url), 'R.provider_url must be a string.');
+      t.ok(isString(art.provider_url), 'R.provider_url must be a string.');
       t.ok(art.provider_url.length > 0, 'R.provider_url is not empty.');
-      t.ok(bella.isString(art.provider_name), 'R.provider_name must be a string.');
+      t.ok(isString(art.provider_name), 'R.provider_name must be a string.');
       t.ok(art.provider_name.length > 0, 'R.provider_name is not empty.');
       t.end();
     }).catch((e) => {
@@ -83,3 +92,10 @@ var hasRequiredKeys = (o) => {
 
   badSamples.map(testBadOne);
 })();
+
+test(`Testing .hasProvider() method`, (t) => {
+  t.ok(isFunction(hasProvider), 'hasProvider must be a function');
+  t.equals(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU'), true, 'YouTube URL has oEmbed provider');
+  t.equals(hasProvider('https://trello.com/b/BO3bg7yn/notes'), false, 'Trello URL has no oEmbed provider');
+  t.end();
+});
