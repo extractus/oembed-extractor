@@ -48,7 +48,7 @@ var findProvider = (url) => {
       return url.includes(domain);
     }
     return schemes.some((scheme) => {
-      let reg = new RegExp(scheme.replace('*', '(.*)'), 'i');
+      let reg = new RegExp(scheme.replace(/\*/g, '(.*)'), 'i');
       return url.match(reg);
     });
   });
