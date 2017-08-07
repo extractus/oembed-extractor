@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -36,7 +36,7 @@
     "nock": "9.x.x",
     "nsp": "2.x.x",
     "nyc": "11.x.x",
-    "sinon": "2.x.x",
+    "sinon": "3.x.x",
     "tap-spec": "4.x.x",
     "tape": "4.x.x"
   },
