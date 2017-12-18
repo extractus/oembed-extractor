@@ -29,13 +29,13 @@
     },
     {
         "provider_name": "amCharts Live Editor",
-        "provider_url": "http:\/\/live.amcharts.com\/",
+        "provider_url": "https:\/\/live.amcharts.com\/",
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/live.amcharts.com\/*"
+                    "https:\/\/live.amcharts.com\/*"
                 ],
-                "url": "http:\/\/live.amcharts.com\/oembed"
+                "url": "https:\/\/live.amcharts.com\/oembed"
             }
         ]
     },
@@ -55,26 +55,13 @@
     },
     {
         "provider_name": "Animoto",
-        "provider_url": "http:\/\/animoto.com\/",
+        "provider_url": "https:\/\/animoto.com\/",
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/animoto.com\/play\/*"
+                    "https:\/\/animoto.com\/play\/*"
                 ],
-                "url": "http:\/\/animoto.com\/oembeds\/create"
-            }
-        ]
-    },
-    {
-        "provider_name": "AudioSnaps",
-        "provider_url": "http:\/\/audiosnaps.com",
-        "endpoints": [
-            {
-                "schemes": [
-                    "http:\/\/audiosnaps.com\/k\/*"
-                ],
-                "url": "http:\/\/audiosnaps.com\/service\/oembed",
-                "discovery": true
+                "url": "https:\/\/animoto.com\/oembeds\/create"
             }
         ]
     },
@@ -94,35 +81,23 @@
     },
     {
         "provider_name": "Box Office Buz",
-        "provider_url": "http:\/\/boxofficebuz.com",
+        "provider_url": "https:\/\/boxofficebuz.com",
         "endpoints": [
             {
-                "url": "http:\/\/boxofficebuz.com\/oembed",
+                "url": "https:\/\/boxofficebuz.com\/oembed",
                 "discovery": true
             }
         ]
     },
     {
-        "provider_name": "Cacoo",
-        "provider_url": "https:\/\/cacoo.com",
-        "endpoints": [
-            {
-                "schemes": [
-                    "https:\/\/cacoo.com\/diagrams\/*"
-                ],
-                "url": "http:\/\/cacoo.com\/oembed.{format}"
-            }
-        ]
-    },
-    {
         "provider_name": "CatBoat",
-        "provider_url": "http:\/\/img.catbo.at\/",
+        "provider_url": "https:\/\/img.catbo.at\/",
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/img.catbo.at\/*"
+                    "https:\/\/img.catbo.at\/*"
                 ],
-                "url": "http:\/\/img.catbo.at\/oembed.json",
+                "url": "https:\/\/img.catbo.at\/oembed.json",
                 "formats": [
                     "json"
                 ]
@@ -183,14 +158,14 @@
     },
     {
         "provider_name": "Clyp",
-        "provider_url": "http:\/\/clyp.it\/",
+        "provider_url": "https:\/\/clyp.it\/",
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/clyp.it\/*",
-                    "http:\/\/clyp.it\/playlist\/*"
+                    "https:\/\/clyp.it\/*",
+                    "https:\/\/clyp.it\/playlist\/*"
                 ],
-                "url": "http:\/\/api.clyp.it\/oembed\/",
+                "url": "https:\/\/api.clyp.it\/oembed\/",
                 "discovery": true
             }
         ]
@@ -204,7 +179,7 @@
                     "http:\/\/codepen.io\/*",
                     "https:\/\/codepen.io\/*"
                 ],
-                "url": "http:\/\/codepen.io\/api\/oembed"
+                "url": "https:\/\/codepen.io\/api\/oembed"
             }
         ]
     },
@@ -239,69 +214,42 @@
     },
     {
         "provider_name": "Coub",
-        "provider_url": "http:\/\/coub.com\/",
+        "provider_url": "https:\/\/coub.com\/",
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/coub.com\/view\/*",
-                    "http:\/\/coub.com\/embed\/*"
+                    "https:\/\/coub.com\/view\/*",
+                    "https:\/\/coub.com\/embed\/*"
                 ],
-                "url": "http:\/\/coub.com\/api\/oembed.{format}"
-            }
-        ]
-    },
-    {
-        "provider_name": "Crowd Ranking",
-        "provider_url": "http:\/\/crowdranking.com",
-        "endpoints": [
-            {
-                "schemes": [
-                    "http:\/\/crowdranking.com\/*\/*"
-                ],
-                "url": "http:\/\/crowdranking.com\/api\/oembed.{format}"
-            }
-        ]
-    },
-    {
-        "provider_name": "Daily Mile",
-        "provider_url": "http:\/\/www.dailymile.com",
-        "endpoints": [
-            {
-                "schemes": [
-                    "http:\/\/www.dailymile.com\/people\/*\/entries\/*"
-                ],
-                "url": "http:\/\/api.dailymile.com\/oembed?format=json",
-                "formats": [
-                    "json"
-                ]
+                "url": "https:\/\/coub.com\/api\/oembed.{format}"
             }
         ]
     },
     {
         "provider_name": "Dailymotion",
-        "provider_url": "http:\/\/www.dailymotion.com",
+        "provider_url": "https:\/\/www.dailymotion.com",
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/www.dailymotion.com\/video\/*"
+                    "https:\/\/www.dailymotion.com\/video\/*"
                 ],
-                "url": "http:\/\/www.dailymotion.com\/services\/oembed",
+                "url": "https:\/\/www.dailymotion.com\/services\/oembed",
                 "discovery": true
             }
         ]
     },
     {
         "provider_name": "Deviantart.com",
-        "provider_url": "http:\/\/www.deviantart.com",
+        "provider_url": "https:\/\/www.deviantart.com",
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/*.deviantart.com\/art\/*",
-                    "http:\/\/*.deviantart.com\/*#\/d*",
-                    "http:\/\/fav.me\/*",
-                    "http:\/\/sta.sh\/*"
+                    "https:\/\/*.deviantart.com\/art\/*",
+                    "https:\/\/*.deviantart.com\/*#\/d*",
+                    "https:\/\/fav.me\/*",
+                    "https:\/\/sta.sh\/*"
                 ],
-                "url": "http:\/\/backend.deviantart.com\/oembed"
+                "url": "https:\/\/backend.deviantart.com\/oembed"
             }
         ]
     },
@@ -322,18 +270,6 @@
         ]
     },
     {
-        "provider_name": "Dipity",
-        "provider_url": "http:\/\/www.dipity.com",
-        "endpoints": [
-            {
-                "schemes": [
-                    "http:\/\/www.dipity.com\/*\/*\/"
-                ],
-                "url": "http:\/\/www.dipity.com\/oembed\/timeline\/"
-            }
-        ]
-    },
-    {
         "provider_name": "Docs",
         "provider_url": "https:\/\/www.docs.com",
         "endpoints": [
@@ -344,30 +280,6 @@
                 ],
                 "url": "https:\/\/docs.com\/api\/oembed",
                 "discovery": true
-            }
-        ]
-    },
-    {
-        "provider_name": "Dotsub",
-        "provider_url": "http:\/\/dotsub.com\/",
-        "endpoints": [
-            {
-                "schemes": [
-                    "http:\/\/dotsub.com\/view\/*"
-                ],
-                "url": "http:\/\/dotsub.com\/services\/oembed"
-            }
-        ]
-    },
-    {
-        "provider_name": "edocr",
-        "provider_url": "http:\/\/www.edocr.com",
-        "endpoints": [
-            {
-                "schemes": [
-                    "http:\/\/edocr.com\/docs\/*"
-                ],
-                "url": "http:\/\/edocr.com\/api\/oembed"
             }
         ]
     },
@@ -386,36 +298,11 @@
         ]
     },
     {
-        "provider_name": "EgliseInfo",
-        "provider_url": "http:\/\/egliseinfo.catholique.fr\/",
-        "endpoints": [
-            {
-                "schemes": [
-                    "http:\/\/egliseinfo.catholique.fr\/*"
-                ],
-                "url": "http:\/\/egliseinfo.catholique.fr\/api\/oembed",
-                "discovery": true
-            }
-        ]
-    },
-    {
-        "provider_name": "Embed Articles",
-        "provider_url": "http:\/\/embedarticles.com\/",
-        "endpoints": [
-            {
-                "schemes": [
-                    "http:\/\/embedarticles.com\/*"
-                ],
-                "url": "http:\/\/embedarticles.com\/oembed\/"
-            }
-        ]
-    },
-    {
         "provider_name": "Embedly",
-        "provider_url": "http:\/\/api.embed.ly\/",
+        "provider_url": "https:\/\/api.embed.ly\/",
         "endpoints": [
             {
-                "url": "http:\/\/api.embed.ly\/1\/oembed"
+                "url": "https:\/\/api.embed.ly\/1\/oembed"
             }
         ]
     },
@@ -463,14 +350,14 @@
     },
     {
         "provider_name": "Flickr",
-        "provider_url": "http:\/\/www.flickr.com\/",
+        "provider_url": "https:\/\/www.flickr.com\/",
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/*.flickr.com\/photos\/*",
-                    "http:\/\/flic.kr\/p\/*"
+                    "https:\/\/*.flickr.com\/photos\/*",
+                    "https:\/\/flic.kr\/p\/*"
                 ],
-                "url": "http:\/\/www.flickr.com\/services\/oembed\/",
+                "url": "https:\/\/www.flickr.com\/services\/oembed\/",
                 "discovery": true
             }
         ]
@@ -735,7 +622,7 @@
                     "https:\/\/instagram.com\/p\/*",
                     "https:\/\/instagr.am\/p\/*"
                 ],
-                "url": "http:\/\/api.instagram.com\/oembed",
+                "url": "https:\/\/api.instagram.com\/oembed",
                 "formats": [
                     "json"
                 ]
@@ -1890,10 +1777,10 @@
     },
     {
         "provider_name": "YouTube",
-        "provider_url": "http:\/\/www.youtube.com\/",
+        "provider_url": "https:\/\/www.youtube.com\/",
         "endpoints": [
             {
-                "url": "http:\/\/www.youtube.com\/oembed",
+                "url": "https:\/\/www.youtube.com\/oembed",
                 "discovery": true
             }
         ]
