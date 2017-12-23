@@ -124,7 +124,7 @@
                 "schemes": [
                     "http:\/\/chirb.it\/*"
                 ],
-                "url": "http:\/\/chirb.it\/oembed.{format}",
+                "url": "http:\/\/chirb.it\/oembed.json",
                 "discovery": true
             }
         ]
@@ -207,7 +207,7 @@
                 "schemes": [
                     "http:\/\/www.collegehumor.com\/video\/*"
                 ],
-                "url": "http:\/\/www.collegehumor.com\/oembed.{format}",
+                "url": "http:\/\/www.collegehumor.com\/oembed.json",
                 "discovery": true
             }
         ]
@@ -221,7 +221,7 @@
                     "https:\/\/coub.com\/view\/*",
                     "https:\/\/coub.com\/embed\/*"
                 ],
-                "url": "https:\/\/coub.com\/api\/oembed.{format}"
+                "url": "https:\/\/coub.com\/api\/oembed.json"
             }
         ]
     },
@@ -397,7 +397,7 @@
                 "schemes": [
                     "http:\/\/www.funnyordie.com\/videos\/*"
                 ],
-                "url": "http:\/\/www.funnyordie.com\/oembed.{format}"
+                "url": "http:\/\/www.funnyordie.com\/oembed.json"
             }
         ]
     },
@@ -527,7 +527,7 @@
                 "schemes": [
                     "http:\/\/www.hulu.com\/watch\/*"
                 ],
-                "url": "http:\/\/www.hulu.com\/api\/oembed.{format}"
+                "url": "http:\/\/www.hulu.com\/api\/oembed.json"
             }
         ]
     },
@@ -880,7 +880,7 @@
                     "http:\/\/official.fm\/tracks\/*",
                     "http:\/\/official.fm\/playlists\/*"
                 ],
-                "url": "http:\/\/official.fm\/services\/oembed.{format}"
+                "url": "http:\/\/official.fm\/services\/oembed.json"
             }
         ]
     },
@@ -1125,7 +1125,7 @@
                     "http:\/\/roomshare.jp\/post\/*",
                     "http:\/\/roomshare.jp\/en\/post\/*"
                 ],
-                "url": "http:\/\/roomshare.jp\/en\/oembed.{format}"
+                "url": "http:\/\/roomshare.jp\/en\/oembed.json"
             }
         ]
     },
@@ -1134,7 +1134,7 @@
         "provider_url": "https:\/\/rumble.com\/",
         "endpoints": [
             {
-                "url": "https:\/\/rumble.com\/api\/Media\/oembed.{format}",
+                "url": "https:\/\/rumble.com\/api\/Media\/oembed.json",
                 "discovery": true
             }
         ]
@@ -1182,7 +1182,7 @@
                 "schemes": [
                     "http:\/\/www.screenr.com\/*\/"
                 ],
-                "url": "http:\/\/www.screenr.com\/api\/oembed.{format}"
+                "url": "http:\/\/www.screenr.com\/api\/oembed.json"
             }
         ]
     },
@@ -1197,7 +1197,7 @@
                     "http:\/\/scribblemaps.com\/maps\/view\/*",
                     "https:\/\/scribblemaps.com\/maps\/view\/*"
                 ],
-                "url": "https:\/\/scribblemaps.com\/api\/services\/oembed.{format}",
+                "url": "https:\/\/scribblemaps.com\/api\/services\/oembed.json",
                 "discovery": true
             }
         ]
@@ -1439,7 +1439,7 @@
                 "schemes": [
                     "http:\/\/ted.com\/talks\/*"
                 ],
-                "url": "http:\/\/www.ted.com\/talks\/oembed.{format}"
+                "url": "http:\/\/www.ted.com\/talks\/oembed.json"
             }
         ]
     },
@@ -1646,7 +1646,7 @@
                     "http:\/\/www.videojug.com\/film\/*",
                     "http:\/\/www.videojug.com\/interview\/*"
                 ],
-                "url": "http:\/\/www.videojug.com\/oembed.{format}"
+                "url": "http:\/\/www.videojug.com\/oembed.json"
             }
         ]
     },
@@ -1676,7 +1676,7 @@
                     "https:\/\/vimeo.com\/ondemand\/*\/*",
                     "https:\/\/player.vimeo.com\/video\/*"
                 ],
-                "url": "https:\/\/vimeo.com\/api\/oembed.{format}",
+                "url": "https:\/\/vimeo.com\/api\/oembed.json",
                 "discovery": true
             }
         ]
@@ -1735,7 +1735,7 @@
                     "http:\/\/*.wizer.me\/preview\/*",
                     "https:\/\/*.wizer.me\/preview\/*"
                 ],
-                "url": "http:\/\/app.wizer.me\/api\/oembed.{format}",
+                "url": "http:\/\/app.wizer.me\/api\/oembed.json",
                 "discovery": true
             }
         ]
