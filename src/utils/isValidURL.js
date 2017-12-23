@@ -3,7 +3,7 @@
  * @ndaidong
  **/
 
-var isValidURL = (str) => {
+const isValidURL = (str) => {
   if (!str) {
     return false;
   }

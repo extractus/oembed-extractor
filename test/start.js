@@ -1,15 +1,23 @@
-var fs = require('fs');
-var path = require('path');
-
 /**
  * Import specs
  */
 
+const {
+  existsSync,
+  readdirSync,
+} = require('fs');
+
+const {
+  extname,
+  join,
+} = require('path');
+
+
 let where = './test/specs';
-if (fs.existsSync(where)) {
-  fs.readdirSync(where).forEach((file) => {
-    if (path.extname(file) === '.js') {
-      require(path.join('.' + where, file));
+if (existsSync(where)) {
+  readdirSync(where).forEach((file) => {
+    if (extname(file) === '.js') {
+      require(join('.' + where, file));
     }
   });
 }
