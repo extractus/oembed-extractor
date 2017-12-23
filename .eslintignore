@@ -1,8 +1,14 @@
 coverage/*
 node_modules/*
-dist
-**/vendor/*.js
 .nyc_output/*
+dist
+storage
+build
+static
 LICENSE
 package.json
 README.md
+
+vendor
+
+.nuxt

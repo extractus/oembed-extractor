@@ -1,9 +1,9 @@
 // utils -> findProvider
 
 
-var providerList = require('./providers.json');
+const providerList = require('./providers.json');
 
-var getHostname = (url) => {
+const getHostname = (url) => {
   let match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
   if (match && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
     return match[2];
@@ -11,38 +11,38 @@ var getHostname = (url) => {
   return null;
 };
 
-var providers = providerList.map((item) => {
+const providers = providerList.map((item) => {
   let {
-    provider_name,
-    provider_url,
-    endpoints
+    provider_name, // eslint-disable-line camelcase
+    provider_url, // eslint-disable-line camelcase
+    endpoints,
   } = item;
 
-  let endpoint  = endpoints[0];
+  let endpoint = endpoints[0];
   let {
     schemes = [],
-    url
+    url,
   } = endpoint;
 
   let hostname = getHostname(url);
   let domain = hostname ? hostname.replace('www.', '') : '';
 
   return {
-    provider_name,
-    provider_url,
+    provider_name, // eslint-disable-line camelcase
+    provider_url, // eslint-disable-line camelcase
     schemes,
     domain,
-    url
+    url,
   };
 }).filter((item) => {
   return item.domain !== '';
 });
 
-var findProvider = (url) => {
+const findProvider = (url) => {
   let candidates = providers.filter((provider) => {
     let {
       schemes,
-      domain
+      domain,
     } = provider;
     if (!schemes.length) {
       return url.includes(domain);

@@ -1,12 +1,12 @@
 // main
 
-var {
+const {
   isValidURL,
   findProvider,
-  fetchEmbed
+  fetchEmbed,
 } = require('./utils');
 
-var extract = (url) => {
+const extract = (url) => {
   return new Promise((resolve, reject) => {
     if (!isValidURL(url)) {
       return reject(new Error('Invalid input URL'));
@@ -19,11 +19,11 @@ var extract = (url) => {
   });
 };
 
-var hasProvider = (url) => {
+const hasProvider = (url) => {
   return findProvider(url) !== null;
 };
 
 module.exports = {
   extract,
-  hasProvider
+  hasProvider,
 };

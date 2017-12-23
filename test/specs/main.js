@@ -3,28 +3,28 @@
  * @ndaidong
  */
 
-var test = require('tape');
+const test = require('tape');
 
-var {
+const {
   hasProperty,
   isObject,
   isString,
-  isFunction
+  isFunction,
 } = require('bellajs');
 
-var AP = require('../../index');
-var {
+const AP = require('../../index');
+const {
   extract,
-  hasProvider
+  hasProvider,
 } = AP;
 
-var hasRequiredKeys = (o) => {
+const hasRequiredKeys = (o) => {
   let structure = [
     'type',
     'version',
     'html',
     'provider_url',
-    'provider_name'
+    'provider_name',
   ];
 
   return structure.every((k) => {
@@ -33,11 +33,9 @@ var hasRequiredKeys = (o) => {
 };
 
 (() => {
-
   let url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
 
   test(`Testing with .extract(${url})`, {timeout: 15000}, (t) => {
-
     extract(url).then((art) => {
       t.comment('(Call returned result is R, so:)');
       t.ok(isObject(art), 'R must be an object.');
@@ -55,11 +53,9 @@ var hasRequiredKeys = (o) => {
       t.end(e);
     });
   });
-
 })();
 
 (() => {
-
   let badSamples = [
     '',
     {k: 9},
@@ -71,14 +67,12 @@ var hasRequiredKeys = (o) => {
     'https://674458092126388225',
     'http://www.ted.com/talks/something-does-not-exist',
     'https://soundcloud^(*%%$%^$$%$$*&(&)())',
-    'https://www.flickr.com/services/oembed/?url=http%3A//www.flickr.com/photos/bees/23416sa/'
+    'https://www.flickr.com/services/oembed/?url=http%3A//www.flickr.com/photos/bees/23416sa/',
   ];
 
 
-  var testBadOne = (url) => {
-
+  const testBadOne = (url) => {
     test(`Testing with .extract(${url})`, {timeout: 15000}, (t) => {
-
       extract(url).then((art) => {
         t.fail(art, 'Could not return result in this case');
       }).catch((e) => {
@@ -87,7 +81,6 @@ var hasRequiredKeys = (o) => {
         t.end();
       });
     });
-
   };
 
   badSamples.map(testBadOne);
