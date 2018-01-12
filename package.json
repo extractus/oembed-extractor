@@ -1,5 +1,5 @@
 {
-  "version": "1.0.7",
+  "version": "1.0.8",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -27,7 +27,7 @@
   "dependencies": {
     "bellajs": "^7.2.0",
     "node-fetch": "^1.7.3",
-    "promise-wtf": "^1.2.4"
+    "promise-wtf": "^1.2.11"
   },
   "devDependencies": {
     "codecov": "^3.0.0",
