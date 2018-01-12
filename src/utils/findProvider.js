@@ -48,8 +48,8 @@ const findProvider = (url) => {
       return url.includes(domain);
     }
     return schemes.some((scheme) => {
-      let reg = new RegExp(scheme.replace(/\*/g, '(.*)'), 'i');
-      return url.match(reg);
+      let reg = new RegExp(scheme.replace('www.', '').replace(/\*/g, '(.*)'), 'i');
+      return url.replace('www.', '').match(reg);
     });
   });
 
