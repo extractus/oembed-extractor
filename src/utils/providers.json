@@ -796,7 +796,7 @@
                     "http:\/\/gph.is\/*",
                     "https:\/\/media.giphy.com\/media\/*\/giphy.gif"
                 ],
-                "url": "http:\/\/giphy.com\/services\/oembed",
+                "url": "https:\/\/giphy.com\/services\/oembed",
                 "discovery": true
             }
         ]
@@ -1115,6 +1115,8 @@
             {
                 "schemes": [
                     "http:\/\/meetup.com\/*",
+                    "https:\/\/www.meetup.com\/*",
+                    "https:\/\/meetup.com\/*",
                     "http:\/\/meetu.ps\/*"
                 ],
                 "url": "https:\/\/api.meetup.com\/oembed",
@@ -1455,7 +1457,8 @@
         "endpoints": [
             {
                 "schemes": [
-                    "https:\/\/reddit.com\/r\/*\/comments\/*\/*"
+                    "https:\/\/reddit.com\/r\/*\/comments\/*\/*",
+                    "https:\/\/www.reddit.com\/r\/*\/comments\/*\/*"
                 ],
                 "url": "https:\/\/www.reddit.com\/oembed"
             }
