@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -17,6 +17,7 @@
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "tap test/start.js --coverage --reporter=spec",
+    "sync": "DEBUG=oembed-parser:* node sync",
     "reset": "node reset"
   },
   "dependencies": {
@@ -25,6 +26,7 @@
     "promise-wtf": "^1.2.4"
   },
   "devDependencies": {
+    "debug": "^3.1.0",
     "eslint": "^4.19.1",
     "eslint-config-goes": "^1.0.0",
     "tap": "^12.0.1"
