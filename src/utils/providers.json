@@ -40,6 +40,18 @@
         ]
     },
     {
+        "provider_name": "Altru",
+        "provider_url": "https:\/\/www.altrulabs.com",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/app.altrulabs.com\/*\/*?answer_id=*"
+                ],
+                "url": "https:\/\/api.altrulabs.com\/social\/oembed (only supports json)"
+            }
+        ]
+    },
+    {
         "provider_name": "amCharts Live Editor",
         "provider_url": "http:\/\/live.amcharts.com\/",
         "endpoints": [
@@ -599,6 +611,26 @@
         ]
     },
     {
+        "provider_name": "Facebook (Post)",
+        "provider_url": "https:\/\/www.facebook.com\/",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/www.facebook.com\/*\/posts\/*",
+                    "https:\/\/www.facebook.com\/photos\/*",
+                    "https:\/\/www.facebook.com\/photo.php",
+                    "https:\/\/www.facebook.com\/*\/activity\/*",
+                    "https:\/\/www.facebook.com\/permalink.php",
+                    "https:\/\/www.facebook.com\/media\/set?set=*",
+                    "https:\/\/www.facebook.com\/questions\/*",
+                    "https:\/\/www.facebook.com\/notes\/*\/*\/*"
+                ],
+                "url": "https:\/\/www.facebook.com\/plugins\/post\/oembed.json",
+                "discovery": true
+            }
+        ]
+    },
+    {
         "provider_name": "Facebook (Video)",
         "provider_url": "https:\/\/www.facebook.com\/",
         "endpoints": [
@@ -668,6 +700,18 @@
                 ],
                 "url": "https:\/\/app.flourish.studio\/api\/v1\/oembed",
                 "discovery": true
+            }
+        ]
+    },
+    {
+        "provider_name": "Fontself",
+        "provider_url": "https:\/\/www.fontself.com",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/catapult.fontself.com\/*"
+                ],
+                "url": "https:\/\/oembed.fontself.com\/"
             }
         ]
     },
@@ -1109,6 +1153,19 @@
         ]
     },
     {
+        "provider_name": "Medienarchiv der K\u00fcnste - Z\u00fcrcher Hochschule der K\u00fcnste",
+        "provider_url": "https:\/\/medienarchiv.zhdk.ch\/",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/medienarchiv.zhdk.ch\/entries\/*"
+                ],
+                "url": "https:\/\/medienarchiv.zhdk.ch\/oembed.{format}",
+                "discovery": true
+            }
+        ]
+    },
+    {
         "provider_name": "Meetup",
         "provider_url": "http:\/\/www.meetup.com",
         "endpoints": [
@@ -1205,7 +1262,11 @@
                     "https:\/\/*.nanoo.tv\/link\/*",
                     "https:\/\/nanoo.tv\/link\/*",
                     "https:\/\/*.nanoo.pro\/link\/*",
-                    "https:\/\/nanoo.pro\/link\/*"
+                    "https:\/\/nanoo.pro\/link\/*",
+                    "http:\/\/media.zhdk.ch\/signatur\/*",
+                    "http:\/\/new.media.zhdk.ch\/signatur\/*",
+                    "https:\/\/media.zhdk.ch\/signatur\/*",
+                    "https:\/\/new.media.zhdk.ch\/signatur\/*"
                 ],
                 "url": "https:\/\/www.nanoo.tv\/services\/oembed",
                 "discovery": true
@@ -1397,19 +1458,6 @@
                     "https:\/\/portfolium.com\/entry\/*"
                 ],
                 "url": "https:\/\/api.portfolium.com\/oembed"
-            }
-        ]
-    },
-    {
-        "provider_name": "Punters",
-        "provider_url": "https:\/\/www.punters.com.au",
-        "endpoints": [
-            {
-                "schemes": [
-                    "https:\/\/www.punters.com.au\/*",
-                    "https:\/\/punters.com.au\/*"
-                ],
-                "url": "https:\/\/www.punters.com.au\/api\/oembed\/"
             }
         ]
     },
@@ -2222,6 +2270,19 @@
         ]
     },
     {
+        "provider_name": "Viziosphere",
+        "provider_url": "http:\/\/www.viziosphere.com",
+        "endpoints": [
+            {
+                "schemes": [
+                    "http:\/\/viziosphere.com\/3dphoto*"
+                ],
+                "url": "http:\/\/viziosphere.com\/services\/oembed\/",
+                "discovery": true
+            }
+        ]
+    },
+    {
         "provider_name": "Vlipsy",
         "provider_url": "https:\/\/vlipsy.com\/",
         "endpoints": [
@@ -2231,6 +2292,22 @@
                 ],
                 "url": "https:\/\/vlipsy.com\/oembed",
                 "discovery": true
+            }
+        ]
+    },
+    {
+        "provider_name": "VoxSnap",
+        "provider_url": "https:\/\/voxsnap.com\/",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/article.voxsnap.com\/*\/*"
+                ],
+                "url": "https:\/\/data.voxsnap.com\/oembed",
+                "discovery": true,
+                "formats": [
+                    "json"
+                ]
             }
         ]
     },
