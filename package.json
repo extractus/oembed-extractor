@@ -21,11 +21,11 @@
     "reset": "node reset"
   },
   "dependencies": {
-    "bellajs": "^7.2.2",
     "node-fetch": "^2.1.2",
     "promise-wtf": "^1.2.4"
   },
   "devDependencies": {
+    "bellajs": "^7.2.2",
     "debug": "^3.1.0",
     "eslint": "^4.19.1",
     "eslint-config-goes": "^1.0.0",
