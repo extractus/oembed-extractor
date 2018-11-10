@@ -1,6 +1,6 @@
 // utils -> fetchEmbed
 
-const fetch = require('node-fetch');
+const fetch = require('node-fetch').default;
 
 const fetchEmbed = (url, provider) => {
   return new Promise((resolve, reject) => {
