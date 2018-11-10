@@ -10,6 +10,9 @@ const fetchEmbed = (url, provider) => {
       url: resourceUrl,
     } = provider;
 
+
+    resourceUrl = resourceUrl.replace(/\{format\}/g, 'json');
+
     let link = `${resourceUrl}?format=json&url=${encodeURIComponent(url)}`;
 
     return fetch(link).then((res) => {
