@@ -5,7 +5,7 @@ const {
   writeFileSync,
 } = require('fs');
 
-const fetch = require('node-fetch');
+const fetch = require('node-fetch').default;
 
 const source = 'https://oembed.com/providers.json';
 const target = './src/utils/providers.json';
