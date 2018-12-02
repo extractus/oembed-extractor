@@ -7,13 +7,13 @@ oembed-parser
 
 ### Installation
 
-```
+```bash
 npm install oembed-parser
 ```
 
 ### Usage
 
-```
+```js
 const {
   extract,
 } = require('oembed-parser');
@@ -59,7 +59,7 @@ List of resource providers is a clone of [oembed.com](http://oembed.com/provider
 
 ## Test
 
-```
+```bash
 git clone https://github.com/ndaidong/oembed-parser.git
 cd oembed-parser
 npm install
