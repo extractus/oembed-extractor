@@ -3,26 +3,42 @@ oembed-parser
 
 [![NPM](https://badge.fury.io/js/oembed-parser.svg)](https://badge.fury.io/js/oembed-parser)
 [![Build Status](https://travis-ci.org/ndaidong/oembed-parser.svg?branch=master)](https://travis-ci.org/ndaidong/oembed-parser)
-[![codecov](https://codecov.io/gh/ndaidong/oembed-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/ndaidong/oembed-parser)
+
 
 ### Installation
 
-```
+```bash
 npm install oembed-parser
 ```
 
 ### Usage
 
-```
-var {extract} = require('oembed-parser');
+```js
+const {
+  extract,
+} = require('oembed-parser');
 
 let url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
 
+// Promise style
 extract(url).then((data) => {
   console.log(data);
 }).catch((err) => {
   console.log(err);
 });
+
+
+// async/await style
+const getArticle = async (link) => {
+  try {
+    let data = await extract(link);
+    return data;
+  } catch (err) {
+    return err;
+  }
+}
+
+console.log(getArticle(url));
 ```
 
 ### APIs
@@ -43,7 +59,7 @@ List of resource providers is a clone of [oembed.com](http://oembed.com/provider
 
 ## Test
 
-```
+```bash
 git clone https://github.com/ndaidong/oembed-parser.git
 cd oembed-parser
 npm install
