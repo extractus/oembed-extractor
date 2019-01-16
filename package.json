@@ -36,5 +36,6 @@
     "parser",
     "util"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "types": "index.d.ts"
 }
