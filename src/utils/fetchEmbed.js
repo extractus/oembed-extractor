@@ -2,7 +2,7 @@
 
 const fetch = require('node-fetch').default;
 
-const fetchEmbed = (url, provider) => {
+const fetchEmbed = (url, provider, params) => {
   return new Promise((resolve, reject) => {
     let {
       provider_name, // eslint-disable-line camelcase
@@ -14,6 +14,8 @@ const fetchEmbed = (url, provider) => {
     resourceUrl = resourceUrl.replace(/\{format\}/g, 'json');
 
     let link = `${resourceUrl}?format=json&url=${encodeURIComponent(url)}`;
+
+    link = `${link}&maxwidth=${params.maxwidth}&maxheight=${params.maxheight}`;
 
     return fetch(link).then((res) => {
       return res.json();
