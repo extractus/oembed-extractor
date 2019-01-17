@@ -26,7 +26,6 @@ const hasRequiredKeys = (o) => {
     'html',
     'provider_url',
     'provider_name',
-    'provider_name',
   ];
 
   return structure.every((k) => {

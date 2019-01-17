@@ -15,7 +15,7 @@ const fetchEmbed = (url, provider, params) => {
 
     let link = `${resourceUrl}?format=json&url=${encodeURIComponent(url)}`;
     link = params && params.maxwidth ? `${link}&maxwidth=${params.maxwidth}` : link;
-    link = params && params.maxwidth ? `${link}&maxheight=${params.maxheight}` : link;
+    link = params && params.maxheight ? `${link}&maxheight=${params.maxheight}` : link;
 
     return fetch(link).then((res) => {
       return res.json();
