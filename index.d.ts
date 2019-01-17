@@ -13,4 +13,6 @@ export interface OembedData {
     html: string;
     provider_url: string;
     provider_name: string;
+    width: number;
+    height: number;
 }

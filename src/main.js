@@ -6,9 +6,8 @@ const {
   fetchEmbed,
 } = require('./utils');
 
-const defaultParams = { maxwidth:480, maxheight:260 }
 
-const extract = (url, params=defaultParams) => {
+const extract = (url, params) => {
   return new Promise((resolve, reject) => {
     if (!isValidURL(url)) {
       return reject(new Error('Invalid input URL'));
