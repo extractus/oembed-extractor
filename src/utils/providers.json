@@ -737,8 +737,7 @@
             {
                 "schemes": [
                     "http:\/\/*.flickr.com\/photos\/*",
-                    "http:\/\/flic.kr\/p\/*",
-                    "https:\/\/flic.kr\/p\/*"
+                    "http:\/\/flic.kr\/p\/*"
                 ],
                 "url": "http:\/\/www.flickr.com\/services\/oembed\/",
                 "discovery": true
