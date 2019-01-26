@@ -9,6 +9,7 @@ const {
   hasProperty,
   isObject,
   isString,
+  isNumber,
   isFunction,
 } = require('bellajs');
 
@@ -34,7 +35,10 @@ const hasRequiredKeys = (o) => {
 
 (() => {
   let url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
-
+  const sizes = {
+    maxheight: 250,
+    maxwidth: 250,
+  };
   test(`Testing with .extract(${url})`, {timeout: 15000}, (t) => {
     extract(url).then((art) => {
       t.comment('(Call returned result is R, so:)');
@@ -48,6 +52,18 @@ const hasRequiredKeys = (o) => {
       t.ok(art.provider_url.length > 0, 'R.provider_url is not empty.');
       t.ok(isString(art.provider_name), 'R.provider_name must be a string.');
       t.ok(art.provider_name.length > 0, 'R.provider_name is not empty.');
+      t.end();
+    }).catch((e) => {
+      t.end(e);
+    });
+  });
+
+  test(`Testing with .extract(${url},${JSON.stringify(sizes)}`, {timeout: 15000}, (t) => {
+    extract(url, sizes).then((art) => {
+      t.comment('(Call returned result is R, so:)');
+      t.ok(/width="250"/.test(art.html), 'R.html provides correct width param.');
+      t.ok(isNumber(art.width), 'R.width not empty.');
+      t.ok(isNumber(art.height), 'R.height not empty.');
       t.end();
     }).catch((e) => {
       t.end(e);
