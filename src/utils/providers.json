@@ -2140,7 +2140,10 @@
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/ted.com\/talks\/*"
+                    "http:\/\/ted.com\/talks\/*",
+                    "https:\/\/ted.com\/talks\/*",
+                    "http:\/\/www.ted.com\/talks\/*",
+                    "https:\/\/www.ted.com\/talks\/*"
                 ],
                 "url": "http:\/\/www.ted.com\/talks\/oembed.{format}"
             }
