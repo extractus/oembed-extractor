@@ -121,6 +121,21 @@
         ]
     },
     {
+        "provider_name": "Backtracks",
+        "provider_url": "https:\/\/backtracks.fm",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/backtracks.fm\/*\/*\/e\/*",
+                    "https:\/\/backtracks.fm\/*",
+                    "http:\/\/backtracks.fm\/*"
+                ],
+                "url": "https:\/\/backtracks.fm\/oembed",
+                "discovery": true
+            }
+        ]
+    },
+    {
         "provider_name": "Beautiful.AI",
         "provider_url": "https:\/\/www.beautiful.ai\/",
         "endpoints": [
@@ -177,7 +192,8 @@
                 "url": "https:\/\/buttondown.email\/embed",
                 "formats": [
                     "json"
-                ]
+                ],
+                "discovery": true
             }
         ]
     },
@@ -1218,6 +1234,37 @@
         ]
     },
     {
+        "provider_name": "Lille.Pod",
+        "provider_url": "hhttps:\/\/pod-test.univ-lille.fr\/",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/pod-test.univ-lille.fr\/video\/*"
+                ],
+                "url": "https:\/\/pod-test.univ-lille.fr\/oembed",
+                "discovery": true
+            }
+        ]
+    },
+    {
+        "provider_name": "Livestream",
+        "provider_url": "https:\/\/livestream.com\/",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/livestream.com\/accounts\/*\/events\/*",
+                    "https:\/\/livestream.com\/accounts\/*\/events\/*\/videos\/*",
+                    "https:\/\/livestream.com\/*\/events\/*",
+                    "https:\/\/livestream.com\/*\/events\/*\/videos\/*",
+                    "https:\/\/livestream.com\/*\/*",
+                    "https:\/\/livestream.com\/*\/*\/videos\/*"
+                ],
+                "url": "https:\/\/livestream.com\/oembed",
+                "discovery": true
+            }
+        ]
+    },
+    {
         "provider_name": "Ludus",
         "provider_url": "https:\/\/ludus.one",
         "endpoints": [
@@ -1446,6 +1493,21 @@
         ]
     },
     {
+        "provider_name": "Omniscope",
+        "provider_url": "https:\/\/omniscope.me\/",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/omniscope.me\/*"
+                ],
+                "url": "https:\/\/omniscope.me\/_global_\/oembed\/json",
+                "formats": [
+                    "json"
+                ]
+            }
+        ]
+    },
+    {
         "provider_name": "On Aol",
         "provider_url": "http:\/\/on.aol.com\/",
         "endpoints": [
@@ -1557,6 +1619,19 @@
                     "xml"
                 ],
                 "discovery": true
+            }
+        ]
+    },
+    {
+        "provider_name": "Podbean",
+        "provider_url": "http:\/\/podbean.com",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/*.podbean.com\/e\/*",
+                    "http:\/\/*.podbean.com\/e\/*"
+                ],
+                "url": "https:\/\/api.podbean.com\/v1\/oembed"
             }
         ]
     },
