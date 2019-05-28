@@ -537,10 +537,11 @@
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/*.deviantart.com\/art\/*",
-                    "http:\/\/*.deviantart.com\/*#\/d*",
+                    "https:\/\/*.deviantart.com\/art\/*",
+                    "https:\/\/*.deviantart.com\/*\/art\/*",
                     "http:\/\/fav.me\/*",
-                    "http:\/\/sta.sh\/*"
+                    "https:\/\/sta.sh\/*",
+                    "https:\/\/*.deviantart.com\/*#\/d*"
                 ],
                 "url": "http:\/\/backend.deviantart.com\/oembed"
             }
@@ -728,6 +729,8 @@
                 "schemes": [
                     "https:\/\/www.facebook.com\/*\/posts\/*",
                     "https:\/\/www.facebook.com\/photos\/*",
+                    "https:\/\/www.facebook.com\/*\/photos\/*",
+                    "https:\/\/www.facebook.com\/photo.php*",
                     "https:\/\/www.facebook.com\/photo.php",
                     "https:\/\/www.facebook.com\/*\/activity\/*",
                     "https:\/\/www.facebook.com\/permalink.php",
@@ -2352,13 +2355,15 @@
     },
     {
         "provider_name": "Ted",
-        "provider_url": "http:\/\/ted.com",
+        "provider_url": "https:\/\/ted.com",
         "endpoints": [
             {
                 "schemes": [
-                    "http:\/\/ted.com\/talks\/*"
+                    "http:\/\/ted.com\/talks\/*",
+                    "https:\/\/ted.com\/talks\/*",
+                    "https:\/\/www.ted.com\/talks\/*"
                 ],
-                "url": "http:\/\/www.ted.com\/talks\/oembed.{format}"
+                "url": "https:\/\/www.ted.com\/talks\/oembed.{format}"
             }
         ]
     },
