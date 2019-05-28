@@ -543,7 +543,7 @@
                     "https:\/\/sta.sh\/*",
                     "https:\/\/*.deviantart.com\/*#\/d*"
                 ],
-                "url": "http:\/\/backend.deviantart.com\/oembed"
+                "url": "https:\/\/backend.deviantart.com\/oembed"
             }
         ]
     },
