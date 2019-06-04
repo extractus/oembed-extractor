@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "12.3"
   - "10.6"
-  - "7.6"
+  - "8.6"
