@@ -81,6 +81,8 @@ const hasPhotoKeys = (o) => {
     t.ok(hasProvider('https://www.deviantart.com/joeyjazz/art/SP-Ocean-Eclipse-781257606'));
     t.ok(hasProvider('https://www.facebook.com/alternate.de/photos/a.391014166661/10156375231596662/?type=3&theater'));
     t.ok(hasProvider('https://www.ted.com/talks/monique_w_morris_why_black_girls_are_targeted_for_punishment_at_school_and_how_to_change_that?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare'));
+    t.ok(hasProvider('https://www.kijk.nl/video/7UFNzXmSKSn'));
+    t.ok(hasProvider('https://www.kijk.nl/net5/hotelrules/videos/7UFNzXmSKSn/komen-ze-er-zonder-kleerscheuren-vanaf'));
     t.end();
   });
 })();
@@ -101,6 +103,8 @@ const hasPhotoKeys = (o) => {
     'https://twitter.com/tribandtweets/status/1133308311917481984',
     'https://twitter.com/NetflixDE/status/1133310428476530688',
     'https://twitter.com/officialmcafee/status/1133280322039291905',
+    'https://www.kijk.nl/video/7UFNzXmSKSn',
+    'https://www.kijk.nl/net5/hotelrules/videos/7UFNzXmSKSn/komen-ze-er-zonder-kleerscheuren-vanaf',
   ];
 
   const photoSamples = [

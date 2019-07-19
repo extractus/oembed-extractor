@@ -1282,6 +1282,19 @@
         ]
     },
     {
+        "provider_name": "Kijk",
+        "provider_url": "https:\/\/www.kijk.nl\/",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https:\/\/www.kijk.nl\/video\/*",
+                    "https:\/\/www.kijk.nl\/*\/*\/videos\/*\/*"
+                ],
+                "url": "https:\/\/oembed.kijk.nl"
+            }
+        ]
+    },
+    {
         "provider_name": "Kit",
         "provider_url": "https:\/\/kit.com\/",
         "endpoints": [
