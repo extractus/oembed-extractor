@@ -1196,7 +1196,15 @@
                     "https:\/\/instagram.com\/p\/*",
                     "https:\/\/instagr.am\/p\/*",
                     "https:\/\/www.instagram.com\/p\/*",
-                    "https:\/\/www.instagr.am\/p\/*"
+                    "https:\/\/www.instagr.am\/*\/p\/*",
+                    "http:\/\/instagram.com\/*\/p\/*",
+                    "http:\/\/instagr.am\/*\/p\/*",
+                    "http:\/\/www.instagram.com\/*\/p\/*",
+                    "http:\/\/www.instagr.am\/*\/p\/*",
+                    "https:\/\/instagram.com\/*\/p\/*",
+                    "https:\/\/instagr.am\/*\/p\/*",
+                    "https:\/\/www.instagram.com\/*\/p\/*",
+                    "https:\/\/www.instagr.am\/*\/p\/*"
                 ],
                 "url": "https:\/\/api.instagram.com\/oembed",
                 "formats": [
