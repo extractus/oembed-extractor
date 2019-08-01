@@ -83,6 +83,7 @@ const hasPhotoKeys = (o) => {
     t.ok(hasProvider('https://www.ted.com/talks/monique_w_morris_why_black_girls_are_targeted_for_punishment_at_school_and_how_to_change_that?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare'));
     t.ok(hasProvider('https://www.kijk.nl/video/7UFNzXmSKSn'));
     t.ok(hasProvider('https://www.kijk.nl/net5/hotelrules/videos/7UFNzXmSKSn/komen-ze-er-zonder-kleerscheuren-vanaf'));
+    t.ok(hasProvider('https://www.instagram.com/farid_rueda/p/Bx-0nVPCe2c/?igshid=18g4fpv1khfug'));
     t.end();
   });
 })();
@@ -105,6 +106,7 @@ const hasPhotoKeys = (o) => {
     'https://twitter.com/officialmcafee/status/1133280322039291905',
     'https://www.kijk.nl/video/7UFNzXmSKSn',
     'https://www.kijk.nl/net5/hotelrules/videos/7UFNzXmSKSn/komen-ze-er-zonder-kleerscheuren-vanaf',
+    'https://www.instagram.com/farid_rueda/p/Bx-0nVPCe2c/?igshid=18g4fpv1khfug',
   ];
 
   const photoSamples = [
