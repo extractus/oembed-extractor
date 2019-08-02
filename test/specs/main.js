@@ -97,6 +97,8 @@ const hasPhotoKeys = (o) => {
 (() => {
   const richSamples = [
     'https://www.youtube.com/watch?v=8jPQjjsBbIc',
+    'https://www.youtube.com/watch?v=cc-elFcs96Y',
+    'https://youtu.be/I8u2NdWuaYs',
     'https://www.ted.com/talks/monique_w_morris_why_black_girls_are_targeted_for_punishment_at_school_and_how_to_change_that?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare',
     'https://www.instagram.com/p/Bx9h8mdpMPF/?utm_source=ig_web_button_share_sheet',
     'https://www.facebook.com/alternate.de/photos/a.391014166661/10156375231596662/?type=3&theater',
@@ -115,7 +117,7 @@ const hasPhotoKeys = (o) => {
     'https://flic.kr/p/5QEkmq',
   ];
 
-  let url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
+  const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
   const sizes = {
     maxheight: 250,
     maxwidth: 250,
@@ -131,8 +133,9 @@ const hasPhotoKeys = (o) => {
   });
 
   const testRichOne = (url) => {
-    test(`Testing with .extract(${url})`, {timeout: 15000}, (t) => {
-      extract(url).then((art) => {
+    test(`Testing with .extract(${url})`, {timeout: 15000}, async (t) => {
+      try {
+        const art = await extract(url);
         t.comment('(Call returned result is R, so:)');
         t.ok(isObject(art), 'R must be an object.');
         t.ok(hasRichKeys(art), 'R must have all required keys.');
@@ -144,17 +147,18 @@ const hasPhotoKeys = (o) => {
         t.ok(art.provider_url.length > 0, 'R.provider_url is not empty.');
         t.ok(isString(art.provider_name), 'R.provider_name must be a string.');
         t.ok(art.provider_name.length > 0, 'R.provider_name is not empty.');
-        t.end();
-      }).catch((e) => {
+      } catch (e) {
         t.error(e);
+      } finally {
         t.end();
-      });
+      }
     });
   };
 
   const testPhotoOne = (url) => {
-    test(`Testing with .extract(${url})`, {timeout: 15000}, (t) => {
-      extract(url).then((art) => {
+    test(`Testing with .extract(${url})`, {timeout: 15000}, async (t) => {
+      try {
+        const art = await extract(url);
         t.comment('(Call returned result is R, so:)');
         t.ok(isObject(art), 'R must be an object.');
         t.ok(hasPhotoKeys(art), 'R must have all required keys.');
@@ -166,33 +170,34 @@ const hasPhotoKeys = (o) => {
         t.ok(art.provider_url.length > 0, 'R.provider_url is not empty.');
         t.ok(isString(art.provider_name), 'R.provider_name must be a string.');
         t.ok(art.provider_name.length > 0, 'R.provider_name is not empty.');
-        t.end();
-      }).catch((e) => {
+      } catch (e) {
         t.error(e);
+      } finally {
         t.end();
-      });
+      }
     });
   };
 
-  richSamples.forEach((item) => testRichOne(item));
-  photoSamples.forEach((item) => testPhotoOne(item));
+  richSamples.map(testRichOne);
+  photoSamples.map(testPhotoOne);
 
-  test(`Testing with .extract(${url},${JSON.stringify(sizes)}`, {timeout: 15000}, (t) => {
-    extract(url, sizes).then((art) => {
+  test(`Testing with .extract(${url},${JSON.stringify(sizes)})`, {timeout: 15000}, async (t) => {
+    try {
+      const art = await extract(url, sizes);
       t.comment('(Call returned result is R, so:)');
       t.ok(/width="250"/.test(art.html), 'R.html provides correct width param.');
       t.ok(isNumber(art.width), 'R.width not empty.');
       t.ok(isNumber(art.height), 'R.height not empty.');
-      t.end();
-    }).catch((e) => {
+    } catch (e) {
       t.error(e);
+    } finally {
       t.end();
-    });
+    }
   });
 })();
 
 (() => {
-  let badSamples = [
+  const badSamples = [
     '',
     {k: 9},
     [1, 3, 4],
@@ -208,14 +213,20 @@ const hasPhotoKeys = (o) => {
 
 
   const testBadOne = (url) => {
-    test(`Testing with .extract(${url})`, {timeout: 15000}, (t) => {
-      extract(url).then((art) => {
-        t.fail(art, 'Could not return result in this case');
-      }).catch((e) => {
-        t.pass(e, 'Test must be failed');
-      }).finally(() => {
+    test(`Testing with .extract(${url})`, {timeout: 15000}, async (t) => {
+      try {
+        t.comment(`Start testing ${url}`);
+        const art = await extract(url);
+        if (art) {
+          t.fail(art, 'Could not return result in this case');
+        } else {
+          t.pass('Done');
+        }
+      } catch (err) {
+        t.pass(err, 'Test must be failed');
+      } finally {
         t.end();
-      });
+      }
     });
   };
 

@@ -4,7 +4,7 @@
 const providerList = require('./providers.json');
 
 const getHostname = (url) => {
-  let match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+  const match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
   if (match && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
     return match[2];
   }
@@ -12,20 +12,20 @@ const getHostname = (url) => {
 };
 
 const providers = providerList.map((item) => {
-  let {
+  const {
     provider_name, // eslint-disable-line camelcase
     provider_url, // eslint-disable-line camelcase
     endpoints,
   } = item;
 
-  let endpoint = endpoints[0];
-  let {
+  const endpoint = endpoints[0];
+  const {
     schemes = [],
     url,
   } = endpoint;
 
-  let hostname = getHostname(url);
-  let domain = hostname ? hostname.replace('www.', '') : '';
+  const hostname = getHostname(url);
+  const domain = hostname ? hostname.replace('www.', '') : '';
 
   return {
     provider_name, // eslint-disable-line camelcase
@@ -39,8 +39,8 @@ const providers = providerList.map((item) => {
 });
 
 const findProvider = (url) => {
-  let candidates = providers.filter((provider) => {
-    let {
+  const candidates = providers.filter((provider) => {
+    const {
       schemes,
       domain,
     } = provider;
@@ -48,7 +48,7 @@ const findProvider = (url) => {
       return url.includes(domain);
     }
     return schemes.some((scheme) => {
-      let reg = new RegExp(scheme.replace(/\*/g, '(.*)'), 'i');
+      const reg = new RegExp(scheme.replace(/\*/g, '(.*)'), 'i');
       return url.match(reg);
     });
   });

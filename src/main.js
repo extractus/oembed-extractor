@@ -7,17 +7,16 @@ const {
 } = require('./utils');
 
 
-const extract = (url, params) => {
-  return new Promise((resolve, reject) => {
-    if (!isValidURL(url)) {
-      return reject(new Error('Invalid input URL'));
-    }
-    let p = findProvider(url);
-    if (!p) {
-      return reject(new Error(`No provider found with given url "${url}"`));
-    }
-    return resolve(fetchEmbed(url, p, params));
-  });
+const extract = async (url, params) => {
+  if (!isValidURL(url)) {
+    throw new Error('Invalid input URL');
+  }
+  const p = findProvider(url);
+  if (!p) {
+    throw new Error(`No provider found with given url "${url}"`);
+  }
+  const data = await fetchEmbed(url, p, params);
+  return data;
 };
 
 const hasProvider = (url) => {
