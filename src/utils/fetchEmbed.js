@@ -1,9 +1,9 @@
 // utils -> fetchEmbed
 
-const fetch = require('node-fetch').default;
+const fetch = require('cross-fetch');
 
-const fetchEmbed = (url, provider, params) => {
-  return new Promise((resolve, reject) => {
+async function fetchEmbed(url, provider, params) {
+  try {
     let {
       provider_name, // eslint-disable-line camelcase
       provider_url, // eslint-disable-line camelcase
@@ -17,16 +17,14 @@ const fetchEmbed = (url, provider, params) => {
     link = params && params.maxwidth ? `${link}&maxwidth=${params.maxwidth}` : link;
     link = params && params.maxheight ? `${link}&maxheight=${params.maxheight}` : link;
 
-    return fetch(link).then((res) => {
-      return res.json();
-    }).then((json) => {
-      json.provider_name = provider_name; // eslint-disable-line camelcase
-      json.provider_url = provider_url; // eslint-disable-line camelcase
-      return resolve(json);
-    }).catch((err) => {
-      return reject(err);
-    });
-  });
-};
+    const res = await fetch(link);
+    const json = await res.json();
+    json.provider_name = provider_name; // eslint-disable-line camelcase
+    json.provider_url = provider_url; // eslint-disable-line camelcase
+    return json;
+  } catch (err) {
+    return err;
+  }
+}
 
 module.exports = fetchEmbed;

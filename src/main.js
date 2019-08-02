@@ -7,22 +7,36 @@ const {
 } = require('./utils');
 
 
-const extract = (url, params) => {
-  return new Promise((resolve, reject) => {
+async function extract(url, params) {
+  try {
     if (!isValidURL(url)) {
-      return reject(new Error('Invalid input URL'));
+      throw new Error('Invalid input URL');
     }
-    let p = findProvider(url);
+    const p = findProvider(url);
     if (!p) {
-      return reject(new Error(`No provider found with given url "${url}"`));
+      throw new Error(`No provider found with given url "${url}"`);
     }
-    return resolve(fetchEmbed(url, p, params));
-  });
-};
+    const result = await fetchEmbed(url, p, params);
+    return result;
+  } catch (err) {
+    return err;
+  }
+}
 
 const hasProvider = (url) => {
   return findProvider(url) !== null;
 };
+
+(async () => {
+  try {
+    const a = await extract('1235');
+    if (a) {
+      console.log(a);
+    }
+  } catch (err) {
+    console.log(err);
+  }
+})();
 
 module.exports = {
   extract,

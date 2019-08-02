@@ -21,14 +21,13 @@
     "reset": "node reset"
   },
   "dependencies": {
-    "node-fetch": "^2.6.0",
-    "promise-wtf": "^1.2.4"
+    "cross-fetch": "^3.0.4"
   },
   "devDependencies": {
     "bellajs": "^7.5.0",
+    "eslint-config-goes": "^1.1.6",
     "debug": "^4.1.1",
-    "eslint-config-goes": "^1.1.5",
-    "tap": "^14.2.0"
+    "tap": "^14.5.0"
   },
   "keywords": [
     "oembed",
