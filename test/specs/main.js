@@ -98,6 +98,7 @@ const hasPhotoKeys = (o) => {
   const richSamples = [
     'https://www.youtube.com/watch?v=8jPQjjsBbIc',
     'https://www.youtube.com/watch?v=cc-elFcs96Y',
+    'https://youtu.be/I8u2NdWuaYs',
     'https://www.ted.com/talks/monique_w_morris_why_black_girls_are_targeted_for_punishment_at_school_and_how_to_change_that?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare',
     'https://www.instagram.com/p/Bx9h8mdpMPF/?utm_source=ig_web_button_share_sheet',
     'https://www.facebook.com/alternate.de/photos/a.391014166661/10156375231596662/?type=3&theater',
