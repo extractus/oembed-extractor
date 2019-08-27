@@ -3,4 +3,5 @@ module.exports = {
   findProvider: require('./findProvider'),
   fetchEmbed: require('./fetchEmbed'),
   logger: require('./logger'),
+  providersFromList: require('./providersFromList'),
 };

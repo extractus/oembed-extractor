@@ -50,6 +50,16 @@ Return a Promise object.
 
 Return boolean. True if the URL matches with any provider in the list.
 
+#### .setProviderList(Array of provider definitions)
+
+Sets the list of providers to use, overriding the defaults.
+
+This can be useful for whitelisting only certain providers, or for adding
+custom providers.
+
+For the expected format, see the
+[default list](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
+
 
 #### Provider list
 
