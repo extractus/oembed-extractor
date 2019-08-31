@@ -17,6 +17,7 @@ const AP = require('../../index');
 const {
   extract,
   hasProvider,
+  setProviderList,
 } = AP;
 
 const UTILS = require('../../src/utils/index');
@@ -237,5 +238,28 @@ test(`Testing .hasProvider() method`, (t) => {
   t.ok(isFunction(hasProvider), 'hasProvider must be a function');
   t.equals(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU'), true, 'YouTube URL has oEmbed provider');
   t.equals(hasProvider('https://trello.com/b/BO3bg7yn/notes'), false, 'Trello URL has no oEmbed provider');
+  t.end();
+});
+
+test(`Testing .setProviderList() method`, (t) => {
+  const customProviderOnly = [
+    {
+      provider_name: 'Example', // eslint-disable-line camelcase
+      provider_url: 'http://www.example.org', // eslint-disable-line camelcase
+      endpoints: [
+        {
+          schemes: [
+            'http://www.example.org/media/*',
+          ],
+          url: 'http://www.example.org/oembed',
+        },
+      ],
+    },
+  ];
+
+  t.ok(isFunction(setProviderList), 'setProviderList must be a function');
+  setProviderList(customProviderOnly);
+  t.equals(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU'), false, 'YouTube URL has no oEmbed provider');
+  t.equals(hasProvider('http://www.example.org/media/abcdef'), true, 'www.example.org URL has oEmbed provider');
   t.end();
 });
