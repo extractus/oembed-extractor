@@ -1,6 +1,6 @@
 // utils -> fetchEmbed
 
-const fetch = require('cross-fetch').default;
+const fetch = require('node-fetch');
 
 const fetchEmbed = async (url, provider, params) => {
   let {

@@ -1204,8 +1204,7 @@
           "https://instagram.com/*/p/*",
           "https://instagr.am/*/p/*",
           "https://www.instagram.com/*/p/*",
-          "https://www.instagr.am/*/p/*",
-          "https://www.instagr.am/p/*"
+          "https://www.instagr.am/*/p/*"
         ],
         "url": "https://api.instagram.com/oembed",
         "formats": [
@@ -2920,8 +2919,7 @@
         "schemes": [
           "https://*.youtube.com/watch*",
           "https://*.youtube.com/v/*\"",
-          "https://youtu.be/*",
-          "https://*.youtube.com/v/*"
+          "https://youtu.be/*"
         ],
         "url": "https://www.youtube.com/oembed",
         "discovery": true
@@ -2951,83 +2949,6 @@
         ],
         "url": "http://api.provider.com/oembed.json",
         "discovery": true
-      }
-    ]
-  },
-  {
-    "provider_name": "Namchey",
-    "provider_url": "https://namchey.com",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://namchey.com/embeds/*"
-        ],
-        "url": "https://namchey.com/api/oembed",
-        "formats": [
-          "json",
-          "xml"
-        ],
-        "discovery": true
-      }
-    ]
-  },
-  {
-    "provider_name": "Natural Atlas",
-    "provider_url": "https://naturalatlas.com/",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://naturalatlas.com/*",
-          "https://naturalatlas.com/*/*",
-          "https://naturalatlas.com/*/*/*",
-          "https://naturalatlas.com/*/*/*/*"
-        ],
-        "url": "https://naturalatlas.com/oembed.{format}",
-        "discovery": true,
-        "formats": [
-          "json"
-        ]
-      }
-    ]
-  },
-  {
-    "provider_name": "posiXion",
-    "provider_url": "https://posixion.com/",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://posixion.com/question/*",
-          "https://posixion.com/*/question/*"
-        ],
-        "url": "http://posixion.com/services/oembed/"
-      }
-    ]
-  },
-  {
-    "provider_name": "SmashNotes",
-    "provider_url": "https://smashnotes.com",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://smashnotes.com/p/*",
-          "https://smashnotes.com/p/*/e/* - https://smashnotes.com/p/*/e/*/s/*"
-        ],
-        "url": "https://smashnotes.com/services/oembed",
-        "discovery": true
-      }
-    ]
-  },
-  {
-    "provider_name": "TypeCast",
-    "provider_url": "https://typecast.ai",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://play.typecast.ai/s/*",
-          "https://play.typecast.ai/e/*",
-          "https://play.typecast.ai/*"
-        ],
-        "url": "https://play.typecast.ai/oembed"
       }
     ]
   }

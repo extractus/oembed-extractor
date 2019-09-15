@@ -3,6 +3,8 @@
  * @ndaidong
  */
 
+/* eslint-disable camelcase */
+
 const test = require('tap').test;
 
 const {
@@ -244,8 +246,8 @@ test(`Testing .hasProvider() method`, (t) => {
 test(`Testing .setProviderList() method`, (t) => {
   const customProviderOnly = [
     {
-      provider_name: 'Example', // eslint-disable-line camelcase
-      provider_url: 'http://www.example.org', // eslint-disable-line camelcase
+      provider_name: 'Example',
+      provider_url: 'http://www.example.org',
       endpoints: [
         {
           schemes: [

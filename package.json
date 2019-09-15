@@ -1,5 +1,5 @@
 {
-  "version": "1.3.3",
+  "version": "1.3.4",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -13,7 +13,6 @@
     "node": ">= 8.6"
   },
   "scripts": {
-    "start": "node index",
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "tap test/start.js --coverage --reporter=spec",
@@ -21,12 +20,12 @@
     "reset": "node reset"
   },
   "dependencies": {
-    "cross-fetch": "^3.0.4"
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "bellajs": "^7.5.0",
+    "bellajs": "^8.0.0",
     "eslint-config-goes": "^1.1.6",
-    "tap": "^14.6.1"
+    "tap": "^14.6.2"
   },
   "keywords": [
     "oembed",
