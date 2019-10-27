@@ -2,22 +2,23 @@
 
 [![NPM](https://badge.fury.io/js/oembed-parser.svg)](https://badge.fury.io/js/oembed-parser)
 [![Build Status](https://travis-ci.org/ndaidong/oembed-parser.svg?branch=master)](https://travis-ci.org/ndaidong/oembed-parser)
+[![Coverage Status](https://coveralls.io/repos/github/ndaidong/oembed-parser/badge.svg?branch=master)](https://coveralls.io/github/ndaidong/oembed-parser?branch=master)
 
 
 ### Installation
 
 ```bash
-npm install oembed-parser
+npm i oembed-parser
 ```
 
 ### Usage
 
 ```js
-const {
+import {
   extract,
-} = require('oembed-parser');
+} from 'oembed-parser';
 
-let url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
+const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
 
 // Promise style
 extract(url).then((data) => {

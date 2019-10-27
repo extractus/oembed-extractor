@@ -5,28 +5,25 @@
 
 /* eslint-disable camelcase */
 
-const test = require('tap').test;
+import {test} from 'tap';
 
-const {
+import {
   hasProperty,
   isObject,
   isString,
   isNumber,
   isFunction,
-} = require('bellajs');
+} from 'bellajs';
 
-const AP = require('../../index');
-const {
+import {
   extract,
   hasProvider,
   setProviderList,
-} = AP;
+} from '../../index';
 
-const UTILS = require('../../src/utils/index');
-
-const {
+import {
   isValidURL,
-} = UTILS;
+} from '../../src/utils/index';
 
 const required = [
   'type',
