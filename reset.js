@@ -20,6 +20,7 @@ const files = [
   'yarn.lock',
   'package-lock.json',
   'coverage.lcov',
+  'coverage.lcov',
 ];
 
 dirs.forEach((d) => {
