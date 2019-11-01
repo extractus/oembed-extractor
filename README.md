@@ -8,7 +8,7 @@
 ### Installation
 
 ```bash
-npm i oembed-parser
+npm install oembed-parser
 ```
 
 ### Usage
@@ -20,32 +20,40 @@ import {
 
 const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
 
-// Promise style
-extract(url).then((data) => {
-  console.log(data);
+extract(url).then((oembed) => {
+  console.log(oembed);
 }).catch((err) => {
-  console.log(err);
+  console.trace(err);
 });
-
-
-// async/await style
-const getArticle = async (link) => {
-  try {
-    let data = await extract(link);
-    return data;
-  } catch (err) {
-    return err;
-  }
-}
-
-console.log(getArticle(url));
 ```
 
 ### APIs
 
-#### .extract(String URL)
+#### .extract(String url [, Object params])
 
-Return a Promise object.
+Extract oEmbed data from specified url.
+Return: a Promise
+
+Optional argument `params` is an object with it we can set `maxwidth` and/or `maxheight` those are used to scale embed size to fit your container size. Please refer [oEmbed/Full Spec/Consumer Request](https://oembed.com/#section2) for more info.
+
+Here is how we can use `oembed-parser` in async/await style:
+
+```js
+import {
+  extract
+} from 'oembed-parser';
+
+const getOembed = async (url) => {
+  try {
+    const oembed = await extract(url);
+    return oembed;
+  } catch (err) {
+    console.trace(err);
+  }
+};
+
+```
+
 
 #### .hasProvider(String URL)
 

@@ -3030,5 +3030,122 @@
         "url": "https://play.typecast.ai/oembed"
       }
     ]
+  },
+  {
+    "provider_name": "Audioboom",
+    "provider_url": "https://audioboom.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://audioboom.com/channel/*",
+          "https://audioboom.com/posts/*"
+        ],
+        "url": "https://audioboom.com/publishing/oembed/v4.{format}",
+        "formats": [
+          "json",
+          "xml"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Blogcast",
+    "provider_url": "https://blogcast.host/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://blogcast.host/embed/*",
+          "https://blogcast.host/embedly/*"
+        ],
+        "url": "https://blogcast.host/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Facebook",
+    "provider_url": "https://www.facebook.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.facebook.com/*/posts/*",
+          "https://www.facebook.com/photos/*",
+          "https://www.facebook.com/*/photos/*",
+          "https://www.facebook.com/photo.php*",
+          "https://www.facebook.com/photo.php",
+          "https://www.facebook.com/*/activity/*",
+          "https://www.facebook.com/permalink.php",
+          "https://www.facebook.com/media/set?set=*",
+          "https://www.facebook.com/questions/*",
+          "https://www.facebook.com/notes/*/*/*"
+        ],
+        "url": "https://www.facebook.com/plugins/post/oembed.json",
+        "discovery": true
+      },
+      {
+        "schemes": [
+          "https://www.facebook.com/*/videos/*",
+          "https://www.facebook.com/video.php"
+        ],
+        "url": "https://www.facebook.com/plugins/video/oembed.json",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "OZ",
+    "provider_url": "https://www.oz.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.oz.com/*/video/*"
+        ],
+        "url": "https://core.oz.com/oembed",
+        "formats": [
+          "json",
+          "xml"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Polaris Share",
+    "provider_url": "https://www.polarishare.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.polarishare.com/*/*"
+        ],
+        "url": "https://api.polarishare.com/rest/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Typlog",
+    "provider_url": "https://typlog.com",
+    "endpoints": [
+      {
+        "url": "https://typlog.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "uStudio, Inc.",
+    "provider_url": "https://www.ustudio.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.ustudio.com/embed/*",
+          "https://*.ustudio.com/embed/*/*"
+        ],
+        "url": "https://app.ustudio.com/api/v2/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
   }
 ]
