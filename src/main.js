@@ -10,7 +10,7 @@ const {
 const defaultProviderList = require('./utils/providers.json');
 let providers = providersFromList(defaultProviderList);
 
-const extract = async (url, params) => {
+const extract = async (url, params = {}) => {
   if (!isValidURL(url)) {
     throw new Error('Invalid input URL');
   }

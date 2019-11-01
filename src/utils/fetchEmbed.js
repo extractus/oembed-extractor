@@ -2,20 +2,33 @@
 
 const fetch = require('node-fetch');
 
-const fetchEmbed = async (url, provider, params) => {
-  let {
+const fetchEmbed = async (url, provider, params = {}) => {
+  const {
     provider_name, // eslint-disable-line camelcase
     provider_url, // eslint-disable-line camelcase
     url: resourceUrl,
   } = provider;
 
+  const baseUrl = resourceUrl.replace(/\{format\}/g, 'json');
 
-  resourceUrl = resourceUrl.replace(/\{format\}/g, 'json');
+  const queries = [
+    'format=json',
+    `url=${encodeURIComponent(url)}`,
+  ];
 
-  let link = `${resourceUrl}?format=json&url=${encodeURIComponent(url)}`;
-  link = params && params.maxwidth ? `${link}&maxwidth=${params.maxwidth}` : link;
-  link = params && params.maxheight ? `${link}&maxheight=${params.maxheight}` : link;
+  const {
+    maxwidth = 0,
+    maxheight = 0,
+  } = params;
 
+  if (maxwidth > 0) {
+    queries.push(`maxwidth=${maxwidth}`);
+  }
+  if (maxheight > 0) {
+    queries.push(`maxheight=${maxheight}`);
+  }
+
+  const link = `${baseUrl}?${queries.join('&')}`;
   const res = await fetch(link, {mode: 'no-cors'});
   const json = await res.json();
   json.provider_name = provider_name; // eslint-disable-line camelcase
