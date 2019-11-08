@@ -3,6 +3,7 @@
 [![NPM](https://badge.fury.io/js/oembed-parser.svg)](https://badge.fury.io/js/oembed-parser)
 [![Build Status](https://travis-ci.org/ndaidong/oembed-parser.svg?branch=master)](https://travis-ci.org/ndaidong/oembed-parser)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/oembed-parser/badge.svg?branch=master)](https://coveralls.io/github/ndaidong/oembed-parser?branch=master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fndaidong%2Foembed-parser.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fndaidong%2Foembed-parser?ref=badge_shield)
 
 
 ### Installation
@@ -87,3 +88,6 @@ npm test
 # License
 
 The MIT License (MIT)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fndaidong%2Foembed-parser.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fndaidong%2Foembed-parser?ref=badge_large)
