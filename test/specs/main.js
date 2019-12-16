@@ -19,7 +19,7 @@ import {
   extract,
   hasProvider,
   setProviderList,
-} from '../../index';
+} from '../../src/main';
 
 
 import isValidURL from '../../src/utils/isValidURL';
