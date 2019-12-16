@@ -1,6 +1,6 @@
 // utils -> findProvider
 
-const findProvider = (url, providers) => {
+export default (url, providers) => {
   const candidates = providers.filter((provider) => {
     const {
       schemes,
@@ -17,5 +17,3 @@ const findProvider = (url, providers) => {
 
   return candidates.length > 0 ? candidates[0] : null;
 };
-
-module.exports = findProvider;

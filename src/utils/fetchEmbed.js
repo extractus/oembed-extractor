@@ -1,8 +1,8 @@
 // utils -> fetchEmbed
 
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-const fetchEmbed = async (url, provider, params = {}) => {
+export default async (url, provider, params = {}) => {
   const {
     provider_name, // eslint-disable-line camelcase
     provider_url, // eslint-disable-line camelcase
@@ -35,5 +35,3 @@ const fetchEmbed = async (url, provider, params = {}) => {
   json.provider_url = provider_url; // eslint-disable-line camelcase
   return json;
 };
-
-module.exports = fetchEmbed;

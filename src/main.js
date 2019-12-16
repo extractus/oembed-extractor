@@ -1,20 +1,21 @@
 // main
 
-const {
-  isValidURL,
-  findProvider,
-  fetchEmbed,
-  providersFromList,
-} = require('./utils');
+import isValidURL from './utils/isValidURL';
+import findProvider from './utils/findProvider';
+import fetchEmbed from './utils/fetchEmbed';
+import providersFromList from './utils/providersFromList';
 
-const defaultProviderList = require('./utils/providers.json');
-let providers = providersFromList(defaultProviderList);
+import defaultProviderList from './utils/providers.json';
 
-const extract = async (url, params = {}) => {
+const state = {
+  providers: providersFromList(defaultProviderList),
+};
+
+export const extract = async (url, params = {}) => {
   if (!isValidURL(url)) {
     throw new Error('Invalid input URL');
   }
-  const p = findProvider(url, providers);
+  const p = findProvider(url, state.providers);
   if (!p) {
     throw new Error(`No provider found with given url "${url}"`);
   }
@@ -22,16 +23,10 @@ const extract = async (url, params = {}) => {
   return data;
 };
 
-const hasProvider = (url) => {
-  return findProvider(url, providers) !== null;
+export const hasProvider = (url) => {
+  return findProvider(url, state.providers) !== null;
 };
 
-const setProviderList = (list) => {
-  providers = providersFromList(list);
-};
-
-module.exports = {
-  extract,
-  hasProvider,
-  setProviderList,
+export const setProviderList = (list) => {
+  state.providers = providersFromList(list);
 };

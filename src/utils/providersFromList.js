@@ -8,7 +8,7 @@ const getHostname = (url) => {
   return null;
 };
 
-const providersFromList = (list) => {
+export default (list) => {
   return list.map((item) => {
     const {
       provider_name, // eslint-disable-line camelcase
@@ -36,5 +36,3 @@ const providersFromList = (list) => {
     return item.domain !== '';
   });
 };
-
-module.exports = providersFromList;

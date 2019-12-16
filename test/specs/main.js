@@ -21,9 +21,8 @@ import {
   setProviderList,
 } from '../../index';
 
-import {
-  isValidURL,
-} from '../../src/utils/index';
+
+import isValidURL from '../../src/utils/isValidURL';
 
 const required = [
   'type',
