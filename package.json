@@ -16,12 +16,16 @@
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "tap test/start.js --coverage --reporter=spec",
-    "sync": "node sync",
-    "reset": "node reset"
+    "postinstall": "node scripts/postinstall",
+    "reset": "node scripts/reset"
   },
   "dependencies": {
     "node-fetch": "^2.6.0"
   },
+  "files": [
+    "src",
+    "scripts"
+  ],
   "devDependencies": {
     "bellajs": "^8.0.2",
     "eslint-config-goes": "^1.1.8",
