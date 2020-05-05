@@ -4,7 +4,7 @@
 //                 CodeBast4rd <https://github.com/CodeBast4rd>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-export function extract(url: string): Promise<OembedData>;
+export function extract(url: string, params?: any): Promise<OembedData>;
 
 export function hasProvider(url: string): boolean;
 
