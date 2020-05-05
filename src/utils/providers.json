@@ -168,7 +168,9 @@
         "schemes": [
           "https://backtracks.fm/*/*/e/*",
           "https://backtracks.fm/*",
-          "http://backtracks.fm/*"
+          "http://backtracks.fm/*",
+          "https://backtracks.fm/*/s/*/*",
+          "https://backtracks.fm/*/*/*/*/e/*/*"
         ],
         "url": "https://backtracks.fm/oembed",
         "discovery": true
@@ -1205,7 +1207,19 @@
           "https://instagr.am/*/p/*",
           "https://www.instagram.com/*/p/*",
           "https://www.instagr.am/*/p/*",
-          "https://www.instagr.am/p/*"
+          "https://www.instagr.am/p/*",
+          "http://instagram.com/*/p/*,",
+          "http://www.instagram.com/*/p/*,",
+          "https://instagram.com/*/p/*,",
+          "https://www.instagram.com/*/p/*,",
+          "http://instagram.com/tv/*",
+          "http://instagr.am/tv/*",
+          "http://www.instagram.com/tv/*",
+          "http://www.instagr.am/tv/*",
+          "https://instagram.com/tv/*",
+          "https://instagr.am/tv/*",
+          "https://www.instagram.com/tv/*",
+          "https://www.instagr.am/tv/*"
         ],
         "url": "https://api.instagram.com/oembed",
         "formats": [
@@ -3145,6 +3159,270 @@
         "formats": [
           "json"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Abraia",
+    "provider_url": "https://abraia.me",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://store.abraia.me/*"
+        ],
+        "url": "https://api.abraia.me/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "ArcGIS StoryMaps",
+    "provider_url": "https://storymaps.arcgis.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://storymaps.arcgis.com/stories/*"
+        ],
+        "url": "https://storymaps.arcgis.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Avocode",
+    "provider_url": "https://www.avocode.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.avocode.com/view/*"
+        ],
+        "url": "https://stage-embed.avocode.com/api/oembed",
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Deseret News",
+    "provider_url": "https://www.deseret.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.deseret.com/*"
+        ],
+        "url": "https://embed.deseret.com/"
+      }
+    ]
+  },
+  {
+    "provider_name": "Firework",
+    "provider_url": "https://fireworktv.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.fireworktv.com/*",
+          "https://*.fireworktv.com/embed/*/v/*"
+        ],
+        "url": "https://www.fireworktv.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Homey",
+    "provider_url": "https://homey.app",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://homey.app/f/*",
+          "https://homey.app/*/flow/*"
+        ],
+        "url": "https://homey.app/api/oembed/flow",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "iHeartRadio",
+    "provider_url": "https://www.iheart.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.iheart.com/podcast/*/*"
+        ],
+        "url": "https://www.iheart.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Jovian",
+    "provider_url": "https://jovian.ml/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://jovian.ml/*",
+          "https://jovian.ml/viewer*",
+          "https://*.jovian.ml/*"
+        ],
+        "url": "https://api.jovian.ai/oembed.json",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Kirim.Email",
+    "provider_url": "https://kirim.email/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://halaman.email/form/*",
+          "https://aplikasi.kirim.email/form/*"
+        ],
+        "url": "https://halaman.email/service/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "MediaLab",
+    "provider_url": "https://www.medialab.co/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.medialab.app/share/watch/*",
+          "https://*.medialab.co/share/watch/*",
+          "https://*.medialab.app/share/social/*",
+          "https://*.medialab.co/share/social/*",
+          "https://*.medialab.app/share/embed/*",
+          "https://*.medialab.co/share/embed/*"
+        ],
+        "url": "https://*.medialab.(co|app)/api/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Mermaid Ink",
+    "provider_url": "https://mermaid.ink",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://mermaid.ink/img/*",
+          "https://mermaid.ink/svg/*"
+        ],
+        "url": "https://mermaid.ink/services/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Microlink",
+    "provider_url": "http://api.microlink.io",
+    "endpoints": [
+      {
+        "url": "https://api.microlink.io"
+      }
+    ]
+  },
+  {
+    "provider_name": "TED",
+    "provider_url": "https://www.ted.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://ted.com/talks/*",
+          "https://ted.com/talks/*",
+          "https://www.ted.com/talks/*"
+        ],
+        "url": "https://www.ted.com/services/v1/oembed.{format}",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "UnivParis1.Pod",
+    "provider_url": "https://mediatheque.univ-paris1.fr/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://mediatheque.univ-paris1.fr/video/*"
+        ],
+        "url": "https://mediatheque.univ-paris1.fr/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Viously",
+    "provider_url": "https://www.viously.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.viously.com/*/*"
+        ],
+        "url": "https://www.viously.com/oembed",
+        "discovery": true,
+        "formats": [
+          "json",
+          "xml"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Vizydrop",
+    "provider_url": "https://vizydrop.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://vizydrop.com/shared/*"
+        ],
+        "url": "https://vizydrop.com/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Xpression",
+    "provider_url": "https://web.xpression.jp",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://web.xpression.jp/video/*"
+        ],
+        "url": "https://web.xpression.jp/api/oembed",
+        "formats": [
+          "json",
+          "xml"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "ZingSoft",
+    "provider_url": "https://app.zingsoft.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.zingsoft.com/embed/*",
+          "https://app.zingsoft.com/view/*"
+        ],
+        "url": "https://app.zingsoft.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Zoomable",
+    "provider_url": "https://zoomable.ca/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://srv2.zoomable.ca/viewer.php*"
+        ],
+        "url": "https://srv2.zoomable.ca/oembed",
+        "discovery": true
       }
     ]
   }

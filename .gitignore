@@ -9,8 +9,9 @@ logs
 
 node_modules
 coverage
+coverage.lcov
 .nyc_output
 
 yarn.lock
-coverage.lcov
+pnpm-lock.yaml
 package-lock.json

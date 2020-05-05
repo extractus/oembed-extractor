@@ -3,15 +3,16 @@
  * @ndaidong
  */
 
-/* eslint-disable camelcase */
+import {readFileSync} from 'fs';
+import {parse} from 'url';
 
+import nock from 'nock';
 import {test} from 'tap';
 
 import {
   hasProperty,
   isObject,
   isString,
-  isNumber,
   isFunction,
 } from 'bellajs';
 
@@ -51,6 +52,26 @@ const PhotoTypeKeys = [
   ...required,
 ];
 
+(() => {
+  const txt = readFileSync('./tests/data/fetched.json', 'utf8');
+  const entries = JSON.parse(txt);
+  entries.forEach((entry) => {
+    const {link, text} = entry;
+    const {
+      protocol,
+      host,
+      path,
+    } = parse(link);
+    nock(`${protocol}//${host}`).get(path).reply(200, text, {
+      'Content-Type': 'text/html',
+    });
+  });
+})();
+
+const richSamples = [
+  'https://www.youtube.com/watch?v=8jPQjjsBbIc',
+];
+
 const hasRichKeys = (o) => {
   return RichTypeKeys.every((k) => {
     return hasProperty(o, k);
@@ -78,51 +99,31 @@ const hasPhotoKeys = (o) => {
 (() => {
   test('Testing hasProvider', (t) => {
     t.notOk(hasProvider('fantasticfreefoodforyou.de'));
-    t.ok(hasProvider('https://www.deviantart.com/joeyjazz/art/SP-Ocean-Eclipse-781257606'));
-    t.ok(hasProvider('https://www.facebook.com/alternate.de/photos/a.391014166661/10156375231596662/?type=3&theater'));
-    t.ok(hasProvider('https://www.ted.com/talks/monique_w_morris_why_black_girls_are_targeted_for_punishment_at_school_and_how_to_change_that?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare'));
-    t.ok(hasProvider('https://www.kijk.nl/video/7UFNzXmSKSn'));
-    t.ok(hasProvider('https://www.kijk.nl/net5/hotelrules/videos/7UFNzXmSKSn/komen-ze-er-zonder-kleerscheuren-vanaf'));
-    t.ok(hasProvider('https://www.instagram.com/farid_rueda/p/Bx-0nVPCe2c/?igshid=18g4fpv1khfug'));
+    richSamples.every((url) => {
+      t.comment(`There is provider for "${url}"`);
+      return t.ok(hasProvider(url));
+    });
     t.end();
   });
 })();
 
 (() => {
   test('Testing isValidUrl', (t) => {
+    t.notOk(hasProvider('fantasticfreefoodforyou.de'));
+    richSamples.every((sample) => {
+      t.comment('Sample is ' + sample);
+      return t.ok(isValidURL(sample));
+    });
     t.end();
   });
 })();
 
 (() => {
-  const richSamples = [
-    'https://www.youtube.com/watch?v=8jPQjjsBbIc',
-    'https://www.youtube.com/watch?v=cc-elFcs96Y',
-    'https://youtu.be/I8u2NdWuaYs',
-    'https://www.ted.com/talks/monique_w_morris_why_black_girls_are_targeted_for_punishment_at_school_and_how_to_change_that?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare',
-    'https://www.instagram.com/p/Bx9h8mdpMPF/?utm_source=ig_web_button_share_sheet',
-    'https://www.facebook.com/alternate.de/photos/a.391014166661/10156375231596662/?type=3&theater',
-    'https://www.facebook.com/RocketBeansTV/videos/364684367488603/',
-    'https://twitter.com/tribandtweets/status/1133308311917481984',
-    'https://twitter.com/NetflixDE/status/1133310428476530688',
-    'https://twitter.com/officialmcafee/status/1133280322039291905',
-    'https://www.kijk.nl/video/7UFNzXmSKSn',
-    'https://www.kijk.nl/net5/hotelrules/videos/7UFNzXmSKSn/komen-ze-er-zonder-kleerscheuren-vanaf',
-    'https://www.instagram.com/farid_rueda/p/Bx-0nVPCe2c/?igshid=18g4fpv1khfug',
-  ];
-
   const photoSamples = [
     'http://fav.me/dcx5286',
     'https://www.deviantart.com/joeyjazz/art/SP-Ocean-Eclipse-781257606',
     'https://flic.kr/p/5QEkmq',
   ];
-
-  const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
-  const sizes = {
-    maxheight: 250,
-    maxwidth: 250,
-  };
-
 
   test('Testing all goodSamples for valid URL', {timeout: 15000}, (t) => {
     richSamples.every((sample) => {
@@ -180,20 +181,6 @@ const hasPhotoKeys = (o) => {
 
   richSamples.map(testRichOne);
   photoSamples.map(testPhotoOne);
-
-  test(`Testing with .extract(${url},${JSON.stringify(sizes)})`, {timeout: 15000}, async (t) => {
-    try {
-      const art = await extract(url, sizes);
-      t.comment('(Call returned result is R, so:)');
-      t.ok(/width="250"/.test(art.html), 'R.html provides correct width param.');
-      t.ok(isNumber(art.width), 'R.width not empty.');
-      t.ok(isNumber(art.height), 'R.height not empty.');
-    } catch (e) {
-      t.error(e);
-    } finally {
-      t.end();
-    }
-  });
 })();
 
 (() => {

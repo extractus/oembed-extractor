@@ -13,7 +13,7 @@ const {
 } = require('path');
 
 
-const where = './test/specs';
+const where = './tests/specs';
 if (existsSync(where)) {
   readdirSync(where).forEach((file) => {
     if (extname(file) === '.js') {
