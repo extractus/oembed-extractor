@@ -14,8 +14,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "tap tests/start.js --coverage --reporter=spec",
+    "test": "jest --passWithNoTests --detectOpenHandles --unhandled-rejections=strict --coverage=true",
     "eval": "node tests/run",
     "sync": "node sync",
     "reset": "node reset"
@@ -26,6 +25,7 @@
   "devDependencies": {
     "bellajs": "^8.0.2",
     "eslint-config-goes": "^1.1.8",
+    "jest": "^26.0.1",
     "nock": "^12.0.3",
     "tap": "^14.10.7"
   },
