@@ -10,3 +10,4 @@ before_script:
 script:
   - npm list || true
   - npm test
+  - cat coverage/lcov.info | coveralls
