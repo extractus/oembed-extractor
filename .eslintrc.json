@@ -1,5 +1,8 @@
 {
   "extends": "eslint-config-goes",
+  "env": {
+    "jest": true
+  },
   "rules": {
     "require-jsdoc": 0
   }
