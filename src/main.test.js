@@ -2,7 +2,6 @@
 
 const {
   hasProperty,
-  isFunction,
 } = require('bellajs');
 
 const {
@@ -76,6 +75,37 @@ const hasPhotoKeys = (o) => {
 
   badSamples.map(testBadOne);
 })();
+
+
+test(`test extract YouTube link`, async () => {
+  try {
+    const url = 'https://www.youtube.com/watch?v=InVCZWzxpN4';
+    const result = await extract(url);
+    expect(hasRichKeys(result)).toBe(true);
+  } catch (err) {
+    expect(err instanceof Error).toBe(null);
+  }
+});
+
+test(`test extract Flickr link`, async () => {
+  try {
+    const url = 'https://flic.kr/p/2iYctUr';
+    const result = await extract(url);
+    expect(hasPhotoKeys(result)).toBe(true);
+  } catch (err) {
+    expect(err instanceof Error).toBe(null);
+  }
+});
+
+test(`test extract Flickr link with params`, async () => {
+  try {
+    const url = 'https://flic.kr/p/2iYctUr';
+    const result = await extract(url, {maxwidth: 640, maxheight: 480});
+    expect(hasPhotoKeys(result)).toBe(true);
+  } catch (err) {
+    expect(err instanceof Error).toBe(null);
+  }
+});
 
 test(`test .hasProvider() method`, () => {
   expect(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU')).toBe(true);

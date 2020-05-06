@@ -82,6 +82,9 @@ git clone https://github.com/ndaidong/oembed-parser.git
 cd oembed-parser
 npm install
 npm test
+
+# quick evaluation
+npm run eval {URL_TO_PARSE_OEMBED}
 ```
 
 # License
