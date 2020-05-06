@@ -10,7 +10,7 @@
   "author": "@ndaidong",
   "main": "./index.js",
   "engines": {
-    "node": ">= 8.6"
+    "node": ">= 10.14.2"
   },
   "scripts": {
     "lint": "eslint .",
