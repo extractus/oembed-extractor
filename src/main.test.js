@@ -1,10 +1,6 @@
 // main
 
 const {
-  hasProperty,
-} = require('bellajs');
-
-const {
   extract,
   hasProvider,
   setProviderList,
@@ -35,6 +31,10 @@ const PhotoTypeKeys = [
   ...optional,
   ...required,
 ];
+
+const hasProperty = (obj, key) => {
+  return Object.prototype.hasOwnProperty.call(obj, key);
+};
 
 const hasRichKeys = (o) => {
   return RichTypeKeys.every((k) => {
@@ -68,7 +68,7 @@ const hasPhotoKeys = (o) => {
       try {
         await extract(url);
       } catch (err) {
-        expect(err instanceof Error).toBe(true);
+        expect(err).toBeTruthy();
       }
     });
   };
@@ -83,7 +83,7 @@ test(`test extract YouTube link`, async () => {
     const result = await extract(url);
     expect(hasRichKeys(result)).toBe(true);
   } catch (err) {
-    expect(err instanceof Error).toBe(null);
+    expect(err).toBe(null);
   }
 });
 
@@ -93,7 +93,7 @@ test(`test extract Flickr link`, async () => {
     const result = await extract(url);
     expect(hasPhotoKeys(result)).toBe(true);
   } catch (err) {
-    expect(err instanceof Error).toBe(null);
+    expect(err).toBe(null);
   }
 });
 
@@ -103,7 +103,7 @@ test(`test extract Flickr link with params`, async () => {
     const result = await extract(url, {maxwidth: 640, maxheight: 480});
     expect(hasPhotoKeys(result)).toBe(true);
   } catch (err) {
-    expect(err instanceof Error).toBe(null);
+    expect(err).toBe(null);
   }
 });
 
