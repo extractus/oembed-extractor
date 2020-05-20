@@ -1,5 +1,7 @@
 # oembed-parser
 
+Extract eEmbed content from given URL.
+
 [![NPM](https://badge.fury.io/js/oembed-parser.svg)](https://badge.fury.io/js/oembed-parser)
 [![Build Status](https://travis-ci.org/ndaidong/oembed-parser.svg?branch=master)](https://travis-ci.org/ndaidong/oembed-parser)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/oembed-parser/badge.svg?branch=master&updated=1)](https://coveralls.io/github/ndaidong/oembed-parser?branch=master)
