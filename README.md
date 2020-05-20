@@ -6,6 +6,7 @@
 
 ## Demo
 
+- [Give it a try!](https://ndaidong.github.io/oembed-parser-demo)
 - [Example FaaS](https://us-central1-technews-251304.cloudfunctions.net/oembed-parser?url=https://www.youtube.com/watch?v=8jPQjjsBbIc)
 
 
