@@ -2,12 +2,27 @@
 // Project: https://www.npmjs.com/package/oembed-parser
 // Definitions by: BendingBender <https://github.com/BendingBender>
 //                 CodeBast4rd <https://github.com/CodeBast4rd>
+//                 Marc McIntosh <https://github.com/MarcMcIntosh>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 export function extract(url: string, params?: any): Promise<OembedData>;
 
 export function hasProvider(url: string): boolean;
 
+export function setProviderList(providers: Provider[]): void
+
+export interface Endpoint {
+    schemes?: string[];
+    url: string;
+    formats?: string[]; // "json" "xml"
+    discovery?: boolean;
+}
+  
+export interface Provider {
+    "provider_name": string;
+    "provider_url": string;
+    "endpoints": Endpoint[];
+}
 /**
  * Basic data structure of every oembed response see https://oembed.com/
  */
