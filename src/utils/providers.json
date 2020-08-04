@@ -601,7 +601,9 @@
           "https://*.docdroid.net/*",
           "http://*.docdroid.net/*",
           "https://docdro.id/*",
-          "http://docdro.id/*"
+          "http://docdro.id/*",
+          "https://*.docdroid.com/*",
+          "http://*.docdroid.com/*"
         ],
         "url": "https://www.docdroid.net/api/oembed",
         "formats": [
@@ -2238,7 +2240,8 @@
       {
         "schemes": [
           "http://soundcloud.com/*",
-          "https://soundcloud.com/*"
+          "https://soundcloud.com/*",
+          "https://soundcloud.app.goog.gl/*"
         ],
         "url": "https://soundcloud.com/oembed"
       }
@@ -2510,33 +2513,15 @@
     ]
   },
   {
-    "provider_name": "Twitch",
-    "provider_url": "https://www.twitch.tv",
-    "endpoints": [
-      {
-        "schemes": [
-          "http://clips.twitch.tv/*",
-          "https://clips.twitch.tv/*",
-          "http://www.twitch.tv/*",
-          "https://www.twitch.tv/*",
-          "http://twitch.tv/*",
-          "https://twitch.tv/*"
-        ],
-        "url": "https://api.twitch.tv/v4/oembed",
-        "formats": [
-          "json"
-        ]
-      }
-    ]
-  },
-  {
     "provider_name": "Twitter",
     "provider_url": "http://www.twitter.com/",
     "endpoints": [
       {
         "schemes": [
           "https://twitter.com/*/status/*",
-          "https://*.twitter.com/*/status/*"
+          "https://*.twitter.com/*/status/*",
+          "https://twitter.com/*/moments/*",
+          "https://*.twitter.com/*/moments/*"
         ],
         "url": "https://publish.twitter.com/oembed"
       }
@@ -2705,7 +2690,8 @@
     "endpoints": [
       {
         "schemes": [
-          "https://players.vidmizer.com/*"
+          "https://players.vidmizer.com/*",
+          "https://players-cdn-v2.vidmizer.com/*"
         ],
         "url": "https://app-v2.vidmizer.com/api/oembed",
         "discovery": true
@@ -2721,7 +2707,10 @@
           "http://embed.vidyard.com/*",
           "http://play.vidyard.com/*",
           "http://share.vidyard.com/*",
-          "http://*.hubs.vidyard.com/*"
+          "http://*.hubs.vidyard.com/*",
+          "http://*.vidyard.com/*",
+          "https://*.vidyard.com/*",
+          "https://*.hubs.vidyard.com/*"
         ],
         "url": "https://api.vidyard.com/dashboard/v1.1/oembed",
         "discovery": true
@@ -3052,7 +3041,8 @@
       {
         "schemes": [
           "https://audioboom.com/channel/*",
-          "https://audioboom.com/posts/*"
+          "https://audioboom.com/posts/*",
+          "https://audioboom.com/channels/*"
         ],
         "url": "https://audioboom.com/publishing/oembed/v4.{format}",
         "formats": [
@@ -3422,6 +3412,287 @@
           "https://srv2.zoomable.ca/viewer.php*"
         ],
         "url": "https://srv2.zoomable.ca/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "AxiomNinja",
+    "provider_url": "http://axiom.ninja",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://axiom.ninja/*"
+        ],
+        "url": "http://axiom.ninja/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Chainflix",
+    "provider_url": "https://chainflix.net",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://chainflix.net/video/*",
+          "https://chainflix.net/video/embed/*",
+          "https://*.chainflix.net/video/*",
+          "https://*.chainflix.net/video/embed/*"
+        ],
+        "url": "https://beta.chainflix.net/video/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "CoCo Corp",
+    "provider_url": "https://ilovecoco.video",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.ilovecoco.video/*/embed"
+        ],
+        "url": "https://app.ilovecoco.video/api/oembed.{format}",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Datawrapper",
+    "provider_url": "http://www.datawrapper.de",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://datawrapper.dwcdn.net/*"
+        ],
+        "url": "https://api.datawrapper.de/v3/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Embedery",
+    "provider_url": "https://embedery.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://embedery.com/widget/*"
+        ],
+        "url": "https://embedery.com/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "hihaho",
+    "provider_url": "https://www.hihaho.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://player.hihaho.com/*"
+        ],
+        "url": "https://player.hihaho.com/services/oembed/*",
+        "formats": [
+          "json",
+          "xml"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Knowledge Pad",
+    "provider_url": "https://knowledgepad.co/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://knowledgepad.co/#/knowledge/*"
+        ],
+        "url": "https://api.spoonacular.com/knowledge/oembed",
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "LeMans.Pod",
+    "provider_url": "https://umotion-test.univ-lemans.fr/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://umotion-test.univ-lemans.fr/video/*"
+        ],
+        "url": "https://umotion-test.univ-lemans.fr/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Microsoft Stream",
+    "provider_url": "https://stream.microsoft.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.microsoftstream.com/video/*",
+          "https://*.microsoftstream.com/channel/*"
+        ],
+        "url": "https://web.microsoftstream.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Odesli (formerly Songlink)",
+    "provider_url": "https://odesli.co",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://song.link/*",
+          "https://album.link/*",
+          "https://artist.link/*",
+          "https://playlist.link/*",
+          "https://pods.link/*",
+          "https://mylink.page/*",
+          "https://odesli.co/*"
+        ],
+        "url": "https://song.link/oembed",
+        "formats": [
+          "json"
+        ],
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Padlet",
+    "provider_url": "https://padlet.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://padlet.com/*"
+        ],
+        "url": "https://padlet.com/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Pinpoll",
+    "provider_url": "https://www.pinpoll.com/products/tools",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://tools.pinpoll.com/embed/*"
+        ],
+        "url": "https://tools.pinpoll.com/oembed",
+        "discovery": true,
+        "formats": [
+          "json",
+          "xml"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Qualifio",
+    "provider_url": "https://qualifio.com/",
+    "endpoints": [
+      {
+        "url": "https://oembed.qualifio.com/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "RadioPublic",
+    "provider_url": "https://radiopublic.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://play.radiopublic.com/*",
+          "https://radiopublic.com/*",
+          "https://www.radiopublic.com/*",
+          "http://play.radiopublic.com/*",
+          "http://radiopublic.com/*",
+          "http://www.radiopublic.com/*",
+          "https://*.radiopublic.com/*'"
+        ],
+        "url": "https://oembed.radiopublic.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Runkit",
+    "provider_url": "https://runkit.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://embed.runkit.com/*,",
+          "https://embed.runkit.com/*,"
+        ],
+        "url": "https://embed.runkit.com/oembed",
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "TikTok",
+    "provider_url": "http://www.tiktok.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.tiktok.com/*/video/*"
+        ],
+        "url": "https://www.tiktok.com/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Wave.video",
+    "provider_url": "https://wave.video",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://watch.wave.video/*",
+          "https://embed.wave.video/*"
+        ],
+        "url": "https://embed.wave.video/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Wokwi",
+    "provider_url": "https://wokwi.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://wokwi.com/share/*"
+        ],
+        "url": "https://wokwi.com/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Zeplin",
+    "provider_url": "https://zeplin.io",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.zeplin.io/project/*/screen/*",
+          "https://app.zeplin.io/project/*/screen/*/version/*",
+          "https://app.zeplin.io/project/*/styleguide/components?coid=*",
+          "https://app.zeplin.io/styleguide/*/components?coid=*"
+        ],
+        "url": "https://app.zeplin.io/embed",
         "discovery": true
       }
     ]
