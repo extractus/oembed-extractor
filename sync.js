@@ -15,6 +15,10 @@ const backup = './src/utils/providers.backup.json';
 
 const providerList = require(target);
 
+const blockedProviders = [
+  'Twitch',
+];
+
 const findOne = (name) => {
   const matches = providerList.filter((p) => {
     return name === p.provider_name;
@@ -61,7 +65,9 @@ const merge = (data) => {
     JSON.stringify(providerList, undefined, 2),
     'utf8'
   );
-  data.forEach((item) => {
+  data.filter(({provider_name}) => {
+    return !blockedProviders.includes(provider_name);
+  }).forEach((item) => {
     const {
       provider_name,
       endpoints,
