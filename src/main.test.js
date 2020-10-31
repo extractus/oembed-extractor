@@ -32,6 +32,13 @@ const PhotoTypeKeys = [
   ...required,
 ];
 
+const InstagramKeys = [
+  'html',
+  'width',
+  ...optional,
+  ...required,
+];
+
 const hasProperty = (obj, key) => {
   return Object.prototype.hasOwnProperty.call(obj, key);
 };
@@ -44,6 +51,12 @@ const hasRichKeys = (o) => {
 
 const hasPhotoKeys = (o) => {
   return PhotoTypeKeys.every((k) => {
+    return hasProperty(o, k);
+  });
+};
+
+const hasInstagramKeys = (o) => {
+  return InstagramKeys.every((k) => {
     return hasProperty(o, k);
   });
 };
@@ -106,6 +119,18 @@ test(`test extract Flickr link with params`, async () => {
     expect(err).toBe(null);
   }
 });
+
+
+test(`test extract Instagram link`, async () => {
+  try {
+    const url = 'https://www.instagram.com/p/ic7kRDqOlt/';
+    const result = await extract(url);
+    expect(hasInstagramKeys(result)).toBe(true);
+  } catch (err) {
+    expect(err).toBe(null);
+  }
+});
+
 
 test(`test .hasProvider() method`, () => {
   expect(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU')).toBe(true);

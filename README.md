@@ -3,8 +3,15 @@
 Extract eEmbed content from given URL.
 
 [![NPM](https://badge.fury.io/js/oembed-parser.svg)](https://badge.fury.io/js/oembed-parser)
-[![Build Status](https://travis-ci.org/ndaidong/oembed-parser.svg?branch=master)](https://travis-ci.org/ndaidong/oembed-parser)
-[![Coverage Status](https://coveralls.io/repos/github/ndaidong/oembed-parser/badge.svg?branch=master&updated=1)](https://coveralls.io/github/ndaidong/oembed-parser?branch=master)
+[![Build Status](https://travis-ci.org/ndaidong/oembed-parser.svg)](https://travis-ci.org/ndaidong/oembed-parser)
+[![Coverage Status](https://coveralls.io/repos/github/ndaidong/oembed-parser/badge.svg)](https://coveralls.io/github/ndaidong/oembed-parser)
+
+
+### Important note:
+
+- [Changes with Instagram](#changes-with-instagram)
+
+
 
 ## Demo
 
@@ -77,9 +84,27 @@ For the expected format, see the
 [default list](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
 
 
-#### Provider list
+### Provider list
 
 List of resource providers is a clone of [oembed.com](http://oembed.com/providers.json) and available [here](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
+
+
+## Changes with Instagram
+
+Since October 24 2020, Facebook have deprecated their legacy urls and applied a new Facebook oEmbed endpoints. Please update your `oembed-parser` version to v1.4.2 to be able to extract Instagram links.
+
+Technically, now we have to use Facebook Graph API, with the access token from a valid and live Facebook app. By default, `oembed-parser` build Graph API endpoint using a pre-existing access token. Althrough it should work in almost cases. However, we recommend to add your own ones.
+
+
+```
+export FACEBOOK_APP_ID=your_app_id
+export FACEBOOK_CLIENT_TOKEN=your_client_token
+
+```
+
+For more info, please refer:
+
+- [Facebook oEmbed](https://developers.facebook.com/docs/plugins/oembed)
 
 
 ## Test
