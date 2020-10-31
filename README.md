@@ -6,6 +6,13 @@ Extract eEmbed content from given URL.
 [![Build Status](https://travis-ci.org/ndaidong/oembed-parser.svg)](https://travis-ci.org/ndaidong/oembed-parser)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/oembed-parser/badge.svg)](https://coveralls.io/github/ndaidong/oembed-parser)
 
+
+### Important note:
+
+- [Changes with Instagram](#changes-with-instagram)
+
+
+
 ## Demo
 
 - [Give it a try!](https://ndaidong.github.io/oembed-parser-demo)
