@@ -107,6 +107,18 @@ test(`test extract Flickr link with params`, async () => {
   }
 });
 
+
+test(`test extract Instagram link`, async () => {
+  try {
+    const url = 'https://www.instagram.com/p/ic7kRDqOlt/';
+    const result = await extract(url);
+    expect(hasRichKeys(result)).toBe(true);
+  } catch (err) {
+    expect(err).toBe(null);
+  }
+});
+
+
 test(`test .hasProvider() method`, () => {
   expect(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU')).toBe(true);
   expect(hasProvider('https://trello.com/b/BO3bg7yn/notes')).toBe(false);
