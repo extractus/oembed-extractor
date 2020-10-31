@@ -11,8 +11,7 @@ const getInstGraphUrl = (query) => {
   const env = process.env || {};
   const appId = env.FACEBOOK_APP_ID || '365101066946402';
   const clientToken = env.FACEBOOK_CLIENT_TOKEN || 'a56861eb5b787f9e9a18e4e09ea5c873';
-  const accessToken = `${appId}|${clientToken}`;
-  return `${baseUrl}?${query}&access_token=${accessToken}`;
+  return `${baseUrl}?${query}&access_token=${appId}|${clientToken}`;
 };
 
 const getRegularUrl = (query, basseUrl) => {
