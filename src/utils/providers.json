@@ -3696,5 +3696,130 @@
         "discovery": true
       }
     ]
+  },
+  {
+    "provider_name": "Lumiere",
+    "provider_url": "https://latd.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.lumiere.is/v/*"
+        ],
+        "url": "https://admin.lumiere.is/api/services/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "NoPaste",
+    "provider_url": "https://nopaste.ml",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://nopaste.ml/*"
+        ],
+        "url": "https://oembed.nopaste.ml",
+        "discovery": false
+      }
+    ]
+  },
+  {
+    "provider_name": "Observable",
+    "provider_url": "https://observablehq.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://observablehq.com/@*/*",
+          "https://observablehq.com/d/*",
+          "https://observablehq.com/embed/*"
+        ],
+        "url": "https://api.observablehq.com/oembed",
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "rcvis",
+    "provider_url": "https://www.rcvis.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.rcvis.com/v/*",
+          "https://www.rcvis.com/visualize=*",
+          "https://www.rcvis.com/ve/*",
+          "https://www.rcvis.com/visualizeEmbedded=*"
+        ],
+        "url": "https://animatron.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Saooti",
+    "provider_url": "https://octopus.saooti.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://octopus.saooti.com/main/pub/podcast/*"
+        ],
+        "url": "https://octopus.saooti.com/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Subscribi",
+    "provider_url": "https://subscribi.io/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://subscribi.io/api/oembed*"
+        ],
+        "url": "https://subscribi.io/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "TourHero",
+    "provider_url": "http://www.tourhero.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.tourhero.com/*"
+        ],
+        "url": "https://oembed.tourhero.com/",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Tumblr",
+    "provider_url": "https://www.tumblr.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.tumblr.com/post/*"
+        ],
+        "url": "https://www.tumblr.com/oembed/1.0"
+      }
+    ]
+  },
+  {
+    "provider_name": "Wolfram Cloud",
+    "provider_url": "https://www.wolframcloud.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.wolframcloud.com/*"
+        ],
+        "url": "https://www.wolframcloud.com/oembed",
+        "discovery": true
+      }
+    ]
   }
 ]
