@@ -83,7 +83,8 @@ custom providers.
 For the expected format, see the
 [default list](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
 
-#### Provider list
+
+### Provider list
 
 List of resource providers is a clone of [oembed.com](http://oembed.com/providers.json) and available [here](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
 
