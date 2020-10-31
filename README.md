@@ -83,8 +83,12 @@ custom providers.
 For the expected format, see the
 [default list](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
 
+#### Provider list
 
-### Changes with Instagram
+List of resource providers is a clone of [oembed.com](http://oembed.com/providers.json) and available [here](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
+
+
+## Changes with Instagram
 
 Since October 24 2020, Facebook have deprecated their legacy urls and applied a new Facebook oEmbed endpoints. Please update your `oembed-parser` version to v1.4.2 to be able to extract Instagram links.
 
@@ -100,12 +104,6 @@ export FACEBOOK_CLIENT_TOKEN=your_client_token
 For more info, please refer:
 
 - [Facebook oEmbed](https://developers.facebook.com/docs/plugins/oembed)
-
-
-
-### Provider list
-
-List of resource providers is a clone of [oembed.com](http://oembed.com/providers.json) and available [here](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
 
 
 ## Test
