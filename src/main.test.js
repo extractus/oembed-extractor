@@ -86,7 +86,7 @@ const hasInstagramKeys = (o) => {
     });
   };
 
-  badSamples.map(testBadOne);
+  return badSamples.map(testBadOne);
 })();
 
 
