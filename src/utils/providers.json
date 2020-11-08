@@ -3645,7 +3645,8 @@
     "endpoints": [
       {
         "schemes": [
-          "https://www.tiktok.com/*/video/*"
+          "https://www.tiktok.com/*/video/*",
+          "https://m.tiktok.com/v/*"
         ],
         "url": "https://www.tiktok.com/oembed"
       }
