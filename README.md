@@ -5,7 +5,7 @@ Extract eEmbed content from given URL.
 [![NPM](https://badge.fury.io/js/oembed-parser.svg)](https://badge.fury.io/js/oembed-parser)
 [![CI test](https://github.com/ndaidong/oembed-parser/workflows/ci-test/badge.svg)](https://github.com/ndaidong/oembed-parser/actions)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/oembed-parser/badge.svg)](https://coveralls.io/github/ndaidong/oembed-parser)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ndaidong_oembed-parser&metric=alert_status)](https://sonarcloud.io/dashboard?id=ndaidong_oembed-parser)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ndaidong_oembed-parser)](https://sonarcloud.io/dashboard?id=ndaidong_oembed-parser)
 
 
 ### Important note:
