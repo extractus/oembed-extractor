@@ -43,7 +43,6 @@ const fetchEmbed = async (url, provider, params = {}) => {
   const query = queries.join('&');
 
   const link = isInstagram(provider) ? getInstGraphUrl(query) : getRegularUrl(query, provider.url);
-  console.log(link);
   const res = await fetch(link, {mode: 'no-cors'});
   const json = await res.json();
   json.provider_name = provider_name; // eslint-disable-line camelcase
