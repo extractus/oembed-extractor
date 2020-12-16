@@ -3254,7 +3254,10 @@
         "schemes": [
           "https://jovian.ml/*",
           "https://jovian.ml/viewer*",
-          "https://*.jovian.ml/*"
+          "https://*.jovian.ml/*",
+          "https://jovian.ai/*",
+          "https://jovian.ai/viewer*",
+          "https://*.jovian.ai/*"
         ],
         "url": "https://api.jovian.ai/oembed.json",
         "discovery": true
@@ -3646,6 +3649,7 @@
       {
         "schemes": [
           "https://www.tiktok.com/*/video/*",
+          "https://www.tiktok.com/*/video/*",
           "https://m.tiktok.com/v/*"
         ],
         "url": "https://www.tiktok.com/oembed"
@@ -3819,6 +3823,44 @@
           "https://*.wolframcloud.com/*"
         ],
         "url": "https://www.wolframcloud.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "ActBlue",
+    "provider_url": "https://secure.actblue.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://secure.actblue.com/donate/*"
+        ],
+        "url": "https://secure.actblue.com/cf/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "kmdr",
+    "provider_url": "https://kmdr.sh",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.kmdr.sh/h/*",
+          "https://app.kmdr.sh/history/*"
+        ],
+        "url": "https://api.kmdr.sh/services/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "uppy",
+    "provider_url": "https://uppy.jp",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.uppy.jp/_shares/video/*"
+        ],
+        "url": "https://api.uppy.jp/v1/oembed",
         "discovery": true
       }
     ]
