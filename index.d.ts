@@ -40,7 +40,7 @@ export interface OembedData {
     /** The url of the resource provider. */
     provider_url?: string;
     /** The suggested cache lifetime for this resource, in seconds. Consumers may choose to use this value or not. */
-    cache_age?: string;
+    cache_age?: string | number;
     /**
      * A URL to a thumbnail image representing the resource.
      * The thumbnail must respect any maxwidth and maxheight parameters.
