@@ -4,6 +4,7 @@ const {
   isValidURL,
   findProvider,
   fetchEmbed,
+  createLink,
   providersFromList,
 } = require('./utils');
 
@@ -22,6 +23,18 @@ const extract = async (url, params = {}) => {
   return data;
 };
 
+const getLink = (url, params = {}) => {
+  if (!isValidURL(url)) {
+    throw new Error('Invalid input URL');
+  }
+  const p = findProvider(url, providers);
+  if (!p) {
+    throw new Error(`No provider found with given url "${url}"`);
+  }
+  const data = createLink(url, p, params);
+  return data;
+};
+
 const hasProvider = (url) => {
   return findProvider(url, providers) !== null;
 };
@@ -32,6 +45,7 @@ const setProviderList = (list) => {
 
 module.exports = {
   extract,
+  getLink,
   hasProvider,
   setProviderList,
 };

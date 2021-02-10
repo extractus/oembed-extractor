@@ -7,6 +7,8 @@
 
 export function extract(url: string, params?: any): Promise<OembedData>;
 
+export function getLink(url: string, params?: any): string;
+
 export function hasProvider(url: string): boolean;
 
 export function setProviderList(providers: Provider[]): void
@@ -17,7 +19,7 @@ export interface Endpoint {
     formats?: string[]; // "json" "xml"
     discovery?: boolean;
 }
-  
+
 export interface Provider {
     "provider_name": string;
     "provider_url": string;
