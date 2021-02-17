@@ -31,8 +31,7 @@ const getLink = (url, params = {}) => {
   if (!p) {
     throw new Error(`No provider found with given url "${url}"`);
   }
-  const data = createLink(url, p, params);
-  return data;
+  return createLink(url, p, params);
 };
 
 const hasProvider = (url) => {
