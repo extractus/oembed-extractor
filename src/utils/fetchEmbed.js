@@ -37,8 +37,7 @@ const createLink = (url, provider, params = {}) => {
   }
   const query = queries.join('&');
 
-  const link = isInstagram(provider) ? getInstGraphUrl(query) : getRegularUrl(query, provider.url);
-  return link;
+  return isInstagram(provider) ? getInstGraphUrl(query) : getRegularUrl(query, provider.url);
 };
 
 const fetchEmbed = async (url, provider, params = {}) => {

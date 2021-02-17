@@ -19,8 +19,7 @@ const extract = async (url, params = {}) => {
   if (!p) {
     throw new Error(`No provider found with given url "${url}"`);
   }
-  const data = await fetchEmbed(url, p, params);
-  return data;
+  return fetchEmbed(url, p, params);
 };
 
 const getLink = (url, params = {}) => {
