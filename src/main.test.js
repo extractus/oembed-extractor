@@ -92,7 +92,7 @@ const hasInstagramKeys = (o) => {
 
 test(`test extract YouTube link`, async () => {
   try {
-    const url = 'https://www.youtube.com/watch?v=InVCZWzxpN4';
+    const url = 'https://www.youtube.com/watch?v=ciS8aCrX-9s';
     const result = await extract(url);
     expect(hasRichKeys(result)).toBe(true);
   } catch (err) {
