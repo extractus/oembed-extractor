@@ -133,7 +133,7 @@ test(`test extract Instagram link`, async () => {
 
 
 test(`test .hasProvider() method`, () => {
-  expect(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU')).toBe(true);
+  expect(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s')).toBe(true);
   expect(hasProvider('https://trello.com/b/BO3bg7yn/notes')).toBe(false);
 });
 
@@ -154,5 +154,5 @@ test(`test .setProviderList() method`, () => {
   ];
   setProviderList(customProviderOnly);
   expect(hasProvider('http://www.example.org/media/abcdef')).toBe(true);
-  expect(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU')).toBe(false);
+  expect(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s')).toBe(false);
 });
