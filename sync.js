@@ -63,7 +63,7 @@ const merge = (data) => {
   writeFileSync(
     backup,
     JSON.stringify(providerList, undefined, 2),
-    'utf8'
+    'utf8',
   );
   data.filter(({provider_name}) => {
     return !blockedProviders.includes(provider_name);
@@ -84,7 +84,7 @@ const merge = (data) => {
   writeFileSync(
     target,
     JSON.stringify(providerList, undefined, 2),
-    'utf8'
+    'utf8',
   );
   console.log(`Providers list has been updated`);
 };

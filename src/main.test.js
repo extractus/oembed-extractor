@@ -92,7 +92,7 @@ const hasInstagramKeys = (o) => {
 
 test(`test extract YouTube link`, async () => {
   try {
-    const url = 'https://www.youtube.com/watch?v=InVCZWzxpN4';
+    const url = 'https://www.youtube.com/watch?v=ciS8aCrX-9s';
     const result = await extract(url);
     expect(hasRichKeys(result)).toBe(true);
   } catch (err) {
@@ -133,7 +133,7 @@ test(`test extract Instagram link`, async () => {
 
 
 test(`test .hasProvider() method`, () => {
-  expect(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU')).toBe(true);
+  expect(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s')).toBe(true);
   expect(hasProvider('https://trello.com/b/BO3bg7yn/notes')).toBe(false);
 });
 
@@ -154,5 +154,5 @@ test(`test .setProviderList() method`, () => {
   ];
   setProviderList(customProviderOnly);
   expect(hasProvider('http://www.example.org/media/abcdef')).toBe(true);
-  expect(hasProvider('https://www.youtube.com/watch?v=zh9NgGf3cxU')).toBe(false);
+  expect(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s')).toBe(false);
 });
