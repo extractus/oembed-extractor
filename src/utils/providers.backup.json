@@ -120,6 +120,19 @@
     ]
   },
   {
+    "provider_name": "AnnieMusic",
+    "provider_url": "https://anniemusic.app",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://anniemusic.app/t/*",
+          "https://anniemusic.app/p/*"
+        ],
+        "url": "https://api.anniemusic.app/api/v1/oembed"
+      }
+    ]
+  },
+  {
     "provider_name": "Apester",
     "provider_url": "https://www.apester.com",
     "endpoints": [
@@ -592,6 +605,18 @@
     ]
   },
   {
+    "provider_name": "Cueup DJ Booking",
+    "provider_url": "https://cueup.io",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://cueup.io/user/*/sounds/*"
+        ],
+        "url": "https://gql.cueup.io/oembed"
+      }
+    ]
+  },
+  {
     "provider_name": "CustomerDB",
     "provider_url": "http://customerdb.com/",
     "endpoints": [
@@ -853,6 +878,20 @@
     ]
   },
   {
+    "provider_name": "Ex.Co",
+    "provider_url": "https://ex.co",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.ex.co/stories/*",
+          "https://www.playbuzz.com/*"
+        ],
+        "url": "https://oembed.ex.co/item",
+        "discovery": false
+      }
+    ]
+  },
+  {
     "provider_name": "Eyrie",
     "provider_url": "https://eyrie.io/",
     "endpoints": [
@@ -881,7 +920,7 @@
           "https://www.facebook.com/questions/*",
           "https://www.facebook.com/notes/*/*/*"
         ],
-        "url": "https://graph.facebook.com/v8.0/oembed_post",
+        "url": "https://graph.facebook.com/v9.0/oembed_post",
         "discovery": false
       },
       {
@@ -890,14 +929,14 @@
           "https://www.facebook.com/video.php?id=*",
           "https://www.facebook.com/video.php?v=*"
         ],
-        "url": "https://graph.facebook.com/v8.0/oembed_video",
+        "url": "https://graph.facebook.com/v9.0/oembed_video",
         "discovery": false
       },
       {
         "schemes": [
           "https://www.facebook.com/*"
         ],
-        "url": "https://graph.facebook.com/v8.0/oembed_page",
+        "url": "https://graph.facebook.com/v9.0/oembed_page",
         "discovery": false
       }
     ]
@@ -1159,6 +1198,33 @@
     ]
   },
   {
+    "provider_name": "Gong",
+    "provider_url": "https://www.gong.io/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.gong.io/call"
+        ],
+        "url": "https://app.gong.io/oembed",
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Grain",
+    "provider_url": "https://grain.co",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://grain.co/highlight/*"
+        ],
+        "url": "http://api.grain.co/_/api/oembed"
+      }
+    ]
+  },
+  {
     "provider_name": "GT Channel",
     "provider_url": "https://gtchannel.com",
     "endpoints": [
@@ -1416,35 +1482,7 @@
           "https://www.instagram.com/tv/*",
           "https://www.instagr.am/tv/*"
         ],
-        "url": "https://api.instagram.com/oembed",
-        "formats": [
-          "json"
-        ]
-      },
-      {
-        "schemes": [
-          "http://instagram.com/*/p/*,",
-          "http://www.instagram.com/*/p/*,",
-          "https://instagram.com/*/p/*,",
-          "https://www.instagram.com/*/p/*,",
-          "http://instagram.com/p/*",
-          "http://instagr.am/p/*",
-          "http://www.instagram.com/p/*",
-          "http://www.instagr.am/p/*",
-          "https://instagram.com/p/*",
-          "https://instagr.am/p/*",
-          "https://www.instagram.com/p/*",
-          "https://www.instagr.am/p/*",
-          "http://instagram.com/tv/*",
-          "http://instagr.am/tv/*",
-          "http://www.instagram.com/tv/*",
-          "http://www.instagr.am/tv/*",
-          "https://instagram.com/tv/*",
-          "https://instagr.am/tv/*",
-          "https://www.instagram.com/tv/*",
-          "https://www.instagr.am/tv/*"
-        ],
-        "url": "https://graph.facebook.com/v8.0/instagram_oembed",
+        "url": "https://graph.facebook.com/v9.0/instagram_oembed",
         "formats": [
           "json"
         ]
@@ -2583,6 +2621,9 @@
     "provider_url": "http://www.screencast.com/",
     "endpoints": [
       {
+        "schemes": [
+          "http://www.screencast.com/*"
+        ],
         "url": "https://api.screencast.com/external/oembed",
         "discovery": true
       }
@@ -2732,8 +2773,8 @@
     "endpoints": [
       {
         "schemes": [
-          "http://sketchfab.com/models/*",
-          "https://sketchfab.com/models/*",
+          "http://sketchfab.com/*models/*",
+          "https://sketchfab.com/*models/*",
           "https://sketchfab.com/*/folders/*"
         ],
         "url": "http://sketchfab.com/oembed",
