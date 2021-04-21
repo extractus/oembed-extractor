@@ -2,25 +2,16 @@
 
 const fetch = require('node-fetch').default;
 
-const isInstagram = (provider) => {
-  return provider.provider_name === 'Instagram';
-};
+const isFacebookGraphDependent = (provider) => {
+  return provider.provider_name === 'Facebook' || provider.provider_name === 'Instagram';
+}
 
-const getInstGraphUrl = (query) => {
-  const baseUrl = 'https://graph.facebook.com/v8.0/instagram_oembed';
-  return `${baseUrl}?${query}&${getFacebookToken()}`;
-};
-
-const getFacebookToken = () => {
+const getFacebookGraphToken = () => {
   const env = process.env || {};
   const appId = env.FACEBOOK_APP_ID || '365101066946402';
   const clientToken = env.FACEBOOK_CLIENT_TOKEN || 'a56861eb5b787f9e9a18e4e09ea5c873';
 
   return `access_token=${appId}|${clientToken}`;
-}
-
-const isFacebook = (provider) => {
-  return provider.provider_name === 'Facebook';
 }
 
 const getRegularUrl = (query, basseUrl) => {
@@ -50,13 +41,13 @@ const fetchEmbed = async (url, provider, params = {}) => {
     queries.push(`maxheight=${maxheight}`);
   }
 
-  if (isFacebook(provider)) {
-    queries.push(getFacebookToken());
+  if (isFacebookGraphDependent(provider)) {
+    queries.push(getFacebookGraphToken());
   }
 
   const query = queries.join('&');
 
-  const link = isInstagram(provider) ? getInstGraphUrl(query) : getRegularUrl(query, provider.url);
+  const link = getRegularUrl(query, provider.url);
   const res = await fetch(link, {mode: 'no-cors'});
   const json = await res.json();
   json.provider_name = provider_name; // eslint-disable-line camelcase
