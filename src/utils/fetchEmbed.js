@@ -4,7 +4,7 @@ const fetch = require('node-fetch').default;
 
 const isFacebookGraphDependent = (provider) => {
   return provider.provider_name === 'Facebook' || provider.provider_name === 'Instagram';
-}
+};
 
 const getFacebookGraphToken = () => {
   const env = process.env || {};
@@ -12,7 +12,7 @@ const getFacebookGraphToken = () => {
   const clientToken = env.FACEBOOK_CLIENT_TOKEN || 'a56861eb5b787f9e9a18e4e09ea5c873';
 
   return `access_token=${appId}|${clientToken}`;
-}
+};
 
 const getRegularUrl = (query, basseUrl) => {
   return basseUrl.replace(/\{format\}/g, 'json') + '?' + query;
