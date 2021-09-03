@@ -1,6 +1,6 @@
 // utils -> fetchEmbed
 
-const fetch = require('node-fetch').default;
+const fetch = require('cross-fetch');
 
 const isFacebookGraphDependent = (provider) => {
   return provider.provider_name === 'Facebook' || provider.provider_name === 'Instagram';
@@ -8,8 +8,8 @@ const isFacebookGraphDependent = (provider) => {
 
 const getFacebookGraphToken = () => {
   const env = process.env || {};
-  const appId = env.FACEBOOK_APP_ID || '365101066946402';
-  const clientToken = env.FACEBOOK_CLIENT_TOKEN || 'a56861eb5b787f9e9a18e4e09ea5c873';
+  const appId = env.FACEBOOK_APP_ID || '845078789498971';
+  const clientToken = env.FACEBOOK_CLIENT_TOKEN || '0d4b05bf3f7e201c636441912423a491';
 
   return `access_token=${appId}|${clientToken}`;
 };
