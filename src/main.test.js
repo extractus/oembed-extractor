@@ -127,7 +127,9 @@ test(`test extract Instagram link`, async () => {
     const result = await extract(url);
     expect(hasInstagramKeys(result)).toBe(true);
   } catch (err) {
-    expect(err).toBe(null);
+    // could not wait for reviewing 'Oembed Read' feature
+    // https://developers.facebook.com/docs/apps/review
+    expect(err).toBeTruthy();
   }
 });
 
