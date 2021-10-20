@@ -10,7 +10,7 @@ const findProvider = (url, providers) => {
       return url.includes(domain);
     }
     return schemes.some((scheme) => {
-      const reg = new RegExp(scheme.replace(/\*/g, '(.*)'), 'i');
+      const reg = new RegExp(scheme.replace(/\*/g, '(.*)').replace(/\?/g, "\\?"), 'i');
       return url.match(reg);
     });
   });
