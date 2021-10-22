@@ -4180,5 +4180,89 @@
         "discovery": true
       }
     ]
+  },
+  {
+    "provider_name": "Catapult",
+    "provider_url": "https://www.catapult.app/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www-catapult-app.sandbox.hs-sites.com/video-page*",
+          "https://www-catapult.app/video-page*"
+        ],
+        "url": "https://www.catapult.app/_hcms/api/video/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "EventLive",
+    "provider_url": "https://eventlive.pro",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://evt.live/*",
+          "https://evt.live/*/*",
+          "https://live.eventlive.pro/*",
+          "https://live.eventlive.pro/*/*"
+        ],
+        "url": "https://evt.live/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Resso",
+    "provider_url": "https://www.resso.app/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://h5.resso.com/*"
+        ],
+        "url": "https://h5.resso.com/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Streamio",
+    "provider_url": "https://www.streamio.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://s3m.io/*",
+          "https://23m.io/*"
+        ],
+        "url": "https://streamio.com/api/v1/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Totango",
+    "provider_url": "https://totango.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app-test.totango.com/*"
+        ],
+        "url": "https://app-test.totango.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Trinity Audio",
+    "provider_url": "https://trinityaudio.ai",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://trinitymedia.ai/player/*",
+          "http://trinitymedia.ai/player/*"
+        ],
+        "url": "https://trinitymedia.ai/player/trinity-oembed",
+        "discovery": true
+      }
+    ]
   }
 ]

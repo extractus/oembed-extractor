@@ -1180,7 +1180,8 @@
         "schemes": [
           "https://giphy.com/gifs/*",
           "http://gph.is/*",
-          "https://media.giphy.com/media/*/giphy.gif"
+          "https://media.giphy.com/media/*/giphy.gif",
+          "https://giphy.com/clips/*"
         ],
         "url": "https://giphy.com/services/oembed",
         "discovery": true
@@ -1483,7 +1484,7 @@
           "https://www.instagram.com/tv/*",
           "https://www.instagr.am/tv/*"
         ],
-        "url": "https://graph.facebook.com/v9.0/instagram_oembed",
+        "url": "https://graph.facebook.com/v11.0/oembed_page",
         "formats": [
           "json"
         ]
@@ -1540,7 +1541,9 @@
           "https://tv.kakao.com/channel/*/cliplink/*",
           "https://tv.kakao.com/channel/v/*",
           "https://tv.kakao.com/channel/*/livelink/*",
-          "https://tv.kakao.com/channel/l/*"
+          "https://tv.kakao.com/channel/l/*",
+          "https://tv.kakao.com/m/channel/*/cliplink/*",
+          "https://tv.kakao.com/m/channel/*/livelink/*"
         ],
         "url": "https://tv.kakao.com/oembed",
         "discovery": true
@@ -3745,7 +3748,8 @@
         "schemes": [
           "https://*.youtube.com/watch*",
           "https://*.youtube.com/v/*",
-          "https://youtu.be/*"
+          "https://youtu.be/*",
+          "https://*.youtube.com/playlist?list=*"
         ],
         "url": "https://www.youtube.com/oembed",
         "discovery": true
@@ -3987,6 +3991,192 @@
           "https://pod.u-pec.fr/video/*"
         ],
         "url": "https://pod.u-pec.fr/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Audiomeans",
+    "provider_url": "https://audiomeans.fr",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://podcasts.audiomeans.fr/*"
+        ],
+        "url": "https://podcasts.audiomeans.fr/services/oembed",
+        "discovery": false,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "CHROCO",
+    "provider_url": "https://chroco.ooo/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://chroco.ooo/mypage/*",
+          "https://chroco.ooo/story/*"
+        ],
+        "url": "https://chroco.ooo/embed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "CodePen",
+    "provider_url": "https://codepen.io",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://codepen.io/*",
+          "https://codepen.io/*"
+        ],
+        "url": "https://codepen.io/api/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Enystre Music",
+    "provider_url": "https://music.enystre.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://music.enystre.com/lyrics/*"
+        ],
+        "url": "https://music.enystre.com/oembed",
+        "formats": [
+          "json",
+          "xml"
+        ],
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Framer",
+    "provider_url": "https://www.framer.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://framer.com/share/*",
+          "https://framer.com/embed/*"
+        ],
+        "url": "https://api.framer.com/web/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "NFTNDX.IO",
+    "provider_url": "https://www.nftndx.io/",
+    "endpoints": [
+      {
+        "url": "https://www.nftndx.io/oembed",
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Opsomai",
+    "provider_url": "http://www.opsomai.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.opsismedia.com/*"
+        ],
+        "url": "https://test-bysa.opsismedia.com/oembed.php",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Pinterest",
+    "provider_url": "https://www.pinterest.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.pinterest.com/*"
+        ],
+        "url": "https://www.pinterest.com/oembed.json",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "PitchHub",
+    "provider_url": "https://www.pitchhub.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.pitchhub.com/en/public/player/*"
+        ],
+        "url": "https://*.pitchhub.com.com/en/public/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Present",
+    "provider_url": "https://present.do",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://present.do/decks/*"
+        ],
+        "url": "https://gateway.cobalt.run/present/decks/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Raindrop",
+    "provider_url": "https://raindrop.io",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://raindrop.io/*",
+          "https://raindrop.io/*/*",
+          "https://raindrop.io/*/*/*",
+          "https://raindrop.io/*/*/*/*"
+        ],
+        "url": "https://pub.raindrop.io/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "UAPod",
+    "provider_url": "https://uapod.univ-antilles.fr/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://uapod.univ-antilles.fr/video/*"
+        ],
+        "url": "https://uapod.univ-antilles.fr/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Waltrack",
+    "provider_url": "https://waltrack/net",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://waltrack.net/product/*"
+        ],
+        "url": "https://waltrack.net/oembed",
         "discovery": true
       }
     ]
