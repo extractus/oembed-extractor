@@ -1484,7 +1484,7 @@
           "https://www.instagram.com/tv/*",
           "https://www.instagr.am/tv/*"
         ],
-        "url": "https://graph.facebook.com/v11.0/oembed_page",
+        "url": "https://graph.facebook.com/v11.0/instagram_oembed",
         "formats": [
           "json"
         ]
