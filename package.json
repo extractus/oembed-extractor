@@ -23,8 +23,7 @@
     "reset": "node reset"
   },
   "dependencies": {
-    "cross-fetch": "^3.1.4",
-    "standard": "^16.0.4"
+    "cross-fetch": "^3.1.4"
   },
   "devDependencies": {
     "jest": "^27.3.1",
