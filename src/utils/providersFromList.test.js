@@ -1,9 +1,9 @@
 // providersFromList
+/* eslint-env jest */
 
-const providersFromList = require('./providersFromList');
+const providersFromList = require('./providersFromList')
 
-
-test(`test providersFromList bad URI format`, () => {
+test('test providersFromList bad URI format', () => {
   const customProviderOnly = [
     {
       provider_name: 'Example',
@@ -11,14 +11,14 @@ test(`test providersFromList bad URI format`, () => {
       endpoints: [
         {
           schemes: [
-            'example.org/media/*',
+            'example.org/media/*'
           ],
-          url: 'org/oembed',
-        },
-      ],
-    },
-  ];
-  const result = providersFromList(customProviderOnly);
-  expect(Array.isArray(result)).toBe(true);
-  expect(result.length).toEqual(0);
-});
+          url: 'org/oembed'
+        }
+      ]
+    }
+  ]
+  const result = providersFromList(customProviderOnly)
+  expect(Array.isArray(result)).toBe(true)
+  expect(result.length).toEqual(0)
+})
