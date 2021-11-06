@@ -22,11 +22,9 @@ jobs:
       with:
         node-version: ${{ matrix.node_version }}
 
-    - name: standardjs-ga
-      uses: devjoca/standardjs-action@0.4.0
-
     - name: run npm scripts
       run: |
+        npm i -g standard
         npm install
         npm run lint
         npm run build --if-present
