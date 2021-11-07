@@ -31,16 +31,16 @@ npm install oembed-parser
 
 ```js
 import {
-  extract,
-} from 'oembed-parser';
+  extract
+} from 'oembed-parser'
 
-const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc';
+const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc'
 
 extract(url).then((oembed) => {
-  console.log(oembed);
+  console.log(oembed)
 }).catch((err) => {
-  console.trace(err);
-});
+  console.trace(err)
+})
 ```
 
 ### APIs
@@ -57,17 +57,19 @@ Here is how we can use `oembed-parser` in async/await style:
 ```js
 import {
   extract
-} from 'oembed-parser';
+} from 'oembed-parser'
 
 const getOembed = async (url) => {
   try {
-    const oembed = await extract(url);
-    return oembed;
+    const oembed = await extract(url)
+    return oembed
   } catch (err) {
-    console.trace(err);
+    console.trace(err)
   }
-};
+}
 
+const data = getOembed('your url')
+console.log(data)
 ```
 
 
