@@ -1,6 +1,17 @@
 // utils -> fetchEmbed
 
-const fetch = require('phin')
+const got = require('got')
+
+const { name, version } = require('../../package.json')
+
+const fetchOptions = {
+  headers: {
+    'user-agent': `${name}/${version}`,
+    accept: 'application/json; charset=utf-8'
+  },
+  timeout: 30 * 1e3,
+  redirect: 'follow'
+}
 
 const isFacebookGraphDependent = (provider) => {
   return provider.provider_name === 'Facebook' || provider.provider_name === 'Instagram'
@@ -48,8 +59,8 @@ const fetchEmbed = async (url, provider, params = {}) => {
   const query = queries.join('&')
 
   const link = getRegularUrl(query, provider.url)
-  const res = await fetch({ url: link, parse: 'json' })
-  const body = res.body
+  const res = got(link, fetchOptions)
+  const body = await res.json()
   body.provider_name = provider_name // eslint-disable-line camelcase
   body.provider_url = provider_url // eslint-disable-line camelcase
   return body
