@@ -1,5 +1,5 @@
 {
-  "version": "1.5.1",
+  "version": "1.5.2",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -15,7 +15,7 @@
   "scripts": {
     "lint": "standard .",
     "pretest": "npm run lint",
-    "test": "jest --verbose --coverage=true --unhandled-rejections=strict",
+    "test": "jest --verbose --coverage=true --unhandled-rejections=strict --detectOpenHandles",
     "eval": "node eval",
     "sync": "node sync",
     "tsc": "tsc --init",
@@ -35,6 +35,6 @@
   "license": "MIT",
   "types": "./index.d.ts",
   "dependencies": {
-    "phin": "^3.6.0"
+    "got": "^11.8.2"
   }
 }
