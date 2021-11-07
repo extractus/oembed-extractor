@@ -1,6 +1,6 @@
 // utils -> fetchEmbed
 
-const fetch = require('cross-fetch')
+const fetch = require('phin')
 
 const isFacebookGraphDependent = (provider) => {
   return provider.provider_name === 'Facebook' || provider.provider_name === 'Instagram'
@@ -48,11 +48,11 @@ const fetchEmbed = async (url, provider, params = {}) => {
   const query = queries.join('&')
 
   const link = getRegularUrl(query, provider.url)
-  const res = await fetch(link, { mode: 'no-cors' })
-  const json = await res.json()
-  json.provider_name = provider_name // eslint-disable-line camelcase
-  json.provider_url = provider_url // eslint-disable-line camelcase
-  return json
+  const res = await fetch({ url: link, parse: 'json' })
+  const body = res.body
+  body.provider_name = provider_name // eslint-disable-line camelcase
+  body.provider_url = provider_url // eslint-disable-line camelcase
+  return body
 }
 
 module.exports = fetchEmbed

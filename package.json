@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.5.1",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -22,9 +22,6 @@
     "build": "tsc",
     "reset": "node reset"
   },
-  "dependencies": {
-    "cross-fetch": "^3.1.4"
-  },
   "devDependencies": {
     "jest": "^27.3.1",
     "typescript": "^4.4.4"
@@ -36,5 +33,8 @@
     "util"
   ],
   "license": "MIT",
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "dependencies": {
+    "phin": "^3.6.0"
+  }
 }
