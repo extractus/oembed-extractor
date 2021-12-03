@@ -1049,6 +1049,8 @@
           "http://*.flickr.com/photos/*",
           "http://flic.kr/p/*",
           "https://*.flickr.com/photos/*",
+          "https://*.*.flickr.com/*/*",
+          "http://*.*.flickr.com/*/*",
           "https://flic.kr/p/*"
         ],
         "url": "https://www.flickr.com/services/oembed/",
@@ -3685,6 +3687,16 @@
     "provider_url": "http://wordpress.com/",
     "endpoints": [
       {
+        "schemes": [
+          "https://wordpress.com/*",
+          "http://wordpress.com/*",
+          "https://*.wordpress.com/*",
+          "http://*.wordpress.com/*",
+          "https://*.*.wordpress.com/*",
+          "http://*.*.wordpress.com/*",
+          "https://wp.me/*",
+          "http://wp.me/*"
+        ],
         "url": "http://public-api.wordpress.com/oembed/",
         "discovery": true
       }

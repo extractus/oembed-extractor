@@ -1,3 +1,6 @@
+// eval.js
+// to quickly test with a single url or file
+
 const { extract } = require('./src/main')
 
 const run = async (url) => {

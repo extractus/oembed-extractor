@@ -14,7 +14,6 @@ Extract eEmbed content from given URL.
 - [Changes with Instagram](#changes-with-instagram)
 
 
-
 ## Demo
 
 - [Give it a try!](https://ndaidong.github.io/oembed-parser-demo)
@@ -77,6 +76,29 @@ console.log(data)
 
 Return boolean. True if the URL matches with any provider in the list.
 
+#### .findProvider(String URL)
+
+Return provider which is relevant to given URL.
+
+For example:
+
+```js
+import {
+  findProvider
+} from 'oembed-parser'
+
+findProvider('https://www.facebook.com/video.php?v=999999999')
+
+// get something like below:
+
+// {
+//   fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_video',
+//   providerName: 'Facebook',
+//   providerUrl: 'https://www.facebook.com/'
+// }
+```
+
+
 #### .setProviderList(Array of provider definitions)
 
 Sets the list of providers to use, overriding the defaults.
@@ -93,17 +115,17 @@ For the expected format, see the
 List of resource providers is a clone of [oembed.com](http://oembed.com/providers.json) and available [here](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
 
 
-## Changes with Instagram
+## Facebook and Instagram
 
-Since October 24 2020, Facebook have deprecated their legacy urls and applied a new Facebook oEmbed endpoints. Please update your `oembed-parser` version to v1.4.2 to be able to extract Instagram links.
+Since October 24 2020, Facebook have deprecated their legacy urls and applied a new Facebook oEmbed endpoints.
+Please update your `oembed-parser` version to v1.4.2 or later to be able to extract oembed data from Instagram and Facebook.
 
-Technically, now we have to use Facebook Graph API, with the access token from a valid and live Facebook app. By default, `oembed-parser` build Graph API endpoint using a pre-existing access token. Althrough it should work in almost cases. However, we recommend to add your own ones.
+Technically, now we have to use Facebook Graph API, with the access token from a valid and live Facebook app.
 
 
-```
+```bash
 export FACEBOOK_APP_ID=your_app_id
 export FACEBOOK_CLIENT_TOKEN=your_client_token
-
 ```
 
 For more info, please refer:

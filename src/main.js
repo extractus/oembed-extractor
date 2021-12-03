@@ -1,20 +1,18 @@
-// main
+/**
+ * oembed parser
+ * @ndaidong
+ **/
 
-const {
-  isValidURL,
-  findProvider,
-  fetchEmbed,
-  providersFromList
-} = require('./utils')
+const isValidURL = require('./utils/isValidURL')
+const fetchEmbed = require('./utils/fetchEmbed')
 
-const defaultProviderList = require('./utils/providers.json')
-let providers = providersFromList(defaultProviderList)
+const provider = require('./utils/provider')
 
 const extract = async (url, params = {}) => {
   if (!isValidURL(url)) {
     throw new Error('Invalid input URL')
   }
-  const p = findProvider(url, providers)
+  const p = provider.find(url)
   if (!p) {
     throw new Error(`No provider found with given url "${url}"`)
   }
@@ -22,16 +20,9 @@ const extract = async (url, params = {}) => {
   return data
 }
 
-const hasProvider = (url) => {
-  return findProvider(url, providers) !== null
-}
-
-const setProviderList = (list) => {
-  providers = providersFromList(list)
-}
-
 module.exports = {
   extract,
-  hasProvider,
-  setProviderList
+  hasProvider: provider.has,
+  findProvider: provider.find,
+  setProviderList: provider.set
 }
