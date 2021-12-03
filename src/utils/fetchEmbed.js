@@ -2,16 +2,9 @@
 
 const got = require('got')
 
-const { name, version } = require('../../package.json')
-
-const fetchOptions = {
-  headers: {
-    'user-agent': `${name}/${version}`,
-    accept: 'application/json; charset=utf-8'
-  },
-  timeout: 30 * 1e3,
-  redirect: 'follow'
-}
+const {
+  fetchOptions
+} = require('../config')
 
 const isFacebookGraphDependent = (provider) => {
   return provider.provider_name === 'Facebook' || provider.provider_name === 'Instagram'

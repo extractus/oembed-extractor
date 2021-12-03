@@ -5,7 +5,11 @@ const {
   writeFileSync
 } = require('fs')
 
-const fetch = require('cross-fetch')
+const got = require('got')
+
+const {
+  fetchOptions
+} = require('./src/config')
 
 const source = 'https://oembed.com/providers.json'
 const target = './src/utils/providers.json'
@@ -13,13 +17,16 @@ const backup = './src/utils/providers.backup.json'
 
 const providerList = require(target)
 
-const merge = (data) => {
+const merge = async () => {
   // backup previous version
   writeFileSync(
     backup,
     JSON.stringify(providerList, undefined, 2),
     'utf8'
   )
+
+  const res = got(source, fetchOptions)
+  const data = await res.json()
 
   // merging
   unlinkSync(target)
@@ -31,7 +38,4 @@ const merge = (data) => {
   console.log('Providers list has been updated')
 }
 
-fetch(source)
-  .then((res) => res.json())
-  .then(merge)
-  .catch(console.trace)
+merge()
