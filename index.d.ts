@@ -19,7 +19,7 @@ export interface Endpoint {
 }
   
 export interface Provider {
-    "provider_name": string;
+    "providerName": string;
     "provider_url": string;
     "endpoints": Endpoint[];
 }

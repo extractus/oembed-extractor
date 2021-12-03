@@ -1,26 +1,15 @@
 // utils -> fetchEmbed
 
-const got = require('got')
+const retrieve = require('./retrieve')
 
-const { name, version } = require('../../package.json')
-
-const fetchOptions = {
-  headers: {
-    'user-agent': `${name}/${version}`,
-    accept: 'application/json; charset=utf-8'
-  },
-  timeout: 30 * 1e3,
-  redirect: 'follow'
-}
-
-const isFacebookGraphDependent = (provider) => {
-  return provider.provider_name === 'Facebook' || provider.provider_name === 'Instagram'
+const isFacebookGraphDependent = (url) => {
+  return url.includes('facebook.com') || url.includes('instagram.com')
 }
 
 const getFacebookGraphToken = () => {
   const env = process.env || {}
   const appId = env.FACEBOOK_APP_ID || '845078789498971'
-  const clientToken = env.FACEBOOK_CLIENT_TOKEN || '0d4b05bf3f7e201c636441912423a491'
+  const clientToken = env.FACEBOOK_CLIENT_TOKEN || '8ff3ab4ddd45b8f018b35c4fb7edac62'
 
   return `access_token=${appId}|${clientToken}`
 }
@@ -30,11 +19,6 @@ const getRegularUrl = (query, basseUrl) => {
 }
 
 const fetchEmbed = async (url, provider, params = {}) => {
-  const {
-    provider_name, // eslint-disable-line camelcase
-    provider_url // eslint-disable-line camelcase
-  } = provider
-
   const queries = [
     'format=json',
     `url=${encodeURIComponent(url)}`
@@ -52,17 +36,14 @@ const fetchEmbed = async (url, provider, params = {}) => {
     queries.push(`maxheight=${maxheight}`)
   }
 
-  if (isFacebookGraphDependent(provider)) {
+  if (isFacebookGraphDependent(provider.providerUrl)) {
     queries.push(getFacebookGraphToken())
   }
 
   const query = queries.join('&')
 
-  const link = getRegularUrl(query, provider.url)
-  const res = got(link, fetchOptions)
-  const body = await res.json()
-  body.provider_name = provider_name // eslint-disable-line camelcase
-  body.provider_url = provider_url // eslint-disable-line camelcase
+  const link = getRegularUrl(query, provider.fetchEndpoint)
+  const body = retrieve(link)
   return body
 }
 
