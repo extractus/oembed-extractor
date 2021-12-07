@@ -98,113 +98,149 @@ describe('test extract(bad url)', () => {
   })
 })
 
-test('test extract YouTube link', async () => {
-  const url = 'https://www.youtube.com/watch?v=ciS8aCrX-9s'
-  const provider = findProvider(url)
-  const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
-  const scope = nock(baseUrl, { encodedQueryParams: true })
-  const params = new URLSearchParams({
-    url,
-    format: 'json'
-  })
-  scope.get(path)
-    .query(params)
-    .replyWithFile(200, './test-data/youtube_ciS8aCrX-9s.json', {
-      'Content-Type': 'application/json'
-    })
-  const result = await extract(url)
-  expect(hasRichKeys(result)).toBe(true)
-  expect(result.provider_name).toEqual('YouTube')
-  expect(result.type).toEqual('video')
-})
+describe('test if extract() with some popular providers', () => {
+  const cases = [
+    {
+      input: {
+        url: 'https://youtu.be/qQpb1oCernE',
+        params: {
+          format: 'json'
+        },
+        file: './test-data/youtube.json'
+      },
+      expected: {
+        provider_name: 'YouTube',
+        type: 'video'
+      },
+      checkFn: hasRichKeys
+    },
+    {
+      input: {
+        url: 'https://www.youtube.com/watch?v=ciS8aCrX-9s',
+        params: {
+          format: 'json'
+        },
+        file: './test-data/youtube_ciS8aCrX-9s.json'
+      },
+      expected: {
+        provider_name: 'YouTube',
+        type: 'video'
+      },
+      checkFn: hasRichKeys
+    },
+    {
+      input: {
+        url: 'https://twitter.com/ndaidong/status/1173592062878314497',
+        params: {
+          format: 'json'
+        },
+        file: './test-data/twitter.json'
+      },
+      expected: {
+        provider_name: 'Twitter',
+        type: 'rich'
+      },
+      checkFn: hasRichKeys
+    },
+    {
+      input: {
+        url: 'https://www.instagram.com/p/ic7kRDqOlt/',
+        params: {
+          format: 'json',
+          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
+        },
+        file: './test-data/instagram_ic7kRDqOlt.json'
+      },
+      expected: {
+        provider_name: 'Instagram',
+        type: 'rich'
+      },
+      checkFn: hasInstagramKeys
+    },
+    {
+      input: {
+        url: 'https://www.facebook.com/facebook/videos/10153231379946729/',
+        params: {
+          format: 'json',
+          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
+        },
+        file: './test-data/facebook.json'
+      },
+      expected: {
+        provider_name: 'Facebook',
+        type: 'video'
+      },
+      checkFn: hasRichKeys
+    },
+    {
+      input: {
+        url: 'https://flic.kr/p/2iYctUr',
+        params: {
+          format: 'json'
+        },
+        file: './test-data/flickr_2iYctUr.json'
+      },
+      expected: {
+        provider_name: 'Flickr',
+        type: 'photo',
+        maxwidth: 1024,
+        maxheight: 768
+      },
+      checkFn: hasPhotoKeys
+    },
+    {
+      input: {
+        url: 'https://flic.kr/p/2iYctUr',
+        params: {
+          format: 'json'
+        },
+        file: './test-data/flickr_2iYctUr_640x480.json'
+      },
+      expected: {
+        provider_name: 'Flickr',
+        type: 'photo',
+        maxwidth: 640,
+        maxheight: 480
+      },
+      checkFn: hasPhotoKeys
+    }
+  ]
 
-test('test extract Flickr link', async () => {
-  const url = 'https://flic.kr/p/2iYctUr'
-  const provider = findProvider(url)
-  const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
-  const scope = nock(baseUrl, { encodedQueryParams: true })
-  const params = new URLSearchParams({
-    url,
-    format: 'json'
-  })
-  scope.get(path)
-    .query(params)
-    .replyWithFile(200, './test-data/flickr_2iYctUr.json', {
-      'Content-Type': 'application/json'
-    })
-  const result = await extract(url)
-  expect(hasPhotoKeys(result)).toBe(true)
-  expect(result.provider_name).toEqual('Flickr')
-  expect(result.type).toEqual('photo')
-  expect(result.width).toEqual(1024)
-  expect(result.height).toEqual(768)
-})
+  cases.forEach(({ input, expected, checkFn }) => {
+    const { url, file, params } = input
+    test(`  check fetchEmbed("${url}")`, async () => {
+      const provider = findProvider(url)
+      const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
 
-test('test extract Flickr link with params', async () => {
-  const url = 'https://flic.kr/p/2iYctUr'
-  const provider = findProvider(url)
-  const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
-  const scope = nock(baseUrl, { encodedQueryParams: true })
-  const params = new URLSearchParams({
-    url,
-    maxwidth: 640,
-    maxheight: 480,
-    format: 'json'
-  })
-  scope.get(path)
-    .query(params)
-    .replyWithFile(200, './test-data/flickr_2iYctUr_640x480.json', {
-      'Content-Type': 'application/json'
-    })
-  const result = await extract(url, { maxwidth: 640, maxheight: 480 })
-  expect(hasPhotoKeys(result)).toBe(true)
-  expect(result.provider_name).toEqual('Flickr')
-  expect(result.type).toEqual('photo')
-  expect(result.width).toBeLessThanOrEqual(640)
-  expect(result.height).toBeLessThanOrEqual(480)
-})
+      const scope = nock(baseUrl, { encodedQueryParams: true })
+      const queries = new URLSearchParams({
+        url,
+        ...params
+      })
+      scope.get(path)
+        .query(queries)
+        .replyWithFile(200, file, {
+          'Content-Type': 'application/json'
+        })
 
-test('test extract Instagram link', async () => {
-  const url = 'https://www.instagram.com/p/ic7kRDqOlt/'
-  const provider = findProvider(url)
-  const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
-  const scope = nock(baseUrl, { encodedQueryParams: true })
-  const params = new URLSearchParams({
-    url,
-    format: 'json',
-    access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
-  })
-  scope.get(path)
-    .query(params)
-    .replyWithFile(200, './test-data/instagram_ic7kRDqOlt.json', {
-      'Content-Type': 'application/json'
-    })
-  const result = await extract(url)
-  expect(hasInstagramKeys(result)).toBe(true)
-  expect(result.provider_name).toEqual('Instagram')
-  expect(result.type).toEqual('rich')
-})
+      const {
+        maxwidth = 0,
+        maxheight = 0
+      } = params
 
-test('test extract Facebook video', async () => {
-  const url = 'https://www.facebook.com/facebook/videos/10153231379946729/'
-  const provider = findProvider(url)
-  const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
-  const scope = nock(baseUrl, { encodedQueryParams: true })
-  const params = new URLSearchParams({
-    url,
-    format: 'json',
-    access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
-  })
-  scope.get(path)
-    .query(params)
-    .replyWithFile(200, './test-data/facebook.json', {
-      'Content-Type': 'application/json'
+      const result = await extract(url, provider, { maxwidth, maxheight })
+      expect(result).toBeTruthy()
+      expect(checkFn(result)).toBe(true)
+      expect(result.provider_name).toEqual(expected.provider_name)
+      expect(result.type).toEqual(expected.type)
+      if (maxwidth > 0) {
+        expect(result.width).toBeLessThanOrEqual(expected.maxwidth)
+      }
+      if (maxheight > 0) {
+        expect(result.height).toBeLessThanOrEqual(expected.maxheight)
+      }
     })
-  const result = await extract(url)
-  expect(hasRichKeys(result)).toBe(true)
-  expect(result).toBeTruthy()
-  expect(result.provider_name).toEqual('Facebook')
-  expect(result.type).toEqual('video')
+  })
 })
 
 test('test .hasProvider() method', () => {
