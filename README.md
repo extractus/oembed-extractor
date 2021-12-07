@@ -9,11 +9,6 @@ Extract eEmbed content from given URL.
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
-### Important note:
-
-- [Changes with Instagram](#changes-with-instagram)
-
-
 ## Demo
 
 - [Give it a try!](https://ndaidong.github.io/oembed-parser-demo)
