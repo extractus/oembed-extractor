@@ -19,9 +19,6 @@ describe('test if fetchEmbed() works correctly', () => {
     {
       input: {
         url: 'https://youtu.be/qQpb1oCernE',
-        params: {
-          format: 'json'
-        },
         file: './test-data/youtube.json'
       },
       expected: {
@@ -32,9 +29,6 @@ describe('test if fetchEmbed() works correctly', () => {
     {
       input: {
         url: 'https://twitter.com/ndaidong/status/1173592062878314497',
-        params: {
-          format: 'json'
-        },
         file: './test-data/twitter.json'
       },
       expected: {
@@ -46,7 +40,6 @@ describe('test if fetchEmbed() works correctly', () => {
       input: {
         url: 'https://www.facebook.com/facebook/videos/10153231379946729/',
         params: {
-          format: 'json',
           access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
         },
         file: './test-data/facebook.json'
@@ -59,9 +52,6 @@ describe('test if fetchEmbed() works correctly', () => {
     {
       input: {
         url: 'http://farm4.static.flickr.com/3123/2341623661_7c99f48bbf_m.jpg',
-        params: {
-          format: 'json'
-        },
         file: './test-data/flickr-default.json'
       },
       expected: {
@@ -76,8 +66,7 @@ describe('test if fetchEmbed() works correctly', () => {
         url: 'http://farm4.static.flickr.com/3123/2341623661_7c99f48bbf_m.jpg',
         params: {
           maxwidth: 800,
-          maxheight: 400,
-          format: 'json'
+          maxheight: 400
         },
         file: './test-data/flickr-sizelimit.json'
       },
@@ -91,7 +80,7 @@ describe('test if fetchEmbed() works correctly', () => {
   ]
 
   cases.forEach(({ input, expected }) => {
-    const { url, file, params } = input
+    const { url, file, params = {} } = input
     test(`  check fetchEmbed("${url}")`, async () => {
       const provider = findProvider(url)
       const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
@@ -99,7 +88,8 @@ describe('test if fetchEmbed() works correctly', () => {
       const scope = nock(baseUrl, { encodedQueryParams: true })
       const queries = new URLSearchParams({
         url,
-        ...params
+        ...params,
+        format: 'json'
       })
       scope.get(path)
         .query(queries)

@@ -103,9 +103,6 @@ describe('test if extract() with some popular providers', () => {
     {
       input: {
         url: 'https://youtu.be/qQpb1oCernE',
-        params: {
-          format: 'json'
-        },
         file: './test-data/youtube.json'
       },
       expected: {
@@ -117,9 +114,6 @@ describe('test if extract() with some popular providers', () => {
     {
       input: {
         url: 'https://www.youtube.com/watch?v=ciS8aCrX-9s',
-        params: {
-          format: 'json'
-        },
         file: './test-data/youtube_ciS8aCrX-9s.json'
       },
       expected: {
@@ -131,9 +125,6 @@ describe('test if extract() with some popular providers', () => {
     {
       input: {
         url: 'https://twitter.com/ndaidong/status/1173592062878314497',
-        params: {
-          format: 'json'
-        },
         file: './test-data/twitter.json'
       },
       expected: {
@@ -146,7 +137,6 @@ describe('test if extract() with some popular providers', () => {
       input: {
         url: 'https://www.instagram.com/p/ic7kRDqOlt/',
         params: {
-          format: 'json',
           access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
         },
         file: './test-data/instagram_ic7kRDqOlt.json'
@@ -161,7 +151,6 @@ describe('test if extract() with some popular providers', () => {
       input: {
         url: 'https://www.facebook.com/facebook/videos/10153231379946729/',
         params: {
-          format: 'json',
           access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
         },
         file: './test-data/facebook.json'
@@ -175,9 +164,6 @@ describe('test if extract() with some popular providers', () => {
     {
       input: {
         url: 'https://flic.kr/p/2iYctUr',
-        params: {
-          format: 'json'
-        },
         file: './test-data/flickr_2iYctUr.json'
       },
       expected: {
@@ -191,9 +177,6 @@ describe('test if extract() with some popular providers', () => {
     {
       input: {
         url: 'https://flic.kr/p/2iYctUr',
-        params: {
-          format: 'json'
-        },
         file: './test-data/flickr_2iYctUr_640x480.json'
       },
       expected: {
@@ -207,7 +190,7 @@ describe('test if extract() with some popular providers', () => {
   ]
 
   cases.forEach(({ input, expected, checkFn }) => {
-    const { url, file, params } = input
+    const { url, file, params = {} } = input
     test(`  check fetchEmbed("${url}")`, async () => {
       const provider = findProvider(url)
       const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
@@ -215,6 +198,7 @@ describe('test if extract() with some popular providers', () => {
       const scope = nock(baseUrl, { encodedQueryParams: true })
       const queries = new URLSearchParams({
         url,
+        format: 'json',
         ...params
       })
       scope.get(path)
