@@ -146,7 +146,7 @@ setProviderList(providers)
 #### .setRequestOptions(Object requestOptions)
 Define options to call oembed HTTP request.
 
-`oembed-parser` is using [axios]() to send HTTP requests. Please refer [axios' request config](https://axios-http.com/docs/req_config) for more info.
+`oembed-parser` is using [axios](https://github.com/axios/axios) to send HTTP requests. Please refer [axios' request config](https://axios-http.com/docs/req_config) for more info.
 
 Default option:
 
