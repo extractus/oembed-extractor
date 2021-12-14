@@ -7,9 +7,13 @@
 
 export function extract(url: string, params?: any): Promise<OembedData>;
 
-export function hasProvider(url: string): boolean;
+export function hasProvider(url: string): boolean
 
 export function setProviderList(providers: Provider[]): void
+
+export function setRequestOptions(options: object): void
+
+export function getRequestOptions(): object
 
 export interface Endpoint {
     schemes?: string[];

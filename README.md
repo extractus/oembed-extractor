@@ -1,3 +1,4 @@
+
 # oembed-parser
 
 Extract eEmbed content from given URL.
@@ -15,19 +16,28 @@ Extract eEmbed content from given URL.
 - [Example FaaS](https://us-central1-technews-251304.cloudfunctions.net/oembed-parser?url=https://www.youtube.com/watch?v=8jPQjjsBbIc)
 
 
-### Installation
+## Installation
 
 ```bash
-npm install oembed-parser
+$ npm install oembed-parser
+
+# or pnpm
+$ pnpm install oembed-parser
+
+# or yarn
+$ yarn add oembed-parser
 ```
 
-### Usage
+
+## Usage
 
 ```js
-import {
-  extract
-} from 'oembed-parser'
+const { extract } = require('oembed-parser')
 
+// es6 module syntax
+import { extract } from 'oembed-parser'
+
+// test
 const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc'
 
 extract(url).then((oembed) => {
@@ -37,21 +47,16 @@ extract(url).then((oembed) => {
 })
 ```
 
-### APIs
+## APIs
 
 #### .extract(String url [, Object params])
 
-Extract oEmbed data from specified url.
-Return: a Promise
+Load and extract oembed data.
 
-Optional argument `params` is an object with it we can set `maxwidth` and/or `maxheight` those are used to scale embed size to fit your container size. Please refer [oEmbed/Full Spec/Consumer Request](https://oembed.com/#section2) for more info.
-
-Here is how we can use `oembed-parser` in async/await style:
+Example:
 
 ```js
-import {
-  extract
-} from 'oembed-parser'
+const { extract } = require('oembed-parser')
 
 const getOembed = async (url) => {
   try {
@@ -59,6 +64,7 @@ const getOembed = async (url) => {
     return oembed
   } catch (err) {
     console.trace(err)
+  return null
   }
 }
 
@@ -66,67 +72,114 @@ const data = getOembed('your url')
 console.log(data)
 ```
 
+Optional argument `params` is an object with it we can set `maxwidth` and/or `maxheight` those are used to scale embed size to fit your container size. Please refer [oEmbed/Full Spec/Consumer Request](https://oembed.com/#section2) for more info.
 
 #### .hasProvider(String URL)
 
-Return boolean. True if the URL matches with any provider in the list.
+Check if a URL matches with any provider in the list.
+
+Examples:
+
+```js
+const { hasProvider } = require('oembed-parser')
+
+hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s') // return true
+hasProvider('https://trello.com/b/BO3bg7yn/notes') // return false
+```
 
 #### .findProvider(String URL)
 
-Return provider which is relevant to given URL.
+Get the provider which is relevant to given URL.
 
 For example:
 
 ```js
-import {
-  findProvider
-} from 'oembed-parser'
+const { findProvider } = require('oembed-parser')
 
 findProvider('https://www.facebook.com/video.php?v=999999999')
-
-// get something like below:
-
-// {
-//   fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_video',
-//   providerName: 'Facebook',
-//   providerUrl: 'https://www.facebook.com/'
-// }
 ```
 
+Result looks like below:
 
-#### .setProviderList(Array of provider definitions)
+```json
+{
+  fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_video',
+  providerName: 'Facebook',
+  providerUrl: 'https://www.facebook.com/'
+}
+```
 
-Sets the list of providers to use, overriding the defaults.
+#### .setProviderList(Array providers)
+
+Apply a list of providers to use, overriding the [default](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
 
 This can be useful for whitelisting only certain providers, or for adding
 custom providers.
 
-For the expected format, see the
-[default list](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
+Default list of resource providers is synchronized from [oembed.com](http://oembed.com/providers.json).
 
+For example:
 
-### Provider list
+```js
+const { setProviderList } = require('oembed-parser')
 
-List of resource providers is a clone of [oembed.com](http://oembed.com/providers.json) and available [here](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
+const providers = [
+  {
+    provider_name: 'Alpha',
+    provider_url: 'https://alpha.com',
+    endpoints: [
+      // endpoint definition here
+    ]
+  },
+  {
+    provider_name: 'Beta',
+    provider_url: 'https://beta.com',
+    endpoints: [
+      // endpoint definition here
+    ]
+  }
+]
+
+setProviderList(providers)
+```
+
+#### .setRequestOptions(Object requestOptions)
+Set options for request method.
+
+`oembed-parser` is using [axios]() to send HTTP requests. Please refer [axios' request config](https://axios-http.com/docs/req_config) for more info.
+
+Default option:
+
+```js
+{
+  headers: {
+    'user-agent': 'Mozilla/5.0 (X11; Linux i686; rv:94.0) Gecko/20100101 Firefox/94.0',
+    accept: 'application/json; charset=utf-8'
+  },
+  responseType: 'json',
+  responseEncoding: 'utf8',
+  timeout: 6e4,
+  maxRedirects: 3
+}
+```
 
 
 ## Facebook and Instagram
 
 Since October 24 2020, Facebook have deprecated their legacy urls and applied a new Facebook oEmbed endpoints.
-Please update your `oembed-parser` version to v1.4.2 or later to be able to extract oembed data from Instagram and Facebook.
 
-Technically, now we have to use Facebook Graph API, with the access token from a valid and live Facebook app.
-
+Technically, now we have to use Facebook Graph API, with the access token from a valid and live Facebook app. `oembed-parser` will try to get these values from environment variables, so please define them, for example:
 
 ```bash
 export FACEBOOK_APP_ID=your_app_id
 export FACEBOOK_CLIENT_TOKEN=your_client_token
 ```
 
-For more info, please refer:
+References:
 
+- [oEmbed Read](https://developers.facebook.com/docs/features-reference/oembed-read)
 - [Facebook oEmbed](https://developers.facebook.com/docs/plugins/oembed)
-
+- [Facebook Graph API](https://developers.facebook.com/docs/graph-api/overview)
 
 ## Test
 
@@ -140,6 +193,7 @@ npm test
 npm run eval {URL_TO_PARSE_OEMBED}
 ```
 
-# License
-
+## License
 The MIT License (MIT)
+
+---

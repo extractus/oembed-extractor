@@ -28,7 +28,7 @@ test('test retrieve() from bad source', async () => {
   const url = 'https://some.where/good/page'
   const { baseUrl, path } = parseUrl(url)
   const scope = nock(baseUrl)
-  scope.get(path).reply(500, { data: { name: 'oembed-parser' } }, {
+  scope.get(path).reply(500, '', {
     'Content-Type': 'application/json'
   })
   const result = await retrieve(url)
