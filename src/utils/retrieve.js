@@ -1,19 +1,19 @@
 // utils -> retrieve
 
-const got = require('got')
+const axios = require('axios')
 
-const { fetchOptions } = require('../config')
+const { getRequestOptions } = require('../config')
 
 module.exports = async (url) => {
   try {
-    const { headers, body } = await got(url, fetchOptions)
+    const res = await axios.get(url, getRequestOptions())
 
-    const contentType = headers['content-type'] || ''
+    const contentType = res.headers['content-type'] || ''
     if (!contentType || !contentType.includes('application/json')) {
       return null
     }
 
-    return body
+    return res.data
   } catch (err) {
     return null
   }

@@ -8,6 +8,10 @@ const fetchEmbed = require('./utils/fetchEmbed')
 
 const provider = require('./utils/provider')
 
+const {
+  setRequestOptions
+} = require('./config')
+
 const extract = async (url, params = {}) => {
   if (!isValidURL(url)) {
     throw new Error('Invalid input URL')
@@ -24,5 +28,6 @@ module.exports = {
   extract,
   hasProvider: provider.has,
   findProvider: provider.find,
-  setProviderList: provider.set
+  setProviderList: provider.set,
+  setRequestOptions
 }
