@@ -38,6 +38,16 @@ describe('test if fetchEmbed() works correctly', () => {
     },
     {
       input: {
+        url: 'https://twitter.com/ndaidong/status/1173592062878314497?theme=dark',
+        file: './test-data/twitter-dark.json'
+      },
+      expected: {
+        provider_name: 'Twitter',
+        type: 'rich'
+      }
+    },
+    {
+      input: {
         url: 'https://www.facebook.com/facebook/videos/10153231379946729/',
         params: {
           access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'

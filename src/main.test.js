@@ -217,7 +217,9 @@ describe('test if extract() with some popular providers', () => {
         maxheight = 0
       } = params
 
-      const result = await extract(url, provider, { maxwidth, maxheight })
+      //  `extract()` takes 2 args: url & params but not provider
+      //  const result = await extract(url, provider, { maxwidth, maxheight })
+      const result = await extract(url, { maxwidth, maxheight })
       expect(result).toBeTruthy()
       expect(checkFn(result)).toBe(true)
       expect(result.provider_name).toEqual(expected.provider_name)

@@ -24,23 +24,25 @@ const fetchEmbed = async (url, provider, params = {}) => {
     `url=${encodeURIComponent(url)}`
   ]
 
-  const {
-    maxwidth = 0,
-    maxheight = 0
-  } = params
-
-  if (maxwidth > 0) {
-    queries.push(`maxwidth=${maxwidth}`)
+  // remove these if they're set to zero
+  if (params.maxwidth <= 0) {
+    delete params.maxwidth
   }
-  if (maxheight > 0) {
-    queries.push(`maxheight=${maxheight}`)
+  if (params.maxheight <= 0) {
+    delete params.maxheight
   }
 
   if (isFacebookGraphDependent(provider.providerUrl)) {
     queries.push(getFacebookGraphToken())
   }
 
-  const query = queries.join('&')
+  const queryParams = new URLSearchParams(params).toString()
+
+  let query = queries.join('&')
+
+  if (queryParams) {
+    query = query + '&' + queryParams
+  }
 
   const link = getRegularUrl(query, provider.fetchEndpoint)
   const body = retrieve(link)
