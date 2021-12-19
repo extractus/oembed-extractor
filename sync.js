@@ -5,11 +5,9 @@ const {
   writeFileSync
 } = require('fs')
 
-const got = require('got')
+const axios = require('axios')
 
-const {
-  fetchOptions
-} = require('./src/config')
+const { getRequestOptions } = require('./src/config')
 
 const source = 'https://oembed.com/providers.json'
 const target = './src/utils/providers.json'
@@ -18,24 +16,27 @@ const backup = './src/utils/providers.backup.json'
 const providerList = require(target)
 
 const merge = async () => {
-  // backup previous version
-  writeFileSync(
-    backup,
-    JSON.stringify(providerList, undefined, 2),
-    'utf8'
-  )
+  try {
+    const res = await axios.get(source, getRequestOptions())
 
-  const res = got(source, fetchOptions)
-  const data = await res.json()
+    // backup previous version
+    writeFileSync(
+      backup,
+      JSON.stringify(providerList, undefined, 2),
+      'utf8'
+    )
 
-  // merging
-  unlinkSync(target)
-  writeFileSync(
-    target,
-    JSON.stringify(data, undefined, 2),
-    'utf8'
-  )
-  console.log('Providers list has been updated')
+    // merging
+    unlinkSync(target)
+    writeFileSync(
+      target,
+      JSON.stringify(res.data, undefined, 2),
+      'utf8'
+    )
+    console.log('Providers list has been updated')
+  } catch (err) {
+    console.trace(err)
+  }
 }
 
 merge()

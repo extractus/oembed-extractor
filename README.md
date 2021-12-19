@@ -64,7 +64,7 @@ const getOembed = async (url) => {
     return oembed
   } catch (err) {
     console.trace(err)
-  return null
+    return null
   }
 }
 
@@ -72,7 +72,17 @@ const data = getOembed('your url')
 console.log(data)
 ```
 
-Optional argument `params` is an object with it we can set `maxwidth` and/or `maxheight` those are used to scale embed size to fit your container size. Please refer [oEmbed/Full Spec/Consumer Request](https://oembed.com/#section2) for more info.
+Optional argument `params` can be useful when you want to specify some additional customizations.
+
+Here are several popular params:
+
+- `maxwidth`: max width of embed size
+- `maxheight`: max height of embed size
+- `theme`: e.g, `dark` or `light`
+- `lang`: e.g, 'en', 'fr', 'cn', 'vi', etc
+
+Note that some params are supported by these providers but not by the others.
+Please see the provider's oEmbed API docs carefully for exact information.
 
 #### .hasProvider(String URL)
 
