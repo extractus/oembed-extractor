@@ -21,10 +21,10 @@ Extract eEmbed content from given URL.
 ```bash
 $ npm install oembed-parser
 
-# or pnpm
+# pnpm
 $ pnpm install oembed-parser
 
-# or yarn
+# yarn
 $ yarn add oembed-parser
 ```
 

@@ -1049,9 +1049,9 @@
           "http://*.flickr.com/photos/*",
           "http://flic.kr/p/*",
           "https://*.flickr.com/photos/*",
+          "https://flic.kr/p/*",
           "https://*.*.flickr.com/*/*",
-          "http://*.*.flickr.com/*/*",
-          "https://flic.kr/p/*"
+          "http://*.*.flickr.com/*/*"
         ],
         "url": "https://www.flickr.com/services/oembed/",
         "discovery": true
@@ -3115,6 +3115,22 @@
     ]
   },
   {
+    "provider_name": "Synthesia",
+    "provider_url": "https://www.synthesia.io/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://share.synthesia.io/*"
+        ],
+        "url": "https://69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed",
+        "formats": [
+          "json"
+        ],
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "TED",
     "provider_url": "https://www.ted.com",
     "endpoints": [
@@ -3685,7 +3701,7 @@
   },
   {
     "provider_name": "WordPress.com",
-    "provider_url": "http://wordpress.com/",
+    "provider_url": "https://wordpress.com/",
     "endpoints": [
       {
         "schemes": [
