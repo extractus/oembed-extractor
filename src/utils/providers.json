@@ -56,9 +56,10 @@
         "schemes": [
           "https://v.afree.ca/ST/",
           "https://vod.afreecatv.com/ST/",
-          "https://vod.afreecatv.com/PLAYER/STATION/"
+          "https://vod.afreecatv.com/PLAYER/STATION/",
+          "https://play.afreecatv.com/"
         ],
-        "url": "https://openapi.afreecatv.com/vod/embedinfo",
+        "url": "https://openapi.afreecatv.com/oembed/embedinfo",
         "discovery": true
       }
     ]
@@ -2500,7 +2501,7 @@
           "http://play.radiopublic.com/*",
           "http://radiopublic.com/*",
           "http://www.radiopublic.com/*",
-          "https://*.radiopublic.com/*'"
+          "https://*.radiopublic.com/*"
         ],
         "url": "https://oembed.radiopublic.com/oembed",
         "discovery": true
