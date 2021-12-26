@@ -1,4 +1,4 @@
-// Type definitions for oembed-parser 1.3.5
+// Type definitions for oembed-parser
 // Project: https://www.npmjs.com/package/oembed-parser
 // Definitions by: BendingBender <https://github.com/BendingBender>
 //                 CodeBast4rd <https://github.com/CodeBast4rd>
@@ -23,7 +23,7 @@ export interface Endpoint {
 }
   
 export interface Provider {
-    "providerName": string;
+    "provider_name": string;
     "provider_url": string;
     "endpoints": Endpoint[];
 }
