@@ -1,7 +1,7 @@
 
 # oembed-parser
 
-Extract eEmbed content from given URL.
+Extract oEmbed content from given URL.
 
 [![NPM](https://badge.fury.io/js/oembed-parser.svg)](https://badge.fury.io/js/oembed-parser)
 [![CI test](https://github.com/ndaidong/oembed-parser/workflows/ci-test/badge.svg)](https://github.com/ndaidong/oembed-parser/actions)
