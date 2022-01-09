@@ -1,5 +1,5 @@
 {
-  "version": "2.0.2",
+  "version": "2.0.3",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -28,7 +28,7 @@
     "bellajs": "^10.0.2"
   },
   "devDependencies": {
-    "jest": "^27.4.5",
+    "jest": "^27.4.7",
     "nock": "^13.2.1"
   },
   "keywords": [
