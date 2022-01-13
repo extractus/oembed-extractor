@@ -1,10 +1,10 @@
 // utils -> retrieve
 
-const axios = require('axios')
+import axios from 'axios'
 
-const { getRequestOptions } = require('../config')
+import { getRequestOptions } from '../config.js'
 
-module.exports = async (url) => {
+export default async (url) => {
   try {
     const res = await axios.get(url, getRequestOptions())
 

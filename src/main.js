@@ -3,20 +3,16 @@
  * @ndaidong
  **/
 
-const isValidURL = require('./utils/isValidURL')
-const fetchEmbed = require('./utils/fetchEmbed')
+import isValidURL from './utils/isValidURL.js'
+import fetchEmbed from './utils/fetchEmbed.js'
 
-const provider = require('./utils/provider')
+import { find } from './utils/provider.js'
 
-const {
-  setRequestOptions
-} = require('./config')
-
-const extract = async (url, params = {}) => {
+export const extract = async (url, params = {}) => {
   if (!isValidURL(url)) {
     throw new Error('Invalid input URL')
   }
-  const p = provider.find(url)
+  const p = find(url)
   if (!p) {
     throw new Error(`No provider found with given url "${url}"`)
   }
@@ -24,10 +20,10 @@ const extract = async (url, params = {}) => {
   return data
 }
 
-module.exports = {
-  extract,
-  hasProvider: provider.has,
-  findProvider: provider.find,
-  setProviderList: provider.set,
-  setRequestOptions
-}
+export { setRequestOptions } from './config.js'
+
+export {
+  find as findProvider,
+  has as hasProvider,
+  set as setProviderList
+} from './utils/provider.js'

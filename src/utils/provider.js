@@ -1,9 +1,11 @@
 // utils / provider
 
-const isValidURL = require('./isValidURL')
-const getDomain = require('./getDomain')
+import { readFileSync } from 'fs'
 
-const defaultProviderList = require('./providers.json')
+import isValidURL from './isValidURL.js'
+import getDomain from './getDomain.js'
+
+const defaultProviderList = JSON.parse(readFileSync('./src/utils/providers.json'))
 
 const providersFromList = (providers = []) => {
   return providers.map((provider) => {
@@ -19,11 +21,11 @@ const store = {
   providers: providersFromList(defaultProviderList)
 }
 
-const get = () => {
+export const get = () => {
   return [...store.providers]
 }
 
-const set = (providers = []) => {
+export const set = (providers = []) => {
   store.providers = providersFromList(providers)
   return store.providers.length
 }
@@ -49,7 +51,7 @@ const getEndpoint = (url, domain, endpoints) => {
   return null
 }
 
-const find = (url = '') => {
+export const find = (url = '') => {
   if (!isValidURL(url)) {
     return null
   }
@@ -78,13 +80,13 @@ const find = (url = '') => {
   return null
 }
 
-const has = (url = '') => {
+export const has = (url = '') => {
   return find(url) !== null
 }
 
-module.exports = {
-  get,
-  set,
+export default {
   find,
-  has
+  has,
+  get,
+  set
 }

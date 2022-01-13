@@ -1,11 +1,14 @@
-#!/usr/bin/env node
+/**
+ * reset.js
+ * @ndaidong
+**/
 
-const {
+import {
   existsSync,
   unlinkSync
-} = require('fs')
+} from 'fs'
 
-const { execSync } = require('child_process')
+import { execSync } from 'child_process'
 
 const dirs = [
   'dist',
@@ -20,7 +23,6 @@ const files = [
   'yarn.lock',
   'pnpm-lock.yaml',
   'package-lock.json',
-  'coverage.lcov',
   'coverage.lcov'
 ]
 

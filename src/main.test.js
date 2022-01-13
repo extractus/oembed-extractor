@@ -1,19 +1,19 @@
 // main
 /* eslint-env jest */
 
-const nock = require('nock')
+import nock from 'nock'
 
-const {
+import {
   extract,
   hasProvider,
   findProvider,
   setProviderList,
   setRequestOptions
-} = require('./main')
+} from './main.js'
 
-const {
+import {
   getRequestOptions
-} = require('./config')
+} from './config.js'
 
 const required = [
   'type',

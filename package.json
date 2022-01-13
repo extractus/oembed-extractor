@@ -1,5 +1,5 @@
 {
-  "version": "2.0.3",
+  "version": "3.0.0rc1",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -8,10 +8,12 @@
     "url": "git@github.com:ndaidong/oembed-parser.git"
   },
   "author": "@ndaidong",
-  "main": "./index.js",
+  "main": "./dist/cjs/oembed-parser.js",
+  "module": "./src/main.js",
+  "type": "module",
   "types": "./index.d.ts",
   "engines": {
-    "node": ">= 10.14.2"
+    "node": ">= 14"
   },
   "scripts": {
     "lint": "standard .",
@@ -20,14 +22,31 @@
     "eval": "node eval",
     "sync": "node sync",
     "tsc": "tsc --init",
-    "build": "tsc",
+    "build-ts": "tsc",
+    "build": "node build src/main.js",
     "reset": "node reset"
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "bellajs": "^10.0.2"
+    "bellajs": "^11.0.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  },
+  "standard": {
+    "ignore": [
+      "/dist"
+    ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
+    "esbuild": "^0.14.10",
     "jest": "^27.4.7",
     "nock": "^13.2.1"
   },

@@ -1,6 +1,6 @@
 // utils -> getDomain
 
-module.exports = (url = '') => {
+export default (url = '') => {
   try {
     const { host } = new URL(url)
     return host

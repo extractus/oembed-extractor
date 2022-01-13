@@ -1,6 +1,6 @@
 // config
 
-const { clone, copies } = require('bellajs')
+import { clone, copies } from 'bellajs'
 
 const requestOptions = {
   headers: {
@@ -13,11 +13,10 @@ const requestOptions = {
   maxRedirects: 3
 }
 
-module.exports = {
-  getRequestOptions: () => {
-    return clone(requestOptions)
-  },
-  setRequestOptions: (opts) => {
-    copies(opts, requestOptions)
-  }
+export const getRequestOptions = () => {
+  return clone(requestOptions)
+}
+
+export const setRequestOptions = (opts) => {
+  copies(opts, requestOptions)
 }
