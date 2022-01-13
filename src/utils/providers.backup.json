@@ -424,6 +424,22 @@
     ]
   },
   {
+    "provider_name": "Chainflix",
+    "provider_url": "https://chainflix.net",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://chainflix.net/video/*",
+          "https://chainflix.net/video/embed/*",
+          "https://*.chainflix.net/video/*",
+          "https://*.chainflix.net/video/embed/*"
+        ],
+        "url": "https://www.chainflix.net/video/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "ChartBlocks",
     "provider_url": "http://www.chartblocks.com/",
     "endpoints": [
@@ -618,6 +634,18 @@
           "http://crowdranking.com/*/*"
         ],
         "url": "http://crowdranking.com/api/oembed.{format}"
+      }
+    ]
+  },
+  {
+    "provider_name": "Crumb.sh",
+    "provider_url": "https://crumb.sh",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://crumb.sh/*"
+        ],
+        "url": "https://crumb.sh/oembed/"
       }
     ]
   },

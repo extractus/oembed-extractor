@@ -1,19 +1,20 @@
 #!/usr/bin/env node
 
-const {
+import {
   unlinkSync,
+  readFileSync,
   writeFileSync
-} = require('fs')
+} from 'fs'
 
-const axios = require('axios')
+import axios from 'axios'
 
-const { getRequestOptions } = require('./src/config')
+import { getRequestOptions } from './src/config.js'
 
 const source = 'https://oembed.com/providers.json'
 const target = './src/utils/providers.json'
 const backup = './src/utils/providers.backup.json'
 
-const providerList = require(target)
+const providerList = JSON.parse(readFileSync(target))
 
 const merge = async () => {
   try {

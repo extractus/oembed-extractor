@@ -1,7 +1,7 @@
 // getDomain.test
 /* eslint-env jest */
 
-const getDomain = require('./getDomain')
+import getDomain from './getDomain.js'
 
 describe('test getDomain()', () => {
   const cases = [

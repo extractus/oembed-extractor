@@ -1,7 +1,7 @@
 // isValidURL.test
 /* eslint-env jest */
 
-const isValidURL = require('./isValidURL')
+import isValidURL from './isValidURL.js'
 
 describe('test isValidURL()', () => {
   const cases = [

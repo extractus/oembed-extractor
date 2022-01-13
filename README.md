@@ -16,28 +16,28 @@ Extract oEmbed content from given URL.
 - [Example FaaS](https://extractor.pwshub.com/oembed/parse?url=https://www.youtube.com/watch?v=8jPQjjsBbIc&apikey=demo-orePhhidnWKWPvF8EYKap7z55cN)
 
 
-## Installation
+## Setup
 
-```bash
-$ npm install oembed-parser
+- Node.js
 
-# pnpm
-$ pnpm install oembed-parser
+  ```bash
+  npm i oembed-parser
 
-# yarn
-$ yarn add oembed-parser
-```
+  # pnpm
+  pnpm i oembed-parser
 
+  # yarn
+  yarn add oembed-parser
+  ```
 
-## Usage
+### Usage
 
 ```js
-const { extract } = require('oembed-parser')
-
-// es6 module syntax
 import { extract } from 'oembed-parser'
 
-// test
+// with CommonJS environments
+// const { extract } = require('oembed-parser/dist/cjs/oembed-parser.js')
+
 const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc'
 
 extract(url).then((oembed) => {
@@ -46,6 +46,12 @@ extract(url).then((oembed) => {
   console.trace(err)
 })
 ```
+
+##### Note:
+
+> Since Node.js v14, ECMAScript modules [have became the official standard format](https://nodejs.org/docs/latest-v14.x/api/esm.html#esm_modules_ecmascript_modules).
+> Just ensure that you are [using module system](https://nodejs.org/api/packages.html#determining-module-system) and enjoy with ES6 import/export syntax.
+
 
 ## APIs
 
@@ -56,7 +62,7 @@ Load and extract oembed data.
 Example:
 
 ```js
-const { extract } = require('oembed-parser')
+import { extract } from 'oembed-parser'
 
 const getOembed = async (url) => {
   try {
@@ -91,7 +97,7 @@ Check if a URL matches with any provider in the list.
 Examples:
 
 ```js
-const { hasProvider } = require('oembed-parser')
+import { hasProvider } from 'oembed-parser'
 
 hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s') // return true
 hasProvider('https://trello.com/b/BO3bg7yn/notes') // return false
@@ -104,7 +110,7 @@ Get the provider which is relevant to given URL.
 For example:
 
 ```js
-const { findProvider } = require('oembed-parser')
+import { findProvider } from 'oembed-parser'
 
 findProvider('https://www.facebook.com/video.php?v=999999999')
 ```
@@ -131,7 +137,7 @@ Default list of resource providers is synchronized from [oembed.com](http://oemb
 For example:
 
 ```js
-const { setProviderList } = require('oembed-parser')
+import { setProviderList } from 'oembed-parser'
 
 const providers = [
   {
@@ -163,7 +169,7 @@ Default option:
 ```js
 {
   headers: {
-    'user-agent': 'Mozilla/5.0 (X11; Linux i686; rv:94.0) Gecko/20100101 Firefox/94.0',
+    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0',
     accept: 'application/json; charset=utf-8'
   },
   responseType: 'json',

@@ -1,6 +1,6 @@
 // utils -> fetchEmbed
 
-const retrieve = require('./retrieve')
+import retrieve from './retrieve.js'
 
 const isFacebookGraphDependent = (url) => {
   return url.includes('facebook.com') || url.includes('instagram.com')
@@ -18,7 +18,7 @@ const getRegularUrl = (query, basseUrl) => {
   return basseUrl.replace(/\{format\}/g, 'json') + '?' + query
 }
 
-const fetchEmbed = async (url, provider, params = {}) => {
+export default async (url, provider, params = {}) => {
   const query = {
     url,
     format: 'json',
@@ -42,5 +42,3 @@ const fetchEmbed = async (url, provider, params = {}) => {
   const body = retrieve(link)
   return body
 }
-
-module.exports = fetchEmbed

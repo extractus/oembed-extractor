@@ -1,10 +1,10 @@
 // fetchEmbed.test
 /* eslint-env jest */
 
-const nock = require('nock')
+import nock from 'nock'
 
-const fetchEmbed = require('./fetchEmbed')
-const { find: findProvider } = require('./provider')
+import fetchEmbed from './fetchEmbed.js'
+import { find as findProvider } from './provider.js'
 
 const parseUrl = (url) => {
   const re = new URL(url)

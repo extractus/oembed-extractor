@@ -1,7 +1,7 @@
 // provider.test
 /* eslint-env jest */
 
-const provider = require('./provider')
+import provider from './provider.js'
 
 describe('test if provider.find() works correctly', () => {
   const cases = [
