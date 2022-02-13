@@ -1,11 +1,16 @@
 // utils / provider
 
-import { readFileSync } from 'fs'
+import { readFileSync, existsSync } from 'fs'
 
 import isValidURL from './isValidURL.js'
 import getDomain from './getDomain.js'
 
-const defaultProviderList = JSON.parse(readFileSync('./src/utils/providers.json'))
+const loadDefaultList = () => {
+  const jsontext = readFileSync(existsSync('./providers.json') ? './providers.json' : './src/utils/providers.json')
+  return JSON.parse(jsontext)
+}
+
+const defaultProviderList = loadDefaultList()
 
 const providersFromList = (providers = []) => {
   return providers.map((provider) => {
