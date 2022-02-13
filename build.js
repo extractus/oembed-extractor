@@ -3,7 +3,7 @@
  * @ndaidong
 **/
 
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync, copyFileSync } from 'fs'
 import { execSync } from 'child_process'
 
 import { buildSync } from 'esbuild'
@@ -50,4 +50,9 @@ writeFileSync(
   'dist/cjs/package.json',
   JSON.stringify(cjspkg, null, '  '),
   'utf8'
+)
+
+copyFileSync(
+  'src/utils/providers.json',
+  'dist/cjs/providers.json'
 )
