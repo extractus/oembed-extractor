@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0rc2",
+  "version": "3.0.0rc3",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -27,8 +27,8 @@
     "reset": "node reset"
   },
   "dependencies": {
-    "axios": "^0.25.0",
-    "bellajs": "^11.0.0"
+    "axios": "^0.26.0",
+    "bellajs": "^11.0.2"
   },
   "babel": {
     "env": {
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",
-    "esbuild": "^0.14.21",
+    "esbuild": "^0.14.23",
     "jest": "^27.5.1",
     "nock": "^13.2.4"
   },
