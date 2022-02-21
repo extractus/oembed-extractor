@@ -1,4 +1,8 @@
-[
+// provider data, synchronized at 2022-02-21T07:55:54.830Z
+
+/* eslint-disable */ 
+
+export const providers = [
   {
     "provider_name": "23HQ",
     "provider_url": "http://www.23hq.com",
@@ -105,6 +109,27 @@
           "https://live.amcharts.com/*"
         ],
         "url": "https://live.amcharts.com/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Amtraker",
+    "provider_url": "https://amtraker.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://amtraker.com/view.html*",
+          "https://www.amtraker.com/view.html*",
+          "https://beta.amtraker.com/view.html*",
+          "https://whereismytrain.us/view.html*",
+          "https://www.whereismytrain.us/view.html*",
+          "https://whereismyfuckingtrain.com/view.html*",
+          "https://www.whereismyfuckingtrain.com/view.html*",
+          "https://amtrak.cc/view.html*",
+          "https://www.amtrak.cc/view.html*"
+        ],
+        "url": "https://api.amtrak.cc/v2/oembed",
+        "discovery": false
       }
     ]
   },
@@ -690,6 +715,24 @@
     ]
   },
   {
+    "provider_name": "dadan",
+    "provider_url": "https://www.dadan.io",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.dadan.io/*",
+          "https://stage.dadan.io/*"
+        ],
+        "url": "https://app.dadan.io/api/video/oembed",
+        "discovery": true,
+        "formats": [
+          "json",
+          "xml"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "Dailymotion",
     "provider_url": "https://www.dailymotion.com",
     "endpoints": [
@@ -1258,6 +1301,19 @@
     ]
   },
   {
+    "provider_name": "GMetri",
+    "provider_url": "https://www.gmetri.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://view.gmetri.com/*"
+        ],
+        "url": "https://z5-viewer-socket.in.gmetri.com/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Gong",
     "provider_url": "https://www.gong.io/",
     "endpoints": [
@@ -1744,8 +1800,8 @@
     "endpoints": [
       {
         "schemes": [
-          "https://*.kooapp.com/koo/",
-          "http://*.kooapp.com/koo/"
+          "https://*.kooapp.com/koo/*",
+          "http://*.kooapp.com/koo/*"
         ],
         "url": "https://embed-stage.kooapp.com/services/oembed",
         "discovery": true
