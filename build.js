@@ -53,6 +53,6 @@ writeFileSync(
 )
 
 copyFileSync(
-  'src/utils/providers.json',
-  'dist/cjs/providers.json'
+  'src/utils/providers.latest.js',
+  'dist/cjs/providers.latest.js'
 )

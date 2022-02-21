@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 import {
-  unlinkSync,
-  readFileSync,
+  copyFileSync,
   writeFileSync
 } from 'fs'
 
@@ -11,27 +10,29 @@ import axios from 'axios'
 import { getRequestOptions } from './src/config.js'
 
 const source = 'https://oembed.com/providers.json'
-const target = './src/utils/providers.json'
-const backup = './src/utils/providers.backup.json'
+const latest = './src/utils/providers.latest.js'
+const prev = './src/utils/providers.prev.js'
 
-const providerList = JSON.parse(readFileSync(target))
-
-const merge = async () => {
+const sync = async () => {
   try {
     const res = await axios.get(source, getRequestOptions())
+    const data = JSON.stringify(res.data, undefined, 2)
 
     // backup previous version
-    writeFileSync(
-      backup,
-      JSON.stringify(providerList, undefined, 2),
-      'utf8'
-    )
+    copyFileSync(latest, prev)
 
-    // merging
-    unlinkSync(target)
+    const syncTime = (new Date()).toISOString()
+
     writeFileSync(
-      target,
-      JSON.stringify(res.data, undefined, 2),
+      latest,
+      [
+        `// provider data, synchronized at ${syncTime}`,
+        '',
+        '/* eslint-disable */ ',
+        '',
+        `export const providers = ${data}`,
+        ''
+      ].join('\n'),
       'utf8'
     )
     console.log('Providers list has been updated')
@@ -40,4 +41,4 @@ const merge = async () => {
   }
 }
 
-merge()
+sync()

@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0rc3",
+  "version": "3.0.0rc4",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -20,6 +20,7 @@
     "pretest": "npm run lint",
     "test": "jest --verbose --coverage=true --unhandled-rejections=strict --detectOpenHandles",
     "eval": "node eval",
+    "eval:cjs": "node cjs-eval",
     "sync": "node sync",
     "tsc": "tsc --init",
     "build-ts": "tsc",
