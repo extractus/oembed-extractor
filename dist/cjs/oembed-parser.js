@@ -1,4 +1,4 @@
-// oembed-parser@3.0.0rc4, by @ndaidong - built with esbuild at 2022-02-21T07:58:54.207Z - published under MIT license
+// oembed-parser@3.0.0rc5, by @ndaidong - built with esbuild at 2022-03-02T07:07:04.790Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -6256,7 +6256,8 @@ var providers = [
       {
         "schemes": [
           "https://sway.com/*",
-          "https://www.sway.com/*"
+          "https://www.sway.com/*",
+          "https://sway.office.com/*"
         ],
         "url": "https://sway.com/api/v1.0/oembed",
         "discovery": true

@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-02-21T07:55:54.830Z
+// provider data, synchronized at 2022-03-02T07:06:00.702Z
 
 /* eslint-disable */ 
 
@@ -3192,7 +3192,8 @@ export const providers = [
       {
         "schemes": [
           "https://sway.com/*",
-          "https://www.sway.com/*"
+          "https://www.sway.com/*",
+          "https://sway.office.com/*"
         ],
         "url": "https://sway.com/api/v1.0/oembed",
         "discovery": true
