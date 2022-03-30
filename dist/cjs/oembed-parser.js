@@ -6876,6 +6876,7 @@ var providers = [
       {
         "schemes": [
           "https://*.youtube.com/shorts*",
+          "https://youtube.com/shorts*",
           "https://*.youtube.com/watch*",
           "https://*.youtube.com/v/*",
           "https://youtu.be/*",
