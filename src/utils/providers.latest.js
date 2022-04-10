@@ -3105,7 +3105,7 @@ export const providers = [
           "https://open.spotify.com/*",
           "spotify:*"
         ],
-        "url": "https://open.spotify.com/oembed/",
+        "url": "https://open.spotify.com/oembed",
         "discovery": true
       }
     ]
