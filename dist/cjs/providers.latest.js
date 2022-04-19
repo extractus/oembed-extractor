@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-03-02T07:06:00.702Z
+// provider data, synchronized at 2022-04-19T11:37:36.305Z
 
 /* eslint-disable */ 
 
@@ -118,17 +118,10 @@ export const providers = [
     "endpoints": [
       {
         "schemes": [
-          "https://amtraker.com/view.html*",
-          "https://www.amtraker.com/view.html*",
-          "https://beta.amtraker.com/view.html*",
-          "https://whereismytrain.us/view.html*",
-          "https://www.whereismytrain.us/view.html*",
-          "https://whereismyfuckingtrain.com/view.html*",
-          "https://www.whereismyfuckingtrain.com/view.html*",
-          "https://amtrak.cc/view.html*",
-          "https://www.amtrak.cc/view.html*"
+          "https://amtraker.com/trains/*",
+          "https://beta.amtraker.com/trains/*"
         ],
-        "url": "https://api.amtrak.cc/v2/oembed",
+        "url": "https://api.amtraker.com/v2/oembed",
         "discovery": false
       }
     ]
@@ -340,6 +333,22 @@ export const providers = [
         ],
         "url": "https://blogcast.host/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Bookingmood",
+    "provider_url": "https://www.bookingmood.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.bookingmood.com/embed/*/*"
+        ],
+        "url": "https://bookingmood.com/api/oembed",
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -1306,9 +1315,10 @@ export const providers = [
     "endpoints": [
       {
         "schemes": [
-          "https://view.gmetri.com/*"
+          "https://view.gmetri.com/*",
+          "https://*.gmetri.com/*"
         ],
-        "url": "https://z5-viewer-socket.in.gmetri.com/oembed/",
+        "url": "https://embed.gmetri.com/oembed/",
         "discovery": true
       }
     ]
@@ -1330,13 +1340,15 @@ export const providers = [
   },
   {
     "provider_name": "Grain",
-    "provider_url": "https://grain.co",
+    "provider_url": "https://grain.com",
     "endpoints": [
       {
         "schemes": [
-          "https://grain.co/highlight/*"
+          "https://grain.co/highlight/*",
+          "https://grain.co/share/*",
+          "https://grain.com/share/*"
         ],
-        "url": "http://api.grain.co/_/api/oembed"
+        "url": "https://api.grain.com/_/api/oembed"
       }
     ]
   },
@@ -1500,6 +1512,22 @@ export const providers = [
         ],
         "url": "https://www.iheart.com/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Incredible",
+    "provider_url": "https://incredible.dev",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://incredible.dev/watch/*"
+        ],
+        "url": "https://oembed.incredible.dev/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2387,6 +2415,21 @@ export const providers = [
           "https://padlet.com/*"
         ],
         "url": "https://padlet.com/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Panda Video",
+    "provider_url": "https://pandavideo.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.tv.pandavideo.com.br/embed/?v=*",
+          "https://*.tv.pandavideo.com.br/*/playlist.m3u8",
+          "https://dashboard.pandavideo.com.br/#/videos/*"
+        ],
+        "url": "https://api-v2.pandavideo.com.br/oembed",
         "discovery": true
       }
     ]
@@ -3706,7 +3749,10 @@ export const providers = [
     "provider_url": "https://www.wecandeo.com/",
     "endpoints": [
       {
-        "url": "https://play.wecandeo.com/oembed",
+        "schemes": [
+          "https://play.wecandeo.com/video/v/*"
+        ],
+        "url": "https://play.wecandeo.com/oembed/",
         "discovery": true
       }
     ]
