@@ -1,4 +1,4 @@
-// oembed-parser@3.0.0rc5, by @ndaidong - built with esbuild at 2022-03-02T07:07:04.790Z - published under MIT license
+// oembed-parser@3.0.1, by @ndaidong - built with esbuild at 2022-04-19T11:38:22.410Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -19,7 +19,6 @@ var __spreadValues = (a, b) => {
     }
   return a;
 };
-var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
@@ -27,26 +26,20 @@ var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
 };
-var __reExport = (target, module2, copyDefault, desc) => {
-  if (module2 && typeof module2 === "object" || typeof module2 === "function") {
-    for (let key of __getOwnPropNames(module2))
-      if (!__hasOwnProp.call(target, key) && (copyDefault || key !== "default"))
-        __defProp(target, key, { get: () => module2[key], enumerable: !(desc = __getOwnPropDesc(module2, key)) || desc.enumerable });
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
   }
-  return target;
+  return to;
 };
-var __toESM = (module2, isNodeMode) => {
-  return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", !isNodeMode && module2 && module2.__esModule ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
-};
-var __toCommonJS = /* @__PURE__ */ ((cache) => {
-  return (module2, temp) => {
-    return cache && cache.get(module2) || (temp = __reExport(__markAsModule({}), module2, 1), cache && cache.set(module2, temp), temp);
-  };
-})(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/bind.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/bind.js
 var require_bind = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/bind.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/bind.js"(exports, module2) {
     "use strict";
     module2.exports = function bind(fn, thisArg) {
       return function wrap() {
@@ -60,9 +53,9 @@ var require_bind = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/utils.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/utils.js
 var require_utils = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/utils.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/utils.js"(exports, module2) {
     "use strict";
     var bind = require_bind();
     var toString = Object.prototype.toString;
@@ -213,9 +206,9 @@ var require_utils = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/buildURL.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/buildURL.js
 var require_buildURL = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/buildURL.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/buildURL.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     function encode(val) {
@@ -264,9 +257,9 @@ var require_buildURL = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/InterceptorManager.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/InterceptorManager.js
 var require_InterceptorManager = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/InterceptorManager.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/InterceptorManager.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     function InterceptorManager() {
@@ -297,9 +290,9 @@ var require_InterceptorManager = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/normalizeHeaderName.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/normalizeHeaderName.js
 var require_normalizeHeaderName = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/normalizeHeaderName.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/normalizeHeaderName.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     module2.exports = function normalizeHeaderName(headers, normalizedName) {
@@ -313,9 +306,9 @@ var require_normalizeHeaderName = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/enhanceError.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/enhanceError.js
 var require_enhanceError = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/enhanceError.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/enhanceError.js"(exports, module2) {
     "use strict";
     module2.exports = function enhanceError(error, config, code, request, response) {
       error.config = config;
@@ -345,9 +338,21 @@ var require_enhanceError = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/createError.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/defaults/transitional.js
+var require_transitional = __commonJS({
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/defaults/transitional.js"(exports, module2) {
+    "use strict";
+    module2.exports = {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    };
+  }
+});
+
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/createError.js
 var require_createError = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/createError.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/createError.js"(exports, module2) {
     "use strict";
     var enhanceError = require_enhanceError();
     module2.exports = function createError(message, config, code, request, response) {
@@ -357,9 +362,9 @@ var require_createError = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/settle.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/settle.js
 var require_settle = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/settle.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/settle.js"(exports, module2) {
     "use strict";
     var createError = require_createError();
     module2.exports = function settle(resolve, reject, response) {
@@ -373,9 +378,9 @@ var require_settle = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/cookies.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/cookies.js
 var require_cookies = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/cookies.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/cookies.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     module2.exports = utils.isStandardBrowserEnv() ? function standardBrowserEnv() {
@@ -419,9 +424,9 @@ var require_cookies = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/isAbsoluteURL.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/isAbsoluteURL.js
 var require_isAbsoluteURL = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/isAbsoluteURL.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/isAbsoluteURL.js"(exports, module2) {
     "use strict";
     module2.exports = function isAbsoluteURL(url) {
       return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url);
@@ -429,9 +434,9 @@ var require_isAbsoluteURL = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/combineURLs.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/combineURLs.js
 var require_combineURLs = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/combineURLs.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/combineURLs.js"(exports, module2) {
     "use strict";
     module2.exports = function combineURLs(baseURL, relativeURL) {
       return relativeURL ? baseURL.replace(/\/+$/, "") + "/" + relativeURL.replace(/^\/+/, "") : baseURL;
@@ -439,9 +444,9 @@ var require_combineURLs = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/buildFullPath.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/buildFullPath.js
 var require_buildFullPath = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/buildFullPath.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/buildFullPath.js"(exports, module2) {
     "use strict";
     var isAbsoluteURL = require_isAbsoluteURL();
     var combineURLs = require_combineURLs();
@@ -454,9 +459,9 @@ var require_buildFullPath = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/parseHeaders.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/parseHeaders.js
 var require_parseHeaders = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/parseHeaders.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/parseHeaders.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     var ignoreDuplicateOf = [
@@ -506,9 +511,9 @@ var require_parseHeaders = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/isURLSameOrigin.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/isURLSameOrigin.js
 var require_isURLSameOrigin = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/isURLSameOrigin.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/isURLSameOrigin.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     module2.exports = utils.isStandardBrowserEnv() ? function standardBrowserEnv() {
@@ -546,9 +551,9 @@ var require_isURLSameOrigin = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/cancel/Cancel.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/cancel/Cancel.js
 var require_Cancel = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/cancel/Cancel.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/cancel/Cancel.js"(exports, module2) {
     "use strict";
     function Cancel(message) {
       this.message = message;
@@ -561,9 +566,9 @@ var require_Cancel = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/adapters/xhr.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/adapters/xhr.js
 var require_xhr = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/adapters/xhr.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/adapters/xhr.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     var settle = require_settle();
@@ -573,7 +578,7 @@ var require_xhr = __commonJS({
     var parseHeaders = require_parseHeaders();
     var isURLSameOrigin = require_isURLSameOrigin();
     var createError = require_createError();
-    var defaults = require_defaults();
+    var transitionalDefaults = require_transitional();
     var Cancel = require_Cancel();
     module2.exports = function xhrAdapter(config) {
       return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -650,7 +655,7 @@ var require_xhr = __commonJS({
         };
         request.ontimeout = function handleTimeout() {
           var timeoutErrorMessage = config.timeout ? "timeout of " + config.timeout + "ms exceeded" : "timeout exceeded";
-          var transitional = config.transitional || defaults.transitional;
+          var transitional = config.transitional || transitionalDefaults;
           if (config.timeoutErrorMessage) {
             timeoutErrorMessage = config.timeoutErrorMessage;
           }
@@ -819,9 +824,9 @@ var require_ms = __commonJS({
   }
 });
 
-// node_modules/.pnpm/debug@4.3.3/node_modules/debug/src/common.js
+// node_modules/.pnpm/debug@4.3.4/node_modules/debug/src/common.js
 var require_common = __commonJS({
-  "node_modules/.pnpm/debug@4.3.3/node_modules/debug/src/common.js"(exports, module2) {
+  "node_modules/.pnpm/debug@4.3.4/node_modules/debug/src/common.js"(exports, module2) {
     function setup(env) {
       createDebug.debug = createDebug;
       createDebug.default = createDebug;
@@ -931,7 +936,7 @@ var require_common = __commonJS({
           }
           namespaces = split[i].replace(/\*/g, ".*?");
           if (namespaces[0] === "-") {
-            createDebug.skips.push(new RegExp("^" + namespaces.substr(1) + "$"));
+            createDebug.skips.push(new RegExp("^" + namespaces.slice(1) + "$"));
           } else {
             createDebug.names.push(new RegExp("^" + namespaces + "$"));
           }
@@ -982,9 +987,9 @@ var require_common = __commonJS({
   }
 });
 
-// node_modules/.pnpm/debug@4.3.3/node_modules/debug/src/browser.js
+// node_modules/.pnpm/debug@4.3.4/node_modules/debug/src/browser.js
 var require_browser = __commonJS({
-  "node_modules/.pnpm/debug@4.3.3/node_modules/debug/src/browser.js"(exports, module2) {
+  "node_modules/.pnpm/debug@4.3.4/node_modules/debug/src/browser.js"(exports, module2) {
     exports.formatArgs = formatArgs;
     exports.save = save;
     exports.load = load;
@@ -1262,9 +1267,9 @@ var require_supports_color = __commonJS({
   }
 });
 
-// node_modules/.pnpm/debug@4.3.3/node_modules/debug/src/node.js
+// node_modules/.pnpm/debug@4.3.4/node_modules/debug/src/node.js
 var require_node = __commonJS({
-  "node_modules/.pnpm/debug@4.3.3/node_modules/debug/src/node.js"(exports, module2) {
+  "node_modules/.pnpm/debug@4.3.4/node_modules/debug/src/node.js"(exports, module2) {
     var tty = require("tty");
     var util = require("util");
     exports.init = init;
@@ -1433,9 +1438,9 @@ var require_node = __commonJS({
   }
 });
 
-// node_modules/.pnpm/debug@4.3.3/node_modules/debug/src/index.js
+// node_modules/.pnpm/debug@4.3.4/node_modules/debug/src/index.js
 var require_src = __commonJS({
-  "node_modules/.pnpm/debug@4.3.3/node_modules/debug/src/index.js"(exports, module2) {
+  "node_modules/.pnpm/debug@4.3.4/node_modules/debug/src/index.js"(exports, module2) {
     if (typeof process === "undefined" || process.type === "renderer" || process.browser === true || process.__nwjs) {
       module2.exports = require_browser();
     } else {
@@ -1444,9 +1449,9 @@ var require_src = __commonJS({
   }
 });
 
-// node_modules/.pnpm/follow-redirects@1.14.8/node_modules/follow-redirects/debug.js
+// node_modules/.pnpm/follow-redirects@1.14.9/node_modules/follow-redirects/debug.js
 var require_debug = __commonJS({
-  "node_modules/.pnpm/follow-redirects@1.14.8/node_modules/follow-redirects/debug.js"(exports, module2) {
+  "node_modules/.pnpm/follow-redirects@1.14.9/node_modules/follow-redirects/debug.js"(exports, module2) {
     var debug;
     module2.exports = function() {
       if (!debug) {
@@ -1464,9 +1469,9 @@ var require_debug = __commonJS({
   }
 });
 
-// node_modules/.pnpm/follow-redirects@1.14.8/node_modules/follow-redirects/index.js
+// node_modules/.pnpm/follow-redirects@1.14.9/node_modules/follow-redirects/index.js
 var require_follow_redirects = __commonJS({
-  "node_modules/.pnpm/follow-redirects@1.14.8/node_modules/follow-redirects/index.js"(exports, module2) {
+  "node_modules/.pnpm/follow-redirects@1.14.9/node_modules/follow-redirects/index.js"(exports, module2) {
     var url = require("url");
     var URL2 = url.URL;
     var http = require("http");
@@ -1694,56 +1699,56 @@ var require_follow_redirects = __commonJS({
         });
       }
       var location = response.headers.location;
-      if (location && this._options.followRedirects !== false && statusCode >= 300 && statusCode < 400) {
-        abortRequest(this._currentRequest);
-        response.destroy();
-        if (++this._redirectCount > this._options.maxRedirects) {
-          this.emit("error", new TooManyRedirectsError());
-          return;
-        }
-        if ((statusCode === 301 || statusCode === 302) && this._options.method === "POST" || statusCode === 303 && !/^(?:GET|HEAD)$/.test(this._options.method)) {
-          this._options.method = "GET";
-          this._requestBodyBuffers = [];
-          removeMatchingHeaders(/^content-/i, this._options.headers);
-        }
-        var currentHostHeader = removeMatchingHeaders(/^host$/i, this._options.headers);
-        var currentUrlParts = url.parse(this._currentUrl);
-        var currentHost = currentHostHeader || currentUrlParts.host;
-        var currentUrl = /^\w+:/.test(location) ? this._currentUrl : url.format(Object.assign(currentUrlParts, { host: currentHost }));
-        var redirectUrl;
-        try {
-          redirectUrl = url.resolve(currentUrl, location);
-        } catch (cause) {
-          this.emit("error", new RedirectionError(cause));
-          return;
-        }
-        debug("redirecting to", redirectUrl);
-        this._isRedirect = true;
-        var redirectUrlParts = url.parse(redirectUrl);
-        Object.assign(this._options, redirectUrlParts);
-        if (redirectUrlParts.protocol !== currentUrlParts.protocol || !isSameOrSubdomain(redirectUrlParts.host, currentHost)) {
-          removeMatchingHeaders(/^(?:authorization|cookie)$/i, this._options.headers);
-        }
-        if (typeof this._options.beforeRedirect === "function") {
-          var responseDetails = { headers: response.headers };
-          try {
-            this._options.beforeRedirect.call(null, this._options, responseDetails);
-          } catch (err) {
-            this.emit("error", err);
-            return;
-          }
-          this._sanitizeOptions(this._options);
-        }
-        try {
-          this._performRequest();
-        } catch (cause) {
-          this.emit("error", new RedirectionError(cause));
-        }
-      } else {
+      if (!location || this._options.followRedirects === false || statusCode < 300 || statusCode >= 400) {
         response.responseUrl = this._currentUrl;
         response.redirects = this._redirects;
         this.emit("response", response);
         this._requestBodyBuffers = [];
+        return;
+      }
+      abortRequest(this._currentRequest);
+      response.destroy();
+      if (++this._redirectCount > this._options.maxRedirects) {
+        this.emit("error", new TooManyRedirectsError());
+        return;
+      }
+      if ((statusCode === 301 || statusCode === 302) && this._options.method === "POST" || statusCode === 303 && !/^(?:GET|HEAD)$/.test(this._options.method)) {
+        this._options.method = "GET";
+        this._requestBodyBuffers = [];
+        removeMatchingHeaders(/^content-/i, this._options.headers);
+      }
+      var currentHostHeader = removeMatchingHeaders(/^host$/i, this._options.headers);
+      var currentUrlParts = url.parse(this._currentUrl);
+      var currentHost = currentHostHeader || currentUrlParts.host;
+      var currentUrl = /^\w+:/.test(location) ? this._currentUrl : url.format(Object.assign(currentUrlParts, { host: currentHost }));
+      var redirectUrl;
+      try {
+        redirectUrl = url.resolve(currentUrl, location);
+      } catch (cause) {
+        this.emit("error", new RedirectionError(cause));
+        return;
+      }
+      debug("redirecting to", redirectUrl);
+      this._isRedirect = true;
+      var redirectUrlParts = url.parse(redirectUrl);
+      Object.assign(this._options, redirectUrlParts);
+      if (redirectUrlParts.protocol !== currentUrlParts.protocol && redirectUrlParts.protocol !== "https:" || redirectUrlParts.host !== currentHost && !isSubdomain(redirectUrlParts.host, currentHost)) {
+        removeMatchingHeaders(/^(?:authorization|cookie)$/i, this._options.headers);
+      }
+      if (typeof this._options.beforeRedirect === "function") {
+        var responseDetails = { headers: response.headers };
+        try {
+          this._options.beforeRedirect.call(null, this._options, responseDetails);
+        } catch (err) {
+          this.emit("error", err);
+          return;
+        }
+        this._sanitizeOptions(this._options);
+      }
+      try {
+        this._performRequest();
+      } catch (cause) {
+        this.emit("error", new RedirectionError(cause));
       }
     };
     function wrap(protocols) {
@@ -1846,10 +1851,7 @@ var require_follow_redirects = __commonJS({
       request.on("error", noop);
       request.abort();
     }
-    function isSameOrSubdomain(subdomain, domain) {
-      if (subdomain === domain) {
-        return true;
-      }
+    function isSubdomain(subdomain, domain) {
       const dot = subdomain.length - domain.length - 1;
       return dot > 0 && subdomain[dot] === "." && subdomain.endsWith(domain);
     }
@@ -1858,18 +1860,18 @@ var require_follow_redirects = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/env/data.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/env/data.js
 var require_data = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/env/data.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/env/data.js"(exports, module2) {
     module2.exports = {
-      "version": "0.26.0"
+      "version": "0.26.1"
     };
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/adapters/http.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/adapters/http.js
 var require_http = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/adapters/http.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/adapters/http.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     var settle = require_settle();
@@ -1884,7 +1886,7 @@ var require_http = __commonJS({
     var VERSION = require_data().version;
     var createError = require_createError();
     var enhanceError = require_enhanceError();
-    var defaults = require_defaults();
+    var transitionalDefaults = require_transitional();
     var Cancel = require_Cancel();
     var isHttps = /https:?/;
     function setProxy(options, proxy, location) {
@@ -2145,7 +2147,7 @@ var require_http = __commonJS({
             } else {
               timeoutErrorMessage = "timeout of " + config.timeout + "ms exceeded";
             }
-            var transitional = config.transitional || defaults.transitional;
+            var transitional = config.transitional || transitionalDefaults;
             reject(createError(timeoutErrorMessage, config, transitional.clarifyTimeoutError ? "ETIMEDOUT" : "ECONNABORTED", req));
           });
         }
@@ -2173,13 +2175,14 @@ var require_http = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/defaults.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/defaults/index.js
 var require_defaults = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/defaults.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/defaults/index.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     var normalizeHeaderName = require_normalizeHeaderName();
     var enhanceError = require_enhanceError();
+    var transitionalDefaults = require_transitional();
     var DEFAULT_CONTENT_TYPE = {
       "Content-Type": "application/x-www-form-urlencoded"
     };
@@ -2211,11 +2214,7 @@ var require_defaults = __commonJS({
       return (encoder || JSON.stringify)(rawValue);
     }
     var defaults = {
-      transitional: {
-        silentJSONParsing: true,
-        forcedJSONParsing: true,
-        clarifyTimeoutError: false
-      },
+      transitional: transitionalDefaults,
       adapter: getDefaultAdapter(),
       transformRequest: [function transformRequest(data, headers) {
         normalizeHeaderName(headers, "Accept");
@@ -2279,9 +2278,9 @@ var require_defaults = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/transformData.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/transformData.js
 var require_transformData = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/transformData.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/transformData.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     var defaults = require_defaults();
@@ -2295,9 +2294,9 @@ var require_transformData = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/cancel/isCancel.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/cancel/isCancel.js
 var require_isCancel = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/cancel/isCancel.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/cancel/isCancel.js"(exports, module2) {
     "use strict";
     module2.exports = function isCancel(value) {
       return !!(value && value.__CANCEL__);
@@ -2305,9 +2304,9 @@ var require_isCancel = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/dispatchRequest.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/dispatchRequest.js
 var require_dispatchRequest = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/dispatchRequest.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/dispatchRequest.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     var transformData = require_transformData();
@@ -2348,9 +2347,9 @@ var require_dispatchRequest = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/mergeConfig.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/mergeConfig.js
 var require_mergeConfig = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/mergeConfig.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/mergeConfig.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     module2.exports = function mergeConfig(config1, config2) {
@@ -2430,9 +2429,9 @@ var require_mergeConfig = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/validator.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/validator.js
 var require_validator = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/validator.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/validator.js"(exports, module2) {
     "use strict";
     var VERSION = require_data().version;
     var validators = {};
@@ -2486,9 +2485,9 @@ var require_validator = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/Axios.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/Axios.js
 var require_Axios = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/core/Axios.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/core/Axios.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     var buildURL = require_buildURL();
@@ -2598,9 +2597,9 @@ var require_Axios = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/cancel/CancelToken.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/cancel/CancelToken.js
 var require_CancelToken = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/cancel/CancelToken.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/cancel/CancelToken.js"(exports, module2) {
     "use strict";
     var Cancel = require_Cancel();
     function CancelToken(executor) {
@@ -2680,9 +2679,9 @@ var require_CancelToken = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/spread.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/spread.js
 var require_spread = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/spread.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/spread.js"(exports, module2) {
     "use strict";
     module2.exports = function spread(callback) {
       return function wrap(arr) {
@@ -2692,9 +2691,9 @@ var require_spread = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/isAxiosError.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/isAxiosError.js
 var require_isAxiosError = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/helpers/isAxiosError.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/helpers/isAxiosError.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     module2.exports = function isAxiosError(payload) {
@@ -2703,9 +2702,9 @@ var require_isAxiosError = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/axios.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/axios.js
 var require_axios = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/lib/axios.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/lib/axios.js"(exports, module2) {
     "use strict";
     var utils = require_utils();
     var bind = require_bind();
@@ -2738,9 +2737,9 @@ var require_axios = __commonJS({
   }
 });
 
-// node_modules/.pnpm/axios@0.26.0/node_modules/axios/index.js
+// node_modules/.pnpm/axios@0.26.1/node_modules/axios/index.js
 var require_axios2 = __commonJS({
-  "node_modules/.pnpm/axios@0.26.0/node_modules/axios/index.js"(exports, module2) {
+  "node_modules/.pnpm/axios@0.26.1/node_modules/axios/index.js"(exports, module2) {
     module2.exports = require_axios();
   }
 });
@@ -2975,6 +2974,7 @@ __export(main_exports, {
   setProviderList: () => set,
   setRequestOptions: () => setRequestOptions
 });
+module.exports = __toCommonJS(main_exports);
 
 // src/utils/isValidURL.js
 var isValidURL_default = (url = "") => {
@@ -3182,17 +3182,10 @@ var providers = [
     "endpoints": [
       {
         "schemes": [
-          "https://amtraker.com/view.html*",
-          "https://www.amtraker.com/view.html*",
-          "https://beta.amtraker.com/view.html*",
-          "https://whereismytrain.us/view.html*",
-          "https://www.whereismytrain.us/view.html*",
-          "https://whereismyfuckingtrain.com/view.html*",
-          "https://www.whereismyfuckingtrain.com/view.html*",
-          "https://amtrak.cc/view.html*",
-          "https://www.amtrak.cc/view.html*"
+          "https://amtraker.com/trains/*",
+          "https://beta.amtraker.com/trains/*"
         ],
-        "url": "https://api.amtrak.cc/v2/oembed",
+        "url": "https://api.amtraker.com/v2/oembed",
         "discovery": false
       }
     ]
@@ -3404,6 +3397,22 @@ var providers = [
         ],
         "url": "https://blogcast.host/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Bookingmood",
+    "provider_url": "https://www.bookingmood.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.bookingmood.com/embed/*/*"
+        ],
+        "url": "https://bookingmood.com/api/oembed",
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -4370,9 +4379,10 @@ var providers = [
     "endpoints": [
       {
         "schemes": [
-          "https://view.gmetri.com/*"
+          "https://view.gmetri.com/*",
+          "https://*.gmetri.com/*"
         ],
-        "url": "https://z5-viewer-socket.in.gmetri.com/oembed/",
+        "url": "https://embed.gmetri.com/oembed/",
         "discovery": true
       }
     ]
@@ -4394,13 +4404,15 @@ var providers = [
   },
   {
     "provider_name": "Grain",
-    "provider_url": "https://grain.co",
+    "provider_url": "https://grain.com",
     "endpoints": [
       {
         "schemes": [
-          "https://grain.co/highlight/*"
+          "https://grain.co/highlight/*",
+          "https://grain.co/share/*",
+          "https://grain.com/share/*"
         ],
-        "url": "http://api.grain.co/_/api/oembed"
+        "url": "https://api.grain.com/_/api/oembed"
       }
     ]
   },
@@ -4564,6 +4576,22 @@ var providers = [
         ],
         "url": "https://www.iheart.com/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Incredible",
+    "provider_url": "https://incredible.dev",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://incredible.dev/watch/*"
+        ],
+        "url": "https://oembed.incredible.dev/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -5451,6 +5479,21 @@ var providers = [
           "https://padlet.com/*"
         ],
         "url": "https://padlet.com/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Panda Video",
+    "provider_url": "https://pandavideo.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.tv.pandavideo.com.br/embed/?v=*",
+          "https://*.tv.pandavideo.com.br/*/playlist.m3u8",
+          "https://dashboard.pandavideo.com.br/#/videos/*"
+        ],
+        "url": "https://api-v2.pandavideo.com.br/oembed",
         "discovery": true
       }
     ]
@@ -6770,7 +6813,10 @@ var providers = [
     "provider_url": "https://www.wecandeo.com/",
     "endpoints": [
       {
-        "url": "https://play.wecandeo.com/oembed",
+        "schemes": [
+          "https://play.wecandeo.com/video/v/*"
+        ],
+        "url": "https://play.wecandeo.com/oembed/",
         "discovery": true
       }
     ]
@@ -7024,7 +7070,6 @@ var extract = async (url, params = {}) => {
   const data = await fetchEmbed_default(url, p, params);
   return data;
 };
-module.exports = __toCommonJS(main_exports);
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   extract,
