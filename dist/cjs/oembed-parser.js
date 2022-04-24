@@ -1,4 +1,4 @@
-// oembed-parser@3.0.1, by @ndaidong - built with esbuild at 2022-04-19T11:38:22.410Z - published under MIT license
+// oembed-parser@3.0.2, by @ndaidong - built with esbuild at 2022-04-24T04:05:44.858Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -3105,6 +3105,22 @@ var providers = [
     ]
   },
   {
+    "provider_name": "Adilo",
+    "provider_url": "https://adilo.bigcommand.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://adilo.bigcommand.com/watch/*"
+        ],
+        "url": "https://adilo.bigcommand.com/web/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "Adways",
     "provider_url": "http://www.adways.com",
     "endpoints": [
@@ -4043,6 +4059,20 @@ var providers = [
           "https://live.eventlive.pro/*/*"
         ],
         "url": "https://evt.live/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "everviz",
+    "provider_url": "https://everviz.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.everviz.com/embed/*",
+          "http://app.everviz.com/embed/*"
+        ],
+        "url": "https://api.everviz.com/oembed",
         "discovery": true
       }
     ]
@@ -6762,6 +6792,19 @@ var providers = [
         "formats": [
           "json"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Vouch",
+    "provider_url": "https://www.vouchfor.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.vouchfor.com/*"
+        ],
+        "url": "https://embed.vouchfor.com/v1/oembed",
+        "discovery": true
       }
     ]
   },

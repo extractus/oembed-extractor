@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-04-19T11:37:36.305Z
+// provider data, synchronized at 2022-04-24T04:05:40.938Z
 
 /* eslint-disable */ 
 
@@ -37,6 +37,22 @@ export const providers = [
           "https://secure.actblue.com/donate/*"
         ],
         "url": "https://secure.actblue.com/cf/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Adilo",
+    "provider_url": "https://adilo.bigcommand.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://adilo.bigcommand.com/watch/*"
+        ],
+        "url": "https://adilo.bigcommand.com/web/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -979,6 +995,20 @@ export const providers = [
           "https://live.eventlive.pro/*/*"
         ],
         "url": "https://evt.live/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "everviz",
+    "provider_url": "https://everviz.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.everviz.com/embed/*",
+          "http://app.everviz.com/embed/*"
+        ],
+        "url": "https://api.everviz.com/oembed",
         "discovery": true
       }
     ]
@@ -3698,6 +3728,19 @@ export const providers = [
         "formats": [
           "json"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Vouch",
+    "provider_url": "https://www.vouchfor.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.vouchfor.com/*"
+        ],
+        "url": "https://embed.vouchfor.com/v1/oembed",
+        "discovery": true
       }
     ]
   },
