@@ -9,7 +9,7 @@ export function extract(url: string, params?: any): Promise<OembedData>;
 
 export function hasProvider(url: string): boolean
 
-export function findProvider(url: string): FoundProvider
+export function findProvider(url: string): FindProviderResult
 
 export function setProviderList(providers: Provider[]): void
 
@@ -35,6 +35,7 @@ export interface FindProviderResult {
     "provider_name": string;
     "provider_url": string;
 }
+
 /**
  * Basic data structure of every oembed response see https://oembed.com/
  */
