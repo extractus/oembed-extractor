@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-04-24T04:05:40.938Z
+// provider data, synchronized at 2022-05-01T01:53:50.390Z
 
 /* eslint-disable */ 
 
@@ -387,6 +387,20 @@ export const providers = [
           "https://view.briovr.com/api/v1/worlds/oembed/*"
         ],
         "url": "https://view.briovr.com/api/v1/worlds/oembed/"
+      }
+    ]
+  },
+  {
+    "provider_name": "Bumper",
+    "provider_url": "http://www.bumper.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.bumper.com/oembed/bumper",
+          "https://www.bumper.com/oembed-s/bumper"
+        ],
+        "url": "https://www.bumper.com/oembed/bumper",
+        "discovery": true
       }
     ]
   },
@@ -1407,6 +1421,19 @@ export const providers = [
         "formats": [
           "json"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "HASH",
+    "provider_url": "https://hash.ai",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://core.hash.ai/@*"
+        ],
+        "url": "https://api.hash.ai/oembed",
+        "discovery": false
       }
     ]
   },
@@ -3135,7 +3162,7 @@ export const providers = [
           "https://open.spotify.com/*",
           "spotify:*"
         ],
-        "url": "https://open.spotify.com/oembed/",
+        "url": "https://open.spotify.com/oembed",
         "discovery": true
       }
     ]
@@ -3265,10 +3292,22 @@ export const providers = [
       {
         "schemes": [
           "https://sway.com/*",
-          "https://www.sway.com/*",
-          "https://sway.office.com/*"
+          "https://www.sway.com/*"
         ],
         "url": "https://sway.com/api/v1.0/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Sway Office",
+    "provider_url": "https://sway.office.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://sway.office.com/*"
+        ],
+        "url": "https://sway.office.com/api/v1.0/oembed",
         "discovery": true
       }
     ]
@@ -3641,6 +3680,19 @@ export const providers = [
     ]
   },
   {
+    "provider_name": "VidMount",
+    "provider_url": "https://vidmount.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://vidmount.com/*"
+        ],
+        "url": "https://vidmount.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Vidyard",
     "provider_url": "https://vidyard.com",
     "endpoints": [
@@ -3904,7 +3956,8 @@ export const providers = [
           "https://*.youtube.com/v/*",
           "https://youtu.be/*",
           "https://*.youtube.com/playlist?list=*",
-          "https://youtube.com/playlist?list=*"
+          "https://youtube.com/playlist?list=*",
+          "https://*.youtube.com/shorts*"
         ],
         "url": "https://www.youtube.com/oembed",
         "discovery": true
