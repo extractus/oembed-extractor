@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-04-29T01:12:40.920Z
+// provider data, synchronized at 2022-05-23T08:52:22.296Z
 
 /* eslint-disable */ 
 
@@ -906,6 +906,19 @@ export const providers = [
     ]
   },
   {
+    "provider_name": "Dream Broker",
+    "provider_url": "https://dreambroker.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.dreambroker.com/channel/*/*"
+        ],
+        "url": "https://dreambroker.com/channel/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "DTube",
     "provider_url": "https://d.tube/",
     "endpoints": [
@@ -1425,6 +1438,19 @@ export const providers = [
     ]
   },
   {
+    "provider_name": "HASH",
+    "provider_url": "https://hash.ai",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://core.hash.ai/@*"
+        ],
+        "url": "https://api.hash.ai/oembed",
+        "discovery": false
+      }
+    ]
+  },
+  {
     "provider_name": "hearthis.at",
     "provider_url": "https://hearthis.at/",
     "endpoints": [
@@ -1875,7 +1901,7 @@ export const providers = [
           "https://*.kooapp.com/koo/*",
           "http://*.kooapp.com/koo/*"
         ],
-        "url": "https://embed-stage.kooapp.com/services/oembed",
+        "url": "https://embed.kooapp.com/services/oembed",
         "discovery": true
       }
     ]
@@ -3065,6 +3091,19 @@ export const providers = [
     ]
   },
   {
+    "provider_name": "Smeme",
+    "provider_url": "https://smeme.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://open.smeme.com/*"
+        ],
+        "url": "https://open.smeme.com/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Smrthi",
     "provider_url": "https://www.smrthi.com",
     "endpoints": [
@@ -3282,6 +3321,19 @@ export const providers = [
           "https://www.sway.com/*"
         ],
         "url": "https://sway.com/api/v1.0/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Sway Office",
+    "provider_url": "https://sway.office.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://sway.office.com/*"
+        ],
+        "url": "https://sway.office.com/api/v1.0/oembed",
         "discovery": true
       }
     ]
@@ -3650,6 +3702,19 @@ export const providers = [
         ],
         "url": "https://videfit.com/oembed",
         "discovery": false
+      }
+    ]
+  },
+  {
+    "provider_name": "VidMount",
+    "provider_url": "https://vidmount.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://vidmount.com/*"
+        ],
+        "url": "https://vidmount.com/oembed",
+        "discovery": true
       }
     ]
   },
