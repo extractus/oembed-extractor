@@ -8,8 +8,8 @@ const isFacebookGraphDependent = (url) => {
 
 const getFacebookGraphToken = () => {
   const env = process.env || {}
-  const appId = env.FACEBOOK_APP_ID || '845078789498971'
-  const clientToken = env.FACEBOOK_CLIENT_TOKEN || '8ff3ab4ddd45b8f018b35c4fb7edac62'
+  const appId = env.FACEBOOK_APP_ID
+  const clientToken = env.FACEBOOK_CLIENT_TOKEN
 
   return `${appId}|${clientToken}`
 }
