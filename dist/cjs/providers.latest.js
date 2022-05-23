@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-05-01T01:53:50.390Z
+// provider data, synchronized at 2022-05-23T15:07:41.370Z
 
 /* eslint-disable */ 
 
@@ -902,6 +902,19 @@ export const providers = [
           "http://dotsub.com/view/*"
         ],
         "url": "http://dotsub.com/services/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Dream Broker",
+    "provider_url": "https://dreambroker.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.dreambroker.com/channel/*/*"
+        ],
+        "url": "https://dreambroker.com/channel/oembed",
+        "discovery": true
       }
     ]
   },
@@ -1888,7 +1901,7 @@ export const providers = [
           "https://*.kooapp.com/koo/*",
           "http://*.kooapp.com/koo/*"
         ],
-        "url": "https://embed-stage.kooapp.com/services/oembed",
+        "url": "https://embed.kooapp.com/services/oembed",
         "discovery": true
       }
     ]
@@ -3073,6 +3086,19 @@ export const providers = [
           "https://smashnotes.com/p/*/e/* - https://smashnotes.com/p/*/e/*/s/*"
         ],
         "url": "https://smashnotes.com/services/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Smeme",
+    "provider_url": "https://smeme.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://open.smeme.com/*"
+        ],
+        "url": "https://open.smeme.com/api/oembed",
         "discovery": true
       }
     ]

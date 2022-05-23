@@ -1,5 +1,5 @@
-  {
-  "version": "3.0.3",
+{
+  "version": "3.0.4",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -18,9 +18,9 @@
   "scripts": {
     "lint": "standard .",
     "pretest": "npm run lint",
-    "test": "jest --verbose --coverage=true --unhandled-rejections=strict --detectOpenHandles",
-    "eval": "node eval",
-    "eval:cjs": "node cjs-eval",
+    "test": " NODE_OPTIONS=--experimental-vm-modules jest --verbose --coverage=true --unhandled-rejections=strict --detectOpenHandles",
+    "eval": "DEBUG=oembed-parser:* node eval",
+    "eval:cjs": "DEBUG=oembed-parser:* node cjs-eval",
     "sync": "node sync",
     "tsc": "tsc --init",
     "build-ts": "tsc",
@@ -29,16 +29,8 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "bellajs": "^11.0.2"
-  },
-  "babel": {
-    "env": {
-      "test": {
-        "plugins": [
-          "@babel/plugin-transform-modules-commonjs"
-        ]
-      }
-    }
+    "bellajs": "^11.0.2",
+    "debug": "^4.3.4"
   },
   "standard": {
     "ignore": [
@@ -46,9 +38,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
-    "esbuild": "^0.14.38",
-    "jest": "^28.0.3",
+    "esbuild": "^0.14.39",
+    "jest": "^28.1.0",
     "nock": "^13.2.4"
   },
   "keywords": [
