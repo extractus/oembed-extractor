@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node_version: [14.x, 15.x, 16.x, 17.x]
+        node_version: [14.x, 15.x, 16.x, 17.x, 18.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -23,6 +23,9 @@ jobs:
         node-version: ${{ matrix.node_version }}
 
     - name: run npm scripts
+      env:
+        FACEBOOK_APP_ID: ${{ secrets.FACEBOOK_APP_ID }}
+        FACEBOOK_CLIENT_TOKEN: ${{ secrets.FACEBOOK_CLIENT_TOKEN }}
       run: |
         npm i -g standard
         npm install
