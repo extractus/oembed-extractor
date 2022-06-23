@@ -42,6 +42,7 @@ export default async (url, provider, params = {}) => {
   const queryParams = new URLSearchParams(query).toString()
 
   const link = getRegularUrl(queryParams, provider.fetchEndpoint)
+  console.log(link)
   const body = retrieve(link)
   return body
 }
