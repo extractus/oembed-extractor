@@ -1,5 +1,5 @@
 "use strict";
-// oembed-parser@3.0.5, by @ndaidong - built with esbuild at 2022-06-23T07:21:16.535Z - published under MIT license
+// oembed-parser@3.0.6, by @ndaidong - built with esbuild at 2022-07-04T04:41:14.012Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -12600,7 +12600,7 @@ var import_axios = __toESM(require_axios2(), 1);
 var import_bellajs = __toESM(require_bella(), 1);
 var requestOptions = {
   headers: {
-    "user-agent": "Mozilla/5.0 (X11; Linux i686; rv:100.0) Gecko/20100101 Firefox/100.0",
+    "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0",
     accept: "application/json; charset=utf-8"
   },
   responseType: "json",
@@ -13140,6 +13140,20 @@ var providers = [
           "https://cacoo.com/diagrams/*"
         ],
         "url": "http://cacoo.com/oembed.{format}"
+      }
+    ]
+  },
+  {
+    "provider_name": "Cardinal Blue",
+    "provider_url": "https://minesweeper.today/",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://minesweeper.today/*",
+          "https://minesweeper.today/*"
+        ],
+        "url": "https://minesweeper.today/api/oembed",
+        "discovery": true
       }
     ]
   },
@@ -14163,6 +14177,21 @@ var providers = [
     ]
   },
   {
+    "provider_name": "Heyzine",
+    "provider_url": "https://heyzine.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://heyzine.com/flip-book/*",
+          "https://*.hflip.co/*",
+          "https://*.aflip.in/*"
+        ],
+        "url": "https://heyzine.com/api1/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "hihaho",
     "provider_url": "https://www.hihaho.com",
     "endpoints": [
@@ -14279,6 +14308,23 @@ var providers = [
           "https://www.iheart.com/podcast/*/*"
         ],
         "url": "https://www.iheart.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "iMenuPro",
+    "provider_url": "https://imenupro.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://qr.imenupro.com/*",
+          "https://qr.imenupro.com/*"
+        ],
+        "url": "https://qr.imenupro.com/api/oembed",
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -14640,6 +14686,18 @@ var providers = [
         ],
         "url": "https://pod.univ-lille.fr/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Line Place",
+    "provider_url": "https://place.line.me",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://place.line.me/businesses/*"
+        ],
+        "url": "https://place.line.me/oembed"
       }
     ]
   },
@@ -15219,6 +15277,20 @@ var providers = [
     ]
   },
   {
+    "provider_name": "Picturelfy",
+    "provider_url": "https://www.picturelfy.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://www.picturelfy.com/p/*",
+          "https://www.picturelfy.com/p/*"
+        ],
+        "url": "https://api.picturelfy.com/service/oembed/",
+        "discovery": false
+      }
+    ]
+  },
+  {
     "provider_name": "PingVP",
     "provider_url": "https://www.pingvp.com/",
     "endpoints": [
@@ -15286,6 +15358,24 @@ var providers = [
           "xml"
         ],
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Plusdocs",
+    "provider_url": "http://plusdocs.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.plusdocs.com/*/snapshots/*",
+          "https://app.plusdocs.com/*/pages/edit/*",
+          "https://app.plusdocs.com/*/pages/share/*"
+        ],
+        "url": "https://app.plusdocs.com/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -15749,6 +15839,19 @@ var providers = [
         "formats": [
           "json"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Slate App",
+    "provider_url": "https://slateapp.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.slateapp.com/work/*"
+        ],
+        "url": "https://*.slateapp.com/api/v2/oembed",
+        "discovery": true
       }
     ]
   },

@@ -1,5 +1,5 @@
 {
-  "version": "3.0.5",
+  "version": "3.0.6",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -38,9 +38,9 @@
     ]
   },
   "devDependencies": {
-    "esbuild": "^0.14.47",
-    "jest": "^28.1.1",
-    "nock": "^13.2.7"
+    "esbuild": "^0.14.48",
+    "jest": "^28.1.2",
+    "nock": "^13.2.8"
   },
   "keywords": [
     "oembed",

@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-05-23T15:07:41.370Z
+// provider data, synchronized at 2022-07-04T04:38:20.547Z
 
 /* eslint-disable */ 
 
@@ -442,6 +442,20 @@ export const providers = [
           "https://cacoo.com/diagrams/*"
         ],
         "url": "http://cacoo.com/oembed.{format}"
+      }
+    ]
+  },
+  {
+    "provider_name": "Cardinal Blue",
+    "provider_url": "https://minesweeper.today/",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://minesweeper.today/*",
+          "https://minesweeper.today/*"
+        ],
+        "url": "https://minesweeper.today/api/oembed",
+        "discovery": true
       }
     ]
   },
@@ -1465,6 +1479,21 @@ export const providers = [
     ]
   },
   {
+    "provider_name": "Heyzine",
+    "provider_url": "https://heyzine.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://heyzine.com/flip-book/*",
+          "https://*.hflip.co/*",
+          "https://*.aflip.in/*"
+        ],
+        "url": "https://heyzine.com/api1/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "hihaho",
     "provider_url": "https://www.hihaho.com",
     "endpoints": [
@@ -1581,6 +1610,23 @@ export const providers = [
           "https://www.iheart.com/podcast/*/*"
         ],
         "url": "https://www.iheart.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "iMenuPro",
+    "provider_url": "https://imenupro.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://qr.imenupro.com/*",
+          "https://qr.imenupro.com/*"
+        ],
+        "url": "https://qr.imenupro.com/api/oembed",
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -1942,6 +1988,18 @@ export const providers = [
         ],
         "url": "https://pod.univ-lille.fr/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Line Place",
+    "provider_url": "https://place.line.me",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://place.line.me/businesses/*"
+        ],
+        "url": "https://place.line.me/oembed"
       }
     ]
   },
@@ -2521,6 +2579,20 @@ export const providers = [
     ]
   },
   {
+    "provider_name": "Picturelfy",
+    "provider_url": "https://www.picturelfy.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://www.picturelfy.com/p/*",
+          "https://www.picturelfy.com/p/*"
+        ],
+        "url": "https://api.picturelfy.com/service/oembed/",
+        "discovery": false
+      }
+    ]
+  },
+  {
     "provider_name": "PingVP",
     "provider_url": "https://www.pingvp.com/",
     "endpoints": [
@@ -2588,6 +2660,24 @@ export const providers = [
           "xml"
         ],
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Plusdocs",
+    "provider_url": "http://plusdocs.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.plusdocs.com/*/snapshots/*",
+          "https://app.plusdocs.com/*/pages/edit/*",
+          "https://app.plusdocs.com/*/pages/share/*"
+        ],
+        "url": "https://app.plusdocs.com/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3051,6 +3141,19 @@ export const providers = [
         "formats": [
           "json"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Slate App",
+    "provider_url": "https://slateapp.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.slateapp.com/work/*"
+        ],
+        "url": "https://*.slateapp.com/api/v2/oembed",
+        "discovery": true
       }
     ]
   },
