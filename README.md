@@ -13,7 +13,7 @@ Extract oEmbed content from given URL.
 ## Demo
 
 - [Give it a try!](https://demos.pwshub.com/oembed-parser)
-- [Example FaaS](https://extractor.pwshub.com/oembed/parse?url=https://www.youtube.com/watch?v=8jPQjjsBbIc&apikey=demo-orePhhidnWKWPvF8EYKap7z55cN)
+- [Example FaaS](https://extractor.pwshub.com/oembed/parse?url=https://www.instagram.com/tv/CVlR5GFqF68/&apikey=demo-TEyRycuuMCiGBiBocbLGSpagfj7gOF8AMyAWfEgP)
 
 
 ## Setup
@@ -169,7 +169,7 @@ Default option:
 ```js
 {
   headers: {
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0',
+    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0',
     accept: 'application/json; charset=utf-8'
   },
   responseType: 'json',
@@ -182,20 +182,18 @@ Default option:
 
 ## Facebook and Instagram
 
-Since October 24 2020, Facebook have deprecated their legacy urls and applied a new Facebook oEmbed endpoints.
+In order to work with the links from Facebook and Instagram, you need a [reviewed Facebook's app](https://developers.facebook.com/docs/app-review) with [oEmbed Read](https://developers.facebook.com/docs/features-reference/oembed-read) permission.
 
-Technically, now we have to use Facebook Graph API, with the access token from a valid and live Facebook app. `oembed-parser` will try to get these values from environment variables, so please define them, for example:
+When seeing a link from Facebook or Instagram, `oembed-parser` will look for environment variables `FACEBOOK_APP_ID` and `FACEBOOK_CLIENT_TOKEN` to retrieve oembed data using your app credentials.
+
+For example:
 
 ```bash
 export FACEBOOK_APP_ID=your_app_id
 export FACEBOOK_CLIENT_TOKEN=your_client_token
+
+npm run eval https://www.instagram.com/tv/CVlR5GFqF68/
 ```
-
-References:
-
-- [oEmbed Read](https://developers.facebook.com/docs/features-reference/oembed-read)
-- [Facebook oEmbed](https://developers.facebook.com/docs/plugins/oembed)
-- [Facebook Graph API](https://developers.facebook.com/docs/graph-api/overview)
 
 ## Test
 
