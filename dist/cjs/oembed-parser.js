@@ -1,5 +1,5 @@
 "use strict";
-// oembed-parser@3.0.6, by @ndaidong - built with esbuild at 2022-07-04T04:41:14.012Z - published under MIT license
+// oembed-parser@3.0.7, by @ndaidong - built with esbuild at 2022-07-24T14:05:45.604Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -12684,7 +12684,6 @@ var fetchEmbed_default = async (url, provider, params = {}) => {
   }
   const queryParams = new URLSearchParams(query).toString();
   const link = getRegularUrl(queryParams, provider.fetchEndpoint);
-  console.log(link);
   const body = retrieve_default(link);
   return body;
 };
@@ -12925,9 +12924,13 @@ var providers = [
         "schemes": [
           "https://audioboom.com/channels/*",
           "https://audioboom.com/channel/*",
-          "https://audioboom.com/posts/*"
+          "https://audioboom.com/playlists/*",
+          "https://audioboom.com/podcasts/*",
+          "https://audioboom.com/podcast/*",
+          "https://audioboom.com/posts/*",
+          "https://audioboom.com/episodes/*"
         ],
-        "url": "https://audioboom.com/publishing/oembed/v4.{format}",
+        "url": "https://audioboom.com/publishing/oembed.{format}",
         "formats": [
           "json",
           "xml"
@@ -15957,6 +15960,7 @@ var providers = [
         "schemes": [
           "http://soundcloud.com/*",
           "https://soundcloud.com/*",
+          "https://on.soundcloud.com/*",
           "https://soundcloud.app.goog.gl/*"
         ],
         "url": "https://soundcloud.com/oembed"

@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-07-04T04:38:20.547Z
+// provider data, synchronized at 2022-07-24T14:03:37.993Z
 
 /* eslint-disable */ 
 
@@ -227,9 +227,13 @@ export const providers = [
         "schemes": [
           "https://audioboom.com/channels/*",
           "https://audioboom.com/channel/*",
-          "https://audioboom.com/posts/*"
+          "https://audioboom.com/playlists/*",
+          "https://audioboom.com/podcasts/*",
+          "https://audioboom.com/podcast/*",
+          "https://audioboom.com/posts/*",
+          "https://audioboom.com/episodes/*"
         ],
-        "url": "https://audioboom.com/publishing/oembed/v4.{format}",
+        "url": "https://audioboom.com/publishing/oembed.{format}",
         "formats": [
           "json",
           "xml"
@@ -3259,6 +3263,7 @@ export const providers = [
         "schemes": [
           "http://soundcloud.com/*",
           "https://soundcloud.com/*",
+          "https://on.soundcloud.com/*",
           "https://soundcloud.app.goog.gl/*"
         ],
         "url": "https://soundcloud.com/oembed"
