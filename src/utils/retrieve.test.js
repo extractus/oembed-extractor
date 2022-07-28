@@ -13,35 +13,30 @@ const parseUrl = (url) => {
   }
 }
 
-test('test retrieve() from good source', async () => {
-  const url = 'https://some.where/good/page'
-  const { baseUrl, path } = parseUrl(url)
-  const scope = nock(baseUrl)
-  scope.get(path).reply(200, { data: { name: 'oembed-parser' } }, {
-    'Content-Type': 'application/json'
+describe('test retrieve() method', () => {
+  test('test retrieve from good source', async () => {
+    const url = 'https://some.where/good/source'
+    const { baseUrl, path } = parseUrl(url)
+    nock(baseUrl).get(path).reply(200, { data: { name: 'oembed-parser' } }, {
+      'Content-Type': 'application/json'
+    })
+    const result = await retrieve(url)
+    expect(result.data.name).toEqual('oembed-parser')
   })
-  const result = await retrieve(url)
-  expect(result.data.name).toEqual('oembed-parser')
-})
 
-test('test retrieve() from bad source', async () => {
-  const url = 'https://some.where/good/page'
-  const { baseUrl, path } = parseUrl(url)
-  const scope = nock(baseUrl)
-  scope.get(path).reply(500, '', {
-    'Content-Type': 'application/json'
+  test('test retrieve with error 500', () => {
+    const url = 'https://some.where/error/500'
+    const { baseUrl, path } = parseUrl(url)
+    nock(baseUrl).get(path).reply(500, 'Error 500')
+    expect(retrieve(url)).rejects.toThrow(new Error('AxiosError: Request failed with status code 500'))
   })
-  const result = await retrieve(url)
-  expect(result).toEqual(null)
-})
 
-test('test retrieve() with unsupported content type', async () => {
-  const url = 'https://some.where/good/page'
-  const { baseUrl, path } = parseUrl(url)
-  const scope = nock(baseUrl)
-  scope.get(path).reply(200, { data: { name: 'oembed-parser' } }, {
-    'Content-Type': 'text/json'
+  test('test retrieve with unsupported content type', () => {
+    const url = 'https://some.where/unsupported-content-type'
+    const { baseUrl, path } = parseUrl(url)
+    nock(baseUrl).get(path).reply(200, { data: { name: 'oembed-parser' } }, {
+      'Content-Type': 'abc/js'
+    })
+    expect(retrieve(url)).rejects.toThrow(new Error('Error: Invalid content type: "abc/js"'))
   })
-  const result = await retrieve(url)
-  expect(result).toEqual(null)
 })

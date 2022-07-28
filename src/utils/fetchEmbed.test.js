@@ -91,7 +91,7 @@ describe('test if fetchEmbed() works correctly', () => {
 
   cases.forEach(({ input, expected }) => {
     const { url, file, params = {} } = input
-    test(`  check fetchEmbed("${url}")`, async () => {
+    test(`check fetchEmbed("${url}")`, async () => {
       const provider = findProvider(url)
       const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
 

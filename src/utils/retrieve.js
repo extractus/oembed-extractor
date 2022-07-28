@@ -3,11 +3,11 @@
 import axios from 'axios'
 
 import { getRequestOptions } from '../config.js'
-import { error } from './logger.js'
 
 const isValidContentType = (ctype) => {
   return [
     'application/json',
+    'application/javascript',
     'text/javascript'
   ].some((item) => {
     return ctype.includes(item)
@@ -19,12 +19,10 @@ export default async (url) => {
     const res = await axios.get(url, getRequestOptions())
     const contentType = res.headers['content-type'] || ''
     if (!isValidContentType(contentType)) {
-      error(`Invalid content type! (${contentType})`)
-      return null
+      throw new Error(`Invalid content type: "${contentType}"`)
     }
     return res.data
   } catch (err) {
-    error(err.message)
-    return null
+    throw new Error(`${err.name}: ${err.message}`)
   }
 }

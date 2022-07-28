@@ -1,5 +1,5 @@
 {
-  "version": "3.0.7",
+  "version": "3.0.8",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -17,9 +17,9 @@
   "scripts": {
     "lint": "standard .",
     "pretest": "npm run lint",
-    "test": " NODE_OPTIONS=--experimental-vm-modules jest --verbose --coverage=true --unhandled-rejections=strict --detectOpenHandles",
-    "eval": "DEBUG=oembed-parser:* node eval",
-    "eval:cjs": "DEBUG=oembed-parser:* node cjs-eval",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --coverage=true",
+    "eval": "node eval",
+    "eval:cjs": "node cjs-eval",
     "sync": "node sync",
     "tsc": "tsc --init",
     "build-ts": "tsc",
@@ -29,7 +29,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "bellajs": "^11.0.3",
-    "debug": "^4.3.4"
+    "tldts": "^5.7.84"
   },
   "standard": {
     "ignore": [
@@ -37,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "esbuild": "^0.14.49",
+    "esbuild": "^0.14.50",
     "jest": "^28.1.3",
     "nock": "^13.2.9"
   },

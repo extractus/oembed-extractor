@@ -196,7 +196,7 @@ describe('test if extract() with some popular providers', () => {
 
   cases.forEach(({ input, expected, checkFn }) => {
     const { url, file, params = {} } = input
-    test(`  check fetchEmbed("${url}")`, async () => {
+    test(`check fetchEmbed("${url}")`, async () => {
       const provider = findProvider(url)
       const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
 
