@@ -47,15 +47,9 @@ extract(url).then((oembed) => {
 })
 ```
 
-##### Note:
-
-> Since Node.js v14, ECMAScript modules [have became the official standard format](https://nodejs.org/docs/latest-v14.x/api/esm.html#esm_modules_ecmascript_modules).
-> Just ensure that you are [using module system](https://nodejs.org/api/packages.html#determining-module-system) and enjoy with ES6 import/export syntax.
-
-
 ## APIs
 
-#### .extract(String url [, Object params])
+### `.extract(String url [, Object params])`
 
 Load and extract oembed data.
 
@@ -90,7 +84,7 @@ Here are several popular params:
 Note that some params are supported by these providers but not by the others.
 Please see the provider's oEmbed API docs carefully for exact information.
 
-#### .hasProvider(String URL)
+### `.hasProvider(String URL)`
 
 Check if a URL matches with any provider in the list.
 
@@ -103,7 +97,7 @@ hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s') // return true
 hasProvider('https://trello.com/b/BO3bg7yn/notes') // return false
 ```
 
-#### .findProvider(String URL)
+### `.findProvider(String URL)`
 
 Get the provider which is relevant to given URL.
 
@@ -125,7 +119,7 @@ Result looks like below:
 }
 ```
 
-#### .setProviderList(Array providers)
+### `.setProviderList(Array providers)`
 
 Apply a list of providers to use, overriding the [default](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
 
@@ -159,26 +153,17 @@ const providers = [
 setProviderList(providers)
 ```
 
-#### .setRequestOptions(Object requestOptions)
+### `.setRequestOptions(Object requestOptions)`
+
 Define options to call oembed HTTP request.
 
 `oembed-parser` is using [axios](https://github.com/axios/axios) to send HTTP requests. Please refer [axios' request config](https://axios-http.com/docs/req_config) for more info.
 
-Default option:
+### `.getRequestOptions()`
 
-```js
-{
-  headers: {
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0',
-    accept: 'application/json; charset=utf-8'
-  },
-  responseType: 'json',
-  responseEncoding: 'utf8',
-  timeout: 6e4,
-  maxRedirects: 3
-}
-```
+Return current request options.
 
+Default values can be found [here](https://github.com/ndaidong/oembed-parser/blob/main/src/config.js#L5).
 
 ## Facebook and Instagram
 

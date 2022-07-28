@@ -20,7 +20,10 @@ export const extract = async (url, params = {}) => {
   return data
 }
 
-export { setRequestOptions } from './config.js'
+export {
+  setRequestOptions,
+  getRequestOptions
+} from './config.js'
 
 export {
   find as findProvider,

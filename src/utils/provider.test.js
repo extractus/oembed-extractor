@@ -36,21 +36,21 @@ describe('test if provider.find() works correctly', () => {
   ]
 
   cases.forEach(({ url, fetchEndpoint }) => {
-    test(`  provider.find("${url}") must return "${fetchEndpoint}"`, () => {
+    test(`provider.find("${url}") must return "${fetchEndpoint}"`, () => {
       const foundedProvider = provider.find(url)
       expect(foundedProvider.fetchEndpoint).toEqual(fetchEndpoint)
     })
   })
 
-  test('  provider.find("{}") must return null', () => {
+  test('provider.find("{}") must return null', () => {
     expect(provider.find({})).toEqual(null)
   })
 
-  test('  provider.find("abcdef") must return null', () => {
+  test('provider.find("abcdef") must return null', () => {
     expect(provider.find('abcdef')).toEqual(null)
   })
 
-  test('  provider.find("https://somethingdoesnotexist.com") must return null', () => {
+  test('provider.find("https://somethingdoesnotexist.com") must return null', () => {
     expect(provider.find('https://somethingdoesnotexist.com')).toEqual(null)
   })
 })
@@ -68,10 +68,10 @@ describe('test if provider set/get works correctly', () => {
       endpoints: []
     }
   ]
-  test('  provider.set()', () => {
+  test('provider.set()', () => {
     expect(provider.set(providerList)).toEqual(providerList.length)
   })
-  test('  provider.get()', () => {
+  test('provider.get()', () => {
     expect(provider.get()).toEqual(providerList)
   })
 })

@@ -13,35 +13,45 @@ const parseUrl = (url) => {
   }
 }
 
-test('test retrieve() from good source', async () => {
-  const url = 'https://some.where/good/page'
-  const { baseUrl, path } = parseUrl(url)
-  const scope = nock(baseUrl)
-  scope.get(path).reply(200, { data: { name: 'oembed-parser' } }, {
-    'Content-Type': 'application/json'
+describe('test retrieve() method', () => {
+  test('test retrieve from good source', async () => {
+    const url = 'https://some.where/good/source'
+    const { baseUrl, path } = parseUrl(url)
+    nock(baseUrl).get(path).reply(200, { data: { name: 'oembed-parser' } }, {
+      'Content-Type': 'application/json'
+    })
+    const result = await retrieve(url)
+    expect(result.data.name).toEqual('oembed-parser')
+    nock.cleanAll()
   })
-  const result = await retrieve(url)
-  expect(result.data.name).toEqual('oembed-parser')
-})
 
-test('test retrieve() from bad source', async () => {
-  const url = 'https://some.where/good/page'
-  const { baseUrl, path } = parseUrl(url)
-  const scope = nock(baseUrl)
-  scope.get(path).reply(500, '', {
-    'Content-Type': 'application/json'
+  test('test retrieve with unsupported content type', async () => {
+    const url = 'https://some.where/unsupported-content-type'
+    const { baseUrl, path } = parseUrl(url)
+    nock(baseUrl).get(path).reply(200, '', {
+      'Content-Type': 'abc/js'
+    })
+    expect(retrieve(url)).rejects.toThrow(new Error('Error: Invalid content type: "abc/js"'))
+    try {
+      await retrieve(url)
+    } catch (err) {
+      expect(err).toBeTruthy()
+    }
+    nock.cleanAll()
   })
-  const result = await retrieve(url)
-  expect(result).toEqual(null)
-})
 
-test('test retrieve() with unsupported content type', async () => {
-  const url = 'https://some.where/good/page'
-  const { baseUrl, path } = parseUrl(url)
-  const scope = nock(baseUrl)
-  scope.get(path).reply(200, { data: { name: 'oembed-parser' } }, {
-    'Content-Type': 'text/json'
+  test('test retrieve with error 500', async () => {
+    const url = 'https://some.where/error/500'
+    const { baseUrl, path } = parseUrl(url)
+    nock(baseUrl).get(path).reply(500, 'Error 500', {
+      'Content-Type': 'application/json'
+    })
+    expect(retrieve(url)).rejects.toThrow(new Error('AxiosError: Request failed with status code 500'))
+    try {
+      await retrieve(url)
+    } catch (err) {
+      expect(err).toBeTruthy()
+    }
+    nock.cleanAll()
   })
-  const result = await retrieve(url)
-  expect(result).toEqual(null)
 })

@@ -91,7 +91,7 @@ describe('test if fetchEmbed() works correctly', () => {
 
   cases.forEach(({ input, expected }) => {
     const { url, file, params = {} } = input
-    test(`  check fetchEmbed("${url}")`, async () => {
+    test(`check fetchEmbed("${url}")`, async () => {
       const provider = findProvider(url)
       const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
 
@@ -122,6 +122,7 @@ describe('test if fetchEmbed() works correctly', () => {
       if (maxheight > 0) {
         expect(result.height).toBeLessThanOrEqual(expected.maxheight)
       }
+      nock.cleanAll()
     })
   })
 })

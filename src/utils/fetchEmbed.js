@@ -1,7 +1,6 @@
 // utils -> fetchEmbed
 
 import retrieve from './retrieve.js'
-import { warning } from './logger.js'
 
 const isFacebookGraphDependent = (url) => {
   return url.includes('facebook.com') || url.includes('instagram.com')
@@ -11,9 +10,6 @@ const getFacebookGraphToken = () => {
   const env = process.env || {}
   const appId = env.FACEBOOK_APP_ID
   const clientToken = env.FACEBOOK_CLIENT_TOKEN
-  if (!appId || !clientToken) {
-    warning('Working with Facebook Graph requires `FACEBOOK_APP_ID` and `FACEBOOK_CLIENT_TOKEN`')
-  }
   return `${appId}|${clientToken}`
 }
 
