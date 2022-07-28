@@ -228,6 +228,7 @@ describe('test if extract() with some popular providers', () => {
       if (maxheight > 0) {
         expect(result.height).toBeLessThanOrEqual(expected.maxheight)
       }
+      nock.cleanAll()
     })
   })
 })

@@ -1,5 +1,5 @@
 "use strict";
-// oembed-parser@3.0.8, by @ndaidong - built with esbuild at 2022-07-28T15:00:23.052Z - published under MIT license
+// oembed-parser@3.0.8, by @ndaidong - built with esbuild at 2022-07-28T15:36:43.727Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;

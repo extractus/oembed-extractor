@@ -122,6 +122,7 @@ describe('test if fetchEmbed() works correctly', () => {
       if (maxheight > 0) {
         expect(result.height).toBeLessThanOrEqual(expected.maxheight)
       }
+      nock.cleanAll()
     })
   })
 })
