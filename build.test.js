@@ -23,8 +23,8 @@ describe('Validate commonjs version output', () => {
   const constent = readFileSync(cjsFile, 'utf8')
   const lines = constent.split('\n')
   test('Check if file meta contains package info', () => {
-    expect(lines[1].includes(`${pkg.name}@${pkg.version}`)).toBeTruthy()
-    expect(lines[1].includes(pkg.author)).toBeTruthy()
-    expect(lines[1].includes(pkg.license)).toBeTruthy()
+    expect(lines[0].includes(`${pkg.name}@${pkg.version}`)).toBeTruthy()
+    expect(lines[0].includes(pkg.author)).toBeTruthy()
+    expect(lines[0].includes(pkg.license)).toBeTruthy()
   })
 })
