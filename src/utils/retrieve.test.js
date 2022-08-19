@@ -25,21 +25,6 @@ describe('test retrieve() method', () => {
     nock.cleanAll()
   })
 
-  test('test retrieve with unsupported content type', async () => {
-    const url = 'https://some.where/unsupported-content-type'
-    const { baseUrl, path } = parseUrl(url)
-    nock(baseUrl).get(path).reply(200, '', {
-      'Content-Type': 'abc/js'
-    })
-    expect(retrieve(url)).rejects.toThrow(new Error('Error: Invalid content type: "abc/js"'))
-    try {
-      await retrieve(url)
-    } catch (err) {
-      expect(err).toBeTruthy()
-    }
-    nock.cleanAll()
-  })
-
   test('test retrieve with error 500', async () => {
     const url = 'https://some.where/error/500'
     const { baseUrl, path } = parseUrl(url)
