@@ -37,6 +37,10 @@ Extract oEmbed content from given URL.
 import { extract } from 'oembed-parser'
 
 // with CommonJS environments
+
+// const { extract } = require('oembed-parser')
+
+// or specify exactly path to cjs variant
 // const { extract } = require('oembed-parser/dist/cjs/oembed-parser.js')
 
 const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc'
@@ -112,7 +116,7 @@ findProvider('https://www.facebook.com/video.php?v=999999999')
 
 Result looks like below:
 
-```json
+```js
 {
   fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_video',
   providerName: 'Facebook',
@@ -153,18 +157,6 @@ const providers = [
 
 setProviderList(providers)
 ```
-
-### `.setRequestOptions(Object requestOptions)`
-
-Define options to call oembed HTTP request.
-
-`oembed-parser` is using [axios](https://github.com/axios/axios) to send HTTP requests. Please refer [axios' request config](https://axios-http.com/docs/req_config) for more info.
-
-### `.getRequestOptions()`
-
-Return current request options.
-
-Default values can be found [here](https://github.com/ndaidong/oembed-parser/blob/main/src/config.js#L5).
 
 ## Facebook and Instagram
 

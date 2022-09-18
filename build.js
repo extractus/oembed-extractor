@@ -3,7 +3,7 @@
  * @ndaidong
 **/
 
-import { readFileSync, writeFileSync, copyFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'fs'
 import { execSync } from 'child_process'
 
 import { buildSync } from 'esbuild'
@@ -25,7 +25,10 @@ const baseOpt = {
   bundle: true,
   charset: 'utf8',
   target: ['es2020', 'node14'],
+  pure: ['console.log', 'debug', 'alert'],
+  legalComments: 'none',
   minify: false,
+  sourcemap: false,
   write: true
 }
 
@@ -50,9 +53,4 @@ writeFileSync(
   'dist/cjs/package.json',
   JSON.stringify(cjspkg, null, '  '),
   'utf8'
-)
-
-copyFileSync(
-  'src/utils/providers.latest.js',
-  'dist/cjs/providers.latest.js'
 )

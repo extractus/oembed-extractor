@@ -24,19 +24,4 @@ describe('test retrieve() method', () => {
     expect(result.data.name).toEqual('oembed-parser')
     nock.cleanAll()
   })
-
-  test('test retrieve with error 500', async () => {
-    const url = 'https://some.where/error/500'
-    const { baseUrl, path } = parseUrl(url)
-    nock(baseUrl).get(path).reply(500, 'Error 500', {
-      'Content-Type': 'application/json'
-    })
-    expect(retrieve(url)).rejects.toThrow(new Error('AxiosError: Request failed with status code 500'))
-    try {
-      await retrieve(url)
-    } catch (err) {
-      expect(err).toBeTruthy()
-    }
-    nock.cleanAll()
-  })
 })

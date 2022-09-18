@@ -1,8 +1,6 @@
 // utils / provider
 
-import { getDomain } from 'tldts'
-
-import isValidURL from './isValidURL.js'
+import { isValid as isValidURL, getDomain } from './linker.js'
 
 import { providers as defaultProviderList } from './providers.latest.js'
 

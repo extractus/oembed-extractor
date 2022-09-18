@@ -13,10 +13,6 @@ export function findProvider(url: string): FindProviderResult
 
 export function setProviderList(providers: Provider[]): void
 
-export function setRequestOptions(options: object): void
-
-export function getRequestOptions(): object
-
 export interface Endpoint {
     schemes?: string[];
     url: string;

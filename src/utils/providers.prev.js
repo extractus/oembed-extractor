@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-07-28T14:44:04.385Z
+// provider data, synchronized at 2022-08-19T11:28:55.403Z
 
 /* eslint-disable */ 
 
@@ -3632,6 +3632,22 @@ export const providers = [
           "https://*.tvcf.co.kr/*"
         ],
         "url": "https://play.tvcf.co.kr/rest/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Twinmotion",
+    "provider_url": "https://twinmotion.unrealengine.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://twinmotion.unrealengine.com/presentation/*",
+          "https://twinmotion.unrealengine.com/panorama/*"
+        ],
+        "url": "https://twinmotion.unrealengine.com/oembed",
+        "formats": [
+          "json"
+        ]
       }
     ]
   },

@@ -7,13 +7,8 @@ import {
   extract,
   hasProvider,
   findProvider,
-  setProviderList,
-  setRequestOptions
+  setProviderList
 } from './main.js'
-
-import {
-  getRequestOptions
-} from './config.js'
 
 const required = [
   'type',
@@ -256,24 +251,4 @@ test('test .setProviderList() method', () => {
   setProviderList(customProviderOnly)
   expect(hasProvider('http://www.example.org/media/abcdef')).toBe(true)
   expect(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s')).toBe(false)
-})
-
-test('Testing setRequestOptions()', () => {
-  setRequestOptions({
-    headers: {
-      authorization: 'bearer <token>'
-    },
-    timeout: 20,
-    somethingElse: 1000
-  })
-
-  const actual = getRequestOptions()
-  const expectedHeader = {
-    authorization: 'bearer <token>',
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0',
-    accept: 'application/json; charset=utf-8'
-  }
-
-  expect(actual.headers).toEqual(expectedHeader)
-  expect(actual.timeout).toEqual(20)
 })

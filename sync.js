@@ -5,9 +5,7 @@ import {
   writeFileSync
 } from 'fs'
 
-import axios from 'axios'
-
-import { getRequestOptions } from './src/config.js'
+import retrieve from './src/utils/retrieve.js'
 
 const source = 'https://oembed.com/providers.json'
 const latest = './src/utils/providers.latest.js'
@@ -15,8 +13,8 @@ const prev = './src/utils/providers.prev.js'
 
 const sync = async () => {
   try {
-    const res = await axios.get(source, getRequestOptions())
-    const data = JSON.stringify(res.data, undefined, 2)
+    const result = await retrieve(source)
+    const data = JSON.stringify(result, undefined, 2)
 
     // backup previous version
     copyFileSync(latest, prev)

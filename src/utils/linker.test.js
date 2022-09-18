@@ -1,7 +1,7 @@
-// isValidURL.test
+// linker.test
 /* eslint-env jest */
 
-import isValidURL from './isValidURL.js'
+import { isValid as isValidURL } from './linker.js'
 
 describe('test isValidURL()', () => {
   const cases = [
