@@ -5,7 +5,7 @@ import { getDomain } from './linker.js'
 
 const isFacebookGraphDependent = (url) => {
   const domain = getDomain(url)
-  return ['facebook.com', 'instagram.com'].includes(domain)
+  return domain.startsWith('graph.facebook.com')
 }
 
 const getFacebookGraphToken = () => {
@@ -19,7 +19,7 @@ const getRegularUrl = (query, basseUrl) => {
   return basseUrl.replace(/\{format\}/g, 'json') + '?' + query
 }
 
-export default async (url, provider, params = {}) => {
+export default async (url, params = {}, endpoint = '') => {
   const query = {
     url,
     format: 'json',
@@ -33,13 +33,13 @@ export default async (url, provider, params = {}) => {
     delete query.maxheight
   }
 
-  if (isFacebookGraphDependent(provider.providerUrl)) {
+  if (isFacebookGraphDependent(endpoint)) {
     query.access_token = getFacebookGraphToken()
   }
 
   const queryParams = new URLSearchParams(query).toString()
 
-  const link = getRegularUrl(queryParams, provider.fetchEndpoint)
+  const link = getRegularUrl(queryParams, endpoint)
   const body = retrieve(link)
   return body
 }

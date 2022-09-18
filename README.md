@@ -43,7 +43,7 @@ import { extract } from 'oembed-parser'
 // or specify exactly path to cjs variant
 // const { extract } = require('oembed-parser/dist/cjs/oembed-parser.js')
 
-const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc'
+const url = 'https://www.youtube.com/watch?v=x2bqscVkGxk'
 
 extract(url).then((oembed) => {
   console.log(oembed)
@@ -89,40 +89,6 @@ Here are several popular params:
 Note that some params are supported by these providers but not by the others.
 Please see the provider's oEmbed API docs carefully for exact information.
 
-### `.hasProvider(String URL)`
-
-Check if a URL matches with any provider in the list.
-
-Examples:
-
-```js
-import { hasProvider } from 'oembed-parser'
-
-hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s') // return true
-hasProvider('https://trello.com/b/BO3bg7yn/notes') // return false
-```
-
-### `.findProvider(String URL)`
-
-Get the provider which is relevant to given URL.
-
-For example:
-
-```js
-import { findProvider } from 'oembed-parser'
-
-findProvider('https://www.facebook.com/video.php?v=999999999')
-```
-
-Result looks like below:
-
-```js
-{
-  fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_video',
-  providerName: 'Facebook',
-  providerUrl: 'https://www.facebook.com/'
-}
-```
 
 ### `.setProviderList(Array providers)`
 

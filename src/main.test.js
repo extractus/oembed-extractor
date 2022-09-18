@@ -193,7 +193,7 @@ describe('test if extract() with some popular providers', () => {
     const { url, file, params = {} } = input
     test(`check fetchEmbed("${url}")`, async () => {
       const provider = findProvider(url)
-      const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
+      const { baseUrl, path } = parseUrl(provider.endpoint)
 
       const scope = nock(baseUrl, { encodedQueryParams: true })
       const queries = new URLSearchParams({
