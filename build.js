@@ -3,7 +3,7 @@
  * @ndaidong
 **/
 
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync } from 'fs'
 import { execSync } from 'child_process'
 
 import { buildSync } from 'esbuild'
@@ -37,20 +37,21 @@ const cjsVersion = {
   platform: 'node',
   format: 'cjs',
   mainFields: ['main'],
-  outfile: `dist/cjs/${pkg.name}.js`,
+  outfile: `dist/${pkg.name}.js`,
   banner: {
     js: comment
   }
 }
 buildSync(cjsVersion)
 
-const cjspkg = {
-  name: pkg.name + '-cjs',
-  version: pkg.version,
-  main: `./${pkg.name}.js`
+const esmVersion = {
+  ...baseOpt,
+  platform: 'browser',
+  format: 'esm',
+  mainFields: ['module'],
+  outfile: `dist/${pkg.name}.esm.js`,
+  banner: {
+    js: comment
+  }
 }
-writeFileSync(
-  'dist/cjs/package.json',
-  JSON.stringify(cjspkg, null, '  '),
-  'utf8'
-)
+buildSync(esmVersion)
