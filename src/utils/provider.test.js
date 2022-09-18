@@ -86,6 +86,6 @@ describe('test if provider set/get works correctly', () => {
     expect(provider.set(providerList)).toEqual(providerList.length)
     const newList = provider.get()
     expect(newList.length).toEqual(providerList.length)
-    expect(newList[0].schemes[0]).toEqual(/store.alpha.com\/(.*)/i)
+    expect(newList[0].schemes[0]).toEqual(/store\.alpha\.com\/(.*)/i)
   })
 })

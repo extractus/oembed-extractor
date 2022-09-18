@@ -5,7 +5,7 @@ import { isValid as isValidURL, getDomain } from './linker.js'
 import { providers as defaultProviderList } from './providers.latest.js'
 
 const toRegExp = (scheme = '') => {
-  return new RegExp(scheme.replace(/\*/g, '(.*)').replace(/\?/g, '\\?').replace(/,$/g, ''), 'i')
+  return new RegExp(scheme.replace(/\./g, '\\.').replace(/\*/g, '(.*)').replace(/\?/g, '\\?').replace(/,$/g, ''), 'i')
 }
 
 const uniquify = (arr = []) => {

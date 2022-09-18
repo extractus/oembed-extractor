@@ -1,4 +1,4 @@
-// oembed-parser@3.1.0rc1, by @ndaidong - built with esbuild at 2022-09-18T11:01:58.482Z - published under MIT license
+// oembed-parser@3.1.0rc1, by @ndaidong - built with esbuild at 2022-09-18T12:43:17.115Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -4966,7 +4966,7 @@ var providers = [
 
 // src/utils/provider.js
 var toRegExp = (scheme = "") => {
-  return new RegExp(scheme.replace(/\*/g, "(.*)").replace(/\?/g, "\\?").replace(/,$/g, ""), "i");
+  return new RegExp(scheme.replace(/\./g, "\\.").replace(/\*/g, "(.*)").replace(/\?/g, "\\?").replace(/,$/g, ""), "i");
 };
 var uniquify = (arr = []) => {
   return [...new Set(arr)];
