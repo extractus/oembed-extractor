@@ -5,15 +5,19 @@ import { isValid as isValidURL, getDomain } from './linker.js'
 import { providers as defaultProviderList } from './providers.latest.js'
 
 const toRegExp = (scheme = '') => {
-  return new RegExp(scheme.replace(/\./g, '\\.').replace(/\*/g, '(.*)').replace(/\?/g, '\\?').replace(/,$/g, ''), 'i')
+  return new RegExp(scheme.replace(/\\./g, '.').replace(/\*/g, '(.*)').replace(/\?/g, '\\?').replace(/,$/g, ''), 'i')
 }
 
 const uniquify = (arr = []) => {
   return [...(new Set(arr))]
 }
 
-const normalize = (scheme = '') => {
-  return scheme.replace('https://', '').replace('http://', '')
+const undotted = (scheme = '') => {
+  return scheme.replace(/\./g, '\\.')
+}
+
+const removeProtocol = (url) => {
+  return url.replace('https://', '').replace('http://', '')
 }
 
 export const simplify = (providers = []) => {
@@ -23,11 +27,11 @@ export const simplify = (providers = []) => {
     } = item
     return endpoints.map((endpoint) => {
       const { schemes = [], url } = endpoint
-      const patterns = schemes.length > 0 ? uniquify(schemes.map(normalize)) : []
+      const patterns = schemes.length > 0 ? uniquify(schemes.map(removeProtocol).map(undotted)) : []
 
       return {
         s: patterns,
-        e: normalize(url.replace(/\{format\}/g, 'json'))
+        e: removeProtocol(url).replace(/\{format\}/g, 'json')
       }
     })
   }).reduce((prev, curr) => {
@@ -48,7 +52,7 @@ const providersFromList = (providers = []) => {
 const store = {
   providers: providersFromList(defaultProviderList)
 }
-
+console.log(store.providers)
 export const get = () => {
   return [...store.providers]
 }
