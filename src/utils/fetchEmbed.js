@@ -1,9 +1,11 @@
 // utils -> fetchEmbed
 
 import retrieve from './retrieve.js'
+import { getDomain } from './linker.js'
 
 const isFacebookGraphDependent = (url) => {
-  return url.includes('facebook.com') || url.includes('instagram.com')
+  const domain = getDomain(url)
+  return ['facebook.com', 'instagram.com'].includes(domain)
 }
 
 const getFacebookGraphToken = () => {

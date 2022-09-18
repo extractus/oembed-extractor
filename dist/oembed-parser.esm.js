@@ -1,4 +1,4 @@
-// oembed-parser@3.1.0rc1, by @ndaidong - built with esbuild at 2022-09-18T05:34:21.227Z - published under MIT license
+// oembed-parser@3.1.0rc1, by @ndaidong - built with esbuild at 2022-09-18T06:17:52.405Z - published under MIT license
 
 // src/utils/linker.js
 var isValid = (url = "") => {
@@ -30,7 +30,8 @@ var retrieve_default = async (url) => {
 
 // src/utils/fetchEmbed.js
 var isFacebookGraphDependent = (url) => {
-  return url.includes("facebook.com") || url.includes("instagram.com");
+  const domain = getDomain(url);
+  return ["facebook.com", "instagram.com"].includes(domain);
 };
 var getFacebookGraphToken = () => {
   const env = process.env || {};
