@@ -1,18 +1,51 @@
 // utils / provider
 
-import { getDomain } from 'tldts'
-
-import isValidURL from './isValidURL.js'
+import { isValid as isValidURL, getDomain } from './linker.js'
 
 import { providers as defaultProviderList } from './providers.latest.js'
 
+const toRegExp = (scheme = '') => {
+  return new RegExp(scheme.replace(/\\./g, '.').replace(/\*/g, '(.*)').replace(/\?/g, '\\?').replace(/,$/g, ''), 'i')
+}
+
+const uniquify = (arr = []) => {
+  return [...(new Set(arr))]
+}
+
+const undotted = (scheme = '') => {
+  return scheme.replace(/\./g, '\\.')
+}
+
+const removeProtocol = (url) => {
+  return url.replace('https://', '').replace('http://', '')
+}
+
+export const simplify = (providers = []) => {
+  return providers.map((item) => {
+    const {
+      endpoints
+    } = item
+    return endpoints.map((endpoint) => {
+      const { schemes = [], url } = endpoint
+      const patterns = schemes.length > 0 ? uniquify(schemes.map(removeProtocol).map(undotted)) : []
+
+      return {
+        s: patterns,
+        e: removeProtocol(url).replace(/\{format\}/g, 'json')
+      }
+    })
+  }).reduce((prev, curr) => {
+    return prev.concat(curr)
+  }, [])
+}
+
 const providersFromList = (providers = []) => {
   return providers.map((provider) => {
-    const { provider_url: url } = provider
-    provider.domain = getDomain(url)
-    return provider
-  }).filter((provider) => {
-    return provider.domain !== ''
+    const { e: endpoint, s: schemes } = provider
+    return {
+      endpoint: `https://${endpoint}`,
+      schemes: schemes.map(toRegExp)
+    }
   })
 }
 
@@ -25,29 +58,19 @@ export const get = () => {
 }
 
 export const set = (providers = []) => {
-  store.providers = providersFromList(providers)
+  store.providers = providersFromList(simplify(providers))
   return store.providers.length
 }
 
-const getEndpoint = (url, domain, endpoints) => {
-  for (let i = 0; i < endpoints.length; i++) {
-    const endpoint = endpoints[i]
-    const { schemes = [], url: endpointUrl } = endpoint
-    if (schemes.length === 0) {
-      const endpointDomain = getDomain(endpointUrl)
-      if (endpointDomain === domain) {
-        return endpoint
-      }
-    }
-    const isMatchedScheme = schemes.some((scheme) => {
-      const reg = new RegExp(scheme.replace(/\*/g, '(.*)').replace(/\?/g, '\\?').replace(/,$/g, ''), 'i')
-      return url.match(reg)
-    })
-    if (isMatchedScheme) {
-      return endpoint
-    }
+const compare = (url = '', endpoint = '', schemes = []) => {
+  if (!schemes.length) {
+    const domain = getDomain(url)
+    const endpointDomain = getDomain(endpoint)
+    return domain === endpointDomain
   }
-  return null
+  return schemes.some((scheme) => {
+    return url.match(scheme)
+  })
 }
 
 export const find = (url = '') => {
@@ -55,23 +78,16 @@ export const find = (url = '') => {
     return null
   }
 
-  const domain = getDomain(url)
-
   const providers = get()
 
   for (let i = 0; i < providers.length; i++) {
-    const prov = providers[i]
-    const {
-      endpoints,
-      provider_name: providerName,
-      provider_url: providerUrl
-    } = prov
-    const endpoint = getEndpoint(url, domain, endpoints)
-    if (endpoint) {
+    const { endpoint, schemes } = providers[i]
+    const isMatched = compare(url, endpoint, schemes)
+    if (isMatched) {
       return {
-        fetchEndpoint: endpoint.url,
-        providerName,
-        providerUrl
+        schemes,
+        endpoint,
+        url
       }
     }
   }
@@ -81,6 +97,11 @@ export const find = (url = '') => {
 
 export const has = (url = '') => {
   return find(url) !== null
+}
+
+export const getEndpoint = (url) => {
+  const p = find(url)
+  return p ? p.endpoint : null
 }
 
 export default {

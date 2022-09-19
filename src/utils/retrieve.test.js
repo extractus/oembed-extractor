@@ -25,13 +25,12 @@ describe('test retrieve() method', () => {
     nock.cleanAll()
   })
 
-  test('test retrieve with error 500', async () => {
-    const url = 'https://some.where/error/500'
+  test('test retrieve invalid json reponsse', async () => {
+    const url = 'https://some.where/bad/source'
     const { baseUrl, path } = parseUrl(url)
-    nock(baseUrl).get(path).reply(500, 'Error 500', {
+    nock(baseUrl).get(path).reply(200, 'this is not json string', {
       'Content-Type': 'application/json'
     })
-    expect(retrieve(url)).rejects.toThrow(new Error('AxiosError: Request failed with status code 500'))
     try {
       await retrieve(url)
     } catch (err) {

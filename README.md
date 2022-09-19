@@ -17,29 +17,29 @@ Extract oEmbed content from given URL.
 - [Example FaaS](https://oembed.deta.dev/?url=https://www.instagram.com/tv/CVlR5GFqF68/)
 
 
-## Setup
+## Install & Usage
 
-- Node.js
+### Node.js
 
-  ```bash
-  npm i oembed-parser
+```bash
+npm i oembed-parser
 
-  # pnpm
-  pnpm i oembed-parser
+# pnpm
+pnpm i oembed-parser
 
-  # yarn
-  yarn add oembed-parser
-  ```
-
-### Usage
+# yarn
+yarn add oembed-parser
+```
 
 ```js
 import { extract } from 'oembed-parser'
 
 // with CommonJS environments
+// const { extract } = require('oembed-parser')
+// or specify exactly path to cjs variant
 // const { extract } = require('oembed-parser/dist/cjs/oembed-parser.js')
 
-const url = 'https://www.youtube.com/watch?v=8jPQjjsBbIc'
+const url = 'https://www.youtube.com/watch?v=x2bqscVkGxk'
 
 extract(url).then((oembed) => {
   console.log(oembed)
@@ -47,6 +47,20 @@ extract(url).then((oembed) => {
   console.trace(err)
 })
 ```
+
+### Deno
+
+```ts
+import { extract } from 'https://esm.sh/oembed-parser'
+
+(async () => {
+  const data = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
+  console.log(data)
+})();
+```
+
+View [more examples](https://github.com/ndaidong/oembed-parser/tree/main/examples).
+
 
 ## APIs
 
@@ -85,40 +99,6 @@ Here are several popular params:
 Note that some params are supported by these providers but not by the others.
 Please see the provider's oEmbed API docs carefully for exact information.
 
-### `.hasProvider(String URL)`
-
-Check if a URL matches with any provider in the list.
-
-Examples:
-
-```js
-import { hasProvider } from 'oembed-parser'
-
-hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s') // return true
-hasProvider('https://trello.com/b/BO3bg7yn/notes') // return false
-```
-
-### `.findProvider(String URL)`
-
-Get the provider which is relevant to given URL.
-
-For example:
-
-```js
-import { findProvider } from 'oembed-parser'
-
-findProvider('https://www.facebook.com/video.php?v=999999999')
-```
-
-Result looks like below:
-
-```json
-{
-  fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_video',
-  providerName: 'Facebook',
-  providerUrl: 'https://www.facebook.com/'
-}
-```
 
 ### `.setProviderList(Array providers)`
 
@@ -154,18 +134,6 @@ const providers = [
 setProviderList(providers)
 ```
 
-### `.setRequestOptions(Object requestOptions)`
-
-Define options to call oembed HTTP request.
-
-`oembed-parser` is using [axios](https://github.com/axios/axios) to send HTTP requests. Please refer [axios' request config](https://axios-http.com/docs/req_config) for more info.
-
-### `.getRequestOptions()`
-
-Return current request options.
-
-Default values can be found [here](https://github.com/ndaidong/oembed-parser/blob/main/src/config.js#L5).
-
 ## Facebook and Instagram
 
 In order to work with the links from Facebook and Instagram, you need a [reviewed Facebook's app](https://developers.facebook.com/docs/app-review) with [oEmbed Read](https://developers.facebook.com/docs/features-reference/oembed-read) permission.
@@ -181,17 +149,6 @@ export FACEBOOK_CLIENT_TOKEN=your_client_token
 npm run eval https://www.instagram.com/tv/CVlR5GFqF68/
 ```
 
-## Test
-
-```bash
-git clone https://github.com/ndaidong/oembed-parser.git
-cd oembed-parser
-npm install
-npm test
-
-# quick evaluation
-npm run eval {URL_TO_PARSE_OEMBED}
-```
 
 ## License
 The MIT License (MIT)

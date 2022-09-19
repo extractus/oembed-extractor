@@ -1,0 +1,10 @@
+{
+  "name": "browser-oembed-parser",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "http-server ./public -p 3102"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

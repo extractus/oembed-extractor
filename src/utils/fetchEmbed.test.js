@@ -4,7 +4,7 @@
 import nock from 'nock'
 
 import fetchEmbed from './fetchEmbed.js'
-import { find as findProvider } from './provider.js'
+import { getEndpoint } from './provider.js'
 
 const parseUrl = (url) => {
   const re = new URL(url)
@@ -92,8 +92,8 @@ describe('test if fetchEmbed() works correctly', () => {
   cases.forEach(({ input, expected }) => {
     const { url, file, params = {} } = input
     test(`check fetchEmbed("${url}")`, async () => {
-      const provider = findProvider(url)
-      const { baseUrl, path } = parseUrl(provider.fetchEndpoint)
+      const endpoint = getEndpoint(url)
+      const { baseUrl, path } = parseUrl(endpoint)
 
       const scope = nock(baseUrl, { encodedQueryParams: true })
       const queries = new URLSearchParams({
@@ -112,7 +112,7 @@ describe('test if fetchEmbed() works correctly', () => {
         maxheight = 0
       } = params
 
-      const result = await fetchEmbed(url, provider, { maxwidth, maxheight })
+      const result = await fetchEmbed(url, { maxwidth, maxheight }, endpoint)
       expect(result).toBeTruthy()
       expect(result.provider_name).toEqual(expected.provider_name)
       expect(result.type).toEqual(expected.type)

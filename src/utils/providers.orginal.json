@@ -1,8 +1,4 @@
-// provider data, synchronized at 2022-08-19T11:28:55.403Z
-
-/* eslint-disable */ 
-
-export const providers = [
+[
   {
     "provider_name": "23HQ",
     "provider_url": "http://www.23hq.com",
@@ -25,6 +21,22 @@ export const providers = [
         ],
         "url": "https://api.abraia.me/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Acast",
+    "provider_url": "https://embed.acast.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://play.acast.com/s/*"
+        ],
+        "url": "https://oembed.acast.com/v1/embed-player",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -498,7 +510,8 @@ export const providers = [
     "endpoints": [
       {
         "schemes": [
-          "http://view.ceros.com/*"
+          "http://view.ceros.com/*",
+          "https://view.ceros.com/*"
         ],
         "url": "http://view.ceros.com/oembed",
         "discovery": true
@@ -2129,6 +2142,21 @@ export const providers = [
     ]
   },
   {
+    "provider_name": "Mediastream",
+    "provider_url": "https://mdstrm.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://mdstrm.com/embed/*",
+          "https://mdstrm.com/live-stream/*",
+          "https://mdstrm.com/image/*"
+        ],
+        "url": "https://mdstrm.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Medienarchiv der Künste - Zürcher Hochschule der Künste",
     "provider_url": "https://medienarchiv.zhdk.ch/",
     "endpoints": [
@@ -2313,6 +2341,26 @@ export const providers = [
         "formats": [
           "json"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "NDLA - Norwegian Digital Learning Arena",
+    "provider_url": "https://ndla.no",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://ndla.no/*"
+        ],
+        "url": "https://ndla.no/oembed",
+        "discovery": false
+      },
+      {
+        "schemes": [
+          "https://liste.ndla.no/*"
+        ],
+        "url": "https://liste.ndla.no/oembed",
+        "discovery": false
       }
     ]
   },
@@ -3443,6 +3491,24 @@ export const providers = [
         ],
         "url": "https://sway.office.com/api/v1.0/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "SwitcherStudio",
+    "provider_url": "https://www.switcherstudio.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://player.switcherstudio.com/*",
+          "https://player.switcherstudio.com/*"
+        ],
+        "url": "https://player.switcherstudio.com/oembed",
+        "discovery": true,
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },

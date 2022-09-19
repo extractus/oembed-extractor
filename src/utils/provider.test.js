@@ -27,7 +27,7 @@ describe('test if provider.find() works correctly', () => {
     },
     {
       url: 'https://vimeo.com/999999',
-      fetchEndpoint: 'https://vimeo.com/api/oembed.{format}'
+      fetchEndpoint: 'https://vimeo.com/api/oembed.json'
     },
     {
       url: 'https://www.youtube.com/watch?v=9999999',
@@ -38,7 +38,7 @@ describe('test if provider.find() works correctly', () => {
   cases.forEach(({ url, fetchEndpoint }) => {
     test(`provider.find("${url}") must return "${fetchEndpoint}"`, () => {
       const foundedProvider = provider.find(url)
-      expect(foundedProvider.fetchEndpoint).toEqual(fetchEndpoint)
+      expect(foundedProvider.endpoint).toEqual(fetchEndpoint)
     })
   })
 
@@ -60,18 +60,32 @@ describe('test if provider set/get works correctly', () => {
     {
       provider_name: 'Alpha',
       provider_url: 'https://alpha.com',
-      endpoints: []
+      endpoints: [
+        {
+          schemes: [
+            'https://store.alpha.com/*'
+          ],
+          url: 'https://api.alpha.com/oembed'
+        }
+      ]
     },
     {
       provider_name: 'Beta',
       provider_url: 'https://beta.com',
-      endpoints: []
+      endpoints: [
+        {
+          schemes: [
+            'https://store.beta.com/*'
+          ],
+          url: 'https://api.beta.com/oembed'
+        }
+      ]
     }
   ]
-  test('provider.set()', () => {
+  test('provider.set() & provider.get()', () => {
     expect(provider.set(providerList)).toEqual(providerList.length)
-  })
-  test('provider.get()', () => {
-    expect(provider.get()).toEqual(providerList)
+    const newList = provider.get()
+    expect(newList.length).toEqual(providerList.length)
+    expect(newList[0].schemes[0]).toEqual(/store.alpha.com\/(.*)/i)
   })
 })

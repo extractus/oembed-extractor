@@ -1,0 +1,11 @@
+{
+  "name": "bun-oembed-parser",
+  "module": "index.ts",
+  "devDependencies": {
+    "bun-types": "^0.1.0"
+  },
+  "dependencies": {
+    "hono": "^2.1.4",
+    "oembed-parser": "latest"
+  }
+}

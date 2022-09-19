@@ -1,8 +1,77 @@
-// provider data, synchronized at 2022-09-18T15:50:15.125Z
+// oembed-parser@3.1.0, by @ndaidong - built with esbuild at 2022-09-19T09:58:58.156Z - published under MIT license
 
-/* eslint-disable */ 
+// src/utils/linker.js
+var isValid = (url = "") => {
+  try {
+    const ourl = new URL(url);
+    return ourl !== null && ourl.protocol.startsWith("http");
+  } catch (err) {
+    return false;
+  }
+};
+var getDomain = (url) => {
+  const host = new URL(url).host;
+  return host.replace("www.", "");
+};
 
-export const providers = [
+// src/deno/cross-fetch.js
+var cross_fetch_default = fetch;
+
+// src/utils/retrieve.js
+var retrieve_default = async (url) => {
+  const res = await cross_fetch_default(url, {
+    headers: {
+      "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0"
+    }
+  });
+  const status = res.status;
+  if (status >= 400) {
+    throw new Error(`Request failed with error code ${status}`);
+  }
+  try {
+    const text = await res.text();
+    return JSON.parse(text);
+  } catch (err) {
+    throw new Error("Failed to convert data to JSON object");
+  }
+};
+
+// src/utils/fetchEmbed.js
+var isFacebookGraphDependent = (url) => {
+  return getDomain(url) === "graph.facebook.com";
+};
+var getFacebookGraphToken = () => {
+  const env = process.env || {};
+  const appId = env.FACEBOOK_APP_ID;
+  const clientToken = env.FACEBOOK_CLIENT_TOKEN;
+  return `${appId}|${clientToken}`;
+};
+var getRegularUrl = (query, basseUrl) => {
+  return basseUrl + "?" + query;
+};
+var fetchEmbed_default = async (url, params = {}, endpoint = "") => {
+  const query = {
+    url,
+    format: "json",
+    ...params
+  };
+  if (query.maxwidth <= 0) {
+    delete query.maxwidth;
+  }
+  if (query.maxheight <= 0) {
+    delete query.maxheight;
+  }
+  if (isFacebookGraphDependent(endpoint)) {
+    query.access_token = getFacebookGraphToken();
+  }
+  const queryParams = new URLSearchParams(query).toString();
+  const link = getRegularUrl(queryParams, endpoint);
+  const body = retrieve_default(link);
+  return body;
+};
+
+// src/utils/providers.latest.js
+var providers = [
   {
     "s": [
       "www\\.23hq\\.com/*/photo/*"
@@ -410,8 +479,8 @@ export const providers = [
       "fav\\.me/*",
       "sta\\.sh/*",
       "*\\.deviantart\\.com/*/art/*",
-      "sta\\.sh/*\",",
-      "*\\.deviantart\\.com/*#/d*\""
+      'sta\\.sh/*",',
+      '*\\.deviantart\\.com/*#/d*"'
     ],
     "e": "backend.deviantart.com/oembed"
   },
@@ -1997,4 +2066,108 @@ export const providers = [
     ],
     "e": "srv2.zoomable.ca/oembed"
   }
-]
+];
+
+// src/utils/provider.js
+var toRegExp = (scheme = "") => {
+  return new RegExp(scheme.replace(/\\./g, ".").replace(/\*/g, "(.*)").replace(/\?/g, "\\?").replace(/,$/g, ""), "i");
+};
+var uniquify = (arr = []) => {
+  return [...new Set(arr)];
+};
+var undotted = (scheme = "") => {
+  return scheme.replace(/\./g, "\\.");
+};
+var removeProtocol = (url) => {
+  return url.replace("https://", "").replace("http://", "");
+};
+var simplify = (providers2 = []) => {
+  return providers2.map((item) => {
+    const {
+      endpoints
+    } = item;
+    return endpoints.map((endpoint) => {
+      const { schemes = [], url } = endpoint;
+      const patterns = schemes.length > 0 ? uniquify(schemes.map(removeProtocol).map(undotted)) : [];
+      return {
+        s: patterns,
+        e: removeProtocol(url).replace(/\{format\}/g, "json")
+      };
+    });
+  }).reduce((prev, curr) => {
+    return prev.concat(curr);
+  }, []);
+};
+var providersFromList = (providers2 = []) => {
+  return providers2.map((provider) => {
+    const { e: endpoint, s: schemes } = provider;
+    return {
+      endpoint: `https://${endpoint}`,
+      schemes: schemes.map(toRegExp)
+    };
+  });
+};
+var store = {
+  providers: providersFromList(providers)
+};
+var get = () => {
+  return [...store.providers];
+};
+var set = (providers2 = []) => {
+  store.providers = providersFromList(simplify(providers2));
+  return store.providers.length;
+};
+var compare = (url = "", endpoint = "", schemes = []) => {
+  if (!schemes.length) {
+    const domain = getDomain(url);
+    const endpointDomain = getDomain(endpoint);
+    return domain === endpointDomain;
+  }
+  return schemes.some((scheme) => {
+    return url.match(scheme);
+  });
+};
+var find = (url = "") => {
+  if (!isValid(url)) {
+    return null;
+  }
+  const providers2 = get();
+  for (let i = 0; i < providers2.length; i++) {
+    const { endpoint, schemes } = providers2[i];
+    const isMatched = compare(url, endpoint, schemes);
+    if (isMatched) {
+      return {
+        schemes,
+        endpoint,
+        url
+      };
+    }
+  }
+  return null;
+};
+var has = (url = "") => {
+  return find(url) !== null;
+};
+var getEndpoint = (url) => {
+  const p = find(url);
+  return p ? p.endpoint : null;
+};
+
+// src/main.js
+var extract = async (url, params = {}) => {
+  if (!isValid(url)) {
+    throw new Error("Invalid input URL");
+  }
+  const endpoint = getEndpoint(url);
+  if (!endpoint) {
+    throw new Error(`No provider found with given url "${url}"`);
+  }
+  const data = await fetchEmbed_default(url, params, endpoint);
+  return data;
+};
+export {
+  extract,
+  find as findProvider,
+  has as hasProvider,
+  set as setProviderList
+};

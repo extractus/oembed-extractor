@@ -1,5 +1,5 @@
 {
-  "name": "oembed-parser-cjs",
-  "version": "3.0.9",
+  "name": "oembed-parser",
+  "version": "3.1.0",
   "main": "./oembed-parser.js"
 }
