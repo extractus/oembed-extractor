@@ -4,8 +4,7 @@ import retrieve from './retrieve.js'
 import { getDomain } from './linker.js'
 
 const isFacebookGraphDependent = (url) => {
-  const domain = getDomain(url)
-  return domain.startsWith('graph.facebook.com')
+  return getDomain(url) === 'graph.facebook.com'
 }
 
 const getFacebookGraphToken = () => {
@@ -16,7 +15,7 @@ const getFacebookGraphToken = () => {
 }
 
 const getRegularUrl = (query, basseUrl) => {
-  return basseUrl.replace(/\{format\}/g, 'json') + '?' + query
+  return basseUrl + '?' + query
 }
 
 export default async (url, params = {}, endpoint = '') => {

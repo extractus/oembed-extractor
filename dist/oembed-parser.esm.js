@@ -1,4 +1,4 @@
-// oembed-parser@3.1.0rc1, by @ndaidong - built with esbuild at 2022-09-18T15:50:51.242Z - published under MIT license
+// oembed-parser@3.1.0rc1, by @ndaidong - built with esbuild at 2022-09-19T03:48:44.081Z - published under MIT license
 
 // src/utils/linker.js
 var isValid = (url = "") => {
@@ -30,8 +30,7 @@ var retrieve_default = async (url) => {
 
 // src/utils/fetchEmbed.js
 var isFacebookGraphDependent = (url) => {
-  const domain = getDomain(url);
-  return domain.startsWith("graph.facebook.com");
+  return getDomain(url) === "graph.facebook.com";
 };
 var getFacebookGraphToken = () => {
   const env = process.env || {};
@@ -40,7 +39,7 @@ var getFacebookGraphToken = () => {
   return `${appId}|${clientToken}`;
 };
 var getRegularUrl = (query, basseUrl) => {
-  return basseUrl.replace(/\{format\}/g, "json") + "?" + query;
+  return basseUrl + "?" + query;
 };
 var fetchEmbed_default = async (url, params = {}, endpoint = "") => {
   const query = {
