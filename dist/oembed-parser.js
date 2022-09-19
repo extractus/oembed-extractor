@@ -1,4 +1,4 @@
-// oembed-parser@3.1.0rc1, by @ndaidong - built with esbuild at 2022-09-19T03:48:44.081Z - published under MIT license
+// oembed-parser@3.1.0rc2, by @ndaidong - built with esbuild at 2022-09-19T04:24:10.933Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -5005,7 +5005,6 @@ var providersFromList = (providers2 = []) => {
 var store = {
   providers: providersFromList(providers)
 };
-/* @__PURE__ */ console.log(store.providers);
 var get = () => {
   return [...store.providers];
 };

@@ -52,7 +52,7 @@ const providersFromList = (providers = []) => {
 const store = {
   providers: providersFromList(defaultProviderList)
 }
-console.log(store.providers)
+
 export const get = () => {
   return [...store.providers]
 }
