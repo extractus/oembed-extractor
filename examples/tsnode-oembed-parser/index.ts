@@ -19,7 +19,7 @@ app.get('/', async (req, res) => {
     const data = await extract(url)
     return res.json({
       error: 0,
-      message: 'article has been extracted successfully',
+      message: 'oembed data has been extracted successfully',
       data,
       meta
     })
