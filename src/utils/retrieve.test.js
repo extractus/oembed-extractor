@@ -24,4 +24,18 @@ describe('test retrieve() method', () => {
     expect(result.data.name).toEqual('oembed-parser')
     nock.cleanAll()
   })
+
+  test('test retrieve invalid json reponsse', async () => {
+    const url = 'https://some.where/bad/source'
+    const { baseUrl, path } = parseUrl(url)
+    nock(baseUrl).get(path).reply(200, 'this is not json string', {
+      'Content-Type': 'application/json'
+    })
+    try {
+      await retrieve(url)
+    } catch (err) {
+      expect(err).toBeTruthy()
+    }
+    nock.cleanAll()
+  })
 })

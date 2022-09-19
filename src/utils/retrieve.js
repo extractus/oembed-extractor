@@ -8,6 +8,14 @@ export default async (url) => {
       'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0'
     }
   })
-  const data = await res.json()
-  return data
+  const status = res.status
+  if (status >= 400) {
+    throw new Error(`Request failed with error code ${status}`)
+  }
+  try {
+    const text = await res.text()
+    return JSON.parse(text)
+  } catch (err) {
+    throw new Error('Failed to convert data to JSON object')
+  }
 }

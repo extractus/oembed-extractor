@@ -1,4 +1,4 @@
-// oembed-parser@3.1.0rc3, by @ndaidong - built with esbuild at 2022-09-19T04:43:52.103Z - published under MIT license
+// oembed-parser@3.1.0rc4, by @ndaidong - built with esbuild at 2022-09-19T09:40:10.993Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -2927,8 +2927,16 @@ var retrieve_default = async (url) => {
       "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0"
     }
   });
-  const data = await res.json();
-  return data;
+  const status = res.status;
+  if (status >= 400) {
+    throw new Error(`Request failed with error code ${status}`);
+  }
+  try {
+    const text = await res.text();
+    return JSON.parse(text);
+  } catch (err) {
+    throw new Error("Failed to convert data to JSON object");
+  }
 };
 
 // src/utils/fetchEmbed.js
