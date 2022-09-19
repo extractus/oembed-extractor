@@ -17,29 +17,25 @@ Extract oEmbed content from given URL.
 - [Example FaaS](https://oembed.deta.dev/?url=https://www.instagram.com/tv/CVlR5GFqF68/)
 
 
-## Setup
+## Install & Usage
 
-- Node.js
+### Node.js
 
-  ```bash
-  npm i oembed-parser
+```bash
+npm i oembed-parser
 
-  # pnpm
-  pnpm i oembed-parser
+# pnpm
+pnpm i oembed-parser
 
-  # yarn
-  yarn add oembed-parser
-  ```
-
-### Usage
+# yarn
+yarn add oembed-parser
+```
 
 ```js
 import { extract } from 'oembed-parser'
 
 // with CommonJS environments
-
 // const { extract } = require('oembed-parser')
-
 // or specify exactly path to cjs variant
 // const { extract } = require('oembed-parser/dist/cjs/oembed-parser.js')
 
@@ -51,6 +47,20 @@ extract(url).then((oembed) => {
   console.trace(err)
 })
 ```
+
+### Deno
+
+```ts
+import { extract } from 'https://esm.sh/oembed-parser'
+
+(async () => {
+  const data = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
+  console.log(data)
+})();
+```
+
+View [more examples](https://github.com/ndaidong/oembed-parser/tree/main/examples).
+
 
 ## APIs
 
@@ -139,17 +149,6 @@ export FACEBOOK_CLIENT_TOKEN=your_client_token
 npm run eval https://www.instagram.com/tv/CVlR5GFqF68/
 ```
 
-## Test
-
-```bash
-git clone https://github.com/ndaidong/oembed-parser.git
-cd oembed-parser
-npm install
-npm test
-
-# quick evaluation
-npm run eval {URL_TO_PARSE_OEMBED}
-```
 
 ## License
 The MIT License (MIT)
