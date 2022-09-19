@@ -1,4 +1,4 @@
-// oembed-parser@3.1.0rc2, by @ndaidong - built with esbuild at 2022-09-19T04:24:10.933Z - published under MIT license
+// oembed-parser@3.1.0rc3, by @ndaidong - built with esbuild at 2022-09-19T04:43:52.103Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;

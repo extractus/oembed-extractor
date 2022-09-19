@@ -1,5 +1,5 @@
 {
-  "version": "3.1.0rc2",
+  "version": "3.1.0rc3",
   "name": "oembed-parser",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://www.npmjs.com/package/oembed-parser",
@@ -12,7 +12,7 @@
   "type": "module",
   "exports": {
     "import": "./src/main.js",
-    "require": "./dist/oembed-parser.js"
+    "require": "./dist/cjs/oembed-parser.js"
   },
   "imports": {
     "cross-fetch": "./src/deno/cross-fetch.js"
