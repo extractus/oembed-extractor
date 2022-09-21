@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <title>Example oembed-parser</title>
-    <link rel="stylesheet" href="https://unpkg.com/chota">
+    <link rel="stylesheet" href="/chota.min.css">
     <style>
       html, body {
         overflow-x: hidden;
@@ -30,9 +30,9 @@
               <input id="input_url" type="url" value="https://www.youtube.com/watch?v=x2bqscVkGxk">
             </p>
             <p>
+              <label><input type="checkbox" id="ckb_proxy"> Use proxy</label>
               <button class="button primary pull-right" id="btn_submit">Load and parse</button>
             </p>
-            <br><br>
           </fieldset>
         </form>
         <fieldset>
@@ -47,14 +47,20 @@
   <script type="module">
     import { extract } from 'https://unpkg.com/oembed-parser@latest/dist/oembed-parser.esm.js'
 
-    const loadOembed = async (url) => {
-      const data = await extract(url)
+    const loadOembed = async (url, useProxy = false) => {
+      const data = await extract(url, {
+        maxwidth: 600,
+        maxheight: 400
+      }, {
+        proxy: useProxy ? { target: '/proxy/jsonload?url=' } : null
+      })
       return Object.assign(Object.create(null), data) // use pure object to hold data
     }
 
     const init = () => {
       const form = document.getElementById('form_parser')
       const url = document.getElementById('input_url')
+      const ckbox = document.getElementById('ckb_proxy')
       const button = document.getElementById('btn_submit')
       const txtarea = document.getElementById('area_result')
 
@@ -66,7 +72,7 @@
         }
         button.setAttribute('disabled', '')
         try {
-          const oembed = await loadOembed(oembedLink)
+          const oembed = await loadOembed(oembedLink, ckbox.checked)
           txtarea.value = JSON.stringify(oembed, undefined, '  ')
         } catch (err) {
           txtarea.value = err.message

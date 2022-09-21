@@ -1,4 +1,4 @@
-// oembed-parser@3.1.0, by @ndaidong - built with esbuild at 2022-09-19T09:58:58.156Z - published under MIT license
+// oembed-parser@3.1.1, by @ndaidong - built with esbuild at 2022-09-21T15:03:39.445Z - published under MIT license
 
 // src/utils/linker.js
 var isValid = (url = "") => {
@@ -18,19 +18,31 @@ var getDomain = (url) => {
 var cross_fetch_default = fetch;
 
 // src/utils/retrieve.js
-var retrieve_default = async (url) => {
-  const res = await cross_fetch_default(url, {
-    headers: {
-      "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0"
-    }
+var profetch = async (url, proxy = {}) => {
+  const {
+    target,
+    headers = {}
+  } = proxy;
+  const res = await cross_fetch_default(target + encodeURIComponent(url), {
+    headers
   });
+  return res;
+};
+var retrieve_default = async (url, options = {}) => {
+  const {
+    headers = {
+      "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0"
+    },
+    proxy = null
+  } = options;
+  const res = proxy ? await profetch(url, proxy) : await cross_fetch_default(url, { headers });
   const status = res.status;
   if (status >= 400) {
     throw new Error(`Request failed with error code ${status}`);
   }
   try {
     const text = await res.text();
-    return JSON.parse(text);
+    return JSON.parse(text.trim());
   } catch (err) {
     throw new Error("Failed to convert data to JSON object");
   }
@@ -46,10 +58,7 @@ var getFacebookGraphToken = () => {
   const clientToken = env.FACEBOOK_CLIENT_TOKEN;
   return `${appId}|${clientToken}`;
 };
-var getRegularUrl = (query, basseUrl) => {
-  return basseUrl + "?" + query;
-};
-var fetchEmbed_default = async (url, params = {}, endpoint = "") => {
+var fetchEmbed_default = async (url, params = {}, endpoint = "", options = {}) => {
   const query = {
     url,
     format: "json",
@@ -65,8 +74,8 @@ var fetchEmbed_default = async (url, params = {}, endpoint = "") => {
     query.access_token = getFacebookGraphToken();
   }
   const queryParams = new URLSearchParams(query).toString();
-  const link = getRegularUrl(queryParams, endpoint);
-  const body = retrieve_default(link);
+  const link = endpoint + "?" + queryParams;
+  const body = retrieve_default(link, options);
   return body;
 };
 
@@ -2154,7 +2163,7 @@ var getEndpoint = (url) => {
 };
 
 // src/main.js
-var extract = async (url, params = {}) => {
+var extract = async (url, params = {}, options = {}) => {
   if (!isValid(url)) {
     throw new Error("Invalid input URL");
   }
@@ -2162,7 +2171,7 @@ var extract = async (url, params = {}) => {
   if (!endpoint) {
     throw new Error(`No provider found with given url "${url}"`);
   }
-  const data = await fetchEmbed_default(url, params, endpoint);
+  const data = await fetchEmbed_default(url, params, endpoint, options);
   return data;
 };
 export {

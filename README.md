@@ -64,28 +64,25 @@ View [more examples](https://github.com/ndaidong/oembed-parser/tree/main/example
 
 ## APIs
 
-### `.extract(String url [, Object params])`
+### `.extract()`
 
 Load and extract oembed data.
 
-Example:
+#### Syntax
 
 ```js
-import { extract } from 'oembed-parser'
-
-const getOembed = async (url) => {
-  try {
-    const oembed = await extract(url)
-    return oembed
-  } catch (err) {
-    console.trace(err)
-    return null
-  }
-}
-
-const data = getOembed('your url')
-console.log(data)
+extract(String url)
+extract(String url, Object params)
+extract(String url, Object params, Object fetchOptions)
 ```
+
+#### Parameters
+
+##### `url` *required*
+
+URL of a valid oEmbed resource, e.g. `https://www.youtube.com/watch?v=x2bqscVkGxk`
+
+##### `params` *optional*
 
 Optional argument `params` can be useful when you want to specify some additional customizations.
 
@@ -99,15 +96,62 @@ Here are several popular params:
 Note that some params are supported by these providers but not by the others.
 Please see the provider's oEmbed API docs carefully for exact information.
 
+##### `fetchOptions` *optional*
 
-### `.setProviderList(Array providers)`
+You can use this param to set request headers to fetch.
+
+For example:
+
+```js
+import { extract } from 'oembed-parser'
+
+const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
+extract(url, null, {
+  headers: {
+    'user-agent': 'Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1'
+  }
+})
+```
+
+You can also specify a proxy endpoint to load remote content, instead of fetching directly.
+
+For example:
+
+```js
+import { extract } from 'oembed-parser'
+
+const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
+extract(url, null, {
+  headers: {
+    'user-agent': 'Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1'
+  },
+  proxy: {
+    target: 'https://your-secret-proxy.io/loadJson?url=',
+    headers: {
+      'Proxy-Authorization': 'Bearer YWxhZGRpbjpvcGVuc2VzYW1l...'
+    }
+  }
+})
+```
+
+With the above setting, request will be forwarded to `https://your-secret-proxy.io/loadJson?url={OEMBED_ENDPOINT}`.
+
+
+### `.setProviderList()`
 
 Apply a list of providers to use, overriding the [default](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
 
-This can be useful for whitelisting only certain providers, or for adding
-custom providers.
+#### Syntax
 
-Default list of resource providers is synchronized from [oembed.com](http://oembed.com/providers.json).
+```js
+setProviderList(Array providers)
+```
+
+#### Parameters
+
+##### `providers` *required*
+
+List of providers to apply.
 
 For example:
 
@@ -134,6 +178,9 @@ const providers = [
 setProviderList(providers)
 ```
 
+Default list of resource providers is synchronized from [oembed.com](http://oembed.com/providers.json).
+
+
 ## Facebook and Instagram
 
 In order to work with the links from Facebook and Instagram, you need a [reviewed Facebook's app](https://developers.facebook.com/docs/app-review) with [oEmbed Read](https://developers.facebook.com/docs/features-reference/oembed-read) permission.
@@ -148,7 +195,6 @@ export FACEBOOK_CLIENT_TOKEN=your_client_token
 
 npm run eval https://www.instagram.com/tv/CVlR5GFqF68/
 ```
-
 
 ## License
 The MIT License (MIT)

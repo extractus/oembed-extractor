@@ -1,10 +1,12 @@
 {
   "name": "browser-oembed-parser",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "start": "http-server ./public -p 3102"
+    "start": "node server"
   },
   "dependencies": {
-    "http-server": "^14.1.1"
+    "express": "^4.18.1",
+    "got": "^12.5.0"
   }
 }
