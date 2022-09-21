@@ -14,11 +14,7 @@ const getFacebookGraphToken = () => {
   return `${appId}|${clientToken}`
 }
 
-const getRegularUrl = (query, basseUrl) => {
-  return basseUrl + '?' + query
-}
-
-export default async (url, params = {}, endpoint = '') => {
+export default async (url, params = {}, endpoint = '', options = {}) => {
   const query = {
     url,
     format: 'json',
@@ -37,8 +33,7 @@ export default async (url, params = {}, endpoint = '') => {
   }
 
   const queryParams = new URLSearchParams(query).toString()
-
-  const link = getRegularUrl(queryParams, endpoint)
-  const body = retrieve(link)
+  const link = endpoint + '?' + queryParams
+  const body = retrieve(link, options)
   return body
 }

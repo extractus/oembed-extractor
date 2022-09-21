@@ -8,7 +8,7 @@ import fetchEmbed from './utils/fetchEmbed.js'
 
 import { getEndpoint } from './utils/provider.js'
 
-export const extract = async (url, params = {}) => {
+export const extract = async (url, params = {}, options = {}) => {
   if (!isValidURL(url)) {
     throw new Error('Invalid input URL')
   }
@@ -17,7 +17,7 @@ export const extract = async (url, params = {}) => {
     throw new Error(`No provider found with given url "${url}"`)
   }
 
-  const data = await fetchEmbed(url, params, endpoint)
+  const data = await fetchEmbed(url, params, endpoint, options)
   return data
 }
 
