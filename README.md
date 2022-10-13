@@ -9,7 +9,27 @@ Extract oEmbed content from given URL.
 ![CodeQL](https://github.com/ndaidong/oembed-parser/workflows/CodeQL/badge.svg)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/ndaidong/oembed-parser-deta)
+## Intro
+
+*oembed-parser* is a part of tool sets for content builder:
+
+- [feed-reader](https://github.com/ndaidong/feed-reader): extract & normalize RSS/ATOM/JSON feed
+- [article-parser](https://github.com/ndaidong/article-parser): extract main article from given URL
+- [oembed-parser](https://github.com/ndaidong/oembed-parser): extract oEmbed data from supported providers
+
+You can use one or combination of these tools to build news sites, create automated content systems for marketing campaign or gather dataset for NLP projects...
+
+```
+                                    ┌────────────────┐
+                            ┌───────► article-parser ├──────────┐
+                            │       └────────────────┘          │
+┌─────────────┐   ┌─────────┴────┐                     ┌────────▼─────────┐   ┌─────────────┐
+│ feed-reader ├───► feed entries │                     │ content database ├───► public APIs │
+└─────────────┘   └─────────┬────┘                     └────────▲─────────┘   └─────────────┘
+                            │       ┌────────────────┐          │
+                            └───────► oembed-parser  ├──────────┘
+                                    └────────────────┘
+```
 
 ## Demo
 
@@ -60,6 +80,12 @@ import { extract } from 'https://esm.sh/oembed-parser'
 ```
 
 View [more examples](https://github.com/ndaidong/oembed-parser/tree/main/examples).
+
+### Deta cloud
+
+For [Deta](https://www.deta.sh/) devs please refer [the source code and guideline here](https://github.com/ndaidong/oembed-parser-deta) or simply click the button below.
+
+[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/ndaidong/oembed-parser-deta)
 
 
 ## APIs
@@ -179,6 +205,8 @@ setProviderList(providers)
 ```
 
 Default list of resource providers is synchronized from [oembed.com](http://oembed.com/providers.json).
+
+If you want to modify providers list, please make pull request on [iamcal/oembed](https://github.com/iamcal/oembed) then create issue/pr here to ask for sync.
 
 
 ## Facebook and Instagram
