@@ -1,4 +1,4 @@
-// oembed-parser@3.1.1, by @ndaidong - built with esbuild at 2022-09-21T15:03:39.445Z - published under MIT license
+// oembed-parser@3.1.2, by @ndaidong - built with esbuild at 2022-10-13T02:16:48.560Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -3420,6 +3420,13 @@ var providers = [
   },
   {
     "s": [
+      "docswell\\.com/*/*",
+      "www\\.docswell\\.com/*/*"
+    ],
+    "e": "www.docswell.com/service/oembed"
+  },
+  {
+    "s": [
       "dotsub\\.com/view/*"
     ],
     "e": "dotsub.com/services/oembed"
@@ -3927,6 +3934,13 @@ var providers = [
   },
   {
     "s": [
+      "kurozora\\.app/episodes*",
+      "kurozora\\.app/songs*"
+    ],
+    "e": "kurozora.app/oembed"
+  },
+  {
+    "s": [
       "learningapps\\.org/*"
     ],
     "e": "learningapps.org/oembed.php"
@@ -4043,6 +4057,12 @@ var providers = [
       "app\\.minervaknows\\.com/recipes/*/follow"
     ],
     "e": "oembed.minervaknows.com"
+  },
+  {
+    "s": [
+      "miro\\.com/app/board/*"
+    ],
+    "e": "miro.com/api/v1/oembed"
   },
   {
     "s": [
@@ -4569,6 +4589,15 @@ var providers = [
   },
   {
     "s": [
+      "*\\.spotlightr\\.com/watch/*",
+      "*\\.spotlightr\\.com/publish/*",
+      "*\\.cdn\\.spotlightr\\.com/watch/*",
+      "*\\.cdn\\.spotlightr\\.com/publish/*"
+    ],
+    "e": "api.spotlightr.com/getOEmbed"
+  },
+  {
+    "s": [
       "*\\.spreaker\\.com/*"
     ],
     "e": "api.spreaker.com/oembed"
@@ -4675,6 +4704,7 @@ var providers = [
   },
   {
     "s": [
+      "www\\.tiktok\\.com/*",
       "www\\.tiktok\\.com/*/video/*"
     ],
     "e": "www.tiktok.com/oembed"

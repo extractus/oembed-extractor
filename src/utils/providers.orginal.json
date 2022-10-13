@@ -925,6 +925,25 @@
     ]
   },
   {
+    "provider_name": "Docswell",
+    "provider_url": "https://docswell.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://docswell.com/*/*",
+          "https://docswell.com/*/*",
+          "http://www.docswell.com/*/*",
+          "https://www.docswell.com/*/*"
+        ],
+        "url": "https://www.docswell.com/service/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "Dotsub",
     "provider_url": "http://dotsub.com/",
     "endpoints": [
@@ -1970,6 +1989,20 @@
     ]
   },
   {
+    "provider_name": "Kurozora",
+    "provider_url": "https://kurozora.app/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://kurozora.app/episodes*",
+          "https://kurozora.app/songs*"
+        ],
+        "url": "https://kurozora.app/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "LearningApps.org",
     "provider_url": "http://learningapps.org/",
     "endpoints": [
@@ -2213,6 +2246,19 @@
         "formats": [
           "json"
         ],
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Miro",
+    "provider_url": "https://miro.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://miro.com/app/board/*"
+        ],
+        "url": "https://miro.com/api/v1/oembed",
         "discovery": true
       }
     ]
@@ -3350,6 +3396,22 @@
     ]
   },
   {
+    "provider_name": "Spotlightr",
+    "provider_url": "https://spotlightr.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.spotlightr.com/watch/*",
+          "https://*.spotlightr.com/publish/*",
+          "https://*.cdn.spotlightr.com/watch/*",
+          "https://*.cdn.spotlightr.com/publish/*"
+        ],
+        "url": "https://api.spotlightr.com/getOEmbed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Spreaker",
     "provider_url": "https://www.spreaker.com/",
     "endpoints": [
@@ -3597,6 +3659,7 @@
     "endpoints": [
       {
         "schemes": [
+          "https://www.tiktok.com/*",
           "https://www.tiktok.com/*/video/*"
         ],
         "url": "https://www.tiktok.com/oembed"
