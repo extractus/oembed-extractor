@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-09-18T15:50:15.125Z
+// provider data, synchronized at 2022-09-19T09:58:06.421Z
 
 /* eslint-disable */ 
 
