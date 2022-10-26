@@ -2036,7 +2036,7 @@
         "schemes": [
           "https://pod.univ-lille.fr/video/*"
         ],
-        "url": "https://pod.univ-lille.fr/oembed",
+        "url": "https://pod.univ-lille.fr/video/oembed",
         "discovery": true
       }
     ]
@@ -2687,6 +2687,22 @@
         ],
         "url": "https://api.picturelfy.com/service/oembed/",
         "discovery": false
+      }
+    ]
+  },
+  {
+    "provider_name": "Pikasso",
+    "provider_url": "https://builder.pikasso.xyz",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.builder.pikasso.xyz/embed/*"
+        ],
+        "url": "https://builder.pikasso.xyz/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },

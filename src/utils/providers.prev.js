@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-09-19T09:58:06.421Z
+// provider data, synchronized at 2022-10-13T02:14:43.201Z
 
 /* eslint-disable */ 
 
@@ -436,6 +436,13 @@ export const providers = [
       "*\\.docdroid\\.com/*"
     ],
     "e": "www.docdroid.net/api/oembed"
+  },
+  {
+    "s": [
+      "docswell\\.com/*/*",
+      "www\\.docswell\\.com/*/*"
+    ],
+    "e": "www.docswell.com/service/oembed"
   },
   {
     "s": [
@@ -946,6 +953,13 @@ export const providers = [
   },
   {
     "s": [
+      "kurozora\\.app/episodes*",
+      "kurozora\\.app/songs*"
+    ],
+    "e": "kurozora.app/oembed"
+  },
+  {
+    "s": [
       "learningapps\\.org/*"
     ],
     "e": "learningapps.org/oembed.php"
@@ -1062,6 +1076,12 @@ export const providers = [
       "app\\.minervaknows\\.com/recipes/*/follow"
     ],
     "e": "oembed.minervaknows.com"
+  },
+  {
+    "s": [
+      "miro\\.com/app/board/*"
+    ],
+    "e": "miro.com/api/v1/oembed"
   },
   {
     "s": [
@@ -1588,6 +1608,15 @@ export const providers = [
   },
   {
     "s": [
+      "*\\.spotlightr\\.com/watch/*",
+      "*\\.spotlightr\\.com/publish/*",
+      "*\\.cdn\\.spotlightr\\.com/watch/*",
+      "*\\.cdn\\.spotlightr\\.com/publish/*"
+    ],
+    "e": "api.spotlightr.com/getOEmbed"
+  },
+  {
+    "s": [
       "*\\.spreaker\\.com/*"
     ],
     "e": "api.spreaker.com/oembed"
@@ -1694,6 +1723,7 @@ export const providers = [
   },
   {
     "s": [
+      "www\\.tiktok\\.com/*",
       "www\\.tiktok\\.com/*/video/*"
     ],
     "e": "www.tiktok.com/oembed"
