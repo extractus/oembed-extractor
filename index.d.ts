@@ -5,21 +5,13 @@
 //                 Marc McIntosh <https://github.com/MarcMcIntosh>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-export function extract(url: string, params?: any): Promise<OembedData>;
-
-export function hasProvider(url: string): boolean
-
-export function findProvider(url: string): FindProviderResult
-
-export function setProviderList(providers: Provider[]): void
-
 export interface Endpoint {
     schemes?: string[];
     url: string;
     formats?: string[]; // "json" "xml"
     discovery?: boolean;
 }
-  
+
 export interface Provider {
     "provider_name": string;
     "provider_url": string;
@@ -113,3 +105,52 @@ export interface RichTypeData extends OembedData {
     /** The height in pixels required to display the HTML. */
     height: number;
 }
+
+export interface Params {
+  /**
+   * max width of embed size
+   * Default: null
+   */
+  maxwidth: number
+  /**
+   * max height of embed size
+   * Default: null
+   */
+  maxheight: number
+  /**
+   * theme for the embed, such as "dark" or "light"
+   * Default: null
+   */
+  theme: string
+  /**
+   * language for the embed, e.g. "en", "fr", "vi", etc
+   * Default: null
+   */
+  lang: string
+}
+
+export interface ProxyConfig {
+  target?: string;
+  headers?: string[];
+}
+
+export interface FetchOptions {
+  /**
+   * list of request headers
+   * default: null
+   */
+  headers?: string[];
+  /**
+   * the values to configure proxy
+   * default: null
+   */
+  proxy?: ProxyConfig;
+}
+
+export function extract(url: string, params?: Params, fetchOptions?: FetchOptions): Promise<OembedData>;
+
+export function hasProvider(url: string): boolean
+
+export function findProvider(url: string): FindProviderResult
+
+export function setProviderList(providers: Provider[]): void

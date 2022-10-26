@@ -1,4 +1,4 @@
-// oembed-parser@3.1.2, by @ndaidong - built with esbuild at 2022-10-13T02:16:48.560Z - published under MIT license
+// oembed-parser@3.1.3, by @ndaidong - built with esbuild at 2022-10-26T05:04:53.355Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -3955,7 +3955,7 @@ var providers = [
     "s": [
       "pod\\.univ-lille\\.fr/video/*"
     ],
-    "e": "pod.univ-lille.fr/oembed"
+    "e": "pod.univ-lille.fr/video/oembed"
   },
   {
     "s": [
@@ -4261,6 +4261,12 @@ var providers = [
       "www\\.picturelfy\\.com/p/*"
     ],
     "e": "api.picturelfy.com/service/oembed/"
+  },
+  {
+    "s": [
+      "*\\.builder\\.pikasso\\.xyz/embed/*"
+    ],
+    "e": "builder.pikasso.xyz/api/oembed"
   },
   {
     "s": [],
