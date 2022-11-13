@@ -12,7 +12,10 @@ As an OSS, it should follow the Unix philosophy: "do one thing and do it well".
 - After cloning the repository, run `npm install` in the root of the repository.
 - Run `npm test` to ensure that everything works correctly in your environment.
 
-If it works well, you can start modifying your fork.
+Because test suite includes the cases of Facebook/Instagram oembed link, you need to set the environment variables `FACEBOOK_APP_ID` and `FACEBOOK_CLIENT_TOKEN`.
+Otherwise the test will fail. Please refer [this section](https://github.com/ndaidong/oembed-parser#facebook-and-instagram) for more info.
+
+Once it works well, you can start modifying your fork.
 
 In this process, you can use [`npm run eval` command](https://github.com/ndaidong/oembed-parser#quick-evaluation) to evaluate your changes.
 
