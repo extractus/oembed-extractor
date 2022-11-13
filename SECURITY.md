@@ -2,21 +2,16 @@
 
 ## Supported Versions
 
-The following versions are being supported with security updates.
+Due to resource limitations, only the latest stable minor release is getting bugfixes (including security ones).
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.4.x   | :white_check_mark: |
-| 1.3.x   | :white_check_mark: |
-| 1.2.x   | :white_check_mark: |
-| 1.1.x   | :white_check_mark: |
-| 1.0.x   | :white_check_mark: |
-| 0.x.x   | :x:                |
+So e.g. if the latest stable version is 3.1.4, then 3.1.x line will still get security fixes but older versions (like 3.0.x) won't get any fixes.
+
+Description above is a general rule and may be altered on case by case basis.
 
 ## Reporting a Vulnerability
 
-If you discover a security issue, please bring it to their attention right away!
+You can report low severity vulnerabilities as GitHub issues.
 
-Please **DO NOT** file a public issue, instead send your report privately to `security-report@pwshub.com`.
+More severe vulnerabilities should be reported to the my email ndaidong@gmail.com or Twitter [@ndaidong](https://twitter.com/ndaidong).
 
-Security reports are greatly appreciated and we will publicly thank you for it, although we keep your name confidential if you request it.
+---
