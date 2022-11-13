@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-10-13T02:14:43.201Z
+// provider data, synchronized at 2022-10-26T05:04:37.983Z
 
 /* eslint-disable */ 
 
@@ -974,7 +974,7 @@ export const providers = [
     "s": [
       "pod\\.univ-lille\\.fr/video/*"
     ],
-    "e": "pod.univ-lille.fr/oembed"
+    "e": "pod.univ-lille.fr/video/oembed"
   },
   {
     "s": [
@@ -1280,6 +1280,12 @@ export const providers = [
       "www\\.picturelfy\\.com/p/*"
     ],
     "e": "api.picturelfy.com/service/oembed/"
+  },
+  {
+    "s": [
+      "*\\.builder\\.pikasso\\.xyz/embed/*"
+    ],
+    "e": "builder.pikasso.xyz/api/oembed"
   },
   {
     "s": [],

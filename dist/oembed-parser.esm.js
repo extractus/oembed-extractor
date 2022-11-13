@@ -1,4 +1,4 @@
-// oembed-parser@3.1.3, by @ndaidong - built with esbuild at 2022-10-26T05:04:53.355Z - published under MIT license
+// oembed-parser@3.1.4, by @ndaidong - built with esbuild at 2022-11-13T05:18:59.638Z - published under MIT license
 
 // src/utils/linker.js
 var isValid = (url = "") => {
