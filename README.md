@@ -224,6 +224,17 @@ export FACEBOOK_CLIENT_TOKEN=your_client_token
 npm run eval https://www.instagram.com/tv/CVlR5GFqF68/
 ```
 
+
+## Quick evaluation
+
+```bash
+git clone https://github.com/ndaidong/oembed-parser.git
+cd oembed-parser
+npm i
+
+npm run eval {URL_TO_PARSE_OEMBED}
+```
+
 ## License
 The MIT License (MIT)
 
