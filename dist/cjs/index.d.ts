@@ -111,27 +111,27 @@ export interface Params {
    * max width of embed size
    * Default: null
    */
-  maxwidth: number
+  maxwidth?: number
   /**
    * max height of embed size
    * Default: null
    */
-  maxheight: number
+  maxheight?: number
   /**
    * theme for the embed, such as "dark" or "light"
    * Default: null
    */
-  theme: string
+  theme?: string
   /**
    * language for the embed, e.g. "en", "fr", "vi", etc
    * Default: null
    */
-  lang: string
+  lang?: string
 }
 
 export interface ProxyConfig {
   target?: string;
-  headers?: string[];
+  headers?: Record<string, string>;
 }
 
 export interface FetchOptions {
@@ -139,7 +139,7 @@ export interface FetchOptions {
    * list of request headers
    * default: null
    */
-  headers?: string[];
+  headers?: Record<string, string>;
   /**
    * the values to configure proxy
    * default: null
