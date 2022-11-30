@@ -164,7 +164,7 @@ With the above setting, request will be forwarded to `https://your-secret-proxy.
 
 ### `.setProviderList()`
 
-Apply a list of providers to use, overriding the [default](https://raw.githubusercontent.com/extractus/oembed-extractor/master/src/utils/providers.json).
+Apply a list of providers to use, overriding the [default](src/utils/providers.orginal.json).
 
 #### Syntax
 
