@@ -1,23 +1,25 @@
-# Contributing to oembed-parser
+# Contributing to `@extractus/oembed-extractor`
 
-While `oembed-parser` is just a simple library with personal purpose, I'm happy if it can be useful for you too.
+Glad to see you here.
 
-Anyway, I hope it always gets better, so pull requests are welcome, though larger proposals should be discussed first.
+Collaborations and pull requests are always welcomed, though larger proposals should be discussed first.
 
-As an OSS, it should follow the Unix philosophy: "do one thing and do it well".
+As an OSS, it's better to follow the Unix philosophy: "do one thing and do it well".
 
-## Installation
 
-- Ensure you have `node` and `npm` installed.
-- After cloning the repository, run `npm install` in the root of the repository.
-- Run `npm test` to ensure that everything works correctly in your environment.
+## What you can contribute?
 
-Because test suite includes the cases of Facebook/Instagram oembed link, you need to set the environment variables `FACEBOOK_APP_ID` and `FACEBOOK_CLIENT_TOKEN`.
-Otherwise the test will fail. Please refer [this section](https://github.com/ndaidong/oembed-parser#facebook-and-instagram) for more info.
+We are planing to re-write this tool in TypeScript and make it Deno-first library.
+If you are interested, please join our team.
 
-Once it works well, you can start modifying your fork.
+Besides that, you can also:
 
-In this process, you can use [`npm run eval` command](https://github.com/ndaidong/oembed-parser#quick-evaluation) to evaluate your changes.
+- Test and report bugs
+- Fix unresolved issues
+- Improve performance
+- Write better documentation
+- Create examples or build demos
+- Feedback on software design and APIs
 
 
 ## Third-party libraries
@@ -35,7 +37,7 @@ Make sure your code lints before opening a pull request.
 
 
 ```bash
-cd oembed-parser
+cd oembed-extractor
 
 # check coding convention issue
 npm run lint
@@ -52,18 +54,18 @@ npm run lint:fix
 Be sure to run the unit test suite before opening a pull request. An example test run is shown below.
 
 ```bash
-cd oembed-parser
+cd oembed-extractor
 npm test
 ```
 
-![oembed-parser unit test](https://i.imgur.com/Nr5BgUx.png)
+![oembed-extractor unit test](https://i.imgur.com/Nr5BgUx.png)
 
 If test coverage decreased, please check test scripts and try to improve this number.
 
 
 ## Documentation
 
-If you've changed APIs, please update README and [the examples](https://github.com/ndaidong/oembed-parser/tree/main/examples).
+If you've changed APIs, please update README and [the examples](https://github.com/extractus/oembed-extractor/tree/main/examples).
 
 
 ## Clean commit histories
@@ -82,6 +84,6 @@ For people new to git, please refer the following guides:
 
 ## License
 
-By contributing to `oembed-parser`, you agree that your contributions will be licensed under its [MIT license](https://github.com/ndaidong/oembed-parser/blob/main/LICENSE).
+By contributing to `@extractus/oembed-extractor`, you agree that your contributions will be licensed under its [MIT license](https://github.com/extractus/oembed-extractor/blob/main/LICENSE).
 
 ---

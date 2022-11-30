@@ -1,5 +1,5 @@
-// Type definitions for oembed-parser
-// Project: https://www.npmjs.com/package/oembed-parser
+// Type definitions for oembed-extractor
+// Project: https://github.com/extractus/oembed-extractor
 // Definitions by: BendingBender <https://github.com/BendingBender>
 //                 CodeBast4rd <https://github.com/CodeBast4rd>
 //                 Marc McIntosh <https://github.com/MarcMcIntosh>

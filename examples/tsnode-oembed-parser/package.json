@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "express": "^4.18.1",
-    "oembed-parser": "latest"
+    "@extractus/oembed-extractor": "latest"
   }
 }

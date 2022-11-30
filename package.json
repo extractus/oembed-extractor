@@ -1,18 +1,18 @@
 {
-  "version": "3.1.5",
-  "name": "oembed-parser",
+  "version": "3.1.6",
+  "name": "@extractus/oembed-extractor",
   "description": "Get oEmbed data from given URL.",
-  "homepage": "https://www.npmjs.com/package/oembed-parser",
+  "homepage": "https://github.com/extractus/oembed-extractor",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ndaidong/oembed-parser.git"
+    "url": "git@github.com:extractus/oembed-extractor.git"
   },
-  "author": "@ndaidong",
+  "author": "@extractus",
   "main": "./src/main.js",
   "type": "module",
   "exports": {
     "import": "./src/main.js",
-    "require": "./dist/cjs/oembed-parser.js"
+    "require": "./dist/cjs/oembed-extractor.js"
   },
   "imports": {
     "cross-fetch": "./src/deno/cross-fetch.js"

@@ -1,5 +1,5 @@
 import express from 'express'
-import { extract } from 'oembed-parser'
+import { extract } from '@extractus/oembed-extractor'
 
 const app = express()
 
