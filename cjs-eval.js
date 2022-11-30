@@ -1,7 +1,7 @@
 // cjs-eval.js
 // to quickly test with a single url or file
 
-const { extract } = require('./dist/cjs/oembed-parser')
+const { extract } = require('./dist/cjs/oembed-extractor')
 
 const run = async (url) => {
   try {

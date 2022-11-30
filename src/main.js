@@ -1,7 +1,4 @@
-/**
- * oembed parser
- * @ndaidong
- **/
+// main.js
 
 import { isValid as isValidURL } from './utils/linker.js'
 import fetchEmbed from './utils/fetchEmbed.js'

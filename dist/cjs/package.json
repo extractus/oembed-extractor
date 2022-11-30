@@ -1,5 +1,5 @@
 {
-  "name": "oembed-parser",
-  "version": "3.1.5",
-  "main": "./oembed-parser.js"
+  "name": "@extractus/oembed-extractor",
+  "version": "3.1.6",
+  "main": "./@extractus/oembed-extractor.js"
 }

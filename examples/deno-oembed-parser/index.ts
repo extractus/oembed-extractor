@@ -1,7 +1,12 @@
 import { serve } from 'https://deno.land/std/http/server.ts'
 
 import { Hono } from 'https://deno.land/x/hono@v2.1.4/mod.ts'
-import { extract } from 'https://esm.sh/oembed-parser'
+
+// for deno > 1.28 only
+import { extract } from 'npm:@extractus/oembed-extractor'
+
+// for deno < 1.28
+// import { extract } from 'https://esm.sh/@extractus/oembed-extractor'
 
 const app = new Hono()
 

@@ -39,7 +39,7 @@ const esmVersion = {
   platform: 'browser',
   format: 'esm',
   mainFields: ['module'],
-  outfile: `dist/${pkg.name}.esm.js`,
+  outfile: 'dist/oembed-extractor.esm.js',
   banner: {
     js: comment
   }
@@ -51,7 +51,7 @@ const cjsVersion = {
   platform: 'node',
   format: 'cjs',
   mainFields: ['main'],
-  outfile: `dist/cjs/${pkg.name}.js`,
+  outfile: 'dist/cjs/oembed-extractor.js',
   banner: {
     js: comment
   }

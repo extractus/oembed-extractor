@@ -9,8 +9,8 @@ import {
 
 const pkg = JSON.parse(readFileSync('./package.json'))
 
-const esmFile = `./dist/${pkg.name}.esm.js`
-const cjsFile = `./dist/cjs/${pkg.name}.js`
+const esmFile = './dist/oembed-extractor.esm.js'
+const cjsFile = './dist/cjs/oembed-extractor.js'
 const cjsPkg = JSON.parse(readFileSync('./dist/cjs/package.json'))
 
 describe('Validate commonjs version output', () => {

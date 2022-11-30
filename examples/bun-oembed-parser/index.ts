@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 
-import { extract } from 'oembed-parser'
+import { extract } from '@extractus/oembed-extractor'
 
 const app = new Hono()
 

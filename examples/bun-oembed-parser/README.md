@@ -3,7 +3,7 @@
 To install dependencies:
 
 ```bash
-bun install --backend=copyfile
+bun install
 ```
 
 To run:

@@ -21,7 +21,7 @@
     <div class="row">
       <div class="col-12">
         <header>
-          <h1>oembed-parser on browser</h1>
+          <h1>oembed-extractor on browser</h1>
         </header>
         <form id="form_parser">
           <fieldset>
@@ -45,7 +45,7 @@
     </div>
   </body>
   <script type="module">
-    import { extract } from 'https://unpkg.com/oembed-parser@latest/dist/oembed-parser.esm.js'
+    import { extract } from 'https://unpkg.com/@extractus/oembed-extractor@latest/dist/oembed-extractor.esm.js'
 
     const loadOembed = async (url, useProxy = false) => {
       const data = await extract(url, {

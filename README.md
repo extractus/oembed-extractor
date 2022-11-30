@@ -1,35 +1,28 @@
 
-# oembed-parser
+# oembed-extractor
 
 Extract oEmbed content from given URL.
 
-[![NPM](https://badge.fury.io/js/oembed-parser.svg)](https://badge.fury.io/js/oembed-parser)
-[![CI test](https://github.com/ndaidong/oembed-parser/workflows/ci-test/badge.svg)](https://github.com/ndaidong/oembed-parser/actions)
-[![Coverage Status](https://coveralls.io/repos/github/ndaidong/oembed-parser/badge.svg)](https://coveralls.io/github/ndaidong/oembed-parser)
-![CodeQL](https://github.com/ndaidong/oembed-parser/workflows/CodeQL/badge.svg)
+[![NPM](https://badge.fury.io/js/@extractus%2Foembed-extractor.svg)](https://badge.fury.io/js/@extractus%2Foembed-extractor)
+[![CI test](https://github.com/extractus/oembed-extractor/workflows/ci-test/badge.svg)](https://github.com/extractus/oembed-extractor/actions)
+[![Coverage Status](https://coveralls.io/repos/github/extractus/oembed-extractor/badge.svg)](https://coveralls.io/github/extractus/oembed-extractor)
+![CodeQL](https://github.com/extractus/oembed-extractor/workflows/CodeQL/badge.svg)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Intro
 
-*oembed-parser* is a part of tool sets for content builder:
+*oembed-extractor* is a part of tool sets for content builder:
 
-- [feed-reader](https://github.com/ndaidong/feed-reader): extract & normalize RSS/ATOM/JSON feed
-- [article-parser](https://github.com/ndaidong/article-parser): extract main article from given URL
-- [oembed-parser](https://github.com/ndaidong/oembed-parser): extract oEmbed data from supported providers
+- [feed-extractor](https://github.com/extractus/feed-extractor): extract & normalize RSS/ATOM/JSON feed
+- [article-extractor](https://github.com/extractus/article-extractor): extract main article from given URL
+- [oembed-extractor](https://github.com/extractus/oembed-extractor): extract oEmbed data from supported providers
 
 You can use one or combination of these tools to build news sites, create automated content systems for marketing campaign or gather dataset for NLP projects...
 
-```
-                                    ┌────────────────┐
-                            ┌───────► article-parser ├──────────┐
-                            │       └────────────────┘          │
-┌─────────────┐   ┌─────────┴────┐                     ┌────────▼─────────┐   ┌─────────────┐
-│ feed-reader ├───► feed entries │                     │ content database ├───► public APIs │
-└─────────────┘   └─────────┬────┘                     └────────▲─────────┘   └─────────────┘
-                            │       ┌────────────────┐          │
-                            └───────► oembed-parser  ├──────────┘
-                                    └────────────────┘
-```
+### Attention
+
+`oembed-parser` has been renamed to `@extractus/oembed-extractor` since v3.1.5
+
 
 ## Demo
 
@@ -42,44 +35,50 @@ You can use one or combination of these tools to build news sites, create automa
 ### Node.js
 
 ```bash
-npm i oembed-parser
+npm i @extractus/oembed-extractor
 
 # pnpm
-pnpm i oembed-parser
+pnpm i @extractus/oembed-extractor
 
 # yarn
-yarn add oembed-parser
+yarn add @extractus/oembed-extractor
 ```
 
-```js
-import { extract } from 'oembed-parser'
+```ts
+// es6 module
+import { extract } from '@extractus/oembed-extractor'
 
-// with CommonJS environments
-// const { extract } = require('oembed-parser')
-// or specify exactly path to cjs variant
-// const { extract } = require('oembed-parser/dist/cjs/oembed-parser.js')
+// CommonJS
+const { extract } = require('@extractus/oembed-extractor')
 
-const url = 'https://www.youtube.com/watch?v=x2bqscVkGxk'
+// or specify exactly path to CommonJS variant
+const { extract } = require('@extractus/oembed-extractor/dist/cjs/oembed-extractor.js')
 
-extract(url).then((oembed) => {
-  console.log(oembed)
-}).catch((err) => {
-  console.trace(err)
-})
+const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
+console.log(result)
 ```
 
 ### Deno
 
 ```ts
-import { extract } from 'https://esm.sh/oembed-parser'
+// deno > 1.28
+import { extract } from 'npm:@extractus/oembed-extractor'
 
-(async () => {
-  const data = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
-  console.log(data)
-})();
+// deno < 1.28
+// import { extract } from 'https://esm.sh/@extractus/oembed-extractor'
+
+const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
+console.log(result)
 ```
 
-View [more examples](https://github.com/ndaidong/oembed-parser/tree/main/examples).
+### Browser
+
+```ts
+import { extract } from 'https://unpkg.com/@extractus/oembed-extractor@latest/dist/oembed-extractor.esm.js'
+```
+
+Please check [the examples](https://github.com/extractus/oembed-extractor/tree/main/examples) for reference.
+
 
 ### Deta cloud
 
@@ -96,7 +95,7 @@ Load and extract oembed data.
 
 #### Syntax
 
-```js
+```ts
 extract(String url)
 extract(String url, Object params)
 extract(String url, Object params, Object fetchOptions)
@@ -129,7 +128,7 @@ You can use this param to set request headers to fetch.
 For example:
 
 ```js
-import { extract } from 'oembed-parser'
+import { extract } from '@extractus/oembed-extractor'
 
 const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
 extract(url, null, {
@@ -144,7 +143,7 @@ You can also specify a proxy endpoint to load remote content, instead of fetchin
 For example:
 
 ```js
-import { extract } from 'oembed-parser'
+import { extract } from '@extractus/oembed-extractor'
 
 const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
 extract(url, null, {
@@ -165,11 +164,11 @@ With the above setting, request will be forwarded to `https://your-secret-proxy.
 
 ### `.setProviderList()`
 
-Apply a list of providers to use, overriding the [default](https://raw.githubusercontent.com/ndaidong/oembed-parser/master/src/utils/providers.json).
+Apply a list of providers to use, overriding the [default](https://raw.githubusercontent.com/extractus/oembed-extractor/master/src/utils/providers.json).
 
 #### Syntax
 
-```js
+```ts
 setProviderList(Array providers)
 ```
 
@@ -182,7 +181,7 @@ List of providers to apply.
 For example:
 
 ```js
-import { setProviderList } from 'oembed-parser'
+import { setProviderList } from '@extractus/oembed-extractor'
 
 const providers = [
   {
@@ -228,8 +227,8 @@ npm run eval https://www.instagram.com/tv/CVlR5GFqF68/
 ## Quick evaluation
 
 ```bash
-git clone https://github.com/ndaidong/oembed-parser.git
-cd oembed-parser
+git clone https://github.com/extractus/oembed-extractor.git
+cd oembed-extractor
 npm i
 
 npm run eval {URL_TO_PARSE_OEMBED}

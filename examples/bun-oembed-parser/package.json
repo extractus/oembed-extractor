@@ -6,6 +6,6 @@
   },
   "dependencies": {
     "hono": "^2.1.4",
-    "oembed-parser": "latest"
+    "@extractus/oembed-extractor": "latest"
   }
 }
