@@ -69,18 +69,6 @@
     ]
   },
   {
-    "provider_name": "Adways",
-    "provider_url": "http://www.adways.com",
-    "endpoints": [
-      {
-        "schemes": [
-          "http://play.adpaths.com/experience/*"
-        ],
-        "url": "http://play.adpaths.com/oembed/*"
-      }
-    ]
-  },
-  {
     "provider_name": "afreecaTV",
     "provider_url": "https://www.afreecatv.com",
     "endpoints": [
@@ -190,19 +178,6 @@
           "https://anniemusic.app/p/*"
         ],
         "url": "https://api.anniemusic.app/api/v1/oembed"
-      }
-    ]
-  },
-  {
-    "provider_name": "Apester",
-    "provider_url": "https://www.apester.com",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://renderer.apester.com/v2/*?preview=true&iframe_preview=true"
-        ],
-        "url": "https://display.apester.com/oembed",
-        "discovery": true
       }
     ]
   },
@@ -635,7 +610,7 @@
         "schemes": [
           "https://codehs.com/editor/share_abacus/*"
         ],
-        "url": "https://codehs.com/api/sharedprogram/*/oembed/",
+        "url": "https://codehs.com/api/sharedprogram/1/oembed/",
         "discovery": true
       }
     ]
@@ -873,22 +848,6 @@
     ]
   },
   {
-    "provider_name": "Didacte",
-    "provider_url": "https://www.didacte.com/",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://*.didacte.com/a/course/*"
-        ],
-        "url": "https://*.didacte.com/cards/oembed",
-        "discovery": true,
-        "formats": [
-          "json"
-        ]
-      }
-    ]
-  },
-  {
     "provider_name": "Digiteka",
     "provider_url": "https://www.ultimedia.com/",
     "endpoints": [
@@ -1018,15 +977,6 @@
         ],
         "url": "https://embedery.com/api/oembed",
         "discovery": true
-      }
-    ]
-  },
-  {
-    "provider_name": "Embedly",
-    "provider_url": "http://api.embed.ly/",
-    "endpoints": [
-      {
-        "url": "http://api.embed.ly/1/oembed"
       }
     ]
   },
@@ -2157,24 +2107,6 @@
     ]
   },
   {
-    "provider_name": "MediaLab",
-    "provider_url": "https://www.medialab.co/",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://*.medialab.app/share/watch/*",
-          "https://*.medialab.co/share/watch/*",
-          "https://*.medialab.app/share/social/*",
-          "https://*.medialab.co/share/social/*",
-          "https://*.medialab.app/share/embed/*",
-          "https://*.medialab.co/share/embed/*"
-        ],
-        "url": "https://*.medialab.(co|app)/api/oembed/",
-        "discovery": true
-      }
-    ]
-  },
-  {
     "provider_name": "Mediastream",
     "provider_url": "https://mdstrm.com/",
     "endpoints": [
@@ -2424,18 +2356,6 @@
     ]
   },
   {
-    "provider_name": "NFTNDX.IO",
-    "provider_url": "https://www.nftndx.io/",
-    "endpoints": [
-      {
-        "url": "https://www.nftndx.io/oembed",
-        "formats": [
-          "json"
-        ]
-      }
-    ]
-  },
-  {
     "provider_name": "NoPaste",
     "provider_url": "https://nopaste.ml",
     "endpoints": [
@@ -2554,16 +2474,6 @@
         "formats": [
           "json"
         ]
-      }
-    ]
-  },
-  {
-    "provider_name": "Ora TV",
-    "provider_url": "http://www.ora.tv/",
-    "endpoints": [
-      {
-        "discovery": true,
-        "url": "https://www.ora.tv/oembed/*?format={format}"
       }
     ]
   },
@@ -2752,9 +2662,9 @@
     "endpoints": [
       {
         "schemes": [
-          "https://*.pitchhub.com/en/public/player/*"
+          "https://player.pitchhub.com/en/public/player/*"
         ],
-        "url": "https://*.pitchhub.com.com/en/public/oembed",
+        "url": "https://player.pitchhub.com/en/public/oembed",
         "discovery": true
       }
     ]
@@ -2860,6 +2770,19 @@
           "https://*.prezi.com/v/*"
         ],
         "url": "https://prezi.com/v/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "QTpi",
+    "provider_url": "https://qtpi.gg/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://qtpi.gg/fashion/*"
+        ],
+        "url": "https://qtpi.gg/fashion/oembed",
         "discovery": true
       }
     ]
@@ -3259,19 +3182,6 @@
     ]
   },
   {
-    "provider_name": "Slate App",
-    "provider_url": "https://slateapp.com",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://*.slateapp.com/work/*"
-        ],
-        "url": "https://*.slateapp.com/api/v2/oembed",
-        "discovery": true
-      }
-    ]
-  },
-  {
     "provider_name": "SlideShare",
     "provider_url": "http://www.slideshare.net/",
     "endpoints": [
@@ -3569,24 +3479,6 @@
         ],
         "url": "https://sway.office.com/api/v1.0/oembed",
         "discovery": true
-      }
-    ]
-  },
-  {
-    "provider_name": "SwitcherStudio",
-    "provider_url": "https://www.switcherstudio.com/",
-    "endpoints": [
-      {
-        "schemes": [
-          "http://player.switcherstudio.com/*",
-          "https://player.switcherstudio.com/*"
-        ],
-        "url": "https://player.switcherstudio.com/oembed",
-        "discovery": true,
-        "formats": [
-          "json",
-          "xml"
-        ]
       }
     ]
   },
@@ -3939,15 +3831,6 @@
     ]
   },
   {
-    "provider_name": "Verse",
-    "provider_url": "http://verse.com/",
-    "endpoints": [
-      {
-        "url": "http://verse.com/services/oembed/"
-      }
-    ]
-  },
-  {
     "provider_name": "VEVO",
     "provider_url": "http://www.vevo.com/",
     "endpoints": [
@@ -4148,17 +4031,14 @@
     ]
   },
   {
-    "provider_name": "Wiredrive",
-    "provider_url": "https://www.wiredrive.com/",
+    "provider_name": "Whimsical",
+    "provider_url": "https://www.whimsical.com",
     "endpoints": [
       {
         "schemes": [
-          "https://*.wiredrive.com/*"
+          "https://whimsical.com/*"
         ],
-        "url": "http://*.wiredrive.com/present-oembed/",
-        "formats": [
-          "json"
-        ],
+        "url": "https://whimsical.com/api/oembed",
         "discovery": true
       }
     ]
