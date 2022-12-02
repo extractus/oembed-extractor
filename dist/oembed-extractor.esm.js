@@ -1,4 +1,4 @@
-// @extractus/oembed-extractor@3.1.7, by @extractus - built with esbuild at 2022-12-02T14:35:39.216Z - published under MIT license
+// @extractus/oembed-extractor@3.1.7, by @extractus - built with esbuild at 2022-12-02T14:38:50.554Z - published under MIT license
 
 // src/utils/linker.js
 var isValid = (url = "") => {
