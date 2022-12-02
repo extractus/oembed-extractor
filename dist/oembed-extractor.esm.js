@@ -1,4 +1,4 @@
-// @extractus/oembed-extractor@3.1.6, by @extractus - built with esbuild at 2022-11-30T09:21:00.562Z - published under MIT license
+// @extractus/oembed-extractor@3.1.7, by @extractus - built with esbuild at 2022-12-02T14:35:39.216Z - published under MIT license
 
 // src/utils/linker.js
 var isValid = (url = "") => {
@@ -113,12 +113,6 @@ var providers = [
   },
   {
     "s": [
-      "play\\.adpaths\\.com/experience/*"
-    ],
-    "e": "play.adpaths.com/oembed/*"
-  },
-  {
-    "s": [
       "v\\.afree\\.ca/ST/",
       "vod\\.afreecatv\\.com/ST/",
       "vod\\.afreecatv\\.com/PLAYER/STATION/",
@@ -171,12 +165,6 @@ var providers = [
       "anniemusic\\.app/p/*"
     ],
     "e": "api.anniemusic.app/api/v1/oembed"
-  },
-  {
-    "s": [
-      "renderer\\.apester\\.com/v2/*?preview=true&iframe_preview=true"
-    ],
-    "e": "display.apester.com/oembed"
   },
   {
     "s": [
@@ -379,7 +367,7 @@ var providers = [
     "s": [
       "codehs\\.com/editor/share_abacus/*"
     ],
-    "e": "codehs.com/api/sharedprogram/*/oembed/"
+    "e": "codehs.com/api/sharedprogram/1/oembed/"
   },
   {
     "s": [
@@ -495,12 +483,6 @@ var providers = [
   },
   {
     "s": [
-      "*\\.didacte\\.com/a/course/*"
-    ],
-    "e": "*.didacte.com/cards/oembed"
-  },
-  {
-    "s": [
       "www\\.ultimedia\\.com/central/video/edit/id/*/topic_id/*/",
       "www\\.ultimedia\\.com/default/index/videogeneric/id/*/showtitle/1/viewnc/1",
       "www\\.ultimedia\\.com/default/index/videogeneric/id/*"
@@ -559,10 +541,6 @@ var providers = [
       "embedery\\.com/widget/*"
     ],
     "e": "embedery.com/api/oembed"
-  },
-  {
-    "s": [],
-    "e": "api.embed.ly/1/oembed"
   },
   {
     "s": [
@@ -1108,17 +1086,6 @@ var providers = [
   },
   {
     "s": [
-      "*\\.medialab\\.app/share/watch/*",
-      "*\\.medialab\\.co/share/watch/*",
-      "*\\.medialab\\.app/share/social/*",
-      "*\\.medialab\\.co/share/social/*",
-      "*\\.medialab\\.app/share/embed/*",
-      "*\\.medialab\\.co/share/embed/*"
-    ],
-    "e": "*.medialab.(co|app)/api/oembed/"
-  },
-  {
-    "s": [
       "mdstrm\\.com/embed/*",
       "mdstrm\\.com/live-stream/*",
       "mdstrm\\.com/image/*"
@@ -1237,10 +1204,6 @@ var providers = [
     "e": "www.nfb.ca/remote/services/oembed/"
   },
   {
-    "s": [],
-    "e": "www.nftndx.io/oembed"
-  },
-  {
     "s": [
       "nopaste\\.ml/*"
     ],
@@ -1298,10 +1261,6 @@ var providers = [
       "omny\\.fm/shows/*"
     ],
     "e": "omny.fm/oembed"
-  },
-  {
-    "s": [],
-    "e": "www.ora.tv/oembed/*?format=json"
   },
   {
     "s": [
@@ -1383,9 +1342,9 @@ var providers = [
   },
   {
     "s": [
-      "*\\.pitchhub\\.com/en/public/player/*"
+      "player\\.pitchhub\\.com/en/public/player/*"
     ],
-    "e": "*.pitchhub.com.com/en/public/oembed"
+    "e": "player.pitchhub.com/en/public/oembed"
   },
   {
     "s": [
@@ -1434,6 +1393,12 @@ var providers = [
       "*\\.prezi\\.com/v/*"
     ],
     "e": "prezi.com/v/oembed"
+  },
+  {
+    "s": [
+      "qtpi\\.gg/fashion/*"
+    ],
+    "e": "qtpi.gg/fashion/oembed"
   },
   {
     "s": [
@@ -1621,12 +1586,6 @@ var providers = [
   },
   {
     "s": [
-      "*\\.slateapp\\.com/work/*"
-    ],
-    "e": "*.slateapp.com/api/v2/oembed"
-  },
-  {
-    "s": [
       "www\\.slideshare\\.net/*/*",
       "fr\\.slideshare\\.net/*/*",
       "de\\.slideshare\\.net/*/*",
@@ -1762,12 +1721,6 @@ var providers = [
       "sway\\.office\\.com/*"
     ],
     "e": "sway.office.com/api/v1.0/oembed"
-  },
-  {
-    "s": [
-      "player\\.switcherstudio\\.com/*"
-    ],
-    "e": "player.switcherstudio.com/oembed"
   },
   {
     "s": [
@@ -1936,10 +1889,6 @@ var providers = [
     "e": "api.veervr.tv/oembed"
   },
   {
-    "s": [],
-    "e": "verse.com/services/oembed/"
-  },
-  {
     "s": [
       "www\\.vevo\\.com/*"
     ],
@@ -2032,9 +1981,9 @@ var providers = [
   },
   {
     "s": [
-      "*\\.wiredrive\\.com/*"
+      "whimsical\\.com/*"
     ],
-    "e": "*.wiredrive.com/present-oembed/"
+    "e": "whimsical.com/api/oembed"
   },
   {
     "s": [

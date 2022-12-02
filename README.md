@@ -26,8 +26,8 @@ You can use one or combination of these tools to build news sites, create automa
 
 ## Demo
 
-- [Give it a try!](https://demos.pwshub.com/oembed-parser)
-- [Example FaaS](https://oembed.deta.dev/?url=https://www.instagram.com/tv/CVlR5GFqF68/)
+- [Give it a try!](https://extractor-demos.pages.dev/oembed-extractor)
+- [Example FaaS](https://extractus.deno.dev/extract?apikey=rn0wbHos2e73W6ghQf705bdF&type=oembed&url=https://www.instagram.com/tv/CVlR5GFqF68/)
 
 
 ## Install & Usage
@@ -61,11 +61,11 @@ console.log(result)
 ### Deno
 
 ```ts
+// deno < 1.28
+import { extract } from 'https://esm.sh/@extractus/oembed-extractor'
+
 // deno > 1.28
 import { extract } from 'npm:@extractus/oembed-extractor'
-
-// deno < 1.28
-// import { extract } from 'https://esm.sh/@extractus/oembed-extractor'
 
 const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
 console.log(result)
@@ -77,7 +77,7 @@ console.log(result)
 import { extract } from 'https://unpkg.com/@extractus/oembed-extractor@latest/dist/oembed-extractor.esm.js'
 ```
 
-Please check [the examples](https://github.com/extractus/oembed-extractor/tree/main/examples) for reference.
+Please check [the examples](examples) for reference.
 
 
 ### Deta cloud
