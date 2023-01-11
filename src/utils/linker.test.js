@@ -7,36 +7,36 @@ describe('test isValidURL()', () => {
   const cases = [
     {
       url: 'https://www.23hq.com',
-      expected: true
+      expected: true,
     },
     {
       url: 'https://secure.actblue.com',
-      expected: true
+      expected: true,
     },
     {
       url: 'https://docs.microsoft.com/en-us/azure/iot-edge/quickstart?view=iotedge-2018-06',
-      expected: true
+      expected: true,
     },
     {
       url: 'http://192.168.1.199:8081/example/page',
-      expected: true
+      expected: true,
     },
     {
       url: 'ftp://192.168.1.199:8081/example/page',
-      expected: false
+      expected: false,
     },
     {
       url: '',
-      expected: false
+      expected: false,
     },
     {
       url: null,
-      expected: false
+      expected: false,
     },
     {
       url: { a: 'x' },
-      expected: false
-    }
+      expected: false,
+    },
   ]
   cases.forEach(({ url, expected }) => {
     test(`isValidURL("${url}") must return "${expected}"`, () => {

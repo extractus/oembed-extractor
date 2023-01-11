@@ -7,32 +7,32 @@ describe('test if provider.find() works correctly', () => {
   const cases = [
     {
       url: 'https://www.facebook.com/video.php?v=999999999',
-      fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_video'
+      fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_video',
     },
     {
       url: 'https://www.facebook.com/someone/photos/somephoto',
-      fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_post'
+      fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_post',
     },
     {
       url: 'https://www.facebook.com/someone/page',
-      fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_page'
+      fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_page',
     },
     {
       url: 'http://instagram.com/someone/p/somepage',
-      fetchEndpoint: 'https://graph.facebook.com/v10.0/instagram_oembed'
+      fetchEndpoint: 'https://graph.facebook.com/v10.0/instagram_oembed',
     },
     {
       url: 'https://www.edumedia-sciences.com/en/media/558-heredity',
-      fetchEndpoint: 'https://www.edumedia-sciences.com/oembed.json'
+      fetchEndpoint: 'https://www.edumedia-sciences.com/oembed.json',
     },
     {
       url: 'https://vimeo.com/999999',
-      fetchEndpoint: 'https://vimeo.com/api/oembed.json'
+      fetchEndpoint: 'https://vimeo.com/api/oembed.json',
     },
     {
       url: 'https://www.youtube.com/watch?v=9999999',
-      fetchEndpoint: 'https://www.youtube.com/oembed'
-    }
+      fetchEndpoint: 'https://www.youtube.com/oembed',
+    },
   ]
 
   cases.forEach(({ url, fetchEndpoint }) => {
@@ -63,11 +63,11 @@ describe('test if provider set/get works correctly', () => {
       endpoints: [
         {
           schemes: [
-            'https://store.alpha.com/*'
+            'https://store.alpha.com/*',
           ],
-          url: 'https://api.alpha.com/oembed'
-        }
-      ]
+          url: 'https://api.alpha.com/oembed',
+        },
+      ],
     },
     {
       provider_name: 'Beta',
@@ -75,12 +75,12 @@ describe('test if provider set/get works correctly', () => {
       endpoints: [
         {
           schemes: [
-            'https://store.beta.com/*'
+            'https://store.beta.com/*',
           ],
-          url: 'https://api.beta.com/oembed'
-        }
-      ]
-    }
+          url: 'https://api.beta.com/oembed',
+        },
+      ],
+    },
   ]
   test('provider.set() & provider.get()', () => {
     expect(provider.set(providerList)).toEqual(providerList.length)

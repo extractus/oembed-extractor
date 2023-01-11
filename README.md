@@ -7,7 +7,7 @@ Extract oEmbed content from given URL.
 [![CI test](https://github.com/extractus/oembed-extractor/workflows/ci-test/badge.svg)](https://github.com/extractus/oembed-extractor/actions)
 [![Coverage Status](https://coveralls.io/repos/github/extractus/oembed-extractor/badge.svg)](https://coveralls.io/github/extractus/oembed-extractor)
 ![CodeQL](https://github.com/extractus/oembed-extractor/workflows/CodeQL/badge.svg)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![CodeFactor](https://www.codefactor.io/repository/github/extractus/oembed-extractor/badge)](https://www.codefactor.io/repository/github/extractus/oembed-extractor)
 
 ## Intro
 
@@ -78,13 +78,6 @@ import { extract } from 'https://unpkg.com/@extractus/oembed-extractor@latest/di
 ```
 
 Please check [the examples](examples) for reference.
-
-
-### Deta cloud
-
-For [Deta](https://www.deta.sh/) devs please refer [the source code and guideline here](https://github.com/ndaidong/oembed-parser-deta) or simply click the button below.
-
-[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/ndaidong/oembed-parser-deta)
 
 
 ## APIs
@@ -224,13 +217,24 @@ npm run eval https://www.instagram.com/tv/CVlR5GFqF68/
 ```
 
 
+## Test
+
+```bash
+git clone https://github.com/extractus/oembed-extractor.git
+cd oembed-extractor
+npm i
+npm test
+```
+
+![oembed-extractor unit test](https://i.imgur.com/Nr5BgUx.png)
+
+
 ## Quick evaluation
 
 ```bash
 git clone https://github.com/extractus/oembed-extractor.git
 cd oembed-extractor
 npm i
-
 npm run eval {URL_TO_PARSE_OEMBED}
 ```
 

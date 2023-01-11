@@ -8,7 +8,7 @@ const app = express()
 const loadRemoteEmbed = async (url) => {
   try {
     const headers = {
-      'Accept-Charset': 'utf-8'
+      'Accept-Charset': 'utf-8',
     }
     const data = await got(url, { headers }).json()
     return data
