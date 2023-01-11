@@ -42,7 +42,7 @@ const sync = async () => {
         '/* eslint-disable */ ',
         '',
         `export const providers = ${data}`,
-        ''
+        '',
       ].join('\n'),
       'utf8'
     )

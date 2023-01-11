@@ -10,7 +10,7 @@ const parseUrl = (url) => {
   const re = new URL(url)
   return {
     baseUrl: `${re.protocol}//${re.host}`,
-    path: re.pathname
+    path: re.pathname,
   }
 }
 
@@ -19,74 +19,74 @@ describe('test if fetchEmbed() works correctly', () => {
     {
       input: {
         url: 'https://youtu.be/qQpb1oCernE',
-        file: './test-data/youtube.json'
+        file: './test-data/youtube.json',
       },
       expected: {
         provider_name: 'YouTube',
-        type: 'video'
-      }
+        type: 'video',
+      },
     },
     {
       input: {
         url: 'https://twitter.com/ndaidong/status/1173592062878314497',
-        file: './test-data/twitter.json'
+        file: './test-data/twitter.json',
       },
       expected: {
         provider_name: 'Twitter',
-        type: 'rich'
-      }
+        type: 'rich',
+      },
     },
     {
       input: {
         url: 'https://twitter.com/ndaidong/status/1173592062878314497?theme=dark',
-        file: './test-data/twitter-dark.json'
+        file: './test-data/twitter-dark.json',
       },
       expected: {
         provider_name: 'Twitter',
-        type: 'rich'
-      }
+        type: 'rich',
+      },
     },
     {
       input: {
         url: 'https://www.facebook.com/facebook/videos/10153231379946729/',
         params: {
-          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
+          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62',
         },
-        file: './test-data/facebook.json'
+        file: './test-data/facebook.json',
       },
       expected: {
         provider_name: 'Facebook',
-        type: 'video'
-      }
+        type: 'video',
+      },
     },
     {
       input: {
         url: 'http://farm4.static.flickr.com/3123/2341623661_7c99f48bbf_m.jpg',
-        file: './test-data/flickr-default.json'
+        file: './test-data/flickr-default.json',
       },
       expected: {
         provider_name: 'Flickr',
         type: 'photo',
         maxwidth: 1024,
-        maxheight: 683
-      }
+        maxheight: 683,
+      },
     },
     {
       input: {
         url: 'http://farm4.static.flickr.com/3123/2341623661_7c99f48bbf_m.jpg',
         params: {
           maxwidth: 800,
-          maxheight: 400
+          maxheight: 400,
         },
-        file: './test-data/flickr-sizelimit.json'
+        file: './test-data/flickr-sizelimit.json',
       },
       expected: {
         provider_name: 'Flickr',
         type: 'photo',
         maxwidth: 800,
-        maxheight: 400
-      }
-    }
+        maxheight: 400,
+      },
+    },
   ]
 
   cases.forEach(({ input, expected }) => {
@@ -99,17 +99,17 @@ describe('test if fetchEmbed() works correctly', () => {
       const queries = new URLSearchParams({
         url,
         ...params,
-        format: 'json'
+        format: 'json',
       })
       scope.get(path)
         .query(queries)
         .replyWithFile(200, file, {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         })
 
       const {
         maxwidth = 0,
-        maxheight = 0
+        maxheight = 0,
       } = params
 
       const result = await fetchEmbed(url, { maxwidth, maxheight }, endpoint)

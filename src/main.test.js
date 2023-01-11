@@ -12,12 +12,12 @@ import {
 
 const required = [
   'type',
-  'version'
+  'version',
 ]
 
 const optional = [
   'provider_url',
-  'provider_name'
+  'provider_name',
 ]
 
 const RichTypeKeys = [
@@ -25,7 +25,7 @@ const RichTypeKeys = [
   'width',
   'height',
   ...optional,
-  ...required
+  ...required,
 ]
 
 const PhotoTypeKeys = [
@@ -33,21 +33,21 @@ const PhotoTypeKeys = [
   'width',
   'height',
   ...optional,
-  ...required
+  ...required,
 ]
 
 const InstagramKeys = [
   'html',
   'width',
   ...optional,
-  ...required
+  ...required,
 ]
 
 const parseUrl = (url) => {
   const re = new URL(url)
   return {
     baseUrl: `${re.protocol}//${re.host}`,
-    path: re.pathname
+    path: re.pathname,
   }
 }
 
@@ -84,7 +84,7 @@ describe('test extract(bad url)', () => {
     'http://badcom/146753785',
     'https://674458092126388225',
     'http://www.ted.com/talks/something-does-not-exist',
-    'https://soundcloud^(*%%$%^$$%$$*&(&)())'
+    'https://soundcloud^(*%%$%^$$%$$*&(&)())',
   ]
 
   badSamples.forEach((url) => {
@@ -103,90 +103,90 @@ describe('test if extract() with some popular providers', () => {
     {
       input: {
         url: 'https://youtu.be/qQpb1oCernE',
-        file: './test-data/youtube.json'
+        file: './test-data/youtube.json',
       },
       expected: {
         provider_name: 'YouTube',
-        type: 'video'
+        type: 'video',
       },
-      checkFn: hasRichKeys
+      checkFn: hasRichKeys,
     },
     {
       input: {
         url: 'https://www.youtube.com/watch?v=ciS8aCrX-9s',
-        file: './test-data/youtube_ciS8aCrX-9s.json'
+        file: './test-data/youtube_ciS8aCrX-9s.json',
       },
       expected: {
         provider_name: 'YouTube',
-        type: 'video'
+        type: 'video',
       },
-      checkFn: hasRichKeys
+      checkFn: hasRichKeys,
     },
     {
       input: {
         url: 'https://twitter.com/ndaidong/status/1173592062878314497',
-        file: './test-data/twitter.json'
+        file: './test-data/twitter.json',
       },
       expected: {
         provider_name: 'Twitter',
-        type: 'rich'
+        type: 'rich',
       },
-      checkFn: hasRichKeys
+      checkFn: hasRichKeys,
     },
     {
       input: {
         url: 'https://www.instagram.com/p/ic7kRDqOlt/',
         params: {
-          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
+          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62',
         },
-        file: './test-data/instagram_ic7kRDqOlt.json'
+        file: './test-data/instagram_ic7kRDqOlt.json',
       },
       expected: {
         provider_name: 'Instagram',
-        type: 'rich'
+        type: 'rich',
       },
-      checkFn: hasInstagramKeys
+      checkFn: hasInstagramKeys,
     },
     {
       input: {
         url: 'https://www.facebook.com/facebook/videos/10153231379946729/',
         params: {
-          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62'
+          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62',
         },
-        file: './test-data/facebook.json'
+        file: './test-data/facebook.json',
       },
       expected: {
         provider_name: 'Facebook',
-        type: 'video'
+        type: 'video',
       },
-      checkFn: hasRichKeys
+      checkFn: hasRichKeys,
     },
     {
       input: {
         url: 'https://flic.kr/p/2iYctUr',
-        file: './test-data/flickr_2iYctUr.json'
+        file: './test-data/flickr_2iYctUr.json',
       },
       expected: {
         provider_name: 'Flickr',
         type: 'photo',
         maxwidth: 1024,
-        maxheight: 768
+        maxheight: 768,
       },
-      checkFn: hasPhotoKeys
+      checkFn: hasPhotoKeys,
     },
     {
       input: {
         url: 'https://flic.kr/p/2iYctUr',
-        file: './test-data/flickr_2iYctUr_640x480.json'
+        file: './test-data/flickr_2iYctUr_640x480.json',
       },
       expected: {
         provider_name: 'Flickr',
         type: 'photo',
         maxwidth: 640,
-        maxheight: 480
+        maxheight: 480,
       },
-      checkFn: hasPhotoKeys
-    }
+      checkFn: hasPhotoKeys,
+    },
   ]
 
   cases.forEach(({ input, expected, checkFn }) => {
@@ -199,17 +199,17 @@ describe('test if extract() with some popular providers', () => {
       const queries = new URLSearchParams({
         url,
         format: 'json',
-        ...params
+        ...params,
       })
       scope.get(path)
         .query(queries)
         .replyWithFile(200, file, {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         })
 
       const {
         maxwidth = 0,
-        maxheight = 0
+        maxheight = 0,
       } = params
 
       const result = await extract(url, { maxwidth, maxheight })
@@ -241,12 +241,12 @@ test('test .setProviderList() method', () => {
       endpoints: [
         {
           schemes: [
-            'http://www.example.org/media/*'
+            'http://www.example.org/media/*',
           ],
-          url: 'http://www.example.org/oembed'
-        }
-      ]
-    }
+          url: 'http://www.example.org/oembed',
+        },
+      ],
+    },
   ]
   setProviderList(customProviderOnly)
   expect(hasProvider('http://www.example.org/media/abcdef')).toBe(true)

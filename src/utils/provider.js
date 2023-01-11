@@ -23,7 +23,7 @@ const removeProtocol = (url) => {
 export const simplify = (providers = []) => {
   return providers.map((item) => {
     const {
-      endpoints
+      endpoints,
     } = item
     return endpoints.map((endpoint) => {
       const { schemes = [], url } = endpoint
@@ -31,7 +31,7 @@ export const simplify = (providers = []) => {
 
       return {
         s: patterns,
-        e: removeProtocol(url).replace(/\{format\}/g, 'json')
+        e: removeProtocol(url).replace(/\{format\}/g, 'json'),
       }
     })
   }).reduce((prev, curr) => {
@@ -44,13 +44,13 @@ const providersFromList = (providers = []) => {
     const { e: endpoint, s: schemes } = provider
     return {
       endpoint: `https://${endpoint}`,
-      schemes: schemes.map(toRegExp)
+      schemes: schemes.map(toRegExp),
     }
   })
 }
 
 const store = {
-  providers: providersFromList(defaultProviderList)
+  providers: providersFromList(defaultProviderList),
 }
 
 export const get = () => {
@@ -87,7 +87,7 @@ export const find = (url = '') => {
       return {
         schemes,
         endpoint,
-        url
+        url,
       }
     }
   }
@@ -108,5 +108,5 @@ export default {
   find,
   has,
   get,
-  set
+  set,
 }

@@ -14,11 +14,11 @@ const getFacebookGraphToken = () => {
   return `${appId}|${clientToken}`
 }
 
-export default async (url, params = {}, endpoint = '', options = {}) => {
+export default async (url, params = {}, endpoint = '', options = {}) => { // eslint-disable-line
   const query = {
     url,
     format: 'json',
-    ...params
+    ...params,
   }
 
   if (query.maxwidth <= 0) {

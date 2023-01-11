@@ -1,4 +1,4 @@
-// provider data, synchronized at 2022-11-22T04:14:50.180Z
+// provider data, synchronized at 2022-12-02T14:34:17.228Z
 
 /* eslint-disable */ 
 
@@ -32,12 +32,6 @@ export const providers = [
       "adilo\\.bigcommand\\.com/watch/*"
     ],
     "e": "adilo.bigcommand.com/web/oembed"
-  },
-  {
-    "s": [
-      "play\\.adpaths\\.com/experience/*"
-    ],
-    "e": "play.adpaths.com/oembed/*"
   },
   {
     "s": [
@@ -93,12 +87,6 @@ export const providers = [
       "anniemusic\\.app/p/*"
     ],
     "e": "api.anniemusic.app/api/v1/oembed"
-  },
-  {
-    "s": [
-      "renderer\\.apester\\.com/v2/*?preview=true&iframe_preview=true"
-    ],
-    "e": "display.apester.com/oembed"
   },
   {
     "s": [
@@ -301,7 +289,7 @@ export const providers = [
     "s": [
       "codehs\\.com/editor/share_abacus/*"
     ],
-    "e": "codehs.com/api/sharedprogram/*/oembed/"
+    "e": "codehs.com/api/sharedprogram/1/oembed/"
   },
   {
     "s": [
@@ -417,12 +405,6 @@ export const providers = [
   },
   {
     "s": [
-      "*\\.didacte\\.com/a/course/*"
-    ],
-    "e": "*.didacte.com/cards/oembed"
-  },
-  {
-    "s": [
       "www\\.ultimedia\\.com/central/video/edit/id/*/topic_id/*/",
       "www\\.ultimedia\\.com/default/index/videogeneric/id/*/showtitle/1/viewnc/1",
       "www\\.ultimedia\\.com/default/index/videogeneric/id/*"
@@ -481,10 +463,6 @@ export const providers = [
       "embedery\\.com/widget/*"
     ],
     "e": "embedery.com/api/oembed"
-  },
-  {
-    "s": [],
-    "e": "api.embed.ly/1/oembed"
   },
   {
     "s": [
@@ -1030,17 +1008,6 @@ export const providers = [
   },
   {
     "s": [
-      "*\\.medialab\\.app/share/watch/*",
-      "*\\.medialab\\.co/share/watch/*",
-      "*\\.medialab\\.app/share/social/*",
-      "*\\.medialab\\.co/share/social/*",
-      "*\\.medialab\\.app/share/embed/*",
-      "*\\.medialab\\.co/share/embed/*"
-    ],
-    "e": "*.medialab.(co|app)/api/oembed/"
-  },
-  {
-    "s": [
       "mdstrm\\.com/embed/*",
       "mdstrm\\.com/live-stream/*",
       "mdstrm\\.com/image/*"
@@ -1159,10 +1126,6 @@ export const providers = [
     "e": "www.nfb.ca/remote/services/oembed/"
   },
   {
-    "s": [],
-    "e": "www.nftndx.io/oembed"
-  },
-  {
     "s": [
       "nopaste\\.ml/*"
     ],
@@ -1220,10 +1183,6 @@ export const providers = [
       "omny\\.fm/shows/*"
     ],
     "e": "omny.fm/oembed"
-  },
-  {
-    "s": [],
-    "e": "www.ora.tv/oembed/*?format=json"
   },
   {
     "s": [
@@ -1305,9 +1264,9 @@ export const providers = [
   },
   {
     "s": [
-      "*\\.pitchhub\\.com/en/public/player/*"
+      "player\\.pitchhub\\.com/en/public/player/*"
     ],
-    "e": "*.pitchhub.com.com/en/public/oembed"
+    "e": "player.pitchhub.com/en/public/oembed"
   },
   {
     "s": [
@@ -1356,6 +1315,12 @@ export const providers = [
       "*\\.prezi\\.com/v/*"
     ],
     "e": "prezi.com/v/oembed"
+  },
+  {
+    "s": [
+      "qtpi\\.gg/fashion/*"
+    ],
+    "e": "qtpi.gg/fashion/oembed"
   },
   {
     "s": [
@@ -1543,12 +1508,6 @@ export const providers = [
   },
   {
     "s": [
-      "*\\.slateapp\\.com/work/*"
-    ],
-    "e": "*.slateapp.com/api/v2/oembed"
-  },
-  {
-    "s": [
       "www\\.slideshare\\.net/*/*",
       "fr\\.slideshare\\.net/*/*",
       "de\\.slideshare\\.net/*/*",
@@ -1684,12 +1643,6 @@ export const providers = [
       "sway\\.office\\.com/*"
     ],
     "e": "sway.office.com/api/v1.0/oembed"
-  },
-  {
-    "s": [
-      "player\\.switcherstudio\\.com/*"
-    ],
-    "e": "player.switcherstudio.com/oembed"
   },
   {
     "s": [
@@ -1858,10 +1811,6 @@ export const providers = [
     "e": "api.veervr.tv/oembed"
   },
   {
-    "s": [],
-    "e": "verse.com/services/oembed/"
-  },
-  {
     "s": [
       "www\\.vevo\\.com/*"
     ],
@@ -1954,9 +1903,9 @@ export const providers = [
   },
   {
     "s": [
-      "*\\.wiredrive\\.com/*"
+      "whimsical\\.com/*"
     ],
-    "e": "*.wiredrive.com/present-oembed/"
+    "e": "whimsical.com/api/oembed"
   },
   {
     "s": [
