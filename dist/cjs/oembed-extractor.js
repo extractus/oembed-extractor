@@ -1,4 +1,4 @@
-// @extractus/oembed-extractor@3.1.8, by @extractus - built with esbuild at 2023-03-28T03:23:06.966Z - published under MIT license
+// @extractus/oembed-extractor@3.1.9, by @extractus - built with esbuild at 2023-03-28T03:30:23.153Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
