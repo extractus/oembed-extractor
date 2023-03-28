@@ -306,6 +306,19 @@
     ]
   },
   {
+    "provider_name": "Beams.fm",
+    "provider_url": "http://beams.fm",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://beams.fm/*"
+        ],
+        "url": "https://api.beams.fm/oEmbed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Beautiful.AI",
     "provider_url": "https://www.beautiful.ai/",
     "endpoints": [
@@ -446,20 +459,6 @@
           "https://minesweeper.today/*"
         ],
         "url": "https://minesweeper.today/api/oembed",
-        "discovery": true
-      }
-    ]
-  },
-  {
-    "provider_name": "Catapult",
-    "provider_url": "https://www.catapult.app/",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://www-catapult-app.sandbox.hs-sites.com/video-page*",
-          "https://www-catapult.app/video-page*"
-        ],
-        "url": "https://www.catapult.app/_hcms/api/video/oembed",
         "discovery": true
       }
     ]
@@ -1783,7 +1782,7 @@
   },
   {
     "provider_name": "Jovian",
-    "provider_url": "https://jovian.ai/",
+    "provider_url": "https://jovian.com/",
     "endpoints": [
       {
         "schemes": [
@@ -1792,9 +1791,12 @@
           "https://*.jovian.ml/*",
           "https://jovian.ai/*",
           "https://jovian.ai/viewer*",
-          "https://*.jovian.ai/*"
+          "https://*.jovian.ai/*",
+          "https://jovian.com/*",
+          "https://jovian.com/viewer*",
+          "https://*.jovian.com/*"
         ],
-        "url": "https://api.jovian.ai/oembed.json",
+        "url": "https://api.jovian.com/oembed.json",
         "discovery": true
       }
     ]
@@ -2205,6 +2207,18 @@
           "https://www.mixcloud.com/*/*/"
         ],
         "url": "https://www.mixcloud.com/oembed/"
+      }
+    ]
+  },
+  {
+    "provider_name": "Mixpanel",
+    "provider_url": "https://mixpanel.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://mixpanel.com/*"
+        ],
+        "url": "https://mixpanel.com/api/app/embed/oembed/"
       }
     ]
   },

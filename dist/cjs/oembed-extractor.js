@@ -1,4 +1,4 @@
-// @extractus/oembed-extractor@3.1.8, by @extractus - built with esbuild at 2023-01-11T02:48:50.197Z - published under MIT license
+// @extractus/oembed-extractor@3.1.8, by @extractus - built with esbuild at 2023-03-28T03:23:06.966Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -3249,6 +3249,12 @@ var providers = [
     "e": "backtracks.fm/oembed"
   },
   {
+    "s": [
+      "beams\\.fm/*"
+    ],
+    "e": "api.beams.fm/oEmbed"
+  },
+  {
     "s": [],
     "e": "www.beautiful.ai/api/oembed"
   },
@@ -3312,13 +3318,6 @@ var providers = [
       "minesweeper\\.today/*"
     ],
     "e": "minesweeper.today/api/oembed"
-  },
-  {
-    "s": [
-      "www-catapult-app\\.sandbox\\.hs-sites\\.com/video-page*",
-      "www-catapult\\.app/video-page*"
-    ],
-    "e": "www.catapult.app/_hcms/api/video/oembed"
   },
   {
     "s": [
@@ -3957,9 +3956,12 @@ var providers = [
       "*\\.jovian\\.ml/*",
       "jovian\\.ai/*",
       "jovian\\.ai/viewer*",
-      "*\\.jovian\\.ai/*"
+      "*\\.jovian\\.ai/*",
+      "jovian\\.com/*",
+      "jovian\\.com/viewer*",
+      "*\\.jovian\\.com/*"
     ],
-    "e": "api.jovian.ai/oembed.json"
+    "e": "api.jovian.com/oembed.json"
   },
   {
     "s": [
@@ -4155,6 +4157,12 @@ var providers = [
       "www\\.mixcloud\\.com/*/*/"
     ],
     "e": "www.mixcloud.com/oembed/"
+  },
+  {
+    "s": [
+      "mixpanel\\.com/*"
+    ],
+    "e": "mixpanel.com/api/app/embed/oembed/"
   },
   {
     "s": [
