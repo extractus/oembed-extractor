@@ -1,4 +1,4 @@
-// provider data, synchronized at 2023-01-11T02:27:50.456Z
+// provider data, synchronized at 2023-03-28T03:23:00.248Z
 
 /* eslint-disable */ 
 
@@ -149,6 +149,12 @@ export const providers = [
     "e": "backtracks.fm/oembed"
   },
   {
+    "s": [
+      "beams\\.fm/*"
+    ],
+    "e": "api.beams.fm/oEmbed"
+  },
+  {
     "s": [],
     "e": "www.beautiful.ai/api/oembed"
   },
@@ -212,13 +218,6 @@ export const providers = [
       "minesweeper\\.today/*"
     ],
     "e": "minesweeper.today/api/oembed"
-  },
-  {
-    "s": [
-      "www-catapult-app\\.sandbox\\.hs-sites\\.com/video-page*",
-      "www-catapult\\.app/video-page*"
-    ],
-    "e": "www.catapult.app/_hcms/api/video/oembed"
   },
   {
     "s": [
@@ -857,9 +856,12 @@ export const providers = [
       "*\\.jovian\\.ml/*",
       "jovian\\.ai/*",
       "jovian\\.ai/viewer*",
-      "*\\.jovian\\.ai/*"
+      "*\\.jovian\\.ai/*",
+      "jovian\\.com/*",
+      "jovian\\.com/viewer*",
+      "*\\.jovian\\.com/*"
     ],
-    "e": "api.jovian.ai/oembed.json"
+    "e": "api.jovian.com/oembed.json"
   },
   {
     "s": [
@@ -1055,6 +1057,12 @@ export const providers = [
       "www\\.mixcloud\\.com/*/*/"
     ],
     "e": "www.mixcloud.com/oembed/"
+  },
+  {
+    "s": [
+      "mixpanel\\.com/*"
+    ],
+    "e": "mixpanel.com/api/app/embed/oembed/"
   },
   {
     "s": [
