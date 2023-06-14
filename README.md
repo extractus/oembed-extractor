@@ -7,7 +7,6 @@ Extract oEmbed content from given URL.
 [![CI test](https://github.com/extractus/oembed-extractor/workflows/ci-test/badge.svg)](https://github.com/extractus/oembed-extractor/actions)
 [![Coverage Status](https://coveralls.io/repos/github/extractus/oembed-extractor/badge.svg)](https://coveralls.io/github/extractus/oembed-extractor)
 ![CodeQL](https://github.com/extractus/oembed-extractor/workflows/CodeQL/badge.svg)
-[![CodeFactor](https://www.codefactor.io/repository/github/extractus/oembed-extractor/badge)](https://www.codefactor.io/repository/github/extractus/oembed-extractor)
 
 ## Intro
 
