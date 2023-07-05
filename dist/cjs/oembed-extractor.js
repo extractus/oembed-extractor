@@ -1,4 +1,4 @@
-// @extractus/oembed-extractor@3.1.10, by @extractus - built with esbuild at 2023-06-14T14:23:09.551Z - published under MIT license
+// @extractus/oembed-extractor@3.1.11, by @extractus - built with esbuild at 2023-07-05T06:34:05.557Z - published under MIT license
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -1805,9 +1805,9 @@ var require_public_api = __commonJS({
   }
 });
 
-// node_modules/.pnpm/node-fetch@2.6.11/node_modules/node-fetch/lib/index.js
+// node_modules/.pnpm/node-fetch@2.6.12/node_modules/node-fetch/lib/index.js
 var require_lib2 = __commonJS({
-  "node_modules/.pnpm/node-fetch@2.6.11/node_modules/node-fetch/lib/index.js"(exports, module2) {
+  "node_modules/.pnpm/node-fetch@2.6.12/node_modules/node-fetch/lib/index.js"(exports, module2) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     function _interopDefault(ex) {
@@ -1822,7 +1822,7 @@ var require_lib2 = __commonJS({
     var Readable = Stream.Readable;
     var BUFFER = Symbol("buffer");
     var TYPE = Symbol("type");
-    var Blob = class {
+    var Blob = class _Blob {
       constructor() {
         this[TYPE] = "";
         const blobParts = arguments[0];
@@ -1841,7 +1841,7 @@ var require_lib2 = __commonJS({
               buffer = Buffer.from(element.buffer, element.byteOffset, element.byteLength);
             } else if (element instanceof ArrayBuffer) {
               buffer = Buffer.from(element);
-            } else if (element instanceof Blob) {
+            } else if (element instanceof _Blob) {
               buffer = element[BUFFER];
             } else {
               buffer = Buffer.from(typeof element === "string" ? element : String(element));
@@ -1903,7 +1903,7 @@ var require_lib2 = __commonJS({
         const span = Math.max(relativeEnd - relativeStart, 0);
         const buffer = this[BUFFER];
         const slicedBuffer = buffer.slice(relativeStart, relativeStart + span);
-        const blob = new Blob([], { type: arguments[2] });
+        const blob = new _Blob([], { type: arguments[2] });
         blob[BUFFER] = slicedBuffer;
         return blob;
       }
@@ -2280,7 +2280,7 @@ var require_lib2 = __commonJS({
       return void 0;
     }
     var MAP = Symbol("map");
-    var Headers = class {
+    var Headers = class _Headers {
       /**
        * Headers class
        *
@@ -2290,7 +2290,7 @@ var require_lib2 = __commonJS({
       constructor() {
         let init = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : void 0;
         this[MAP] = /* @__PURE__ */ Object.create(null);
-        if (init instanceof Headers) {
+        if (init instanceof _Headers) {
           const rawHeaders = init.raw();
           const headerNames = Object.keys(rawHeaders);
           for (const headerName of headerNames) {
@@ -2559,7 +2559,7 @@ var require_lib2 = __commonJS({
     }
     var INTERNALS$1 = Symbol("Response internals");
     var STATUS_CODES = http.STATUS_CODES;
-    var Response = class {
+    var Response = class _Response {
       constructor() {
         let body = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : null;
         let opts = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
@@ -2607,7 +2607,7 @@ var require_lib2 = __commonJS({
        * @return  Response
        */
       clone() {
-        return new Response(clone(this), {
+        return new _Response(clone(this), {
           url: this.url,
           status: this.status,
           statusText: this.statusText,
@@ -2651,7 +2651,7 @@ var require_lib2 = __commonJS({
       const proto = signal && typeof signal === "object" && Object.getPrototypeOf(signal);
       return !!(proto && proto.constructor.name === "AbortSignal");
     }
-    var Request = class {
+    var Request = class _Request {
       constructor(input) {
         let init = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
         let parsedURL;
@@ -2721,7 +2721,7 @@ var require_lib2 = __commonJS({
        * @return  Request
        */
       clone() {
-        return new Request(this);
+        return new _Request(this);
       }
     };
     Body.mixIn(Request.prototype);
@@ -3022,7 +3022,7 @@ var require_lib2 = __commonJS({
         const headers = response.headers;
         if (headers["transfer-encoding"] === "chunked" && !headers["content-length"]) {
           response.once("close", function(hadError) {
-            const hasDataListener = socket.listenerCount("data") > 0;
+            const hasDataListener = socket && socket.listenerCount("data") > 0;
             if (hasDataListener && !hadError) {
               const err = new Error("Premature close");
               err.code = "ERR_STREAM_PREMATURE_CLOSE";
@@ -3054,9 +3054,9 @@ var require_lib2 = __commonJS({
   }
 });
 
-// node_modules/.pnpm/cross-fetch@3.1.6/node_modules/cross-fetch/dist/node-ponyfill.js
+// node_modules/.pnpm/cross-fetch@4.0.0/node_modules/cross-fetch/dist/node-ponyfill.js
 var require_node_ponyfill = __commonJS({
-  "node_modules/.pnpm/cross-fetch@3.1.6/node_modules/cross-fetch/dist/node-ponyfill.js"(exports, module2) {
+  "node_modules/.pnpm/cross-fetch@4.0.0/node_modules/cross-fetch/dist/node-ponyfill.js"(exports, module2) {
     var nodeFetch = require_lib2();
     var realFetch = nodeFetch.default || nodeFetch;
     var fetch2 = function(url, options) {
@@ -3116,9 +3116,10 @@ var retrieve_default = async (url, options = {}) => {
     headers = {
       "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0"
     },
-    proxy = null
+    proxy = null,
+    agent = null
   } = options;
-  const res = proxy ? await profetch(url, proxy) : await (0, import_cross_fetch.default)(url, { headers });
+  const res = proxy ? await profetch(url, proxy) : await (0, import_cross_fetch.default)(url, { headers, agent });
   const status = res.status;
   if (status >= 400) {
     throw new Error(`Request failed with error code ${status}`);
