@@ -1,6 +1,8 @@
 // main
 /* eslint-env jest */
 
+import { HttpsProxyAgent } from 'https-proxy-agent'
+
 import nock from 'nock'
 
 import {
@@ -9,6 +11,9 @@ import {
   findProvider,
   setProviderList
 } from './main.js'
+
+const env = process.env || {}
+const PROXY_SERVER = env.PROXY_SERVER || ''
 
 const required = [
   'type',
@@ -227,6 +232,19 @@ describe('test if extract() with some popular providers', () => {
     })
   })
 })
+
+if (PROXY_SERVER !== '') {
+  describe('test extract live oembed API via proxy server', () => {
+    test('check if extract method works with proxy server', async () => {
+      const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
+      const result = await extract(url, {}, {
+        agent: new HttpsProxyAgent(PROXY_SERVER),
+      })
+      console.log(result)
+      expect(result.success).toBeTruthy()
+    }, 10000)
+  })
+}
 
 test('test .hasProvider() method', () => {
   expect(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s')).toBe(true)

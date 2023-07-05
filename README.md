@@ -153,6 +153,27 @@ extract(url, null, {
 
 With the above setting, request will be forwarded to `https://your-secret-proxy.io/loadJson?url={OEMBED_ENDPOINT}`.
 
+Another way to work with proxy is use `agent` option instead of `proxy` as below:
+
+```js
+import { extract } from '@extractus/oembed-extractor'
+
+import { HttpsProxyAgent } from 'https-proxy-agent'
+
+const proxy = 'http://abc:RaNdoMpasswORd_country-France@proxy.packetstream.io:31113'
+
+const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
+
+const oembed = await extract(url, null, {
+  agent: new HttpsProxyAgent(proxy),
+})
+console.log('Run oembed-extractor with proxy:', proxy)
+console.log(oembed)
+```
+
+For more info about [https-proxy-agent](https://www.npmjs.com/package/https-proxy-agent), check [its repo](https://github.com/TooTallNate/proxy-agents).
+
+
 
 ### `.setProviderList()`
 

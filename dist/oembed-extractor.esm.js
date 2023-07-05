@@ -1,4 +1,4 @@
-// @extractus/oembed-extractor@3.1.10, by @extractus - built with esbuild at 2023-06-14T14:23:09.551Z - published under MIT license
+// @extractus/oembed-extractor@3.1.11, by @extractus - built with esbuild at 2023-07-05T06:35:06.826Z - published under MIT license
 
 // src/utils/linker.js
 var isValid = (url = "") => {
@@ -33,9 +33,10 @@ var retrieve_default = async (url, options = {}) => {
     headers = {
       "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0"
     },
-    proxy = null
+    proxy = null,
+    agent = null
   } = options;
-  const res = proxy ? await profetch(url, proxy) : await cross_fetch_default(url, { headers });
+  const res = proxy ? await profetch(url, proxy) : await cross_fetch_default(url, { headers, agent });
   const status = res.status;
   if (status >= 400) {
     throw new Error(`Request failed with error code ${status}`);

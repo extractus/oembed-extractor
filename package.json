@@ -1,5 +1,5 @@
 {
-  "version": "3.1.10",
+  "version": "3.1.11",
   "name": "@extractus/oembed-extractor",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://github.com/extractus/oembed-extractor",
@@ -36,12 +36,13 @@
     "reset": "node reset"
   },
   "dependencies": {
-    "cross-fetch": "^3.1.6"
+    "cross-fetch": "^4.0.0"
   },
   "devDependencies": {
-    "esbuild": "^0.18.2",
-    "eslint": "^8.42.0",
-    "jest": "^29.5.0",
+    "esbuild": "^0.18.11",
+    "eslint": "^8.44.0",
+    "https-proxy-agent": "^7.0.0",
+    "jest": "^29.6.0",
     "nock": "^13.3.1"
   },
   "keywords": [

@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node_version: [14.x, 16.x, 18.x, 19.x]
+        node_version: [14.x, 16.x, 18.x, 20.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -26,6 +26,7 @@ jobs:
       env:
         FACEBOOK_APP_ID: ${{ secrets.FACEBOOK_APP_ID }}
         FACEBOOK_CLIENT_TOKEN: ${{ secrets.FACEBOOK_CLIENT_TOKEN }}
+        PROXY_SERVER: ${{ secrets.PROXY_SERVER }}
       run: |
         npm install
         npm run lint
