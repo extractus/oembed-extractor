@@ -150,6 +150,11 @@ export interface FetchOptions {
    * default: null
    */
   agent?: object;
+  /**
+   * signal to terminate request
+   * default: null
+   */
+  signal?: object;
 }
 
 export function extract(url: string, params?: Params, fetchOptions?: FetchOptions): Promise<OembedData>;

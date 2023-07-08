@@ -4,24 +4,9 @@
 Extract oEmbed content from given URL.
 
 [![NPM](https://badge.fury.io/js/@extractus%2Foembed-extractor.svg)](https://badge.fury.io/js/@extractus%2Foembed-extractor)
+![CodeQL](https://github.com/extractus/oembed-extractor/workflows/CodeQL/badge.svg)
 [![CI test](https://github.com/extractus/oembed-extractor/workflows/ci-test/badge.svg)](https://github.com/extractus/oembed-extractor/actions)
 [![Coverage Status](https://coveralls.io/repos/github/extractus/oembed-extractor/badge.svg)](https://coveralls.io/github/extractus/oembed-extractor)
-![CodeQL](https://github.com/extractus/oembed-extractor/workflows/CodeQL/badge.svg)
-
-## Intro
-
-*oembed-extractor* is a part of tool sets for content builder:
-
-- [feed-extractor](https://github.com/extractus/feed-extractor): extract & normalize RSS/ATOM/JSON feed
-- [article-extractor](https://github.com/extractus/article-extractor): extract main article from given URL
-- [oembed-extractor](https://github.com/extractus/oembed-extractor): extract oEmbed data from supported providers
-
-You can use one or combination of these tools to build news sites, create automated content systems for marketing campaign or gather dataset for NLP projects...
-
-### Attention
-
-`oembed-parser` has been renamed to `@extractus/oembed-extractor` since v3.1.5
-
 
 ## Demo
 
@@ -73,7 +58,7 @@ console.log(result)
 ### Browser
 
 ```ts
-import { extract } from 'https://unpkg.com/@extractus/oembed-extractor@latest/dist/oembed-extractor.esm.js'
+import { extract } from "https://esm.sh/@extractus/oembed-extractor@latest"
 ```
 
 Please check [the examples](examples) for reference.
@@ -114,6 +99,13 @@ Note that some params are supported by these providers but not by the others.
 Please see the provider's oEmbed API docs carefully for exact information.
 
 ##### `fetchOptions` *optional*
+
+`fetchOptions` is an object that can have the following properties:
+
+- `headers`: to set request headers
+- `proxy`: another endpoint to forward the request to
+- `agent`: a HTTP proxy agent
+- `signal`: AbortController signal or AbortSignal timeout to terminate the request
 
 You can use this param to set request headers to fetch.
 
@@ -173,6 +165,36 @@ console.log(oembed)
 
 For more info about [https-proxy-agent](https://www.npmjs.com/package/https-proxy-agent), check [its repo](https://github.com/TooTallNate/proxy-agents).
 
+By default, there is no request timeout. You can use the option `signal` to cancel request at the right time.
+
+The common way is to use AbortControler:
+
+```js
+const controller = new AbortController()
+
+// stop after 5 seconds
+setTimeout(() => {
+  controller.abort()
+}, 5000)
+
+const oembed = await extract(url, null, {
+  signal: controller.signal,
+})
+```
+
+A newer solution is AbortSignal's `timeout()` static method:
+
+```js
+// stop after 5 seconds
+const oembed = await extract(url, null, {
+  signal: AbortSignal.timeout(5000),
+})
+```
+
+For more info:
+
+- [AbortController constructor](https://developer.mozilla.org/en-US/docs/Web/API/AbortController)
+- [AbortSignal: timeout() static method](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout_static)
 
 
 ### `.setProviderList()`

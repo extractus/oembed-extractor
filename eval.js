@@ -5,10 +5,12 @@ import { extract } from './src/main.js'
 
 const run = async (url) => {
   try {
-    const art = await extract(url)
-    console.log(art)
+    console.time('extract-oembed')
+    const oembed = await extract(url)
+    console.log(oembed)
+    console.timeEnd('extract-oembed')
   } catch (err) {
-    console.trace(err)
+    console.log(err.message)
   }
 }
 

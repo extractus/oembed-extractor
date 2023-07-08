@@ -1,11 +1,14 @@
 {
   "name": "bun-oembed-parser",
   "module": "index.ts",
+  "scripts": {
+    "start": "bun run index.ts"
+  },
   "devDependencies": {
-    "bun-types": "^0.1.0"
+    "bun-types": "^0.6.13"
   },
   "dependencies": {
-    "hono": "^2.1.4",
+    "hono": "^3.2.7",
     "@extractus/oembed-extractor": "latest"
   }
 }
