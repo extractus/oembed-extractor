@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "cross-fetch": "./src/deno/cross-fetch.js"
+  }
+}

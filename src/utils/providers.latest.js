@@ -1,4 +1,4 @@
-// provider data, synchronized at 2023-07-05T06:35:01.771Z
+// provider data, synchronized at 2023-07-12T01:33:32.812Z
 
 /* eslint-disable */ 
 
@@ -35,6 +35,7 @@ export const providers = [
   },
   {
     "s": [
+      "vod\\.afreecatv\\.com/player/",
       "v\\.afree\\.ca/ST/",
       "vod\\.afreecatv\\.com/ST/",
       "vod\\.afreecatv\\.com/PLAYER/STATION/",
@@ -99,6 +100,23 @@ export const providers = [
       "app\\.archivos\\.digital/app/view/*"
     ],
     "e": "app.archivos.digital/oembed/"
+  },
+  {
+    "s": [
+      "studio\\.assemblrworld\\.com/*",
+      "assemblr\\.world/*",
+      "app-edu\\.assemblrworld\\.com/*",
+      "staging\\.d1o2otincy91d\\.amplifyapp\\.com/*",
+      "editor\\.assemblrworld\\.com/*"
+    ],
+    "e": "studio.assemblrworld.com/api/oembed"
+  },
+  {
+    "s": [
+      "audio\\.com/*",
+      "www\\.audio\\.com/*"
+    ],
+    "e": "api.audio.com/oembed"
   },
   {
     "s": [
@@ -212,6 +230,12 @@ export const providers = [
       "cacoo\\.com/diagrams/*"
     ],
     "e": "cacoo.com/oembed.json"
+  },
+  {
+    "s": [
+      "www\\.canva\\.com/design/*/view"
+    ],
+    "e": "www.canva.com/_oembed"
   },
   {
     "s": [
@@ -396,9 +420,7 @@ export const providers = [
       "*\\.deviantart\\.com/*#/d*",
       "fav\\.me/*",
       "sta\\.sh/*",
-      "*\\.deviantart\\.com/*/art/*",
-      "sta\\.sh/*\",",
-      "*\\.deviantart\\.com/*#/d*\""
+      "*\\.deviantart\\.com/*/art/*"
     ],
     "e": "backend.deviantart.com/oembed"
   },
@@ -420,8 +442,8 @@ export const providers = [
   },
   {
     "s": [
-      "docswell\\.com/*/*",
-      "www\\.docswell\\.com/*/*"
+      "docswell\\.com/s/*/*",
+      "www\\.docswell\\.com/s/*/*"
     ],
     "e": "www.docswell.com/service/oembed"
   },
@@ -462,12 +484,6 @@ export const providers = [
       "embedery\\.com/widget/*"
     ],
     "e": "embedery.com/api/oembed"
-  },
-  {
-    "s": [
-      "music\\.enystre\\.com/lyrics/*"
-    ],
-    "e": "music.enystre.com/oembed"
   },
   {
     "s": [
@@ -516,7 +532,7 @@ export const providers = [
       "www\\.facebook\\.com/questions/*",
       "www\\.facebook\\.com/notes/*/*/*"
     ],
-    "e": "graph.facebook.com/v10.0/oembed_post"
+    "e": "graph.facebook.com/v16.0/oembed_post"
   },
   {
     "s": [
@@ -524,13 +540,13 @@ export const providers = [
       "www\\.facebook\\.com/video\\.php?id=*",
       "www\\.facebook\\.com/video\\.php?v=*"
     ],
-    "e": "graph.facebook.com/v10.0/oembed_video"
+    "e": "graph.facebook.com/v16.0/oembed_video"
   },
   {
     "s": [
       "www\\.facebook\\.com/*"
     ],
-    "e": "graph.facebook.com/v10.0/oembed_page"
+    "e": "graph.facebook.com/v16.0/oembed_page"
   },
   {
     "s": [
@@ -690,6 +706,13 @@ export const providers = [
   },
   {
     "s": [
+      "www\\.gumlet\\.com/watch/*",
+      "play\\.gumlet\\.io/embed/*"
+    ],
+    "e": "api.gumlet.com/v1/oembed"
+  },
+  {
+    "s": [
       "gyazo\\.com/*"
     ],
     "e": "api.gyazo.com/api/oembed"
@@ -835,7 +858,7 @@ export const providers = [
       "instagram\\.com/reel/*",
       "instagr\\.am/reel/*"
     ],
-    "e": "graph.facebook.com/v10.0/instagram_oembed"
+    "e": "graph.facebook.com/v16.0/instagram_oembed"
   },
   {
     "s": [
@@ -848,6 +871,12 @@ export const providers = [
       "issuu\\.com/*/docs/*"
     ],
     "e": "issuu.com/oembed"
+  },
+  {
+    "s": [
+      "play\\.itemis\\.io/*"
+    ],
+    "e": "create.storage.api.itemis.io/api/embed"
   },
   {
     "s": [
@@ -1204,6 +1233,12 @@ export const providers = [
   },
   {
     "s": [
+      "origits\\.com/v/*"
+    ],
+    "e": "origits.net/oembed"
+  },
+  {
+    "s": [
       "outplayed\\.tv/media/*"
     ],
     "e": "outplayed.tv/oembed"
@@ -1247,6 +1282,13 @@ export const providers = [
       "www\\.picturelfy\\.com/p/*"
     ],
     "e": "api.picturelfy.com/service/oembed/"
+  },
+  {
+    "s": [
+      "piggy\\.to/@*/*",
+      "piggy\\.to/view/*"
+    ],
+    "e": "piggy.to/oembed"
   },
   {
     "s": [
@@ -1681,9 +1723,11 @@ export const providers = [
   },
   {
     "s": [
+      "www\\.tickcounter\\.com/widget/*",
       "www\\.tickcounter\\.com/countdown/*",
       "www\\.tickcounter\\.com/countup/*",
       "www\\.tickcounter\\.com/ticker/*",
+      "www\\.tickcounter\\.com/clock/*",
       "www\\.tickcounter\\.com/worldclock/*"
     ],
     "e": "www.tickcounter.com/oembed"
@@ -1694,6 +1738,15 @@ export const providers = [
       "www\\.tiktok\\.com/*/video/*"
     ],
     "e": "www.tiktok.com/oembed"
+  },
+  {
+    "s": [
+      "tonicaudio\\.com/take/*",
+      "tonicaudio\\.com/song/*",
+      "tnic\\.io/song/*",
+      "tnic\\.io/take/*"
+    ],
+    "e": "tonicaudio.com/oembed"
   },
   {
     "s": [
@@ -1718,9 +1771,11 @@ export const providers = [
   },
   {
     "s": [
-      "trinitymedia\\.ai/player/*"
+      "trinitymedia\\.ai/player/*",
+      "trinitymedia\\.ai/player/*/*",
+      "trinitymedia\\.ai/player/*/*/*"
     ],
-    "e": "trinitymedia.ai/player/trinity-oembed"
+    "e": "trinitymedia.ai/services/oembed"
   },
   {
     "s": [
@@ -1961,6 +2016,12 @@ export const providers = [
       "*\\.youtube\\.com/shorts*"
     ],
     "e": "www.youtube.com/oembed"
+  },
+  {
+    "s": [
+      "www\\.yumpu\\.com/*/document/view/*/*"
+    ],
+    "e": "www.yumpu.com/services/oembed"
   },
   {
     "s": [
