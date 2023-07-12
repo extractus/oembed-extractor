@@ -3,7 +3,7 @@
 import {
   copyFileSync,
   writeFileSync
-} from 'fs'
+} from 'node:fs'
 
 import retrieve from './src/utils/retrieve.js'
 import { simplify } from './src/utils/provider.js'

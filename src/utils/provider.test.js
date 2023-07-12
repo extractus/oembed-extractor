@@ -7,19 +7,19 @@ describe('test if provider.find() works correctly', () => {
   const cases = [
     {
       url: 'https://www.facebook.com/video.php?v=999999999',
-      fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_video',
+      fetchEndpoint: 'https://graph.facebook.com/v16.0/oembed_video',
     },
     {
       url: 'https://www.facebook.com/someone/photos/somephoto',
-      fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_post',
+      fetchEndpoint: 'https://graph.facebook.com/v16.0/oembed_post',
     },
     {
       url: 'https://www.facebook.com/someone/page',
-      fetchEndpoint: 'https://graph.facebook.com/v10.0/oembed_page',
+      fetchEndpoint: 'https://graph.facebook.com/v16.0/oembed_page',
     },
     {
       url: 'http://instagram.com/someone/p/somepage',
-      fetchEndpoint: 'https://graph.facebook.com/v10.0/instagram_oembed',
+      fetchEndpoint: 'https://graph.facebook.com/v16.0/instagram_oembed',
     },
     {
       url: 'https://www.edumedia-sciences.com/en/media/558-heredity',
