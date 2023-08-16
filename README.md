@@ -32,12 +32,6 @@ yarn add @extractus/oembed-extractor
 // es6 module
 import { extract } from '@extractus/oembed-extractor'
 
-// CommonJS
-const { extract } = require('@extractus/oembed-extractor')
-
-// or specify exactly path to CommonJS variant
-const { extract } = require('@extractus/oembed-extractor/dist/cjs/oembed-extractor.js')
-
 const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
 console.log(result)
 ```
@@ -50,9 +44,6 @@ import { extract } from 'https://esm.sh/@extractus/oembed-extractor'
 
 // deno > 1.28
 import { extract } from 'npm:@extractus/oembed-extractor'
-
-const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
-console.log(result)
 ```
 
 ### Browser
@@ -282,5 +273,16 @@ npm run eval {URL_TO_PARSE_OEMBED}
 
 ## License
 The MIT License (MIT)
+
+
+## Support the project
+
+If you find value from this open source project, you can support in the following ways:
+
+- Give it a star ⭐
+- Buy me a coffee: https://paypal.me/ndaidong 🍵
+- Subscribe [Feed Reader service](https://rapidapi.com/pwshub-pwshub-default/api/feed-reader1/) on RapidAPI 😉
+
+Thank you.
 
 ---
