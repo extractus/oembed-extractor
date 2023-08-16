@@ -281,7 +281,7 @@ If you find value from this open source project, you can support in the followin
 
 - Give it a star ⭐
 - Buy me a coffee: https://paypal.me/ndaidong 🍵
-- Subscribe [Feed Reader service](https://rapidapi.com/pwshub-pwshub-default/api/feed-reader1/) on RapidAPI 😉
+- Subscribe [oEmbed Parser service](https://rapidapi.com/pwshub-pwshub-default/api/oembed-parser/) on RapidAPI 😉
 
 Thank you.
 
