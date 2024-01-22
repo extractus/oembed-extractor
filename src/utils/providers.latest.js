@@ -1,4 +1,4 @@
-// provider data, synchronized at 2023-08-16T03:16:17.352Z
+// provider data, synchronized at 2024-01-22T08:51:16.050Z
 
 /* eslint-disable */ 
 
@@ -103,10 +103,11 @@ export const providers = [
   },
   {
     "s": [
-      "studio\\.assemblrworld\\.com/*",
+      "*\\.studio\\.assemblrworld\\.com/creation/*",
+      "studio\\.assemblrworld\\.com/creation/*",
+      "*\\.app-edu\\.assemblrworld\\.com/Creation/*",
+      "app-edu\\.assemblrworld\\.com/Creation/*",
       "assemblr\\.world/*",
-      "app-edu\\.assemblrworld\\.com/*",
-      "staging\\.d1o2otincy91d\\.amplifyapp\\.com/*",
       "editor\\.assemblrworld\\.com/*"
     ],
     "e": "studio.assemblrworld.com/api/oembed"
@@ -165,6 +166,12 @@ export const providers = [
       "backtracks\\.fm/*"
     ],
     "e": "backtracks.fm/oembed"
+  },
+  {
+    "s": [
+      "balsamiq\\.cloud/*"
+    ],
+    "e": "balsamiq.cloud/oembed"
   },
   {
     "s": [
@@ -466,6 +473,12 @@ export const providers = [
     "e": "api.d.tube/oembed"
   },
   {
+    "s": [
+      "app\\.echoeshq\\.com/embed/*"
+    ],
+    "e": "api.echoeshq.com/oembed"
+  },
+  {
     "s": [],
     "e": "www.edumedia-sciences.com/oembed.json"
   },
@@ -650,13 +663,6 @@ export const providers = [
       "gty\\.im/*"
     ],
     "e": "embed.gettyimages.com/oembed"
-  },
-  {
-    "s": [
-      "gfycat\\.com/*",
-      "www\\.gfycat\\.com/*"
-    ],
-    "e": "api.gfycat.com/v1/oembed"
   },
   {
     "s": [

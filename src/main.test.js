@@ -107,7 +107,7 @@ describe('test if extract() with some popular providers', () => {
   const cases = [
     {
       input: {
-        url: 'https://youtu.be/qQpb1oCernE',
+        url: 'https://youtu.be/iQzwqZgr8Hc',
         file: './test-data/youtube.json',
       },
       expected: {

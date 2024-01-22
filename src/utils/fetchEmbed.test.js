@@ -18,7 +18,7 @@ describe('test if fetchEmbed() works correctly', () => {
   const cases = [
     {
       input: {
-        url: 'https://youtu.be/qQpb1oCernE',
+        url: 'https://youtu.be/iQzwqZgr8Hc',
         file: './test-data/youtube.json',
       },
       expected: {
