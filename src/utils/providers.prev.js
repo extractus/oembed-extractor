@@ -1,4 +1,4 @@
-// provider data, synchronized at 2024-01-22T08:51:16.050Z
+// provider data, synchronized at 2024-03-29T04:36:42.975Z
 
 /* eslint-disable */ 
 
@@ -8,6 +8,12 @@ export const providers = [
       "www\\.23hq\\.com/*/photo/*"
     ],
     "e": "www.23hq.com/23/oembed"
+  },
+  {
+    "s": [
+      "playout\\.3qsdn\\.com/embed/*"
+    ],
+    "e": "playout.3qsdn.com/oembed"
   },
   {
     "s": [
@@ -108,7 +114,9 @@ export const providers = [
       "*\\.app-edu\\.assemblrworld\\.com/Creation/*",
       "app-edu\\.assemblrworld\\.com/Creation/*",
       "assemblr\\.world/*",
-      "editor\\.assemblrworld\\.com/*"
+      "editor\\.assemblrworld\\.com/*",
+      "*\\.assemblrworld\\.com/creation/*",
+      "*\\.assemblrworld\\.com/Creation/*"
     ],
     "e": "studio.assemblrworld.com/api/oembed"
   },
@@ -182,6 +190,13 @@ export const providers = [
   {
     "s": [],
     "e": "www.beautiful.ai/api/oembed"
+  },
+  {
+    "s": [
+      "www\\.behance\\.net/gallery/*/*",
+      "www\\.behance\\.net/*/services/*/*"
+    ],
+    "e": "www.behance.net/services/oembed"
   },
   {
     "s": [
@@ -579,6 +594,12 @@ export const providers = [
   },
   {
     "s": [
+      "www\\.figma\\.com/file/*"
+    ],
+    "e": "www.figma.com/api/oembed"
+  },
+  {
+    "s": [
       "*\\.fireworktv\\.com/*",
       "*\\.fireworktv\\.com/embed/*/v/*"
     ],
@@ -611,6 +632,20 @@ export const providers = [
       "public\\.flourish\\.studio/story/*"
     ],
     "e": "app.flourish.studio/api/v1/oembed"
+  },
+  {
+    "s": [
+      "flowhub\\.org/f/*",
+      "flowhub\\.org/s/*"
+    ],
+    "e": "flowhub.org/o/embed"
+  },
+  {
+    "s": [
+      "fooday\\.app/*/reviews/*",
+      "fooday\\.app/*/spots/*"
+    ],
+    "e": "fooday.app/oembed"
   },
   {
     "s": [
@@ -1011,7 +1046,9 @@ export const providers = [
   {
     "s": [
       "lottiefiles\\.com/*",
-      "*\\.lottiefiles\\.com/*"
+      "*\\.lottiefiles\\.com/*",
+      "*\\.lottie\\.host/*",
+      "lottie\\.host/*"
     ],
     "e": "embed.lottiefiles.com/oembed"
   },
@@ -1152,15 +1189,14 @@ export const providers = [
   },
   {
     "s": [
-      "ndla\\.no/*"
+      "ndla\\.no/*",
+      "ndla\\.no/article/*",
+      "ndla\\.no/audio/*",
+      "ndla\\.no/concept/*",
+      "ndla\\.no/image/*",
+      "ndla\\.no/video/*"
     ],
     "e": "ndla.no/oembed"
-  },
-  {
-    "s": [
-      "liste\\.ndla\\.no/*"
-    ],
-    "e": "liste.ndla.no/oembed"
   },
   {
     "s": [
@@ -1242,6 +1278,12 @@ export const providers = [
       "origits\\.com/v/*"
     ],
     "e": "origits.net/oembed"
+  },
+  {
+    "s": [
+      "origits\\.com/v/*"
+    ],
+    "e": "origits.com/oembed"
   },
   {
     "s": [
@@ -1651,6 +1693,19 @@ export const providers = [
   },
   {
     "s": [
+      "spyke\\.social/p/*",
+      "spyke\\.social/u/*",
+      "spyke\\.social/g/*",
+      "spyke\\.social/c/*",
+      "www\\.spyke\\.social/p/*",
+      "www\\.spyke\\.social/u/*",
+      "www\\.spyke\\.social/g/*",
+      "www\\.spyke\\.social/c/*"
+    ],
+    "e": "api.spyke.social/embed/oembed"
+  },
+  {
+    "s": [
       "purl\\.stanford\\.edu/*"
     ],
     "e": "purl.stanford.edu/embed.json"
@@ -1911,9 +1966,16 @@ export const providers = [
       "vimeo\\.com/channels/*/*",
       "vimeo\\.com/groups/*/videos/*",
       "vimeo\\.com/ondemand/*/*",
-      "player\\.vimeo\\.com/video/*"
+      "player\\.vimeo\\.com/video/*",
+      "vimeo\\.com/event/*/*"
     ],
     "e": "vimeo.com/api/oembed.json"
+  },
+  {
+    "s": [
+      "share\\.viostream\\.com/*"
+    ],
+    "e": "play.viostream.com/oembed"
   },
   {
     "s": [
@@ -1966,6 +2028,14 @@ export const providers = [
   },
   {
     "s": [
+      "www\\.web3isgoinggreat\\.com/?id=*",
+      "www\\.web3isgoinggreat\\.com/single/*",
+      "www\\.web3isgoinggreat\\.com/embed/*"
+    ],
+    "e": "www.web3isgoinggreat.com/api/oembed"
+  },
+  {
+    "s": [
       "play\\.wecandeo\\.com/video/v/*"
     ],
     "e": "play.wecandeo.com/oembed/"
@@ -2011,6 +2081,14 @@ export const providers = [
       "wp\\.me/*"
     ],
     "e": "public-api.wordpress.com/oembed/"
+  },
+  {
+    "s": [
+      "x\\.com/*",
+      "x\\.com/*/status/*",
+      "*\\.x\\.com/*/status/*"
+    ],
+    "e": "publish.x.com/oembed"
   },
   {
     "s": [
