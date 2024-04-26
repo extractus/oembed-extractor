@@ -444,6 +444,19 @@
     ]
   },
   {
+    "provider_name": "Bluesky Social",
+    "provider_url": "https://bsky.app",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://bsky.app/profile/*/post/*"
+        ],
+        "url": "https://embed.bsky.app/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Bookingmood",
     "provider_url": "https://www.bookingmood.com",
     "endpoints": [
@@ -2508,6 +2521,18 @@
     ]
   },
   {
+    "provider_name": "neetoRecord",
+    "provider_url": "https://neetorecord.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.neetorecord.com/watch/*"
+        ],
+        "url": "https://api.neetorecord.com/api/v1/oembed"
+      }
+    ]
+  },
+  {
     "provider_name": "nfb.ca",
     "provider_url": "http://www.nfb.ca/",
     "endpoints": [
@@ -3282,6 +3307,20 @@
     ]
   },
   {
+    "provider_name": "Shopshare",
+    "provider_url": "https://shopshare.tv",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://shopshare.tv/shopboard/*",
+          "https://shopshare.tv/shopcast/*"
+        ],
+        "url": "https://shopshare.tv/api/shopcast/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "ShortNote",
     "provider_url": "https://www.shortnote.jp/",
     "endpoints": [
@@ -3869,6 +3908,18 @@
         ],
         "url": "https://app-test.totango.com/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Trackspace",
+    "provider_url": "http://trackspace.upitup.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://trackspace.upitup.com/*"
+        ],
+        "url": "https://trackspace.upitup.com/oembed"
       }
     ]
   },

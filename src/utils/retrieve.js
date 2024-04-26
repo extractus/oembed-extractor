@@ -35,7 +35,7 @@ export default async (url, options = {}) => {
   try {
     const text = await res.text()
     return JSON.parse(text.trim())
-  } catch (err) {
+  } catch {
     throw new Error('Failed to convert data to JSON object')
   }
 }
