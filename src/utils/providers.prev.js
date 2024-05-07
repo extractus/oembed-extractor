@@ -1,4 +1,4 @@
-// provider data, synchronized at 2024-03-29T04:36:42.975Z
+// provider data, synchronized at 2024-04-26T08:46:02.055Z
 
 /* eslint-disable */ 
 
@@ -211,6 +211,12 @@ export const providers = [
       "blogcast\\.host/embedly/*"
     ],
     "e": "blogcast.host/oembed"
+  },
+  {
+    "s": [
+      "bsky\\.app/profile/*/post/*"
+    ],
+    "e": "embed.bsky.app/oembed"
   },
   {
     "s": [
@@ -1200,6 +1206,12 @@ export const providers = [
   },
   {
     "s": [
+      "*\\.neetorecord\\.com/watch/*"
+    ],
+    "e": "api.neetorecord.com/api/v1/oembed"
+  },
+  {
+    "s": [
       "*\\.nfb\\.ca/film/*"
     ],
     "e": "www.nfb.ca/remote/services/oembed/"
@@ -1561,6 +1573,13 @@ export const providers = [
   },
   {
     "s": [
+      "shopshare\\.tv/shopboard/*",
+      "shopshare\\.tv/shopcast/*"
+    ],
+    "e": "shopshare.tv/api/shopcast/oembed"
+  },
+  {
+    "s": [
       "www\\.shortnote\\.jp/view/notes/*"
     ],
     "e": "www.shortnote.jp/oembed/"
@@ -1829,6 +1848,12 @@ export const providers = [
       "app-test\\.totango\\.com/*"
     ],
     "e": "app-test.totango.com/oembed"
+  },
+  {
+    "s": [
+      "trackspace\\.upitup\\.com/*"
+    ],
+    "e": "trackspace.upitup.com/oembed"
   },
   {
     "s": [

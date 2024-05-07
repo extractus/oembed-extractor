@@ -5,10 +5,10 @@
     "start": "bun run index.ts"
   },
   "devDependencies": {
-    "bun-types": "^0.6.13"
+    "bun-types": "latest"
   },
   "dependencies": {
-    "hono": "^3.2.7",
+    "hono": "latest",
     "@extractus/oembed-extractor": "latest"
   }
 }
