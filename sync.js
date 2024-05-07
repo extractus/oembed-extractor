@@ -5,7 +5,7 @@ import {
   writeFileSync
 } from 'node:fs'
 
-import retrieve from './src/utils/retrieve.js'
+import { getJson } from './src/utils/retrieve.js'
 import { simplify } from './src/utils/provider.js'
 
 const source = 'https://oembed.com/providers.json'
@@ -23,7 +23,7 @@ const saveOriginal = (data, file) => {
 
 const sync = async () => {
   try {
-    const result = await retrieve(source)
+    const result = await getJson(source)
     saveOriginal(result, orginal)
 
     const arr = simplify(result)

@@ -1,6 +1,6 @@
 // utils -> fetchEmbed
 
-import retrieve from './retrieve.js'
+import { getJson } from './retrieve.js'
 import { getDomain } from './linker.js'
 
 const isFacebookGraphDependent = (url) => {
@@ -34,6 +34,7 @@ export default async (url, params = {}, endpoint = '', options = {}) => { // esl
 
   const queryParams = new URLSearchParams(query).toString()
   const link = endpoint + '?' + queryParams
-  const body = retrieve(link, options)
+  const body = await getJson(link, options)
+  body.method = 'provider-api'
   return body
 }

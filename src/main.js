@@ -1,6 +1,7 @@
 // main.js
 
 import { isValid as isValidURL } from './utils/linker.js'
+import extractWithDiscovery from './utils/autoDiscovery.js'
 import fetchEmbed from './utils/fetchEmbed.js'
 
 import { getEndpoint } from './utils/provider.js'
@@ -10,12 +11,10 @@ export const extract = async (url, params = {}, options = {}) => {
     throw new Error('Invalid input URL')
   }
   const endpoint = getEndpoint(url)
-  if (!endpoint) {
-    throw new Error(`No provider found with given url "${url}"`)
-  }
 
-  const data = await fetchEmbed(url, params, endpoint, options)
-  return data
+  return endpoint
+    ? fetchEmbed(url, params, endpoint, options)
+    : extractWithDiscovery(url, params, options)
 }
 
 export {

@@ -416,6 +416,19 @@
     ]
   },
   {
+    "provider_name": "biqnetwork",
+    "provider_url": "https://biqapp.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://cloud.biqapp.com/*"
+        ],
+        "url": "https://biqapp.com/api/v1/video/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Blackfire.io",
     "provider_url": "https://blackfire.io",
     "endpoints": [
@@ -585,6 +598,22 @@
           "http://img.catbo.at/*"
         ],
         "url": "http://img.catbo.at/oembed.json",
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Celero",
+    "provider_url": "https://www.celero.io",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://embeds.celero.io/*"
+        ],
+        "url": "https://api.celero.io/api/oembed",
+        "discovery": true,
         "formats": [
           "json"
         ]
@@ -1695,6 +1724,19 @@
           "http://www.hulu.com/watch/*"
         ],
         "url": "http://www.hulu.com/api/oembed.{format}"
+      }
+    ]
+  },
+  {
+    "provider_name": "Ideamapper",
+    "provider_url": "http://oembed.ideamapper.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://oembed.ideamapper.com/*"
+        ],
+        "url": "http://oembed.ideamapper.com",
+        "discovery": true
       }
     ]
   },

@@ -29,7 +29,6 @@ yarn add @extractus/oembed-extractor
 ```
 
 ```ts
-// es6 module
 import { extract } from '@extractus/oembed-extractor'
 
 const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
@@ -39,10 +38,6 @@ console.log(result)
 ### Deno
 
 ```ts
-// deno < 1.28
-import { extract } from 'https://esm.sh/@extractus/oembed-extractor'
-
-// deno > 1.28
 import { extract } from 'npm:@extractus/oembed-extractor'
 ```
 
