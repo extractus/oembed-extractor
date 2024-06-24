@@ -1,0 +1,13 @@
+{
+  "author_name": "Facebook",
+  "author_url": "https://www.facebook.com/facebook/",
+  "provider_url": "https://www.facebook.com",
+  "provider_name": "Facebook",
+  "success": true,
+  "height": null,
+  "html": "<div id=\"fb-root\"></div>\n<script>(function(d, s, id) {\n  var js, fjs = d.getElementsByTagName(s)[0];\n  if (d.getElementById(id)) return;\n  js = d.createElement(s); js.id = id;\n  js.src = \"https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.9\";\n  fjs.parentNode.insertBefore(js, fjs);\n}(document, 'script', 'facebook-jssdk'));</script><div class=\"fb-video\" data-href=\"https://www.facebook.com/facebook/videos/10153231379946729/\"><div class=\"fb-xfbml-parse-ignore\"><blockquote cite=\"https://www.facebook.com/facebook/videos/10153231379946729/\"><a href=\"https://www.facebook.com/facebook/videos/10153231379946729/\">How to Share With Just Friends</a><p>How to share with just friends.</p>Posted by <a href=\"https://www.facebook.com/facebook/\">Facebook</a> on Friday, December 5, 2014</blockquote></div></div>",
+  "type": "video",
+  "version": "1.0",
+  "url": "https://www.facebook.com/facebook/videos/10153231379946729/",
+  "width": "100%"
+}

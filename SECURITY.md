@@ -2,9 +2,11 @@
 
 ## Supported Versions
 
-Due to resource limitations, only the latest stable minor release is getting bugfixes (including security ones).
+Due to resource limitations, only the latest stable minor release is getting
+bugfixes (including security ones).
 
-So e.g. if the latest stable version is 3.1.4, then 3.1.x line will still get security fixes but older versions (like 3.0.x) won't get any fixes.
+So e.g. if the latest stable version is 3.1.4, then 3.1.x line will still get
+security fixes but older versions (like 3.0.x) won't get any fixes.
 
 Description above is a general rule and may be altered on case by case basis.
 
