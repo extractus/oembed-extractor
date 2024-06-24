@@ -12,50 +12,27 @@ jobs:
 
     strategy:
       matrix:
-        node_version: [18.x, 20.x, 22.x]
+        deno-version: [1.44.4]
 
     steps:
-    - uses: actions/checkout@v4
+      - name: Git Checkout Deno Module
+        uses: actions/checkout@v4
+      - name: Use Deno Version ${{ matrix.deno-version }}
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ matrix.deno-version }}
+      - name: format check
+        run: deno fmt --check mod.ts utils/* scripts/* tests/*
+      - name: run linter
+        run: deno lint mod.ts utils/* scripts/* tests/*
+      - name: run test
+        run: deno test --allow-all --coverage=cov/
 
-    - name: setup Node.js v${{ matrix.node_version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node_version }}
+      - name: Generate coverage report
+        run: deno coverage --lcov cov > cov.lcov
 
-    - name: run npm scripts
-      env:
-        FACEBOOK_APP_ID: ${{ secrets.FACEBOOK_APP_ID }}
-        FACEBOOK_CLIENT_TOKEN: ${{ secrets.FACEBOOK_CLIENT_TOKEN }}
-        PROXY_SERVER: ${{ secrets.PROXY_SERVER }}
-      run: |
-        npm install
-        npm run lint
-        npm run build --if-present
-        npm run test
-
-    - name: Coveralls Parallel
-      uses: coverallsapp/github-action@v2
-      with:
-        flag-name: run-${{ join(matrix.*, '-') }}
-        parallel: true
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: cache node modules
-      uses: actions/cache@v4
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-
-  finish:
-    needs: test
-    if: ${{ always() }}
-    runs-on: ubuntu-latest
-    steps:
-    - name: Coveralls Finished
-      uses: coverallsapp/github-action@v2
-      with:
-        parallel-finished: true
-        carryforward: "run-18.x,run-20.x,run-21.x"
-
+      - name: Upload coverage to Coveralls.io
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: cov.lcov

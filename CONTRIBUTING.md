@@ -6,6 +6,7 @@ Collaborations and pull requests are always welcomed, though larger proposals sh
 
 As an OSS, it's better to follow the Unix philosophy: "do one thing and do it well".
 
+
 ## Third-party libraries
 
 Please avoid using libaries other than those available in the standard library, unless necessary.
@@ -13,41 +14,9 @@ Please avoid using libaries other than those available in the standard library, 
 This library needs to be simple and flexible to run on multiple platforms such as Deno, Bun, or even browser.
 
 
-## Coding convention
-
-Make sure your code lints before opening a pull request.
-
-
-```bash
-cd oembed-extractor
-
-# check coding convention issue
-npm run lint
-
-# auto fix coding convention issue
-npm run lint:fix
-```
-
-*When you run `npm test`, the linting process will be triggered at first.*
-
-
-## Testing
-
-Be sure to run the unit test suite before opening a pull request. An example test run is shown below.
-
-```bash
-cd oembed-extractor
-npm test
-```
-
-![oembed-extractor unit test](https://i.imgur.com/Nr5BgUx.png)
-
-If test coverage decreased, please check test scripts and try to improve this number.
-
-
 ## Documentation
 
-If you've changed APIs, please update README and [the examples](examples).
+If you've changed APIs, please update README.
 
 
 ## Clean commit histories
