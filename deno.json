@@ -10,7 +10,8 @@
   "author": "@extractus",
   "license": "MIT",
   "tasks": {
-    "build": "deno run -A ./scripts/build_npm.ts"
+    "build": "deno run -A ./scripts/build_npm.ts",
+    "sync": "deno run --allow-net --allow-write --allow-read scripts/sync.ts"
   },
   "imports": {
     "@deno/dnt": "jsr:@deno/dnt@^0.41.2"

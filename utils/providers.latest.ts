@@ -1,41 +1,41 @@
-// provider data, synchronized at 2024-05-07T10:41:10.221Z
+// provider data, synchronized at 2024-06-25T15:38:26.847Z
 
 export const providers = [
   {
     "s": [
-      "www\\.23hq\\.com/*/photo/*",
+      "www\\.23hq\\.com/*/photo/*"
     ],
-    "e": "www.23hq.com/23/oembed",
+    "e": "www.23hq.com/23/oembed"
   },
   {
     "s": [
-      "playout\\.3qsdn\\.com/embed/*",
+      "playout\\.3qsdn\\.com/embed/*"
     ],
-    "e": "playout.3qsdn.com/oembed",
+    "e": "playout.3qsdn.com/oembed"
   },
   {
     "s": [
-      "store\\.abraia\\.me/*",
+      "store\\.abraia\\.me/*"
     ],
-    "e": "api.abraia.me/oembed",
+    "e": "api.abraia.me/oembed"
   },
   {
     "s": [
-      "play\\.acast\\.com/s/*",
+      "play\\.acast\\.com/s/*"
     ],
-    "e": "oembed.acast.com/v1/embed-player",
+    "e": "oembed.acast.com/v1/embed-player"
   },
   {
     "s": [
-      "secure\\.actblue\\.com/donate/*",
+      "secure\\.actblue\\.com/donate/*"
     ],
-    "e": "secure.actblue.com/cf/oembed",
+    "e": "secure.actblue.com/cf/oembed"
   },
   {
     "s": [
-      "adilo\\.bigcommand\\.com/watch/*",
+      "adilo\\.bigcommand\\.com/watch/*"
     ],
-    "e": "adilo.bigcommand.com/web/oembed",
+    "e": "adilo.bigcommand.com/web/oembed"
   },
   {
     "s": [
@@ -43,67 +43,67 @@ export const providers = [
       "v\\.afree\\.ca/ST/",
       "vod\\.afreecatv\\.com/ST/",
       "vod\\.afreecatv\\.com/PLAYER/STATION/",
-      "play\\.afreecatv\\.com/",
+      "play\\.afreecatv\\.com/"
     ],
-    "e": "openapi.afreecatv.com/oembed/embedinfo",
+    "e": "openapi.afreecatv.com/oembed/embedinfo"
   },
   {
     "s": [
-      "altium\\.com/viewer/*",
+      "altium\\.com/viewer/*"
     ],
-    "e": "viewer.altium.com/shell/oembed",
+    "e": "viewer.altium.com/shell/oembed"
   },
   {
     "s": [
       "app\\.altrulabs\\.com/*/*?answer_id=*",
-      "app\\.altrulabs\\.com/player/*",
+      "app\\.altrulabs\\.com/player/*"
     ],
-    "e": "api.altrulabs.com/api/v1/social/oembed",
+    "e": "api.altrulabs.com/api/v1/social/oembed"
   },
   {
     "s": [
-      "live\\.amcharts\\.com/*",
+      "live\\.amcharts\\.com/*"
     ],
-    "e": "live.amcharts.com/oembed",
+    "e": "live.amcharts.com/oembed"
   },
   {
     "s": [
       "amtraker\\.com/trains/*",
-      "beta\\.amtraker\\.com/trains/*",
+      "beta\\.amtraker\\.com/trains/*"
     ],
-    "e": "api.amtraker.com/v2/oembed",
+    "e": "api.amtraker.com/v2/oembed"
   },
   {
     "s": [
       "www\\.animatron\\.com/project/*",
-      "animatron\\.com/project/*",
+      "animatron\\.com/project/*"
     ],
-    "e": "animatron.com/oembed/json",
+    "e": "animatron.com/oembed/json"
   },
   {
     "s": [
-      "animoto\\.com/play/*",
+      "animoto\\.com/play/*"
     ],
-    "e": "animoto.com/oembeds/create",
+    "e": "animoto.com/oembeds/create"
   },
   {
     "s": [
       "anniemusic\\.app/t/*",
-      "anniemusic\\.app/p/*",
+      "anniemusic\\.app/p/*"
     ],
-    "e": "api.anniemusic.app/api/v1/oembed",
+    "e": "api.anniemusic.app/api/v1/oembed"
   },
   {
     "s": [
-      "storymaps\\.arcgis\\.com/stories/*",
+      "storymaps\\.arcgis\\.com/stories/*"
     ],
-    "e": "storymaps.arcgis.com/oembed",
+    "e": "storymaps.arcgis.com/oembed"
   },
   {
     "s": [
-      "app\\.archivos\\.digital/app/view/*",
+      "app\\.archivos\\.digital/app/view/*"
     ],
-    "e": "app.archivos.digital/oembed/",
+    "e": "app.archivos.digital/oembed/"
   },
   {
     "s": [
@@ -114,16 +114,16 @@ export const providers = [
       "assemblr\\.world/*",
       "editor\\.assemblrworld\\.com/*",
       "*\\.assemblrworld\\.com/creation/*",
-      "*\\.assemblrworld\\.com/Creation/*",
+      "*\\.assemblrworld\\.com/Creation/*"
     ],
-    "e": "studio.assemblrworld.com/api/oembed",
+    "e": "studio.assemblrworld.com/api/oembed"
   },
   {
     "s": [
       "audio\\.com/*",
-      "www\\.audio\\.com/*",
+      "www\\.audio\\.com/*"
     ],
-    "e": "api.audio.com/oembed",
+    "e": "api.audio.com/oembed"
   },
   {
     "s": [
@@ -133,324 +133,332 @@ export const providers = [
       "audioboom\\.com/podcasts/*",
       "audioboom\\.com/podcast/*",
       "audioboom\\.com/posts/*",
-      "audioboom\\.com/episodes/*",
+      "audioboom\\.com/episodes/*"
     ],
-    "e": "audioboom.com/publishing/oembed.json",
+    "e": "audioboom.com/publishing/oembed.json"
   },
   {
     "s": [
       "audioclip\\.naver\\.com/channels/*/clips/*",
-      "audioclip\\.naver\\.com/audiobooks/*",
+      "audioclip\\.naver\\.com/audiobooks/*"
     ],
-    "e": "audioclip.naver.com/oembed",
+    "e": "audioclip.naver.com/oembed"
   },
   {
     "s": [
       "audiomack\\.com/*/song/*",
       "audiomack\\.com/*/album/*",
-      "audiomack\\.com/*/playlist/*",
+      "audiomack\\.com/*/playlist/*"
     ],
-    "e": "audiomack.com/oembed",
+    "e": "audiomack.com/oembed"
   },
   {
     "s": [
-      "podcasts\\.audiomeans\\.fr/*",
+      "podcasts\\.audiomeans\\.fr/*"
     ],
-    "e": "podcasts.audiomeans.fr/services/oembed",
+    "e": "podcasts.audiomeans.fr/services/oembed"
   },
   {
     "s": [
-      "app\\.avocode\\.com/view/*",
+      "app\\.avocode\\.com/view/*"
     ],
-    "e": "stage-embed.avocode.com/api/oembed",
+    "e": "stage-embed.avocode.com/api/oembed"
   },
   {
     "s": [
       "backtracks\\.fm/*/*/e/*",
       "backtracks\\.fm/*/s/*/*",
       "backtracks\\.fm/*/*/*/*/e/*/*",
-      "backtracks\\.fm/*",
+      "backtracks\\.fm/*"
     ],
-    "e": "backtracks.fm/oembed",
+    "e": "backtracks.fm/oembed"
   },
   {
     "s": [
-      "balsamiq\\.cloud/*",
+      "balsamiq\\.cloud/*"
     ],
-    "e": "balsamiq.cloud/oembed",
+    "e": "balsamiq.cloud/oembed"
   },
   {
     "s": [
-      "beams\\.fm/*",
+      "beams\\.fm/*"
     ],
-    "e": "api.beams.fm/oEmbed",
+    "e": "api.beams.fm/oEmbed"
   },
   {
     "s": [],
-    "e": "www.beautiful.ai/api/oembed",
+    "e": "www.beautiful.ai/api/oembed"
   },
   {
     "s": [
       "www\\.behance\\.net/gallery/*/*",
-      "www\\.behance\\.net/*/services/*/*",
+      "www\\.behance\\.net/*/services/*/*"
     ],
-    "e": "www.behance.net/services/oembed",
+    "e": "www.behance.net/services/oembed"
   },
   {
     "s": [
-      "cloud\\.biqapp\\.com/*",
+      "cloud\\.biqapp\\.com/*"
     ],
-    "e": "biqapp.com/api/v1/video/oembed",
+    "e": "biqapp.com/api/v1/video/oembed"
   },
   {
     "s": [
       "blackfire\\.io/profiles/*/graph",
-      "blackfire\\.io/profiles/compare/*/graph",
+      "blackfire\\.io/profiles/compare/*/graph"
     ],
-    "e": "blackfire.io/oembed",
+    "e": "blackfire.io/oembed"
   },
   {
     "s": [
       "blogcast\\.host/embed/*",
-      "blogcast\\.host/embedly/*",
+      "blogcast\\.host/embedly/*"
     ],
-    "e": "blogcast.host/oembed",
+    "e": "blogcast.host/oembed"
   },
   {
     "s": [
-      "bsky\\.app/profile/*/post/*",
+      "bsky\\.app/profile/*/post/*"
     ],
-    "e": "embed.bsky.app/oembed",
+    "e": "embed.bsky.app/oembed"
   },
   {
     "s": [
-      "www\\.bookingmood\\.com/embed/*/*",
+      "www\\.bookingmood\\.com/embed/*/*"
     ],
-    "e": "bookingmood.com/api/oembed",
+    "e": "bookingmood.com/api/oembed"
   },
   {
     "s": [],
-    "e": "boxofficebuz.com/oembed",
+    "e": "boxofficebuz.com/oembed"
   },
   {
     "s": [
-      "view\\.briovr\\.com/api/v1/worlds/oembed/*",
+      "view\\.briovr\\.com/api/v1/worlds/oembed/*"
     ],
-    "e": "view.briovr.com/api/v1/worlds/oembed/",
+    "e": "view.briovr.com/api/v1/worlds/oembed/"
   },
   {
     "s": [
       "www\\.bumper\\.com/oembed/bumper",
-      "www\\.bumper\\.com/oembed-s/bumper",
+      "www\\.bumper\\.com/oembed-s/bumper"
     ],
-    "e": "www.bumper.com/oembed/bumper",
+    "e": "www.bumper.com/oembed/bumper"
   },
   {
     "s": [
-      "buttondown\\.email/*",
+      "iframe\\.mediadelivery\\.net/*",
+      "video\\.bunnycdn\\.com/*"
     ],
-    "e": "buttondown.email/embed",
+    "e": "video.bunnycdn.com/OEmbed"
   },
   {
     "s": [
-      "cmc\\.byzart\\.eu/files/*",
+      "buttondown\\.email/*"
     ],
-    "e": "cmc.byzart.eu/oembed/",
+    "e": "buttondown.email/embed"
   },
   {
     "s": [
-      "cacoo\\.com/diagrams/*",
+      "cmc\\.byzart\\.eu/files/*"
     ],
-    "e": "cacoo.com/oembed.json",
+    "e": "cmc.byzart.eu/oembed/"
   },
   {
     "s": [
-      "www\\.canva\\.com/design/*/view",
+      "cacoo\\.com/diagrams/*"
     ],
-    "e": "www.canva.com/_oembed",
+    "e": "cacoo.com/oembed.json"
   },
   {
     "s": [
-      "minesweeper\\.today/*",
+      "www\\.canva\\.com/design/*/view"
     ],
-    "e": "minesweeper.today/api/oembed",
+    "e": "www.canva.com/_oembed"
   },
   {
     "s": [
-      "img\\.catbo\\.at/*",
+      "minesweeper\\.today/*"
     ],
-    "e": "img.catbo.at/oembed.json",
+    "e": "minesweeper.today/api/oembed"
   },
   {
     "s": [
-      "embeds\\.celero\\.io/*",
+      "img\\.catbo\\.at/*"
     ],
-    "e": "api.celero.io/api/oembed",
+    "e": "img.catbo.at/oembed.json"
   },
   {
     "s": [
-      "view\\.ceros\\.com/*",
+      "embeds\\.celero\\.io/*"
     ],
-    "e": "view.ceros.com/oembed",
+    "e": "api.celero.io/api/oembed"
+  },
+  {
+    "s": [
+      "view\\.ceros\\.com/*"
+    ],
+    "e": "view.ceros.com/oembed"
   },
   {
     "s": [
       "chainflix\\.net/video/*",
       "chainflix\\.net/video/embed/*",
       "*\\.chainflix\\.net/video/*",
-      "*\\.chainflix\\.net/video/embed/*",
+      "*\\.chainflix\\.net/video/embed/*"
     ],
-    "e": "www.chainflix.net/video/oembed",
+    "e": "www.chainflix.net/video/oembed"
   },
   {
     "s": [
-      "public\\.chartblocks\\.com/c/*",
+      "public\\.chartblocks\\.com/c/*"
     ],
-    "e": "embed.chartblocks.com/1.0/oembed",
+    "e": "embed.chartblocks.com/1.0/oembed"
   },
   {
     "s": [
-      "chirb\\.it/*",
+      "chirb\\.it/*"
     ],
-    "e": "chirb.it/oembed.json",
+    "e": "chirb.it/oembed.json"
   },
   {
     "s": [
       "chroco\\.ooo/mypage/*",
-      "chroco\\.ooo/story/*",
+      "chroco\\.ooo/story/*"
     ],
-    "e": "chroco.ooo/embed",
+    "e": "chroco.ooo/embed"
   },
   {
     "s": [
-      "www\\.circuitlab\\.com/circuit/*",
+      "www\\.circuitlab\\.com/circuit/*"
     ],
-    "e": "www.circuitlab.com/circuit/oembed/",
+    "e": "www.circuitlab.com/circuit/oembed/"
   },
   {
     "s": [
-      "www\\.clipland\\.com/v/*",
+      "www\\.clipland\\.com/v/*"
     ],
-    "e": "www.clipland.com/api/oembed",
+    "e": "www.clipland.com/api/oembed"
   },
   {
     "s": [
       "clyp\\.it/*",
-      "clyp\\.it/playlist/*",
+      "clyp\\.it/playlist/*"
     ],
-    "e": "api.clyp.it/oembed/",
+    "e": "api.clyp.it/oembed/"
   },
   {
     "s": [
-      "app\\.ilovecoco\\.video/*/embed",
+      "app\\.ilovecoco\\.video/*/embed"
     ],
-    "e": "app.ilovecoco.video/api/oembed.json",
+    "e": "app.ilovecoco.video/api/oembed.json"
   },
   {
     "s": [
-      "codehs\\.com/editor/share_abacus/*",
+      "codehs\\.com/editor/share_abacus/*"
     ],
-    "e": "codehs.com/api/sharedprogram/1/oembed/",
+    "e": "codehs.com/api/sharedprogram/1/oembed/"
   },
   {
     "s": [
-      "codepen\\.io/*",
+      "codepen\\.io/*"
     ],
-    "e": "codepen.io/api/oembed",
+    "e": "codepen.io/api/oembed"
   },
   {
     "s": [
       "codepoints\\.net/*",
-      "www\\.codepoints\\.net/*",
+      "www\\.codepoints\\.net/*"
     ],
-    "e": "codepoints.net/api/v1/oembed",
+    "e": "codepoints.net/api/v1/oembed"
   },
   {
     "s": [
       "codesandbox\\.io/s/*",
-      "codesandbox\\.io/embed/*",
+      "codesandbox\\.io/embed/*"
     ],
-    "e": "codesandbox.io/oembed",
+    "e": "codesandbox.io/oembed"
   },
   {
     "s": [
-      "www\\.collegehumor\\.com/video/*",
+      "www\\.collegehumor\\.com/video/*"
     ],
-    "e": "www.collegehumor.com/oembed.json",
+    "e": "www.collegehumor.com/oembed.json"
   },
   {
     "s": [
-      "commaful\\.com/play/*",
+      "commaful\\.com/play/*"
     ],
-    "e": "commaful.com/api/oembed/",
+    "e": "commaful.com/api/oembed/"
   },
   {
     "s": [
       "coub\\.com/view/*",
-      "coub\\.com/embed/*",
+      "coub\\.com/embed/*"
     ],
-    "e": "coub.com/api/oembed.json",
+    "e": "coub.com/api/oembed.json"
   },
   {
     "s": [
-      "crowdranking\\.com/*/*",
+      "crowdranking\\.com/*/*"
     ],
-    "e": "crowdranking.com/api/oembed.json",
+    "e": "crowdranking.com/api/oembed.json"
   },
   {
     "s": [
-      "crumb\\.sh/*",
+      "crumb\\.sh/*"
     ],
-    "e": "crumb.sh/oembed/",
+    "e": "crumb.sh/oembed/"
   },
   {
     "s": [
-      "cueup\\.io/user/*/sounds/*",
+      "cueup\\.io/user/*/sounds/*"
     ],
-    "e": "gql.cueup.io/oembed",
+    "e": "gql.cueup.io/oembed"
   },
   {
     "s": [
-      "*\\.curated\\.co/*",
+      "*\\.curated\\.co/*"
     ],
-    "e": "api.curated.co/oembed",
+    "e": "api.curated.co/oembed"
   },
   {
     "s": [
-      "app\\.customerdb\\.com/share/*",
+      "app\\.customerdb\\.com/share/*"
     ],
-    "e": "app.customerdb.com/embed",
+    "e": "app.customerdb.com/embed"
   },
   {
     "s": [
       "app\\.dadan\\.io/*",
-      "stage\\.dadan\\.io/*",
+      "stage\\.dadan\\.io/*"
     ],
-    "e": "app.dadan.io/api/video/oembed",
+    "e": "app.dadan.io/api/video/oembed"
   },
   {
     "s": [
       "www\\.dailymotion\\.com/video/*",
+      "geo\\.dailymotion\\.com/player\\.html?video=*"
     ],
-    "e": "www.dailymotion.com/services/oembed",
+    "e": "www.dailymotion.com/services/oembed"
   },
   {
     "s": [
-      "dalexni\\.com/i/*",
+      "dalexni\\.com/i/*"
     ],
-    "e": "dalexni.com/oembed/",
+    "e": "dalexni.com/oembed/"
   },
   {
     "s": [
-      "datawrapper\\.dwcdn\\.net/*",
+      "datawrapper\\.dwcdn\\.net/*"
     ],
-    "e": "api.datawrapper.de/v3/oembed/",
+    "e": "api.datawrapper.de/v3/oembed/"
   },
   {
     "s": [
-      "*\\.deseret\\.com/*",
+      "*\\.deseret\\.com/*"
     ],
-    "e": "embed.deseret.com/",
+    "e": "embed.deseret.com/"
   },
   {
     "s": [
@@ -458,111 +466,111 @@ export const providers = [
       "*\\.deviantart\\.com/*#/d*",
       "fav\\.me/*",
       "sta\\.sh/*",
-      "*\\.deviantart\\.com/*/art/*",
+      "*\\.deviantart\\.com/*/art/*"
     ],
-    "e": "backend.deviantart.com/oembed",
+    "e": "backend.deviantart.com/oembed"
   },
   {
     "s": [
       "www\\.ultimedia\\.com/central/video/edit/id/*/topic_id/*/",
       "www\\.ultimedia\\.com/default/index/videogeneric/id/*/showtitle/1/viewnc/1",
-      "www\\.ultimedia\\.com/default/index/videogeneric/id/*",
+      "www\\.ultimedia\\.com/default/index/videogeneric/id/*"
     ],
-    "e": "www.ultimedia.com/api/search/oembed",
+    "e": "www.ultimedia.com/api/search/oembed"
   },
   {
     "s": [
       "*\\.docdroid\\.net/*",
       "docdro\\.id/*",
-      "*\\.docdroid\\.com/*",
+      "*\\.docdroid\\.com/*"
     ],
-    "e": "www.docdroid.net/api/oembed",
+    "e": "www.docdroid.net/api/oembed"
   },
   {
     "s": [
       "docswell\\.com/s/*/*",
-      "www\\.docswell\\.com/s/*/*",
+      "www\\.docswell\\.com/s/*/*"
     ],
-    "e": "www.docswell.com/service/oembed",
+    "e": "www.docswell.com/service/oembed"
   },
   {
     "s": [
-      "dotsub\\.com/view/*",
+      "dotsub\\.com/view/*"
     ],
-    "e": "dotsub.com/services/oembed",
+    "e": "dotsub.com/services/oembed"
   },
   {
     "s": [
-      "www\\.dreambroker\\.com/channel/*/*",
+      "www\\.dreambroker\\.com/channel/*/*"
     ],
-    "e": "dreambroker.com/channel/oembed",
+    "e": "dreambroker.com/channel/oembed"
   },
   {
     "s": [
-      "d\\.tube/v/*",
+      "d\\.tube/v/*"
     ],
-    "e": "api.d.tube/oembed",
+    "e": "api.d.tube/oembed"
   },
   {
     "s": [
-      "app\\.echoeshq\\.com/embed/*",
+      "app\\.echoeshq\\.com/embed/*"
     ],
-    "e": "api.echoeshq.com/oembed",
+    "e": "api.echoeshq.com/oembed"
   },
   {
     "s": [],
-    "e": "www.edumedia-sciences.com/oembed.json",
+    "e": "www.edumedia-sciences.com/oembed.json"
   },
   {
     "s": [],
-    "e": "www.edumedia-sciences.com/oembed.xml",
+    "e": "www.edumedia-sciences.com/oembed.xml"
   },
   {
     "s": [
-      "egliseinfo\\.catholique\\.fr/*",
+      "egliseinfo\\.catholique\\.fr/*"
     ],
-    "e": "egliseinfo.catholique.fr/api/oembed",
+    "e": "egliseinfo.catholique.fr/api/oembed"
   },
   {
     "s": [
-      "embedery\\.com/widget/*",
+      "embedery\\.com/widget/*"
     ],
-    "e": "embedery.com/api/oembed",
+    "e": "embedery.com/api/oembed"
   },
   {
     "s": [
-      "ethfiddle\\.com/*",
+      "ethfiddle\\.com/*"
     ],
-    "e": "ethfiddle.com/services/oembed/",
+    "e": "ethfiddle.com/services/oembed/"
   },
   {
     "s": [
       "evt\\.live/*",
       "evt\\.live/*/*",
       "live\\.eventlive\\.pro/*",
-      "live\\.eventlive\\.pro/*/*",
+      "live\\.eventlive\\.pro/*/*"
     ],
-    "e": "evt.live/api/oembed",
+    "e": "evt.live/api/oembed"
   },
   {
     "s": [
-      "app\\.everviz\\.com/embed/*",
+      "app\\.everviz\\.com/embed/*"
     ],
-    "e": "api.everviz.com/oembed",
+    "e": "api.everviz.com/oembed"
   },
   {
     "s": [
       "app\\.ex\\.co/stories/*",
-      "www\\.playbuzz\\.com/*",
+      "www\\.playbuzz\\.com/*"
     ],
-    "e": "oembed.ex.co/item",
+    "e": "oembed.ex.co/item"
   },
   {
     "s": [
       "eyrie\\.io/board/*",
-      "eyrie\\.io/sparkfun/*",
+      "eyrie\\.io/sparkfun/*"
     ],
-    "e": "eyrie.io/v1/oembed",
+    "e": "eyrie.io/v1/oembed"
   },
   {
     "s": [
@@ -574,29 +582,29 @@ export const providers = [
       "www\\.facebook\\.com/permalink\\.php?story_fbid=*",
       "www\\.facebook\\.com/media/set?set=*",
       "www\\.facebook\\.com/questions/*",
-      "www\\.facebook\\.com/notes/*/*/*",
+      "www\\.facebook\\.com/notes/*/*/*"
     ],
-    "e": "graph.facebook.com/v16.0/oembed_post",
+    "e": "graph.facebook.com/v16.0/oembed_post"
   },
   {
     "s": [
       "www\\.facebook\\.com/*/videos/*",
       "www\\.facebook\\.com/video\\.php?id=*",
-      "www\\.facebook\\.com/video\\.php?v=*",
+      "www\\.facebook\\.com/video\\.php?v=*"
     ],
-    "e": "graph.facebook.com/v16.0/oembed_video",
+    "e": "graph.facebook.com/v16.0/oembed_video"
   },
   {
     "s": [
-      "www\\.facebook\\.com/*",
+      "www\\.facebook\\.com/*"
     ],
-    "e": "graph.facebook.com/v16.0/oembed_page",
+    "e": "graph.facebook.com/v16.0/oembed_page"
   },
   {
     "s": [
-      "app\\.getfader\\.com/projects/*/publish",
+      "app\\.getfader\\.com/projects/*/publish"
     ],
-    "e": "app.getfader.com/api/oembed",
+    "e": "app.getfader.com/api/oembed"
   },
   {
     "s": [
@@ -604,92 +612,92 @@ export const providers = [
       "faithlifetv\\.com/items/resource/*/*",
       "faithlifetv\\.com/media/*",
       "faithlifetv\\.com/media/assets/*",
-      "faithlifetv\\.com/media/resource/*/*",
+      "faithlifetv\\.com/media/resource/*/*"
     ],
-    "e": "faithlifetv.com/api/oembed",
+    "e": "faithlifetv.com/api/oembed"
   },
   {
     "s": [
-      "www\\.figma\\.com/file/*",
+      "www\\.figma\\.com/file/*"
     ],
-    "e": "www.figma.com/api/oembed",
+    "e": "www.figma.com/api/oembed"
   },
   {
     "s": [
       "*\\.fireworktv\\.com/*",
-      "*\\.fireworktv\\.com/embed/*/v/*",
+      "*\\.fireworktv\\.com/embed/*/v/*"
     ],
-    "e": "www.fireworktv.com/oembed",
+    "e": "www.fireworktv.com/oembed"
   },
   {
     "s": [
-      "www\\.fite\\.tv/watch/*",
+      "www\\.fite\\.tv/watch/*"
     ],
-    "e": "www.fite.tv/oembed",
+    "e": "www.fite.tv/oembed"
   },
   {
     "s": [
       "flat\\.io/score/*",
-      "*\\.flat\\.io/score/*",
+      "*\\.flat\\.io/score/*"
     ],
-    "e": "flat.io/services/oembed",
+    "e": "flat.io/services/oembed"
   },
   {
     "s": [
       "*\\.flickr\\.com/photos/*",
       "flic\\.kr/p/*",
-      "*\\.*\\.flickr\\.com/*/*",
+      "*\\.*\\.flickr\\.com/*/*"
     ],
-    "e": "www.flickr.com/services/oembed/",
+    "e": "www.flickr.com/services/oembed/"
   },
   {
     "s": [
       "public\\.flourish\\.studio/visualisation/*",
-      "public\\.flourish\\.studio/story/*",
+      "public\\.flourish\\.studio/story/*"
     ],
-    "e": "app.flourish.studio/api/v1/oembed",
+    "e": "app.flourish.studio/api/v1/oembed"
   },
   {
     "s": [
       "flowhub\\.org/f/*",
-      "flowhub\\.org/s/*",
+      "flowhub\\.org/s/*"
     ],
-    "e": "flowhub.org/o/embed",
+    "e": "flowhub.org/o/embed"
   },
   {
     "s": [
       "fooday\\.app/*/reviews/*",
-      "fooday\\.app/*/spots/*",
+      "fooday\\.app/*/spots/*"
     ],
-    "e": "fooday.app/oembed",
+    "e": "fooday.app/oembed"
   },
   {
     "s": [
-      "fiso\\.foxsports\\.com\\.au/isomorphic-widget/*",
+      "fiso\\.foxsports\\.com\\.au/isomorphic-widget/*"
     ],
-    "e": "fiso.foxsports.com.au/oembed",
+    "e": "fiso.foxsports.com.au/oembed"
   },
   {
     "s": [
-      "framebuzz\\.com/v/*",
+      "framebuzz\\.com/v/*"
     ],
-    "e": "framebuzz.com/oembed/",
+    "e": "framebuzz.com/oembed/"
   },
   {
     "s": [
       "framer\\.com/share/*",
-      "framer\\.com/embed/*",
+      "framer\\.com/embed/*"
     ],
-    "e": "api.framer.com/web/oembed",
+    "e": "api.framer.com/web/oembed"
   },
   {
     "s": [
       "*\\.geograph\\.org\\.uk/*",
       "*\\.geograph\\.co\\.uk/*",
       "*\\.geograph\\.ie/*",
-      "*\\.wikimedia\\.org/*_geograph\\.org\\.uk_*",
+      "*\\.wikimedia\\.org/*_geograph\\.org\\.uk_*"
     ],
-    "e": "api.geograph.org.uk/api/oembed",
+    "e": "api.geograph.org.uk/api/oembed"
   },
   {
     "s": [
@@ -697,213 +705,220 @@ export const providers = [
       "*\\.geograph\\.org\\.je/*",
       "channel-islands\\.geograph\\.org/*",
       "channel-islands\\.geographs\\.org/*",
-      "*\\.channel\\.geographs\\.org/*",
+      "*\\.channel\\.geographs\\.org/*"
     ],
-    "e": "www.geograph.org.gg/api/oembed",
+    "e": "www.geograph.org.gg/api/oembed"
   },
   {
     "s": [
       "geo-en\\.hlipp\\.de/*",
       "geo\\.hlipp\\.de/*",
-      "germany\\.geograph\\.org/*",
+      "germany\\.geograph\\.org/*"
     ],
-    "e": "geo.hlipp.de/restapi.php/api/oembed",
+    "e": "geo.hlipp.de/restapi.php/api/oembed"
   },
   {
     "s": [
-      "gty\\.im/*",
+      "gty\\.im/*"
     ],
-    "e": "embed.gettyimages.com/oembed",
+    "e": "embed.gettyimages.com/oembed"
   },
   {
     "s": [
-      "www\\.gifnote\\.com/play/*",
+      "www\\.gifnote\\.com/play/*"
     ],
-    "e": "www.gifnote.com/services/oembed",
+    "e": "www.gifnote.com/services/oembed"
   },
   {
     "s": [
       "giphy\\.com/gifs/*",
       "giphy\\.com/clips/*",
       "gph\\.is/*",
-      "media\\.giphy\\.com/media/*/giphy\\.gif",
+      "media\\.giphy\\.com/media/*/giphy\\.gif"
     ],
-    "e": "giphy.com/services/oembed",
+    "e": "giphy.com/services/oembed"
   },
   {
     "s": [],
-    "e": "gloria.tv/oembed/",
+    "e": "gloria.tv/oembed/"
   },
   {
     "s": [
       "view\\.gmetri\\.com/*",
-      "*\\.gmetri\\.com/*",
+      "*\\.gmetri\\.com/*"
     ],
-    "e": "embed.gmetri.com/oembed/",
+    "e": "embed.gmetri.com/oembed/"
   },
   {
     "s": [
-      "app\\.gong\\.io/call?id=*",
+      "app\\.gong\\.io/call?id=*"
     ],
-    "e": "app.gong.io/oembed",
+    "e": "app.gong.io/oembed"
   },
   {
     "s": [
       "grain\\.co/highlight/*",
       "grain\\.co/share/*",
-      "grain\\.com/share/*",
+      "grain\\.com/share/*"
     ],
-    "e": "api.grain.com/_/api/oembed",
+    "e": "api.grain.com/_/api/oembed"
   },
   {
     "s": [
-      "gtchannel\\.com/watch/*",
+      "gtchannel\\.com/watch/*"
     ],
-    "e": "api.luminery.com/oembed",
+    "e": "api.luminery.com/oembed"
   },
   {
     "s": [
+      "gumlet\\.tv/watch/*",
       "www\\.gumlet\\.com/watch/*",
-      "play\\.gumlet\\.io/embed/*",
+      "play\\.gumlet\\.io/embed/*"
     ],
-    "e": "api.gumlet.com/v1/oembed",
+    "e": "api.gumlet.com/v1/oembed"
   },
   {
     "s": [
-      "gyazo\\.com/*",
+      "gyazo\\.com/*"
     ],
-    "e": "api.gyazo.com/api/oembed",
+    "e": "api.gyazo.com/api/oembed"
   },
   {
     "s": [
-      "core\\.hash\\.ai/@*",
+      "core\\.hash\\.ai/@*"
     ],
-    "e": "api.hash.ai/oembed",
+    "e": "api.hash.ai/oembed"
   },
   {
     "s": [
       "hearthis\\.at/*/*/",
-      "hearthis\\.at/*/set/*/",
+      "hearthis\\.at/*/set/*/"
     ],
-    "e": "hearthis.at/oembed/?format=json",
+    "e": "hearthis.at/oembed/?format=json"
   },
   {
     "s": [
       "heyzine\\.com/flip-book/*",
       "*\\.hflip\\.co/*",
-      "*\\.aflip\\.in/*",
+      "*\\.aflip\\.in/*"
     ],
-    "e": "heyzine.com/api1/oembed",
+    "e": "heyzine.com/api1/oembed"
   },
   {
     "s": [
-      "player\\.hihaho\\.com/*",
+      "player\\.hihaho\\.com/*"
     ],
-    "e": "player.hihaho.com/services/oembed",
+    "e": "player.hihaho.com/services/oembed"
   },
   {
     "s": [
-      "*\\.hippovideo\\.io/*",
+      "*\\.hippovideo\\.io/*"
     ],
-    "e": "www.hippovideo.io/services/oembed",
+    "e": "www.hippovideo.io/services/oembed"
   },
   {
     "s": [
       "homey\\.app/f/*",
-      "homey\\.app/*/flow/*",
+      "homey\\.app/*/flow/*"
     ],
-    "e": "homey.app/api/oembed/flow",
+    "e": "homey.app/api/oembed/flow"
   },
   {
     "s": [
-      "huffduffer\\.com/*/*",
+      "*\\.hopvue\\.com/*"
     ],
-    "e": "huffduffer.com/oembed",
+    "e": "portal.hopvue.com/api/oembed/"
   },
   {
     "s": [
-      "www\\.hulu\\.com/watch/*",
+      "huffduffer\\.com/*/*"
     ],
-    "e": "www.hulu.com/api/oembed.json",
+    "e": "huffduffer.com/oembed"
   },
   {
     "s": [
-      "oembed\\.ideamapper\\.com/*",
+      "www\\.hulu\\.com/watch/*"
     ],
-    "e": "oembed.ideamapper.com",
+    "e": "www.hulu.com/api/oembed.json"
   },
   {
     "s": [
-      "*\\.idomoo\\.com/*",
+      "oembed\\.ideamapper\\.com/*"
     ],
-    "e": "oembed.idomoo.com/oembed",
+    "e": "oembed.ideamapper.com/oembed"
   },
   {
     "s": [
-      "www\\.ifixit\\.com/Guide/View/*",
+      "*\\.idomoo\\.com/*"
     ],
-    "e": "www.ifixit.com/Embed",
+    "e": "oembed.idomoo.com/oembed"
   },
   {
     "s": [
-      "ifttt\\.com/recipes/*",
+      "www\\.ifixit\\.com/Guide/View/*"
     ],
-    "e": "www.ifttt.com/oembed/",
+    "e": "www.ifixit.com/Embed"
   },
   {
     "s": [
-      "www\\.iheart\\.com/podcast/*/*",
+      "ifttt\\.com/recipes/*"
     ],
-    "e": "www.iheart.com/oembed",
+    "e": "www.ifttt.com/oembed/"
   },
   {
     "s": [
-      "qr\\.imenupro\\.com/*",
+      "www\\.iheart\\.com/podcast/*/*"
     ],
-    "e": "qr.imenupro.com/api/oembed",
+    "e": "www.iheart.com/oembed"
   },
   {
     "s": [
-      "incredible\\.dev/watch/*",
+      "qr\\.imenupro\\.com/*"
     ],
-    "e": "oembed.incredible.dev/oembed",
+    "e": "qr.imenupro.com/api/oembed"
   },
   {
     "s": [
-      "player\\.indacolive\\.com/player/jwp/clients/*",
+      "incredible\\.dev/watch/*"
     ],
-    "e": "player.indacolive.com/services/oembed",
+    "e": "oembed.incredible.dev/oembed"
   },
   {
     "s": [
-      "infogram\\.com/*",
+      "player\\.indacolive\\.com/player/jwp/clients/*"
     ],
-    "e": "infogram.com/oembed",
+    "e": "player.indacolive.com/services/oembed"
+  },
+  {
+    "s": [
+      "infogram\\.com/*"
+    ],
+    "e": "infogram.com/oembed"
   },
   {
     "s": [
       "*\\.infoveave\\.net/E/*",
-      "*\\.infoveave\\.net/P/*",
+      "*\\.infoveave\\.net/P/*"
     ],
-    "e": "infoveave.net/services/oembed/",
+    "e": "infoveave.net/services/oembed/"
   },
   {
     "s": [
-      "www\\.injurymap\\.com/exercises/*",
+      "www\\.injurymap\\.com/exercises/*"
     ],
-    "e": "www.injurymap.com/services/oembed",
+    "e": "www.injurymap.com/services/oembed"
   },
   {
     "s": [
-      "www\\.inoreader\\.com/oembed/",
+      "www\\.inoreader\\.com/oembed/"
     ],
-    "e": "www.inoreader.com/oembed/api/",
+    "e": "www.inoreader.com/oembed/api/"
   },
   {
     "s": [
-      "*\\.inphood\\.com/*",
+      "*\\.inphood\\.com/*"
     ],
-    "e": "api.inphood.com/oembed",
+    "e": "api.inphood.com/oembed"
   },
   {
     "s": [
@@ -919,27 +934,27 @@ export const providers = [
       "www\\.instagr\\.am/tv/*",
       "www\\.instagram\\.com/reel/*",
       "instagram\\.com/reel/*",
-      "instagr\\.am/reel/*",
+      "instagr\\.am/reel/*"
     ],
-    "e": "graph.facebook.com/v16.0/instagram_oembed",
+    "e": "graph.facebook.com/v16.0/instagram_oembed"
   },
   {
     "s": [
-      "ppa\\.insticator\\.com/embed-unit/*",
+      "ppa\\.insticator\\.com/embed-unit/*"
     ],
-    "e": "www.insticator.com/oembed",
+    "e": "www.insticator.com/oembed"
   },
   {
     "s": [
-      "issuu\\.com/*/docs/*",
+      "issuu\\.com/*/docs/*"
     ],
-    "e": "issuu.com/oembed",
+    "e": "issuu.com/oembed"
   },
   {
     "s": [
-      "play\\.itemis\\.io/*",
+      "play\\.itemis\\.io/*"
     ],
-    "e": "create.storage.api.itemis.io/api/embed",
+    "e": "create.storage.api.itemis.io/api/embed"
   },
   {
     "s": [
@@ -951,9 +966,9 @@ export const providers = [
       "*\\.jovian\\.ai/*",
       "jovian\\.com/*",
       "jovian\\.com/viewer*",
-      "*\\.jovian\\.com/*",
+      "*\\.jovian\\.com/*"
     ],
-    "e": "api.jovian.com/oembed.json",
+    "e": "api.jovian.com/oembed.json"
   },
   {
     "s": [
@@ -962,97 +977,97 @@ export const providers = [
       "tv\\.kakao\\.com/channel/v/*",
       "tv\\.kakao\\.com/channel/*/livelink/*",
       "tv\\.kakao\\.com/m/channel/*/livelink/*",
-      "tv\\.kakao\\.com/channel/l/*",
+      "tv\\.kakao\\.com/channel/l/*"
     ],
-    "e": "tv.kakao.com/oembed",
+    "e": "tv.kakao.com/oembed"
   },
   {
     "s": [
-      "www\\.kickstarter\\.com/projects/*",
+      "www\\.kickstarter\\.com/projects/*"
     ],
-    "e": "www.kickstarter.com/services/oembed",
+    "e": "www.kickstarter.com/services/oembed"
   },
   {
     "s": [
       "www\\.kidoju\\.com/en/x/*/*",
-      "www\\.kidoju\\.com/fr/x/*/*",
+      "www\\.kidoju\\.com/fr/x/*/*"
     ],
-    "e": "www.kidoju.com/api/oembed",
+    "e": "www.kidoju.com/api/oembed"
   },
   {
     "s": [
       "halaman\\.email/form/*",
-      "aplikasi\\.kirim\\.email/form/*",
+      "aplikasi\\.kirim\\.email/form/*"
     ],
-    "e": "halaman.email/service/oembed",
+    "e": "halaman.email/service/oembed"
   },
   {
     "s": [
-      "kit\\.co/*/*",
+      "kit\\.co/*/*"
     ],
-    "e": "embed.kit.co/oembed",
+    "e": "embed.kit.co/oembed"
   },
   {
     "s": [
-      "www\\.kitchenbowl\\.com/recipe/*",
+      "www\\.kitchenbowl\\.com/recipe/*"
     ],
-    "e": "www.kitchenbowl.com/oembed",
+    "e": "www.kitchenbowl.com/oembed"
   },
   {
     "s": [
       "app\\.kmdr\\.sh/h/*",
-      "app\\.kmdr\\.sh/history/*",
+      "app\\.kmdr\\.sh/history/*"
     ],
-    "e": "api.kmdr.sh/services/oembed",
+    "e": "api.kmdr.sh/services/oembed"
   },
   {
     "s": [
-      "jdr\\.knacki\\.info/meuh/*",
+      "jdr\\.knacki\\.info/meuh/*"
     ],
-    "e": "jdr.knacki.info/oembed",
+    "e": "jdr.knacki.info/oembed"
   },
   {
     "s": [
-      "knowledgepad\\.co/#/knowledge/*",
+      "knowledgepad\\.co/#/knowledge/*"
     ],
-    "e": "api.spoonacular.com/knowledge/oembed",
+    "e": "api.spoonacular.com/knowledge/oembed"
   },
   {
     "s": [
-      "*\\.kooapp\\.com/koo/*",
+      "*\\.kooapp\\.com/koo/*"
     ],
-    "e": "embed.kooapp.com/services/oembed",
+    "e": "embed.kooapp.com/services/oembed"
   },
   {
     "s": [
       "kurozora\\.app/episodes*",
-      "kurozora\\.app/songs*",
+      "kurozora\\.app/songs*"
     ],
-    "e": "kurozora.app/oembed",
+    "e": "kurozora.app/oembed"
   },
   {
     "s": [
-      "learningapps\\.org/*",
+      "learningapps\\.org/*"
     ],
-    "e": "learningapps.org/oembed.php",
+    "e": "learningapps.org/oembed.php"
   },
   {
     "s": [
-      "umotion-test\\.univ-lemans\\.fr/video/*",
+      "umotion-test\\.univ-lemans\\.fr/video/*"
     ],
-    "e": "umotion-test.univ-lemans.fr/oembed",
+    "e": "umotion-test.univ-lemans.fr/oembed"
   },
   {
     "s": [
-      "pod\\.univ-lille\\.fr/video/*",
+      "pod\\.univ-lille\\.fr/video/*"
     ],
-    "e": "pod.univ-lille.fr/video/oembed",
+    "e": "pod.univ-lille.fr/video/oembed"
   },
   {
     "s": [
-      "place\\.line\\.me/businesses/*",
+      "place\\.line\\.me/businesses/*"
     ],
-    "e": "place.line.me/oembed",
+    "e": "place.line.me/oembed"
   },
   {
     "s": [
@@ -1061,74 +1076,74 @@ export const providers = [
       "livestream\\.com/*/events/*",
       "livestream\\.com/*/events/*/videos/*",
       "livestream\\.com/*/*",
-      "livestream\\.com/*/*/videos/*",
+      "livestream\\.com/*/*/videos/*"
     ],
-    "e": "livestream.com/oembed",
+    "e": "livestream.com/oembed"
   },
   {
     "s": [
       "lottiefiles\\.com/*",
       "*\\.lottiefiles\\.com/*",
       "*\\.lottie\\.host/*",
-      "lottie\\.host/*",
+      "lottie\\.host/*"
     ],
-    "e": "embed.lottiefiles.com/oembed",
+    "e": "embed.lottiefiles.com/oembed"
   },
   {
     "s": [
-      "app\\.ludus\\.one/*",
+      "app\\.ludus\\.one/*"
     ],
-    "e": "app.ludus.one/oembed",
+    "e": "app.ludus.one/oembed"
   },
   {
     "s": [
-      "*\\.lumiere\\.is/v/*",
+      "*\\.lumiere\\.is/v/*"
     ],
-    "e": "admin.lumiere.is/api/services/oembed",
+    "e": "admin.lumiere.is/api/services/oembed"
   },
   {
     "s": [
-      "mathembed\\.com/latex?inputText=*",
+      "mathembed\\.com/latex?inputText=*"
     ],
-    "e": "mathembed.com/oembed",
+    "e": "mathembed.com/oembed"
   },
   {
     "s": [],
-    "e": "my.matterport.com/api/v1/models/oembed/",
+    "e": "my.matterport.com/api/v1/models/oembed/"
   },
   {
     "s": [
-      "me\\.me/i/*",
+      "me\\.me/i/*"
     ],
-    "e": "me.me/oembed",
+    "e": "me.me/oembed"
   },
   {
     "s": [
       "mdstrm\\.com/embed/*",
       "mdstrm\\.com/live-stream/*",
-      "mdstrm\\.com/image/*",
+      "mdstrm\\.com/image/*"
     ],
-    "e": "mdstrm.com/oembed",
+    "e": "mdstrm.com/oembed"
   },
   {
     "s": [
-      "medienarchiv\\.zhdk\\.ch/entries/*",
+      "medienarchiv\\.zhdk\\.ch/entries/*"
     ],
-    "e": "medienarchiv.zhdk.ch/oembed.json",
+    "e": "medienarchiv.zhdk.ch/oembed.json"
   },
   {
     "s": [
       "mermaid\\.ink/img/*",
-      "mermaid\\.ink/svg/*",
+      "mermaid\\.ink/svg/*"
     ],
-    "e": "mermaid.ink/services/oembed",
+    "e": "mermaid.ink/services/oembed"
   },
   {
     "s": [
       "*\\.microsoftstream\\.com/video/*",
-      "*\\.microsoftstream\\.com/channel/*",
+      "*\\.microsoftstream\\.com/channel/*"
     ],
-    "e": "web.microsoftstream.com/oembed",
+    "e": "web.microsoftstream.com/oembed"
   },
   {
     "s": [
@@ -1136,52 +1151,52 @@ export const providers = [
       "www\\.minervaknows\\.com/themes/*",
       "www\\.minervaknows\\.com/themes/*/recipes/*",
       "app\\.minervaknows\\.com/recipes/*",
-      "app\\.minervaknows\\.com/recipes/*/follow",
+      "app\\.minervaknows\\.com/recipes/*/follow"
     ],
-    "e": "oembed.minervaknows.com",
+    "e": "oembed.minervaknows.com"
   },
   {
     "s": [
-      "miro\\.com/app/board/*",
+      "miro\\.com/app/board/*"
     ],
-    "e": "miro.com/api/v1/oembed",
+    "e": "miro.com/api/v1/oembed"
   },
   {
     "s": [
-      "www\\.mixcloud\\.com/*/*/",
+      "www\\.mixcloud\\.com/*/*/"
     ],
-    "e": "www.mixcloud.com/oembed/",
+    "e": "www.mixcloud.com/oembed/"
   },
   {
     "s": [
-      "mixpanel\\.com/*",
+      "mixpanel\\.com/*"
     ],
-    "e": "mixpanel.com/api/app/embed/oembed/",
+    "e": "mixpanel.com/api/app/embed/oembed/"
   },
   {
     "s": [
       "www\\.mobypicture\\.com/user/*/view/*",
-      "moby\\.to/*",
+      "moby\\.to/*"
     ],
-    "e": "api.mobypicture.com/oEmbed",
+    "e": "api.mobypicture.com/oEmbed"
   },
   {
     "s": [
-      "musicboxmaniacs\\.com/explore/melody/*",
+      "musicboxmaniacs\\.com/explore/melody/*"
     ],
-    "e": "musicboxmaniacs.com/embed/",
+    "e": "musicboxmaniacs.com/embed/"
   },
   {
     "s": [
-      "mybeweeg\\.com/w/*",
+      "mybeweeg\\.com/w/*"
     ],
-    "e": "mybeweeg.com/services/oembed",
+    "e": "mybeweeg.com/services/oembed"
   },
   {
     "s": [
-      "namchey\\.com/embeds/*",
+      "namchey\\.com/embeds/*"
     ],
-    "e": "namchey.com/api/oembed",
+    "e": "namchey.com/api/oembed"
   },
   {
     "s": [
@@ -1190,24 +1205,24 @@ export const providers = [
       "*\\.nanoo\\.pro/link/*",
       "nanoo\\.pro/link/*",
       "media\\.zhdk\\.ch/signatur/*",
-      "new\\.media\\.zhdk\\.ch/signatur/*",
+      "new\\.media\\.zhdk\\.ch/signatur/*"
     ],
-    "e": "www.nanoo.tv/services/oembed",
+    "e": "www.nanoo.tv/services/oembed"
   },
   {
     "s": [
-      "www\\.nb\\.no/items/*",
+      "www\\.nb\\.no/items/*"
     ],
-    "e": "api.nb.no/catalog/v1/oembed",
+    "e": "api.nb.no/catalog/v1/oembed"
   },
   {
     "s": [
       "naturalatlas\\.com/*",
       "naturalatlas\\.com/*/*",
       "naturalatlas\\.com/*/*/*",
-      "naturalatlas\\.com/*/*/*/*",
+      "naturalatlas\\.com/*/*/*/*"
     ],
-    "e": "naturalatlas.com/oembed.json",
+    "e": "naturalatlas.com/oembed.json"
   },
   {
     "s": [
@@ -1216,42 +1231,42 @@ export const providers = [
       "ndla\\.no/audio/*",
       "ndla\\.no/concept/*",
       "ndla\\.no/image/*",
-      "ndla\\.no/video/*",
+      "ndla\\.no/video/*"
     ],
-    "e": "ndla.no/oembed",
+    "e": "ndla.no/oembed"
   },
   {
     "s": [
-      "*\\.neetorecord\\.com/watch/*",
+      "*\\.neetorecord\\.com/watch/*"
     ],
-    "e": "api.neetorecord.com/api/v1/oembed",
+    "e": "api.neetorecord.com/api/v1/oembed"
   },
   {
     "s": [
-      "*\\.nfb\\.ca/film/*",
+      "*\\.nfb\\.ca/film/*"
     ],
-    "e": "www.nfb.ca/remote/services/oembed/",
+    "e": "www.nfb.ca/remote/services/oembed/"
   },
   {
     "s": [
-      "nopaste\\.ml/*",
+      "nopaste\\.ml/*"
     ],
-    "e": "oembed.nopaste.ml",
+    "e": "oembed.nopaste.ml"
   },
   {
     "s": [
       "observablehq\\.com/@*/*",
       "observablehq\\.com/d/*",
-      "observablehq\\.com/embed/*",
+      "observablehq\\.com/embed/*"
     ],
-    "e": "api.observablehq.com/oembed",
+    "e": "api.observablehq.com/oembed"
   },
   {
     "s": [
       "www\\.odds\\.com\\.au/*",
-      "odds\\.com\\.au/*",
+      "odds\\.com\\.au/*"
     ],
-    "e": "www.odds.com.au/api/oembed/",
+    "e": "www.odds.com.au/api/oembed/"
   },
   {
     "s": [
@@ -1261,35 +1276,35 @@ export const providers = [
       "playlist\\.link/*",
       "pods\\.link/*",
       "mylink\\.page/*",
-      "odesli\\.co/*",
+      "odesli\\.co/*"
     ],
-    "e": "song.link/oembed",
+    "e": "song.link/oembed"
   },
   {
     "s": [
       "odysee\\.com/*/*",
-      "odysee\\.com/*",
+      "odysee\\.com/*"
     ],
-    "e": "odysee.com/$/oembed",
+    "e": "odysee.com/$/oembed"
   },
   {
     "s": [
       "official\\.fm/tracks/*",
-      "official\\.fm/playlists/*",
+      "official\\.fm/playlists/*"
     ],
-    "e": "official.fm/services/oembed.json",
+    "e": "official.fm/services/oembed.json"
   },
   {
     "s": [
-      "omniscope\\.me/*",
+      "omniscope\\.me/*"
     ],
-    "e": "omniscope.me/_global_/oembed/json",
+    "e": "omniscope.me/_global_/oembed/json"
   },
   {
     "s": [
-      "omny\\.fm/shows/*",
+      "omny\\.fm/shows/*"
     ],
-    "e": "omny.fm/oembed",
+    "e": "omny.fm/oembed"
   },
   {
     "s": [
@@ -1297,347 +1312,347 @@ export const providers = [
       "orbitvu\\.co/001/*/ov3601/*/view",
       "orbitvu\\.co/001/*/ov3602/*/view",
       "orbitvu\\.co/001/*/2/orbittour/*/view",
-      "orbitvu\\.co/001/*/1/2/orbittour/*/view",
+      "orbitvu\\.co/001/*/1/2/orbittour/*/view"
     ],
-    "e": "orbitvu.co/service/oembed",
+    "e": "orbitvu.co/service/oembed"
   },
   {
     "s": [
-      "origits\\.com/v/*",
+      "origits\\.com/v/*"
     ],
-    "e": "origits.net/oembed",
+    "e": "origits.net/oembed"
   },
   {
     "s": [
-      "origits\\.com/v/*",
+      "origits\\.com/v/*"
     ],
-    "e": "origits.com/oembed",
+    "e": "origits.com/oembed"
   },
   {
     "s": [
-      "outplayed\\.tv/media/*",
+      "outplayed\\.tv/media/*"
     ],
-    "e": "outplayed.tv/oembed",
+    "e": "outplayed.tv/oembed"
   },
   {
     "s": [
       "overflow\\.io/s/*",
-      "overflow\\.io/embed/*",
+      "overflow\\.io/embed/*"
     ],
-    "e": "overflow.io/services/oembed",
+    "e": "overflow.io/services/oembed"
   },
   {
     "s": [
-      "www\\.oz\\.com/*/video/*",
+      "www\\.oz\\.com/*/video/*"
     ],
-    "e": "core.oz.com/oembed",
+    "e": "core.oz.com/oembed"
   },
   {
     "s": [
-      "padlet\\.com/*",
+      "padlet\\.com/*"
     ],
-    "e": "padlet.com/oembed/",
+    "e": "padlet.com/oembed/"
   },
   {
     "s": [
       "*\\.tv\\.pandavideo\\.com\\.br/embed/?v=*",
       "*\\.tv\\.pandavideo\\.com\\.br/*/playlist\\.m3u8",
-      "dashboard\\.pandavideo\\.com\\.br/#/videos/*",
+      "dashboard\\.pandavideo\\.com\\.br/#/videos/*"
     ],
-    "e": "api-v2.pandavideo.com.br/oembed",
+    "e": "api-v2.pandavideo.com.br/oembed"
   },
   {
     "s": [
       "pastery\\.net/*",
-      "www\\.pastery\\.net/*",
+      "www\\.pastery\\.net/*"
     ],
-    "e": "www.pastery.net/oembed",
+    "e": "www.pastery.net/oembed"
   },
   {
     "s": [
-      "www\\.picturelfy\\.com/p/*",
+      "www\\.picturelfy\\.com/p/*"
     ],
-    "e": "api.picturelfy.com/service/oembed/",
+    "e": "api.picturelfy.com/service/oembed/"
   },
   {
     "s": [
       "piggy\\.to/@*/*",
-      "piggy\\.to/view/*",
+      "piggy\\.to/view/*"
     ],
-    "e": "piggy.to/oembed",
+    "e": "piggy.to/oembed"
   },
   {
     "s": [
-      "*\\.builder\\.pikasso\\.xyz/embed/*",
+      "*\\.builder\\.pikasso\\.xyz/embed/*"
     ],
-    "e": "builder.pikasso.xyz/api/oembed",
+    "e": "builder.pikasso.xyz/api/oembed"
   },
   {
     "s": [],
-    "e": "beta.pingvp.com.kpnis.nl/p/oembed.php",
+    "e": "beta.pingvp.com.kpnis.nl/p/oembed.php"
   },
   {
     "s": [
-      "tools\\.pinpoll\\.com/embed/*",
+      "tools\\.pinpoll\\.com/embed/*"
     ],
-    "e": "tools.pinpoll.com/oembed",
+    "e": "tools.pinpoll.com/oembed"
   },
   {
     "s": [
-      "www\\.pinterest\\.com/*",
+      "www\\.pinterest\\.com/*"
     ],
-    "e": "www.pinterest.com/oembed.json",
+    "e": "www.pinterest.com/oembed.json"
   },
   {
     "s": [
-      "player\\.pitchhub\\.com/en/public/player/*",
+      "player\\.pitchhub\\.com/en/public/player/*"
     ],
-    "e": "player.pitchhub.com/en/public/oembed",
+    "e": "player.pitchhub.com/en/public/oembed"
   },
   {
     "s": [
       "store\\.pixdor\\.com/place-marker-widget/*/show",
-      "store\\.pixdor\\.com/map/*/show",
+      "store\\.pixdor\\.com/map/*/show"
     ],
-    "e": "store.pixdor.com/oembed",
+    "e": "store.pixdor.com/oembed"
   },
   {
     "s": [
       "app\\.plusdocs\\.com/*/snapshots/*",
       "app\\.plusdocs\\.com/*/pages/edit/*",
-      "app\\.plusdocs\\.com/*/pages/share/*",
+      "app\\.plusdocs\\.com/*/pages/share/*"
     ],
-    "e": "app.plusdocs.com/oembed",
+    "e": "app.plusdocs.com/oembed"
   },
   {
     "s": [
-      "*\\.podbean\\.com/e/*",
+      "*\\.podbean\\.com/e/*"
     ],
-    "e": "api.podbean.com/v1/oembed",
+    "e": "api.podbean.com/v1/oembed"
   },
   {
     "s": [
       "*\\.polldaddy\\.com/s/*",
       "*\\.polldaddy\\.com/poll/*",
-      "*\\.polldaddy\\.com/ratings/*",
+      "*\\.polldaddy\\.com/ratings/*"
     ],
-    "e": "polldaddy.com/oembed/",
+    "e": "polldaddy.com/oembed/"
   },
   {
     "s": [
-      "portfolium\\.com/entry/*",
+      "portfolium\\.com/entry/*"
     ],
-    "e": "api.portfolium.com/oembed",
+    "e": "api.portfolium.com/oembed"
   },
   {
     "s": [
-      "present\\.do/decks/*",
+      "present\\.do/decks/*"
     ],
-    "e": "gateway.cobalt.run/present/decks/oembed",
+    "e": "gateway.cobalt.run/present/decks/oembed"
   },
   {
     "s": [
       "prezi\\.com/v/*",
-      "*\\.prezi\\.com/v/*",
+      "*\\.prezi\\.com/v/*"
     ],
-    "e": "prezi.com/v/oembed",
+    "e": "prezi.com/v/oembed"
   },
   {
     "s": [
-      "qtpi\\.gg/fashion/*",
+      "qtpi\\.gg/fashion/*"
     ],
-    "e": "qtpi.gg/fashion/oembed",
+    "e": "qtpi.gg/fashion/oembed"
   },
   {
     "s": [
-      "www\\.quiz\\.biz/quizz-*\\.html",
+      "www\\.quiz\\.biz/quizz-*\\.html"
     ],
-    "e": "www.quiz.biz/api/oembed",
+    "e": "www.quiz.biz/api/oembed"
   },
   {
     "s": [
-      "www\\.quizz\\.biz/quizz-*\\.html",
+      "www\\.quizz\\.biz/quizz-*\\.html"
     ],
-    "e": "www.quizz.biz/api/oembed",
+    "e": "www.quizz.biz/api/oembed"
   },
   {
     "s": [
       "play\\.radiopublic\\.com/*",
       "radiopublic\\.com/*",
       "www\\.radiopublic\\.com/*",
-      "*\\.radiopublic\\.com/*",
+      "*\\.radiopublic\\.com/*"
     ],
-    "e": "oembed.radiopublic.com/oembed",
+    "e": "oembed.radiopublic.com/oembed"
   },
   {
     "s": [
       "raindrop\\.io/*",
       "raindrop\\.io/*/*",
       "raindrop\\.io/*/*/*",
-      "raindrop\\.io/*/*/*/*",
+      "raindrop\\.io/*/*/*/*"
     ],
-    "e": "pub.raindrop.io/api/oembed",
+    "e": "pub.raindrop.io/api/oembed"
   },
   {
     "s": [
       "www\\.rcvis\\.com/v/*",
       "www\\.rcvis\\.com/visualize=*",
       "www\\.rcvis\\.com/ve/*",
-      "www\\.rcvis\\.com/visualizeEmbedded=*",
+      "www\\.rcvis\\.com/visualizeEmbedded=*"
     ],
-    "e": "animatron.com/oembed",
+    "e": "animatron.com/oembed"
   },
   {
     "s": [
       "reddit\\.com/r/*/comments/*/*",
-      "www\\.reddit\\.com/r/*/comments/*/*",
+      "www\\.reddit\\.com/r/*/comments/*/*"
     ],
-    "e": "www.reddit.com/oembed",
+    "e": "www.reddit.com/oembed"
   },
   {
     "s": [
-      "rwire\\.com/*",
+      "rwire\\.com/*"
     ],
-    "e": "publisher.releasewire.com/oembed/",
+    "e": "publisher.releasewire.com/oembed/"
   },
   {
     "s": [
       "repl\\.it/@*/*",
-      "replit\\.com/@*/*",
+      "replit\\.com/@*/*"
     ],
-    "e": "replit.com/data/oembed",
+    "e": "replit.com/data/oembed"
   },
   {
     "s": [
       "www\\.reverbnation\\.com/*",
-      "www\\.reverbnation\\.com/*/songs/*",
+      "www\\.reverbnation\\.com/*/songs/*"
     ],
-    "e": "www.reverbnation.com/oembed",
+    "e": "www.reverbnation.com/oembed"
   },
   {
     "s": [
       "roomshare\\.jp/post/*",
-      "roomshare\\.jp/en/post/*",
+      "roomshare\\.jp/en/post/*"
     ],
-    "e": "roomshare.jp/en/oembed.json",
+    "e": "roomshare.jp/en/oembed.json"
   },
   {
     "s": [
-      "roosterteeth\\.com/*",
+      "roosterteeth\\.com/*"
     ],
-    "e": "roosterteeth.com/oembed",
+    "e": "roosterteeth.com/oembed"
   },
   {
     "s": [],
-    "e": "rumble.com/api/Media/oembed.json",
+    "e": "rumble.com/api/Media/oembed.json"
   },
   {
     "s": [
-      "embed\\.runkit\\.com/*,",
+      "embed\\.runkit\\.com/*,"
     ],
-    "e": "embed.runkit.com/oembed",
+    "e": "embed.runkit.com/oembed"
   },
   {
     "s": [
-      "octopus\\.saooti\\.com/main/pub/podcast/*",
+      "octopus\\.saooti\\.com/main/pub/podcast/*"
     ],
-    "e": "octopus.saooti.com/oembed",
+    "e": "octopus.saooti.com/oembed"
   },
   {
     "s": [
-      "videos\\.sapo\\.pt/*",
+      "videos\\.sapo\\.pt/*"
     ],
-    "e": "videos.sapo.pt/oembed",
+    "e": "videos.sapo.pt/oembed"
   },
   {
     "s": [
       "console\\.screen9\\.com/*",
-      "*\\.screen9\\.tv/*",
+      "*\\.screen9\\.tv/*"
     ],
-    "e": "api.screen9.com/oembed",
+    "e": "api.screen9.com/oembed"
   },
   {
     "s": [
-      "www\\.screencast\\.com/*",
+      "www\\.screencast\\.com/*"
     ],
-    "e": "api.screencast.com/external/oembed",
+    "e": "api.screencast.com/external/oembed"
   },
   {
     "s": [
-      "www\\.screenr\\.com/*/",
+      "www\\.screenr\\.com/*/"
     ],
-    "e": "www.screenr.com/api/oembed.json",
+    "e": "www.screenr.com/api/oembed.json"
   },
   {
     "s": [
       "www\\.scribblemaps\\.com/maps/view/*",
-      "scribblemaps\\.com/maps/view/*",
+      "scribblemaps\\.com/maps/view/*"
     ],
-    "e": "scribblemaps.com/api/services/oembed.json",
+    "e": "scribblemaps.com/api/services/oembed.json"
   },
   {
     "s": [
-      "www\\.scribd\\.com/doc/*",
+      "www\\.scribd\\.com/doc/*"
     ],
-    "e": "www.scribd.com/services/oembed/",
+    "e": "www.scribd.com/services/oembed/"
   },
   {
     "s": [
-      "embed\\.sendtonews\\.com/oembed/*",
+      "embed\\.sendtonews\\.com/oembed/*"
     ],
-    "e": "embed.sendtonews.com/services/oembed",
+    "e": "embed.sendtonews.com/services/oembed"
   },
   {
     "s": [
       "shopshare\\.tv/shopboard/*",
-      "shopshare\\.tv/shopcast/*",
+      "shopshare\\.tv/shopcast/*"
     ],
-    "e": "shopshare.tv/api/shopcast/oembed",
+    "e": "shopshare.tv/api/shopcast/oembed"
   },
   {
     "s": [
-      "www\\.shortnote\\.jp/view/notes/*",
+      "www\\.shortnote\\.jp/view/notes/*"
     ],
-    "e": "www.shortnote.jp/oembed/",
+    "e": "www.shortnote.jp/oembed/"
   },
   {
     "s": [
       "shoudio\\.com/*",
-      "shoud\\.io/*",
+      "shoud\\.io/*"
     ],
-    "e": "shoudio.com/api/oembed",
+    "e": "shoudio.com/api/oembed"
   },
   {
     "s": [
       "app\\.getshow\\.io/iframe/*",
-      "*\\.getshow\\.io/share/*",
+      "*\\.getshow\\.io/share/*"
     ],
-    "e": "api.getshow.io/oembed.json",
+    "e": "api.getshow.io/oembed.json"
   },
   {
     "s": [
-      "showtheway\\.io/to/*",
+      "showtheway\\.io/to/*"
     ],
-    "e": "showtheway.io/oembed",
+    "e": "showtheway.io/oembed"
   },
   {
     "s": [
-      "simplecast\\.com/s/*",
+      "simplecast\\.com/s/*"
     ],
-    "e": "simplecast.com/oembed",
+    "e": "simplecast.com/oembed"
   },
   {
     "s": [
-      "onsizzle\\.com/i/*",
+      "onsizzle\\.com/i/*"
     ],
-    "e": "onsizzle.com/oembed",
+    "e": "onsizzle.com/oembed"
   },
   {
     "s": [
       "sketchfab\\.com/*models/*",
-      "sketchfab\\.com/*/folders/*",
+      "sketchfab\\.com/*/folders/*"
     ],
-    "e": "sketchfab.com/oembed",
+    "e": "sketchfab.com/oembed"
   },
   {
     "s": [
@@ -1645,86 +1660,86 @@ export const providers = [
       "fr\\.slideshare\\.net/*/*",
       "de\\.slideshare\\.net/*/*",
       "es\\.slideshare\\.net/*/*",
-      "pt\\.slideshare\\.net/*/*",
+      "pt\\.slideshare\\.net/*/*"
     ],
-    "e": "www.slideshare.net/api/oembed/2",
+    "e": "www.slideshare.net/api/oembed/2"
   },
   {
     "s": [
       "smashnotes\\.com/p/*",
-      "smashnotes\\.com/p/*/e/* - https://smashnotes\\.com/p/*/e/*/s/*",
+      "smashnotes\\.com/p/*/e/* - https://smashnotes\\.com/p/*/e/*/s/*"
     ],
-    "e": "smashnotes.com/services/oembed",
+    "e": "smashnotes.com/services/oembed"
   },
   {
     "s": [
-      "open\\.smeme\\.com/*",
+      "open\\.smeme\\.com/*"
     ],
-    "e": "open.smeme.com/api/oembed",
+    "e": "open.smeme.com/api/oembed"
   },
   {
     "s": [
-      "www\\.smrthi\\.com/book/*",
+      "www\\.smrthi\\.com/book/*"
     ],
-    "e": "www.smrthi.com/api/oembed",
+    "e": "www.smrthi.com/api/oembed"
   },
   {
     "s": [
-      "*\\.smugmug\\.com/*",
+      "*\\.smugmug\\.com/*"
     ],
-    "e": "api.smugmug.com/services/oembed/",
+    "e": "api.smugmug.com/services/oembed/"
   },
   {
     "s": [
       "www\\.socialexplorer\\.com/*/explore",
       "www\\.socialexplorer\\.com/*/view",
       "www\\.socialexplorer\\.com/*/edit",
-      "www\\.socialexplorer\\.com/*/embed",
+      "www\\.socialexplorer\\.com/*/embed"
     ],
-    "e": "www.socialexplorer.com/services/oembed/",
+    "e": "www.socialexplorer.com/services/oembed/"
   },
   {
     "s": [
       "soundcloud\\.com/*",
       "on\\.soundcloud\\.com/*",
-      "soundcloud\\.app\\.goog\\.gl/*",
+      "soundcloud\\.app\\.goog\\.gl/*"
     ],
-    "e": "soundcloud.com/oembed",
+    "e": "soundcloud.com/oembed"
   },
   {
     "s": [
-      "speakerdeck\\.com/*/*",
+      "speakerdeck\\.com/*/*"
     ],
-    "e": "speakerdeck.com/oembed.json",
+    "e": "speakerdeck.com/oembed.json"
   },
   {
     "s": [
       "open\\.spotify\\.com/*",
-      "spotify:*",
+      "spotify:*"
     ],
-    "e": "open.spotify.com/oembed",
+    "e": "open.spotify.com/oembed"
   },
   {
     "s": [
       "*\\.spotlightr\\.com/watch/*",
       "*\\.spotlightr\\.com/publish/*",
       "*\\.cdn\\.spotlightr\\.com/watch/*",
-      "*\\.cdn\\.spotlightr\\.com/publish/*",
+      "*\\.cdn\\.spotlightr\\.com/publish/*"
     ],
-    "e": "api.spotlightr.com/getOEmbed",
+    "e": "api.spotlightr.com/getOEmbed"
   },
   {
     "s": [
-      "*\\.spreaker\\.com/*",
+      "*\\.spreaker\\.com/*"
     ],
-    "e": "api.spreaker.com/oembed",
+    "e": "api.spreaker.com/oembed"
   },
   {
     "s": [
       "sproutvideo\\.com/videos/*",
-      "*\\.vids\\.io/videos/*",
+      "*\\.vids\\.io/videos/*"
     ],
-    "e": "sproutvideo.com/oembed.json",
+    "e": "sproutvideo.com/oembed.json"
   },
   {
     "s": [
@@ -1735,87 +1750,87 @@ export const providers = [
       "www\\.spyke\\.social/p/*",
       "www\\.spyke\\.social/u/*",
       "www\\.spyke\\.social/g/*",
-      "www\\.spyke\\.social/c/*",
+      "www\\.spyke\\.social/c/*"
     ],
-    "e": "api.spyke.social/embed/oembed",
+    "e": "api.spyke.social/embed/oembed"
   },
   {
     "s": [
-      "purl\\.stanford\\.edu/*",
+      "purl\\.stanford\\.edu/*"
     ],
-    "e": "purl.stanford.edu/embed.json",
+    "e": "purl.stanford.edu/embed.json"
   },
   {
     "s": [
-      "streamable\\.com/*",
+      "streamable\\.com/*"
     ],
-    "e": "api.streamable.com/oembed.json",
+    "e": "api.streamable.com/oembed.json"
   },
   {
     "s": [
       "s3m\\.io/*",
-      "23m\\.io/*",
+      "23m\\.io/*"
     ],
-    "e": "streamio.com/api/v1/oembed",
+    "e": "streamio.com/api/v1/oembed"
   },
   {
     "s": [
-      "subscribi\\.io/api/oembed*",
+      "subscribi\\.io/api/oembed*"
     ],
-    "e": "subscribi.io/api/oembed",
+    "e": "subscribi.io/api/oembed"
   },
   {
     "s": [
       "www\\.sudomemo\\.net/watch/*",
-      "flipnot\\.es/*",
+      "flipnot\\.es/*"
     ],
-    "e": "www.sudomemo.net/oembed",
+    "e": "www.sudomemo.net/oembed"
   },
   {
     "s": [
-      "www\\.sutori\\.com/story/*",
+      "www\\.sutori\\.com/story/*"
     ],
-    "e": "www.sutori.com/api/oembed",
+    "e": "www.sutori.com/api/oembed"
   },
   {
     "s": [
       "sway\\.com/*",
-      "www\\.sway\\.com/*",
+      "www\\.sway\\.com/*"
     ],
-    "e": "sway.com/api/v1.0/oembed",
+    "e": "sway.com/api/v1.0/oembed"
   },
   {
     "s": [
-      "sway\\.office\\.com/*",
+      "sway\\.office\\.com/*"
     ],
-    "e": "sway.office.com/api/v1.0/oembed",
+    "e": "sway.office.com/api/v1.0/oembed"
   },
   {
     "s": [
-      "share\\.synthesia\\.io/*",
+      "share\\.synthesia\\.io/*"
     ],
-    "e": "69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed",
+    "e": "69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed"
   },
   {
     "s": [
       "ted\\.com/talks/*",
-      "www\\.ted\\.com/talks/*",
+      "www\\.ted\\.com/talks/*"
     ],
-    "e": "www.ted.com/services/v1/oembed.json",
+    "e": "www.ted.com/services/v1/oembed.json"
   },
   {
     "s": [
       "www\\.nytimes\\.com/svc/oembed",
       "nytimes\\.com/*",
-      "*\\.nytimes\\.com/*",
+      "*\\.nytimes\\.com/*"
     ],
-    "e": "www.nytimes.com/svc/oembed/json/",
+    "e": "www.nytimes.com/svc/oembed/json/"
   },
   {
     "s": [
-      "theysaidso\\.com/image/*",
+      "theysaidso\\.com/image/*"
     ],
-    "e": "theysaidso.com/extensions/oembed/",
+    "e": "theysaidso.com/extensions/oembed/"
   },
   {
     "s": [
@@ -1824,181 +1839,181 @@ export const providers = [
       "www\\.tickcounter\\.com/countup/*",
       "www\\.tickcounter\\.com/ticker/*",
       "www\\.tickcounter\\.com/clock/*",
-      "www\\.tickcounter\\.com/worldclock/*",
+      "www\\.tickcounter\\.com/worldclock/*"
     ],
-    "e": "www.tickcounter.com/oembed",
+    "e": "www.tickcounter.com/oembed"
   },
   {
     "s": [
       "www\\.tiktok\\.com/*",
-      "www\\.tiktok\\.com/*/video/*",
+      "www\\.tiktok\\.com/*/video/*"
     ],
-    "e": "www.tiktok.com/oembed",
+    "e": "www.tiktok.com/oembed"
   },
   {
     "s": [
       "tonicaudio\\.com/take/*",
       "tonicaudio\\.com/song/*",
       "tnic\\.io/song/*",
-      "tnic\\.io/take/*",
+      "tnic\\.io/take/*"
     ],
-    "e": "tonicaudio.com/oembed",
+    "e": "tonicaudio.com/oembed"
   },
   {
     "s": [
       "www\\.toornament\\.com/tournaments/*/information",
       "www\\.toornament\\.com/tournaments/*/registration/",
       "www\\.toornament\\.com/tournaments/*/matches/schedule",
-      "www\\.toornament\\.com/tournaments/*/stages/*/",
+      "www\\.toornament\\.com/tournaments/*/stages/*/"
     ],
-    "e": "widget.toornament.com/oembed",
+    "e": "widget.toornament.com/oembed"
   },
   {
     "s": [
-      "www\\.topy\\.se/image/*",
+      "www\\.topy\\.se/image/*"
     ],
-    "e": "www.topy.se/oembed/",
+    "e": "www.topy.se/oembed/"
   },
   {
     "s": [
-      "app-test\\.totango\\.com/*",
+      "app-test\\.totango\\.com/*"
     ],
-    "e": "app-test.totango.com/oembed",
+    "e": "app-test.totango.com/oembed"
   },
   {
     "s": [
-      "trackspace\\.upitup\\.com/*",
+      "trackspace\\.upitup\\.com/*"
     ],
-    "e": "trackspace.upitup.com/oembed",
+    "e": "trackspace.upitup.com/oembed"
   },
   {
     "s": [
       "trinitymedia\\.ai/player/*",
       "trinitymedia\\.ai/player/*/*",
-      "trinitymedia\\.ai/player/*/*/*",
+      "trinitymedia\\.ai/player/*/*/*"
     ],
-    "e": "trinitymedia.ai/services/oembed",
+    "e": "trinitymedia.ai/services/oembed"
   },
   {
     "s": [
-      "*\\.tumblr\\.com/post/*",
+      "*\\.tumblr\\.com/post/*"
     ],
-    "e": "www.tumblr.com/oembed/1.0",
+    "e": "www.tumblr.com/oembed/1.0"
   },
   {
     "s": [
-      "www\\.tuxx\\.be/*",
+      "www\\.tuxx\\.be/*"
     ],
-    "e": "www.tuxx.be/services/oembed",
+    "e": "www.tuxx.be/services/oembed"
   },
   {
     "s": [
       "play\\.tvcf\\.co\\.kr/*",
-      "*\\.tvcf\\.co\\.kr/*",
+      "*\\.tvcf\\.co\\.kr/*"
     ],
-    "e": "play.tvcf.co.kr/rest/oembed",
+    "e": "play.tvcf.co.kr/rest/oembed"
   },
   {
     "s": [
       "twinmotion\\.unrealengine\\.com/presentation/*",
-      "twinmotion\\.unrealengine\\.com/panorama/*",
+      "twinmotion\\.unrealengine\\.com/panorama/*"
     ],
-    "e": "twinmotion.unrealengine.com/oembed",
+    "e": "twinmotion.unrealengine.com/oembed"
   },
   {
     "s": [
       "twitter\\.com/*",
       "twitter\\.com/*/status/*",
-      "*\\.twitter\\.com/*/status/*",
+      "*\\.twitter\\.com/*/status/*"
     ],
-    "e": "publish.twitter.com/oembed",
+    "e": "publish.twitter.com/oembed"
   },
   {
     "s": [
       "play\\.typecast\\.ai/s/*",
       "play\\.typecast\\.ai/e/*",
-      "play\\.typecast\\.ai/*",
+      "play\\.typecast\\.ai/*"
     ],
-    "e": "play.typecast.ai/oembed",
+    "e": "play.typecast.ai/oembed"
   },
   {
     "s": [],
-    "e": "typlog.com/oembed",
+    "e": "typlog.com/oembed"
   },
   {
     "s": [
-      "uapod\\.univ-antilles\\.fr/video/*",
+      "uapod\\.univ-antilles\\.fr/video/*"
     ],
-    "e": "uapod.univ-antilles.fr/oembed",
+    "e": "uapod.univ-antilles.fr/oembed"
   },
   {
     "s": [
-      "map\\.cam\\.ac\\.uk/*",
+      "map\\.cam\\.ac\\.uk/*"
     ],
-    "e": "map.cam.ac.uk/oembed/",
+    "e": "map.cam.ac.uk/oembed/"
   },
   {
     "s": [
-      "mediatheque\\.univ-paris1\\.fr/video/*",
+      "mediatheque\\.univ-paris1\\.fr/video/*"
     ],
-    "e": "mediatheque.univ-paris1.fr/oembed",
+    "e": "mediatheque.univ-paris1.fr/oembed"
   },
   {
     "s": [
-      "pod\\.u-pec\\.fr/video/*",
+      "pod\\.u-pec\\.fr/video/*"
     ],
-    "e": "pod.u-pec.fr/oembed",
+    "e": "pod.u-pec.fr/oembed"
   },
   {
     "s": [
       "*\\.ustream\\.tv/*",
-      "*\\.ustream\\.com/*",
+      "*\\.ustream\\.com/*"
     ],
-    "e": "www.ustream.tv/oembed",
+    "e": "www.ustream.tv/oembed"
   },
   {
     "s": [
       "*\\.ustudio\\.com/embed/*",
-      "*\\.ustudio\\.com/embed/*/*",
+      "*\\.ustudio\\.com/embed/*/*"
     ],
-    "e": "app.ustudio.com/api/v2/oembed",
+    "e": "app.ustudio.com/api/v2/oembed"
   },
   {
     "s": [
-      "veer\\.tv/videos/*",
+      "veer\\.tv/videos/*"
     ],
-    "e": "api.veer.tv/oembed",
+    "e": "api.veer.tv/oembed"
   },
   {
     "s": [
-      "veervr\\.tv/videos/*",
+      "veervr\\.tv/videos/*"
     ],
-    "e": "api.veervr.tv/oembed",
+    "e": "api.veervr.tv/oembed"
   },
   {
     "s": [
-      "www\\.vevo\\.com/*",
+      "www\\.vevo\\.com/*"
     ],
-    "e": "www.vevo.com/oembed",
+    "e": "www.vevo.com/oembed"
   },
   {
     "s": [
-      "videfit\\.com/videos/*",
+      "videfit\\.com/videos/*"
     ],
-    "e": "videfit.com/oembed",
+    "e": "videfit.com/oembed"
   },
   {
     "s": [
-      "vidmount\\.com/*",
+      "vidmount\\.com/*"
     ],
-    "e": "vidmount.com/oembed",
+    "e": "vidmount.com/oembed"
   },
   {
     "s": [
       "*\\.vidyard\\.com/*",
-      "*\\.hubs\\.vidyard\\.com/*",
+      "*\\.hubs\\.vidyard\\.com/*"
     ],
-    "e": "api.vidyard.com/dashboard/v1.1/oembed",
+    "e": "api.vidyard.com/dashboard/v1.1/oembed"
   },
   {
     "s": [
@@ -2008,128 +2023,128 @@ export const providers = [
       "vimeo\\.com/groups/*/videos/*",
       "vimeo\\.com/ondemand/*/*",
       "player\\.vimeo\\.com/video/*",
-      "vimeo\\.com/event/*/*",
+      "vimeo\\.com/event/*/*"
     ],
-    "e": "vimeo.com/api/oembed.json",
+    "e": "vimeo.com/api/oembed.json"
   },
   {
     "s": [
-      "share\\.viostream\\.com/*",
+      "share\\.viostream\\.com/*"
     ],
-    "e": "play.viostream.com/oembed",
+    "e": "play.viostream.com/oembed"
   },
   {
     "s": [
-      "www\\.viously\\.com/*/*",
+      "www\\.viously\\.com/*/*"
     ],
-    "e": "www.viously.com/oembed",
+    "e": "www.viously.com/oembed"
   },
   {
     "s": [
-      "vizydrop\\.com/shared/*",
+      "vizydrop\\.com/shared/*"
     ],
-    "e": "vizydrop.com/oembed",
+    "e": "vizydrop.com/oembed"
   },
   {
     "s": [
-      "vlipsy\\.com/*",
+      "vlipsy\\.com/*"
     ],
-    "e": "vlipsy.com/oembed",
+    "e": "vlipsy.com/oembed"
   },
   {
     "s": [
-      "www\\.vlive\\.tv/video/*",
+      "www\\.vlive\\.tv/video/*"
     ],
-    "e": "www.vlive.tv/oembed",
+    "e": "www.vlive.tv/oembed"
   },
   {
     "s": [
-      "*\\.vouchfor\\.com/*",
+      "*\\.vouchfor\\.com/*"
     ],
-    "e": "embed.vouchfor.com/v1/oembed",
+    "e": "embed.vouchfor.com/v1/oembed"
   },
   {
     "s": [
-      "article\\.voxsnap\\.com/*/*",
+      "article\\.voxsnap\\.com/*/*"
     ],
-    "e": "data.voxsnap.com/oembed",
+    "e": "data.voxsnap.com/oembed"
   },
   {
     "s": [
-      "waltrack\\.net/product/*",
+      "waltrack\\.net/product/*"
     ],
-    "e": "waltrack.net/oembed",
+    "e": "waltrack.net/oembed"
   },
   {
     "s": [
       "watch\\.wave\\.video/*",
-      "embed\\.wave\\.video/*",
+      "embed\\.wave\\.video/*"
     ],
-    "e": "embed.wave.video/oembed",
+    "e": "embed.wave.video/oembed"
   },
   {
     "s": [
       "www\\.web3isgoinggreat\\.com/?id=*",
       "www\\.web3isgoinggreat\\.com/single/*",
-      "www\\.web3isgoinggreat\\.com/embed/*",
+      "www\\.web3isgoinggreat\\.com/embed/*"
     ],
-    "e": "www.web3isgoinggreat.com/api/oembed",
+    "e": "www.web3isgoinggreat.com/api/oembed"
   },
   {
     "s": [
-      "play\\.wecandeo\\.com/video/v/*",
+      "play\\.wecandeo\\.com/video/v/*"
     ],
-    "e": "play.wecandeo.com/oembed/",
+    "e": "play.wecandeo.com/oembed/"
   },
   {
     "s": [
-      "whimsical\\.com/*",
+      "whimsical\\.com/*"
     ],
-    "e": "whimsical.com/api/oembed",
+    "e": "whimsical.com/api/oembed"
   },
   {
     "s": [
       "fast\\.wistia\\.com/embed/iframe/*",
       "fast\\.wistia\\.com/embed/playlists/*",
-      "*\\.wistia\\.com/medias/*",
+      "*\\.wistia\\.com/medias/*"
     ],
-    "e": "fast.wistia.com/oembed.json",
+    "e": "fast.wistia.com/oembed.json"
   },
   {
     "s": [
       "*\\.wizer\\.me/learn/*",
-      "*\\.wizer\\.me/preview/*",
+      "*\\.wizer\\.me/preview/*"
     ],
-    "e": "app.wizer.me/api/oembed.json",
+    "e": "app.wizer.me/api/oembed.json"
   },
   {
     "s": [
-      "wokwi\\.com/share/*",
+      "wokwi\\.com/share/*"
     ],
-    "e": "wokwi.com/api/oembed",
+    "e": "wokwi.com/api/oembed"
   },
   {
     "s": [
-      "*\\.wolframcloud\\.com/*",
+      "*\\.wolframcloud\\.com/*"
     ],
-    "e": "www.wolframcloud.com/oembed",
+    "e": "www.wolframcloud.com/oembed"
   },
   {
     "s": [
       "wordpress\\.com/*",
       "*\\.wordpress\\.com/*",
       "*\\.*\\.wordpress\\.com/*",
-      "wp\\.me/*",
+      "wp\\.me/*"
     ],
-    "e": "public-api.wordpress.com/oembed/",
+    "e": "public-api.wordpress.com/oembed/"
   },
   {
     "s": [
       "x\\.com/*",
       "x\\.com/*/status/*",
-      "*\\.x\\.com/*/status/*",
+      "*\\.x\\.com/*/status/*"
     ],
-    "e": "publish.x.com/oembed",
+    "e": "publish.x.com/oembed"
   },
   {
     "s": [
@@ -2139,41 +2154,42 @@ export const providers = [
       "*\\.youtube\\.com/playlist?list=*",
       "youtube\\.com/playlist?list=*",
       "*\\.youtube\\.com/shorts*",
+      "*\\.youtube\\.com/embed/*"
     ],
-    "e": "www.youtube.com/oembed",
+    "e": "www.youtube.com/oembed"
   },
   {
     "s": [
-      "www\\.yumpu\\.com/*/document/view/*/*",
+      "www\\.yumpu\\.com/*/document/view/*/*"
     ],
-    "e": "www.yumpu.com/services/oembed",
+    "e": "www.yumpu.com/services/oembed"
   },
   {
     "s": [
       "app\\.zeplin\\.io/project/*/screen/*",
       "app\\.zeplin\\.io/project/*/screen/*/version/*",
       "app\\.zeplin\\.io/project/*/styleguide/components?coid=*",
-      "app\\.zeplin\\.io/styleguide/*/components?coid=*",
+      "app\\.zeplin\\.io/styleguide/*/components?coid=*"
     ],
-    "e": "app.zeplin.io/embed",
+    "e": "app.zeplin.io/embed"
   },
   {
     "s": [
       "app\\.zingsoft\\.com/embed/*",
-      "app\\.zingsoft\\.com/view/*",
+      "app\\.zingsoft\\.com/view/*"
     ],
-    "e": "app.zingsoft.com/oembed",
+    "e": "app.zingsoft.com/oembed"
   },
   {
     "s": [
-      "*\\.znipe\\.tv/*",
+      "*\\.znipe\\.tv/*"
     ],
-    "e": "api.znipe.tv/v3/oembed/",
+    "e": "api.znipe.tv/v3/oembed/"
   },
   {
     "s": [
-      "srv2\\.zoomable\\.ca/viewer\\.php*",
+      "srv2\\.zoomable\\.ca/viewer\\.php*"
     ],
-    "e": "srv2.zoomable.ca/oembed",
-  },
+    "e": "srv2.zoomable.ca/oembed"
+  }
 ];
