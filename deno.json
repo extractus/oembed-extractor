@@ -11,6 +11,7 @@
   "license": "MIT",
   "tasks": {
     "build": "deno run -A ./scripts/build_npm.ts",
+    "eval": "deno run --allow-net scripts/eval.ts",
     "sync": "deno run --allow-net --allow-write --allow-read scripts/sync.ts"
   },
   "imports": {
