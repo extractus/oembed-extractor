@@ -99,6 +99,23 @@
     ]
   },
   {
+    "provider_name": "afreecaTV",
+    "provider_url": "https://www.sooplive.co.kr",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://vod.sooplive.co.kr/player/",
+          "https://v.afree.ca/ST/",
+          "https://vod.sooplive.co.kr/ST/",
+          "https://vod.sooplive.co.kr/PLAYER/STATION/",
+          "https://play.sooplive.co.kr/"
+        ],
+        "url": "https://openapi.sooplive.co.kr/oembed/embedinfo",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Altium LLC",
     "provider_url": "https://altium.com",
     "endpoints": [
@@ -149,10 +166,12 @@
       {
         "schemes": [
           "https://amtraker.com/trains/*",
-          "https://beta.amtraker.com/trains/*"
+          "https://amtraker.com/trains/*/*",
+          "https://*.amtraker.com/trains/*",
+          "https://*.amtraker.com/trains/*/*"
         ],
-        "url": "https://api.amtraker.com/v2/oembed",
-        "discovery": false
+        "url": "https://api.amtraker.com/v3/oembed",
+        "discovery": true
       }
     ]
   },
@@ -332,21 +351,6 @@
     ]
   },
   {
-    "provider_name": "Avocode",
-    "provider_url": "https://www.avocode.com/",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://app.avocode.com/view/*"
-        ],
-        "url": "https://stage-embed.avocode.com/api/oembed",
-        "formats": [
-          "json"
-        ]
-      }
-    ]
-  },
-  {
     "provider_name": "Backtracks",
     "provider_url": "https://backtracks.fm",
     "endpoints": [
@@ -424,6 +428,16 @@
           "https://cloud.biqapp.com/*"
         ],
         "url": "https://biqapp.com/api/v1/video/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Bitchute",
+    "provider_url": "https://bitchute.com/",
+    "endpoints": [
+      {
+        "url": "https://api.bitchute.com/oembed/",
         "discovery": true
       }
     ]
@@ -517,6 +531,25 @@
           "https://www.bumper.com/oembed-s/bumper"
         ],
         "url": "https://www.bumper.com/oembed/bumper",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Bunny",
+    "provider_url": "https://bunny.net/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://iframe.mediadelivery.net/*",
+          "http://iframe.mediadelivery.net/*",
+          "https://video.bunnycdn.com/*",
+          "http://video.bunnycdn.com/*"
+        ],
+        "url": "https://video.bunnycdn.com/OEmbed",
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -924,7 +957,8 @@
     "endpoints": [
       {
         "schemes": [
-          "https://www.dailymotion.com/video/*"
+          "https://www.dailymotion.com/video/*",
+          "https://geo.dailymotion.com/player.html?video=*"
         ],
         "url": "https://www.dailymotion.com/services/oembed",
         "discovery": true
@@ -1340,8 +1374,10 @@
         "schemes": [
           "http://*.flickr.com/photos/*",
           "http://flic.kr/p/*",
+          "http://flic.kr/s/*",
           "https://*.flickr.com/photos/*",
           "https://flic.kr/p/*",
+          "https://flic.kr/s/*",
           "https://*.*.flickr.com/*/*",
           "http://*.*.flickr.com/*/*"
         ],
@@ -1402,6 +1438,18 @@
           "https://fiso.foxsports.com.au/isomorphic-widget/*"
         ],
         "url": "https://fiso.foxsports.com.au/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Framatube",
+    "provider_url": "https://framatube.org/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://framatube.org/w/*"
+        ],
+        "url": "https://framatube.org/services/oembed"
       }
     ]
   },
@@ -1594,6 +1642,7 @@
     "endpoints": [
       {
         "schemes": [
+          "https://gumlet.tv/watch/*",
           "https://www.gumlet.com/watch/*",
           "https://play.gumlet.io/embed/*"
         ],
@@ -1704,6 +1753,19 @@
     ]
   },
   {
+    "provider_name": "Hopvue",
+    "provider_url": "https://www.hopvue.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.hopvue.com/*"
+        ],
+        "url": "https://portal.hopvue.com/api/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "HuffDuffer",
     "provider_url": "http://huffduffer.com",
     "endpoints": [
@@ -1729,13 +1791,13 @@
   },
   {
     "provider_name": "Ideamapper",
-    "provider_url": "http://oembed.ideamapper.com",
+    "provider_url": "https://ideamapper.com/",
     "endpoints": [
       {
         "schemes": [
-          "http://oembed.ideamapper.com/*"
+          "https://oembed.ideamapper.com/*"
         ],
-        "url": "http://oembed.ideamapper.com",
+        "url": "https://oembed.ideamapper.com/oembed",
         "discovery": true
       }
     ]
@@ -1909,6 +1971,19 @@
     ]
   },
   {
+    "provider_name": "Insight Timer",
+    "provider_url": "https://insighttimer.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://insighttimer.com/*"
+        ],
+        "url": "https://widgets.insighttimer.com/services/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Instagram",
     "provider_url": "https://instagram.com",
     "endpoints": [
@@ -1970,6 +2045,19 @@
           "https://issuu.com/*/docs/*"
         ],
         "url": "https://issuu.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Itabtech infosys",
+    "provider_url": "https://samay.itabtechinfosys.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://samay.itabtechinfosys.com/*"
+        ],
+        "url": "https://samay.itabtechinfosys.com/oembed/",
         "discovery": true
       }
     ]
@@ -2152,8 +2240,8 @@
     "endpoints": [
       {
         "schemes": [
-          "https://kurozora.app/episodes*",
-          "https://kurozora.app/songs*"
+          "https://kurozora.app/episodes/*",
+          "https://kurozora.app/songs/*"
         ],
         "url": "https://kurozora.app/oembed",
         "discovery": true
@@ -2212,6 +2300,20 @@
     ]
   },
   {
+    "provider_name": "Linkstackz",
+    "provider_url": "https://www.linkstackz.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://linkstackz.com/irf/*",
+          "https://linkstackz.com/post/*"
+        ],
+        "url": "https://api.linkstackz.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Livestream",
     "provider_url": "https://livestream.com/",
     "endpoints": [
@@ -2225,6 +2327,20 @@
           "https://livestream.com/*/*/videos/*"
         ],
         "url": "https://livestream.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Loom",
+    "provider_url": "https://www.loom.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://loom.com/i/*",
+          "https://loom.com/share/*"
+        ],
+        "url": "https://www.loom.com/v1/oembed",
         "discovery": true
       }
     ]
@@ -2472,6 +2588,23 @@
     ]
   },
   {
+    "provider_name": "MySQL Visual Explain",
+    "provider_url": "https://mysqlexplain.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://mysqlexplain.com/explain/*",
+          "https://embed.mysqlexplain.com/explain/*"
+        ],
+        "url": "https://api.mysqlexplain.com/v2/oembed.json",
+        "formats": [
+          "json"
+        ],
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Namchey",
     "provider_url": "https://namchey.com",
     "endpoints": [
@@ -2559,6 +2692,36 @@
         ],
         "url": "https://ndla.no/oembed",
         "discovery": false
+      }
+    ]
+  },
+  {
+    "provider_name": "Nebula",
+    "provider_url": "https://nebula.tv",
+    "endpoints": [
+      {
+        "url": "https://nebula.tv/api/oembed",
+        "formats": [
+          "json"
+        ],
+        "schemes": [
+          "https://nebula.tv/videos/*"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Nebula Beta",
+    "provider_url": "https://beta.nebula.tv",
+    "endpoints": [
+      {
+        "url": "https://beta.nebula.tv/api/oembed",
+        "formats": [
+          "json"
+        ],
+        "schemes": [
+          "https://beta.nebula.tv/videos/*"
+        ]
       }
     ]
   },
@@ -2835,6 +2998,18 @@
         ],
         "url": "https://www.pastery.net/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "PeerTube.TV",
+    "provider_url": "https://peertube.tv/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://peertube.tv/w/*"
+        ],
+        "url": "https://peertube.tv/services/oembed"
       }
     ]
   },
@@ -3266,6 +3441,19 @@
     ]
   },
   {
+    "provider_name": "sbedit",
+    "provider_url": "https://sbedit.net",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://sbedit.net/*"
+        ],
+        "url": "https://sbedit.net/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Screen9",
     "provider_url": "http://www.screen9.com/",
     "endpoints": [
@@ -3345,6 +3533,19 @@
           "json",
           "xml"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "SharedFile",
+    "provider_url": "https://shared-file-kappa.vercel.app/file/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://shared-file-kappa.vercel.app/file/*"
+        ],
+        "url": "https://shared-file-kappa.vercel.app/file/api/oembed",
+        "discovery": true
       }
     ]
   },
@@ -3593,7 +3794,8 @@
       {
         "schemes": [
           "https://open.spotify.com/*",
-          "spotify:*"
+          "spotify:*",
+          "https://spotify.link/*"
         ],
         "url": "https://open.spotify.com/oembed",
         "discovery": true
@@ -3819,6 +4021,19 @@
           "https://www.ted.com/talks/*"
         ],
         "url": "https://www.ted.com/services/v1/oembed.{format}",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "The DAM consultants",
+    "provider_url": "https://hubspot-media-bridge.thedamconsultants.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://hubspot-media-bridge.thedamconsultants.com/*"
+        ],
+        "url": "https://hubspot-media-bridge.thedamconsultants.com/oembed/",
         "discovery": true
       }
     ]
@@ -4286,6 +4501,23 @@
     ]
   },
   {
+    "provider_name": "Vizdom",
+    "provider_url": "https://vizdom.dev",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://vizdom.dev/link/*"
+        ],
+        "url": "https://vizdom.dev/api/v1/oembed",
+        "discovery": true,
+        "formats": [
+          "xml",
+          "json"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "Vizydrop",
     "provider_url": "https://vizydrop.com",
     "endpoints": [
@@ -4392,6 +4624,21 @@
           "https://www.web3isgoinggreat.com/embed/*"
         ],
         "url": "https://www.web3isgoinggreat.com/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Webcrumbs",
+    "provider_url": "https://webcrumbs.org/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://share.webcrumbs.org/*",
+          "https://tools.webcrumbs.org/*",
+          "https://www.webcrumbs.org/*"
+        ],
+        "url": "http://share.webcrumbs.org/",
         "discovery": true
       }
     ]
@@ -4525,7 +4772,11 @@
           "https://youtu.be/*",
           "https://*.youtube.com/playlist?list=*",
           "https://youtube.com/playlist?list=*",
-          "https://*.youtube.com/shorts*"
+          "https://*.youtube.com/shorts*",
+          "https://youtube.com/shorts*",
+          "https://*.youtube.com/embed/*",
+          "https://*.youtube.com/live*",
+          "https://youtube.com/live*"
         ],
         "url": "https://www.youtube.com/oembed",
         "discovery": true
