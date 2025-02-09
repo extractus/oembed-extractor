@@ -1,4 +1,4 @@
-// provider data, synchronized at 2024-04-26T08:46:02.055Z
+// provider data, synchronized at 2024-05-07T10:41:10.221Z
 
 /* eslint-disable */ 
 
@@ -200,6 +200,12 @@ export const providers = [
   },
   {
     "s": [
+      "cloud\\.biqapp\\.com/*"
+    ],
+    "e": "biqapp.com/api/v1/video/oembed"
+  },
+  {
+    "s": [
       "blackfire\\.io/profiles/*/graph",
       "blackfire\\.io/profiles/compare/*/graph"
     ],
@@ -276,6 +282,12 @@ export const providers = [
       "img\\.catbo\\.at/*"
     ],
     "e": "img.catbo.at/oembed.json"
+  },
+  {
+    "s": [
+      "embeds\\.celero\\.io/*"
+    ],
+    "e": "api.celero.io/api/oembed"
   },
   {
     "s": [
@@ -815,6 +827,12 @@ export const providers = [
       "www\\.hulu\\.com/watch/*"
     ],
     "e": "www.hulu.com/api/oembed.json"
+  },
+  {
+    "s": [
+      "oembed\\.ideamapper\\.com/*"
+    ],
+    "e": "oembed.ideamapper.com"
   },
   {
     "s": [
