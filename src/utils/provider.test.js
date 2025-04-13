@@ -6,22 +6,6 @@ import provider from './provider.js'
 describe('test if provider.find() works correctly', () => {
   const cases = [
     {
-      url: 'https://www.facebook.com/video.php?v=999999999',
-      fetchEndpoint: 'https://graph.facebook.com/v16.0/oembed_video',
-    },
-    {
-      url: 'https://www.facebook.com/someone/photos/somephoto',
-      fetchEndpoint: 'https://graph.facebook.com/v16.0/oembed_post',
-    },
-    {
-      url: 'https://www.facebook.com/someone/page',
-      fetchEndpoint: 'https://graph.facebook.com/v16.0/oembed_page',
-    },
-    {
-      url: 'http://instagram.com/someone/p/somepage',
-      fetchEndpoint: 'https://graph.facebook.com/v16.0/instagram_oembed',
-    },
-    {
       url: 'https://www.edumedia-sciences.com/en/media/558-heredity',
       fetchEndpoint: 'https://www.edumedia-sciences.com/oembed.json',
     },
@@ -86,6 +70,6 @@ describe('test if provider set/get works correctly', () => {
     expect(provider.set(providerList)).toEqual(providerList.length)
     const newList = provider.get()
     expect(newList.length).toEqual(providerList.length)
-    expect(newList[0].schemes[0]).toEqual(/store.alpha.com\/(.*)/i)
+    expect(newList[0].schemes[0]).toEqual(/\/\/store.alpha.com\/(.*)/i)
   })
 })

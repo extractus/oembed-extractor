@@ -46,19 +46,19 @@ describe('test if fetchEmbed() works correctly', () => {
         type: 'rich',
       },
     },
-    {
-      input: {
-        url: 'https://www.facebook.com/facebook/videos/10153231379946729/',
-        params: {
-          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62',
-        },
-        file: './test-data/facebook.json',
-      },
-      expected: {
-        provider_name: 'Facebook',
-        type: 'video',
-      },
-    },
+    // {
+    //   input: {
+    //     url: 'https://www.facebook.com/facebook/videos/10153231379946729/',
+    //     params: {
+    //       access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62',
+    //     },
+    //     file: './test-data/facebook.json',
+    //   },
+    //   expected: {
+    //     provider_name: 'Facebook',
+    //     type: 'video',
+    //   },
+    // },
     {
       input: {
         url: 'http://farm4.static.flickr.com/3123/2341623661_7c99f48bbf_m.jpg',

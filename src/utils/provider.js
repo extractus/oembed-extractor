@@ -17,7 +17,7 @@ const undotted = (scheme = '') => {
 }
 
 const removeProtocol = (url) => {
-  return url.replace('https://', '').replace('http://', '')
+  return url.replace('https://', '//').replace('http://', '//')
 }
 
 export const simplify = (providers = []) => {
@@ -43,7 +43,7 @@ const providersFromList = (providers = []) => {
   return providers.map((provider) => {
     const { e: endpoint, s: schemes } = provider
     return {
-      endpoint: `https://${endpoint}`,
+      endpoint: `https:${endpoint}`,
       schemes: schemes.map(toRegExp),
     }
   })

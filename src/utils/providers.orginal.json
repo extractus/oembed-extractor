@@ -500,6 +500,20 @@
     ]
   },
   {
+    "provider_name": "Bornetube",
+    "provider_url": "https://www.bornetube.dk/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.bornetube.dk/media/*",
+          "https://www.bornetube.dk/video/*"
+        ],
+        "url": "https://www.bornetube.dk/media/lasync/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Box Office Buz",
     "provider_url": "http://boxofficebuz.com",
     "endpoints": [
@@ -618,6 +632,19 @@
           "https://minesweeper.today/*"
         ],
         "url": "https://minesweeper.today/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "castmake",
+    "provider_url": "https://www.castmake-ai.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.castmake-ai.com/c/*/episodes/*"
+        ],
+        "url": "http://castmake-ai.com/api/embed",
         "discovery": true
       }
     ]
@@ -1694,6 +1721,19 @@
     ]
   },
   {
+    "provider_name": "helenenglish_education",
+    "provider_url": "https://helenenglish.education/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://helenenglish.education/widget*"
+        ],
+        "url": "https://helenenglish.education/embed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Heyzine",
     "provider_url": "https://heyzine.com",
     "endpoints": [
@@ -1786,6 +1826,19 @@
           "http://www.hulu.com/watch/*"
         ],
         "url": "http://www.hulu.com/api/oembed.{format}"
+      }
+    ]
+  },
+  {
+    "provider_name": "Icosa Gallery",
+    "provider_url": "https://icosa.gallery",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://icosa.gallery/view/*"
+        ],
+        "url": "https://api.icosa.gallery/v1/oembed",
+        "discovery": true
       }
     ]
   },
@@ -1989,10 +2042,10 @@
     "endpoints": [
       {
         "schemes": [
-          "http://instagram.com/*/p/*,",
-          "http://www.instagram.com/*/p/*,",
-          "https://instagram.com/*/p/*,",
-          "https://www.instagram.com/*/p/*,",
+          "http://instagram.com/*/p/*",
+          "http://www.instagram.com/*/p/*",
+          "https://instagram.com/*/p/*",
+          "https://www.instagram.com/*/p/*",
           "http://instagram.com/p/*",
           "http://instagr.am/p/*",
           "http://www.instagram.com/p/*",
@@ -2540,7 +2593,8 @@
     "endpoints": [
       {
         "schemes": [
-          "https://mixpanel.com/*"
+          "https://mixpanel.com/*",
+          "https://*.mixpanel.com/*"
         ],
         "url": "https://mixpanel.com/api/app/embed/oembed/"
       }
@@ -2721,6 +2775,23 @@
         ],
         "schemes": [
           "https://beta.nebula.tv/videos/*"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Needle Cloud",
+    "provider_url": "https://cloud.needle.tools",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://cloud.needle.tools/-/assets/*/file",
+          "https://cloud.needle.tools/view?file=*",
+          "https://*.needle.run/*"
+        ],
+        "url": "https://cloud.needle.tools/oembed",
+        "formats": [
+          "json"
         ]
       }
     ]
@@ -3228,6 +3299,20 @@
     ]
   },
   {
+    "provider_name": "Quartr",
+    "provider_url": "http://quartr.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://quartr.com/*",
+          "https://web.quartr.com/*"
+        ],
+        "url": "https://web.quartr.com/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Quiz.biz",
     "provider_url": "http://www.quiz.biz/",
     "endpoints": [
@@ -3317,6 +3402,28 @@
           "https://www.reddit.com/r/*/comments/*/*"
         ],
         "url": "https://www.reddit.com/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Redlof-Medien",
+    "provider_url": "https://redlof-medien.de",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://redlof-medien.de/*",
+          "https://www.redlof-medien.de/*"
+        ],
+        "url": "https://redlof-medien.de/wp-json/oembed/1.0/embed",
+        "discovery": true
+      },
+      {
+        "schemes": [
+          "https://show.wexcreator.com/*",
+          "https://showroom.redlof-medien.de/*"
+        ],
+        "url": "https://api.wexcreator.com/oembed/",
+        "discovery": true
       }
     ]
   },
@@ -3441,6 +3548,19 @@
     ]
   },
   {
+    "provider_name": "Satcat",
+    "provider_url": "https://www.satcat.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.satcat.com/sats/*"
+        ],
+        "url": "https://www.satcat.com/api/sats/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "sbedit",
     "provider_url": "https://sbedit.net",
     "endpoints": [
@@ -3449,6 +3569,20 @@
           "https://sbedit.net/*"
         ],
         "url": "https://sbedit.net/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Scenes",
+    "provider_url": "https://getscenes.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://getscenes.com/e/*",
+          "https://getscenes.com/event/*"
+        ],
+        "url": "https://getscenes.com/oembed",
         "discovery": true
       }
     ]
@@ -3658,6 +3792,22 @@
         "formats": [
           "json"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Skoletube",
+    "provider_url": "https://www.skoletube.dk/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.skoletube.dk/media/*",
+          "https://www.skoletube.dk/video/*",
+          "https://www.studietube.dk/media/*",
+          "https://www.studietube.dk/video/*"
+        ],
+        "url": "https://www.skoletube.dk/media/lasync/oembed/",
+        "discovery": true
       }
     ]
   },
@@ -3952,6 +4102,19 @@
     ]
   },
   {
+    "provider_name": "Supercut",
+    "provider_url": "https://supercut.video/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://supercut.video/share/*"
+        ],
+        "url": "https://supercut.video/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Sutori",
     "provider_url": "https://www.sutori.com/",
     "endpoints": [
@@ -4006,6 +4169,19 @@
         "formats": [
           "json"
         ],
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Tech Post Cast",
+    "provider_url": "https://techpostcast.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://techpostcast.com/headline-topic-programs/*"
+        ],
+        "url": "https://techpostcast.com/oembed/",
         "discovery": true
       }
     ]
@@ -4100,6 +4276,20 @@
           "https://www.tiktok.com/*/video/*"
         ],
         "url": "https://www.tiktok.com/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "tksn-me",
+    "provider_url": "https://tksn.me",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://tksn.me/*",
+          "https://*.tksn.me/*"
+        ],
+        "url": "https://tksn.me/api/oembed/",
+        "discovery": true
       }
     ]
   },

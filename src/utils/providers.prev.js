@@ -1,4 +1,4 @@
-// provider data, synchronized at 2024-05-07T10:41:10.221Z
+// provider data, synchronized at 2025-04-13T01:57:28.452Z
 
 /* eslint-disable */ 
 
@@ -51,6 +51,16 @@ export const providers = [
   },
   {
     "s": [
+      "vod\\.sooplive\\.co\\.kr/player/",
+      "v\\.afree\\.ca/ST/",
+      "vod\\.sooplive\\.co\\.kr/ST/",
+      "vod\\.sooplive\\.co\\.kr/PLAYER/STATION/",
+      "play\\.sooplive\\.co\\.kr/"
+    ],
+    "e": "openapi.sooplive.co.kr/oembed/embedinfo"
+  },
+  {
+    "s": [
       "altium\\.com/viewer/*"
     ],
     "e": "viewer.altium.com/shell/oembed"
@@ -71,9 +81,11 @@ export const providers = [
   {
     "s": [
       "amtraker\\.com/trains/*",
-      "beta\\.amtraker\\.com/trains/*"
+      "amtraker\\.com/trains/*/*",
+      "*\\.amtraker\\.com/trains/*",
+      "*\\.amtraker\\.com/trains/*/*"
     ],
-    "e": "api.amtraker.com/v2/oembed"
+    "e": "api.amtraker.com/v3/oembed"
   },
   {
     "s": [
@@ -162,12 +174,6 @@ export const providers = [
   },
   {
     "s": [
-      "app\\.avocode\\.com/view/*"
-    ],
-    "e": "stage-embed.avocode.com/api/oembed"
-  },
-  {
-    "s": [
       "backtracks\\.fm/*/*/e/*",
       "backtracks\\.fm/*/s/*/*",
       "backtracks\\.fm/*/*/*/*/e/*/*",
@@ -205,6 +211,10 @@ export const providers = [
     "e": "biqapp.com/api/v1/video/oembed"
   },
   {
+    "s": [],
+    "e": "api.bitchute.com/oembed/"
+  },
+  {
     "s": [
       "blackfire\\.io/profiles/*/graph",
       "blackfire\\.io/profiles/compare/*/graph"
@@ -231,6 +241,13 @@ export const providers = [
     "e": "bookingmood.com/api/oembed"
   },
   {
+    "s": [
+      "www\\.bornetube\\.dk/media/*",
+      "www\\.bornetube\\.dk/video/*"
+    ],
+    "e": "www.bornetube.dk/media/lasync/oembed/"
+  },
+  {
     "s": [],
     "e": "boxofficebuz.com/oembed"
   },
@@ -246,6 +263,13 @@ export const providers = [
       "www\\.bumper\\.com/oembed-s/bumper"
     ],
     "e": "www.bumper.com/oembed/bumper"
+  },
+  {
+    "s": [
+      "iframe\\.mediadelivery\\.net/*",
+      "video\\.bunnycdn\\.com/*"
+    ],
+    "e": "video.bunnycdn.com/OEmbed"
   },
   {
     "s": [
@@ -276,6 +300,12 @@ export const providers = [
       "minesweeper\\.today/*"
     ],
     "e": "minesweeper.today/api/oembed"
+  },
+  {
+    "s": [
+      "www\\.castmake-ai\\.com/c/*/episodes/*"
+    ],
+    "e": "castmake-ai.com/api/embed"
   },
   {
     "s": [
@@ -432,7 +462,8 @@ export const providers = [
   },
   {
     "s": [
-      "www\\.dailymotion\\.com/video/*"
+      "www\\.dailymotion\\.com/video/*",
+      "geo\\.dailymotion\\.com/player\\.html?video=*"
     ],
     "e": "www.dailymotion.com/services/oembed"
   },
@@ -640,6 +671,7 @@ export const providers = [
     "s": [
       "*\\.flickr\\.com/photos/*",
       "flic\\.kr/p/*",
+      "flic\\.kr/s/*",
       "*\\.*\\.flickr\\.com/*/*"
     ],
     "e": "www.flickr.com/services/oembed/"
@@ -670,6 +702,12 @@ export const providers = [
       "fiso\\.foxsports\\.com\\.au/isomorphic-widget/*"
     ],
     "e": "fiso.foxsports.com.au/oembed"
+  },
+  {
+    "s": [
+      "framatube\\.org/w/*"
+    ],
+    "e": "framatube.org/services/oembed"
   },
   {
     "s": [
@@ -765,6 +803,7 @@ export const providers = [
   },
   {
     "s": [
+      "gumlet\\.tv/watch/*",
       "www\\.gumlet\\.com/watch/*",
       "play\\.gumlet\\.io/embed/*"
     ],
@@ -788,6 +827,12 @@ export const providers = [
       "hearthis\\.at/*/set/*/"
     ],
     "e": "hearthis.at/oembed/?format=json"
+  },
+  {
+    "s": [
+      "helenenglish\\.education/widget*"
+    ],
+    "e": "helenenglish.education/embed"
   },
   {
     "s": [
@@ -818,6 +863,12 @@ export const providers = [
   },
   {
     "s": [
+      "*\\.hopvue\\.com/*"
+    ],
+    "e": "portal.hopvue.com/api/oembed/"
+  },
+  {
+    "s": [
       "huffduffer\\.com/*/*"
     ],
     "e": "huffduffer.com/oembed"
@@ -830,9 +881,15 @@ export const providers = [
   },
   {
     "s": [
+      "icosa\\.gallery/view/*"
+    ],
+    "e": "api.icosa.gallery/v1/oembed"
+  },
+  {
+    "s": [
       "oembed\\.ideamapper\\.com/*"
     ],
-    "e": "oembed.ideamapper.com"
+    "e": "oembed.ideamapper.com/oembed"
   },
   {
     "s": [
@@ -909,8 +966,14 @@ export const providers = [
   },
   {
     "s": [
-      "instagram\\.com/*/p/*,",
-      "www\\.instagram\\.com/*/p/*,",
+      "insighttimer\\.com/*"
+    ],
+    "e": "widgets.insighttimer.com/services/oembed"
+  },
+  {
+    "s": [
+      "instagram\\.com/*/p/*",
+      "www\\.instagram\\.com/*/p/*",
       "instagram\\.com/p/*",
       "instagr\\.am/p/*",
       "www\\.instagram\\.com/p/*",
@@ -936,6 +999,12 @@ export const providers = [
       "issuu\\.com/*/docs/*"
     ],
     "e": "issuu.com/oembed"
+  },
+  {
+    "s": [
+      "samay\\.itabtechinfosys\\.com/*"
+    ],
+    "e": "samay.itabtechinfosys.com/oembed/"
   },
   {
     "s": [
@@ -1027,8 +1096,8 @@ export const providers = [
   },
   {
     "s": [
-      "kurozora\\.app/episodes*",
-      "kurozora\\.app/songs*"
+      "kurozora\\.app/episodes/*",
+      "kurozora\\.app/songs/*"
     ],
     "e": "kurozora.app/oembed"
   },
@@ -1058,6 +1127,13 @@ export const providers = [
   },
   {
     "s": [
+      "linkstackz\\.com/irf/*",
+      "linkstackz\\.com/post/*"
+    ],
+    "e": "api.linkstackz.com/oembed"
+  },
+  {
+    "s": [
       "livestream\\.com/accounts/*/events/*",
       "livestream\\.com/accounts/*/events/*/videos/*",
       "livestream\\.com/*/events/*",
@@ -1066,6 +1142,13 @@ export const providers = [
       "livestream\\.com/*/*/videos/*"
     ],
     "e": "livestream.com/oembed"
+  },
+  {
+    "s": [
+      "loom\\.com/i/*",
+      "loom\\.com/share/*"
+    ],
+    "e": "www.loom.com/v1/oembed"
   },
   {
     "s": [
@@ -1156,7 +1239,8 @@ export const providers = [
   },
   {
     "s": [
-      "mixpanel\\.com/*"
+      "mixpanel\\.com/*",
+      "*\\.mixpanel\\.com/*"
     ],
     "e": "mixpanel.com/api/app/embed/oembed/"
   },
@@ -1178,6 +1262,13 @@ export const providers = [
       "mybeweeg\\.com/w/*"
     ],
     "e": "mybeweeg.com/services/oembed"
+  },
+  {
+    "s": [
+      "mysqlexplain\\.com/explain/*",
+      "embed\\.mysqlexplain\\.com/explain/*"
+    ],
+    "e": "api.mysqlexplain.com/v2/oembed.json"
   },
   {
     "s": [
@@ -1221,6 +1312,26 @@ export const providers = [
       "ndla\\.no/video/*"
     ],
     "e": "ndla.no/oembed"
+  },
+  {
+    "s": [
+      "nebula\\.tv/videos/*"
+    ],
+    "e": "nebula.tv/api/oembed"
+  },
+  {
+    "s": [
+      "beta\\.nebula\\.tv/videos/*"
+    ],
+    "e": "beta.nebula.tv/api/oembed"
+  },
+  {
+    "s": [
+      "cloud\\.needle\\.tools/-/assets/*/file",
+      "cloud\\.needle\\.tools/view?file=*",
+      "*\\.needle\\.run/*"
+    ],
+    "e": "cloud.needle.tools/oembed"
   },
   {
     "s": [
@@ -1357,6 +1468,12 @@ export const providers = [
   },
   {
     "s": [
+      "peertube\\.tv/w/*"
+    ],
+    "e": "peertube.tv/services/oembed"
+  },
+  {
+    "s": [
       "www\\.picturelfy\\.com/p/*"
     ],
     "e": "api.picturelfy.com/service/oembed/"
@@ -1452,6 +1569,13 @@ export const providers = [
   },
   {
     "s": [
+      "quartr\\.com/*",
+      "web\\.quartr\\.com/*"
+    ],
+    "e": "web.quartr.com/api/oembed"
+  },
+  {
+    "s": [
       "www\\.quiz\\.biz/quizz-*\\.html"
     ],
     "e": "www.quiz.biz/api/oembed"
@@ -1495,6 +1619,20 @@ export const providers = [
       "www\\.reddit\\.com/r/*/comments/*/*"
     ],
     "e": "www.reddit.com/oembed"
+  },
+  {
+    "s": [
+      "redlof-medien\\.de/*",
+      "www\\.redlof-medien\\.de/*"
+    ],
+    "e": "redlof-medien.de/wp-json/oembed/1.0/embed"
+  },
+  {
+    "s": [
+      "show\\.wexcreator\\.com/*",
+      "showroom\\.redlof-medien\\.de/*"
+    ],
+    "e": "api.wexcreator.com/oembed/"
   },
   {
     "s": [
@@ -1553,6 +1691,25 @@ export const providers = [
   },
   {
     "s": [
+      "www\\.satcat\\.com/sats/*"
+    ],
+    "e": "www.satcat.com/api/sats/oembed"
+  },
+  {
+    "s": [
+      "sbedit\\.net/*"
+    ],
+    "e": "sbedit.net/oembed/"
+  },
+  {
+    "s": [
+      "getscenes\\.com/e/*",
+      "getscenes\\.com/event/*"
+    ],
+    "e": "getscenes.com/oembed"
+  },
+  {
+    "s": [
       "console\\.screen9\\.com/*",
       "*\\.screen9\\.tv/*"
     ],
@@ -1588,6 +1745,12 @@ export const providers = [
       "embed\\.sendtonews\\.com/oembed/*"
     ],
     "e": "embed.sendtonews.com/services/oembed"
+  },
+  {
+    "s": [
+      "shared-file-kappa\\.vercel\\.app/file/*"
+    ],
+    "e": "shared-file-kappa.vercel.app/file/api/oembed"
   },
   {
     "s": [
@@ -1640,6 +1803,15 @@ export const providers = [
       "sketchfab\\.com/*/folders/*"
     ],
     "e": "sketchfab.com/oembed"
+  },
+  {
+    "s": [
+      "www\\.skoletube\\.dk/media/*",
+      "www\\.skoletube\\.dk/video/*",
+      "www\\.studietube\\.dk/media/*",
+      "www\\.studietube\\.dk/video/*"
+    ],
+    "e": "www.skoletube.dk/media/lasync/oembed/"
   },
   {
     "s": [
@@ -1702,7 +1874,8 @@ export const providers = [
   {
     "s": [
       "open\\.spotify\\.com/*",
-      "spotify:*"
+      "spotify:*",
+      "spotify\\.link/*"
     ],
     "e": "open.spotify.com/oembed"
   },
@@ -1775,6 +1948,12 @@ export const providers = [
   },
   {
     "s": [
+      "supercut\\.video/share/*"
+    ],
+    "e": "supercut.video/oembed"
+  },
+  {
+    "s": [
       "www\\.sutori\\.com/story/*"
     ],
     "e": "www.sutori.com/api/oembed"
@@ -1800,10 +1979,22 @@ export const providers = [
   },
   {
     "s": [
+      "techpostcast\\.com/headline-topic-programs/*"
+    ],
+    "e": "techpostcast.com/oembed/"
+  },
+  {
+    "s": [
       "ted\\.com/talks/*",
       "www\\.ted\\.com/talks/*"
     ],
     "e": "www.ted.com/services/v1/oembed.json"
+  },
+  {
+    "s": [
+      "hubspot-media-bridge\\.thedamconsultants\\.com/*"
+    ],
+    "e": "hubspot-media-bridge.thedamconsultants.com/oembed/"
   },
   {
     "s": [
@@ -1836,6 +2027,13 @@ export const providers = [
       "www\\.tiktok\\.com/*/video/*"
     ],
     "e": "www.tiktok.com/oembed"
+  },
+  {
+    "s": [
+      "tksn\\.me/*",
+      "*\\.tksn\\.me/*"
+    ],
+    "e": "tksn.me/api/oembed/"
   },
   {
     "s": [
@@ -2028,6 +2226,12 @@ export const providers = [
   },
   {
     "s": [
+      "vizdom\\.dev/link/*"
+    ],
+    "e": "vizdom.dev/api/v1/oembed"
+  },
+  {
+    "s": [
       "vizydrop\\.com/shared/*"
     ],
     "e": "vizydrop.com/oembed"
@@ -2076,6 +2280,14 @@ export const providers = [
       "www\\.web3isgoinggreat\\.com/embed/*"
     ],
     "e": "www.web3isgoinggreat.com/api/oembed"
+  },
+  {
+    "s": [
+      "share\\.webcrumbs\\.org/*",
+      "tools\\.webcrumbs\\.org/*",
+      "www\\.webcrumbs\\.org/*"
+    ],
+    "e": "share.webcrumbs.org/"
   },
   {
     "s": [
@@ -2140,7 +2352,11 @@ export const providers = [
       "youtu\\.be/*",
       "*\\.youtube\\.com/playlist?list=*",
       "youtube\\.com/playlist?list=*",
-      "*\\.youtube\\.com/shorts*"
+      "*\\.youtube\\.com/shorts*",
+      "youtube\\.com/shorts*",
+      "*\\.youtube\\.com/embed/*",
+      "*\\.youtube\\.com/live*",
+      "youtube\\.com/live*"
     ],
     "e": "www.youtube.com/oembed"
   },
