@@ -72,7 +72,7 @@ const hasPhotoKeys = (o) => {
   })
 }
 
-const hasInstagramKeys = (o) => {
+export const hasInstagramKeys = (o) => {
   return InstagramKeys.every((k) => {
     return hasProperty(o, k)
   })
@@ -135,34 +135,6 @@ describe('test if extract() with some popular providers', () => {
       expected: {
         provider_name: 'Twitter',
         type: 'rich',
-      },
-      checkFn: hasRichKeys,
-    },
-    {
-      input: {
-        url: 'https://www.instagram.com/p/ic7kRDqOlt/',
-        params: {
-          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62',
-        },
-        file: './test-data/instagram_ic7kRDqOlt.json',
-      },
-      expected: {
-        provider_name: 'Instagram',
-        type: 'rich',
-      },
-      checkFn: hasInstagramKeys,
-    },
-    {
-      input: {
-        url: 'https://www.facebook.com/facebook/videos/10153231379946729/',
-        params: {
-          access_token: '845078789498971|8ff3ab4ddd45b8f018b35c4fb7edac62',
-        },
-        file: './test-data/facebook.json',
-      },
-      expected: {
-        provider_name: 'Facebook',
-        type: 'video',
       },
       checkFn: hasRichKeys,
     },
