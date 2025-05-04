@@ -1,2397 +1,2397 @@
-// provider data, synchronized at 2025-04-13T01:57:28.452Z
+// provider data, synchronized at 2025-04-13T02:12:06.847Z
 
 /* eslint-disable */ 
 
 export const providers = [
   {
     "s": [
-      "www\\.23hq\\.com/*/photo/*"
+      "//www\\.23hq\\.com/*/photo/*"
     ],
-    "e": "www.23hq.com/23/oembed"
+    "e": "//www.23hq.com/23/oembed"
   },
   {
     "s": [
-      "playout\\.3qsdn\\.com/embed/*"
+      "//playout\\.3qsdn\\.com/embed/*"
     ],
-    "e": "playout.3qsdn.com/oembed"
+    "e": "//playout.3qsdn.com/oembed"
   },
   {
     "s": [
-      "store\\.abraia\\.me/*"
+      "//store\\.abraia\\.me/*"
     ],
-    "e": "api.abraia.me/oembed"
+    "e": "//api.abraia.me/oembed"
   },
   {
     "s": [
-      "play\\.acast\\.com/s/*"
+      "//play\\.acast\\.com/s/*"
     ],
-    "e": "oembed.acast.com/v1/embed-player"
+    "e": "//oembed.acast.com/v1/embed-player"
   },
   {
     "s": [
-      "secure\\.actblue\\.com/donate/*"
+      "//secure\\.actblue\\.com/donate/*"
     ],
-    "e": "secure.actblue.com/cf/oembed"
+    "e": "//secure.actblue.com/cf/oembed"
   },
   {
     "s": [
-      "adilo\\.bigcommand\\.com/watch/*"
+      "//adilo\\.bigcommand\\.com/watch/*"
     ],
-    "e": "adilo.bigcommand.com/web/oembed"
+    "e": "//adilo.bigcommand.com/web/oembed"
   },
   {
     "s": [
-      "vod\\.afreecatv\\.com/player/",
-      "v\\.afree\\.ca/ST/",
-      "vod\\.afreecatv\\.com/ST/",
-      "vod\\.afreecatv\\.com/PLAYER/STATION/",
-      "play\\.afreecatv\\.com/"
+      "//vod\\.afreecatv\\.com/player/",
+      "//v\\.afree\\.ca/ST/",
+      "//vod\\.afreecatv\\.com/ST/",
+      "//vod\\.afreecatv\\.com/PLAYER/STATION/",
+      "//play\\.afreecatv\\.com/"
     ],
-    "e": "openapi.afreecatv.com/oembed/embedinfo"
+    "e": "//openapi.afreecatv.com/oembed/embedinfo"
   },
   {
     "s": [
-      "vod\\.sooplive\\.co\\.kr/player/",
-      "v\\.afree\\.ca/ST/",
-      "vod\\.sooplive\\.co\\.kr/ST/",
-      "vod\\.sooplive\\.co\\.kr/PLAYER/STATION/",
-      "play\\.sooplive\\.co\\.kr/"
+      "//vod\\.sooplive\\.co\\.kr/player/",
+      "//v\\.afree\\.ca/ST/",
+      "//vod\\.sooplive\\.co\\.kr/ST/",
+      "//vod\\.sooplive\\.co\\.kr/PLAYER/STATION/",
+      "//play\\.sooplive\\.co\\.kr/"
     ],
-    "e": "openapi.sooplive.co.kr/oembed/embedinfo"
+    "e": "//openapi.sooplive.co.kr/oembed/embedinfo"
   },
   {
     "s": [
-      "altium\\.com/viewer/*"
+      "//altium\\.com/viewer/*"
     ],
-    "e": "viewer.altium.com/shell/oembed"
+    "e": "//viewer.altium.com/shell/oembed"
   },
   {
     "s": [
-      "app\\.altrulabs\\.com/*/*?answer_id=*",
-      "app\\.altrulabs\\.com/player/*"
+      "//app\\.altrulabs\\.com/*/*?answer_id=*",
+      "//app\\.altrulabs\\.com/player/*"
     ],
-    "e": "api.altrulabs.com/api/v1/social/oembed"
+    "e": "//api.altrulabs.com/api/v1/social/oembed"
   },
   {
     "s": [
-      "live\\.amcharts\\.com/*"
+      "//live\\.amcharts\\.com/*"
     ],
-    "e": "live.amcharts.com/oembed"
+    "e": "//live.amcharts.com/oembed"
   },
   {
     "s": [
-      "amtraker\\.com/trains/*",
-      "amtraker\\.com/trains/*/*",
-      "*\\.amtraker\\.com/trains/*",
-      "*\\.amtraker\\.com/trains/*/*"
+      "//amtraker\\.com/trains/*",
+      "//amtraker\\.com/trains/*/*",
+      "//*\\.amtraker\\.com/trains/*",
+      "//*\\.amtraker\\.com/trains/*/*"
     ],
-    "e": "api.amtraker.com/v3/oembed"
+    "e": "//api.amtraker.com/v3/oembed"
   },
   {
     "s": [
-      "www\\.animatron\\.com/project/*",
-      "animatron\\.com/project/*"
+      "//www\\.animatron\\.com/project/*",
+      "//animatron\\.com/project/*"
     ],
-    "e": "animatron.com/oembed/json"
+    "e": "//animatron.com/oembed/json"
   },
   {
     "s": [
-      "animoto\\.com/play/*"
+      "//animoto\\.com/play/*"
     ],
-    "e": "animoto.com/oembeds/create"
+    "e": "//animoto.com/oembeds/create"
   },
   {
     "s": [
-      "anniemusic\\.app/t/*",
-      "anniemusic\\.app/p/*"
+      "//anniemusic\\.app/t/*",
+      "//anniemusic\\.app/p/*"
     ],
-    "e": "api.anniemusic.app/api/v1/oembed"
+    "e": "//api.anniemusic.app/api/v1/oembed"
   },
   {
     "s": [
-      "storymaps\\.arcgis\\.com/stories/*"
+      "//storymaps\\.arcgis\\.com/stories/*"
     ],
-    "e": "storymaps.arcgis.com/oembed"
+    "e": "//storymaps.arcgis.com/oembed"
   },
   {
     "s": [
-      "app\\.archivos\\.digital/app/view/*"
+      "//app\\.archivos\\.digital/app/view/*"
     ],
-    "e": "app.archivos.digital/oembed/"
+    "e": "//app.archivos.digital/oembed/"
   },
   {
     "s": [
-      "*\\.studio\\.assemblrworld\\.com/creation/*",
-      "studio\\.assemblrworld\\.com/creation/*",
-      "*\\.app-edu\\.assemblrworld\\.com/Creation/*",
-      "app-edu\\.assemblrworld\\.com/Creation/*",
-      "assemblr\\.world/*",
-      "editor\\.assemblrworld\\.com/*",
-      "*\\.assemblrworld\\.com/creation/*",
-      "*\\.assemblrworld\\.com/Creation/*"
+      "//*\\.studio\\.assemblrworld\\.com/creation/*",
+      "//studio\\.assemblrworld\\.com/creation/*",
+      "//*\\.app-edu\\.assemblrworld\\.com/Creation/*",
+      "//app-edu\\.assemblrworld\\.com/Creation/*",
+      "//assemblr\\.world/*",
+      "//editor\\.assemblrworld\\.com/*",
+      "//*\\.assemblrworld\\.com/creation/*",
+      "//*\\.assemblrworld\\.com/Creation/*"
     ],
-    "e": "studio.assemblrworld.com/api/oembed"
+    "e": "//studio.assemblrworld.com/api/oembed"
   },
   {
     "s": [
-      "audio\\.com/*",
-      "www\\.audio\\.com/*"
+      "//audio\\.com/*",
+      "//www\\.audio\\.com/*"
     ],
-    "e": "api.audio.com/oembed"
+    "e": "//api.audio.com/oembed"
   },
   {
     "s": [
-      "audioboom\\.com/channels/*",
-      "audioboom\\.com/channel/*",
-      "audioboom\\.com/playlists/*",
-      "audioboom\\.com/podcasts/*",
-      "audioboom\\.com/podcast/*",
-      "audioboom\\.com/posts/*",
-      "audioboom\\.com/episodes/*"
+      "//audioboom\\.com/channels/*",
+      "//audioboom\\.com/channel/*",
+      "//audioboom\\.com/playlists/*",
+      "//audioboom\\.com/podcasts/*",
+      "//audioboom\\.com/podcast/*",
+      "//audioboom\\.com/posts/*",
+      "//audioboom\\.com/episodes/*"
     ],
-    "e": "audioboom.com/publishing/oembed.json"
+    "e": "//audioboom.com/publishing/oembed.json"
   },
   {
     "s": [
-      "audioclip\\.naver\\.com/channels/*/clips/*",
-      "audioclip\\.naver\\.com/audiobooks/*"
+      "//audioclip\\.naver\\.com/channels/*/clips/*",
+      "//audioclip\\.naver\\.com/audiobooks/*"
     ],
-    "e": "audioclip.naver.com/oembed"
+    "e": "//audioclip.naver.com/oembed"
   },
   {
     "s": [
-      "audiomack\\.com/*/song/*",
-      "audiomack\\.com/*/album/*",
-      "audiomack\\.com/*/playlist/*"
+      "//audiomack\\.com/*/song/*",
+      "//audiomack\\.com/*/album/*",
+      "//audiomack\\.com/*/playlist/*"
     ],
-    "e": "audiomack.com/oembed"
+    "e": "//audiomack.com/oembed"
   },
   {
     "s": [
-      "podcasts\\.audiomeans\\.fr/*"
+      "//podcasts\\.audiomeans\\.fr/*"
     ],
-    "e": "podcasts.audiomeans.fr/services/oembed"
+    "e": "//podcasts.audiomeans.fr/services/oembed"
   },
   {
     "s": [
-      "backtracks\\.fm/*/*/e/*",
-      "backtracks\\.fm/*/s/*/*",
-      "backtracks\\.fm/*/*/*/*/e/*/*",
-      "backtracks\\.fm/*"
+      "//backtracks\\.fm/*/*/e/*",
+      "//backtracks\\.fm/*/s/*/*",
+      "//backtracks\\.fm/*/*/*/*/e/*/*",
+      "//backtracks\\.fm/*"
     ],
-    "e": "backtracks.fm/oembed"
+    "e": "//backtracks.fm/oembed"
   },
   {
     "s": [
-      "balsamiq\\.cloud/*"
+      "//balsamiq\\.cloud/*"
     ],
-    "e": "balsamiq.cloud/oembed"
+    "e": "//balsamiq.cloud/oembed"
   },
   {
     "s": [
-      "beams\\.fm/*"
+      "//beams\\.fm/*"
     ],
-    "e": "api.beams.fm/oEmbed"
-  },
-  {
-    "s": [],
-    "e": "www.beautiful.ai/api/oembed"
-  },
-  {
-    "s": [
-      "www\\.behance\\.net/gallery/*/*",
-      "www\\.behance\\.net/*/services/*/*"
-    ],
-    "e": "www.behance.net/services/oembed"
-  },
-  {
-    "s": [
-      "cloud\\.biqapp\\.com/*"
-    ],
-    "e": "biqapp.com/api/v1/video/oembed"
+    "e": "//api.beams.fm/oEmbed"
   },
   {
     "s": [],
-    "e": "api.bitchute.com/oembed/"
+    "e": "//www.beautiful.ai/api/oembed"
   },
   {
     "s": [
-      "blackfire\\.io/profiles/*/graph",
-      "blackfire\\.io/profiles/compare/*/graph"
+      "//www\\.behance\\.net/gallery/*/*",
+      "//www\\.behance\\.net/*/services/*/*"
     ],
-    "e": "blackfire.io/oembed"
+    "e": "//www.behance.net/services/oembed"
   },
   {
     "s": [
-      "blogcast\\.host/embed/*",
-      "blogcast\\.host/embedly/*"
+      "//cloud\\.biqapp\\.com/*"
     ],
-    "e": "blogcast.host/oembed"
-  },
-  {
-    "s": [
-      "bsky\\.app/profile/*/post/*"
-    ],
-    "e": "embed.bsky.app/oembed"
-  },
-  {
-    "s": [
-      "www\\.bookingmood\\.com/embed/*/*"
-    ],
-    "e": "bookingmood.com/api/oembed"
-  },
-  {
-    "s": [
-      "www\\.bornetube\\.dk/media/*",
-      "www\\.bornetube\\.dk/video/*"
-    ],
-    "e": "www.bornetube.dk/media/lasync/oembed/"
+    "e": "//biqapp.com/api/v1/video/oembed"
   },
   {
     "s": [],
-    "e": "boxofficebuz.com/oembed"
+    "e": "//api.bitchute.com/oembed/"
   },
   {
     "s": [
-      "view\\.briovr\\.com/api/v1/worlds/oembed/*"
+      "//blackfire\\.io/profiles/*/graph",
+      "//blackfire\\.io/profiles/compare/*/graph"
     ],
-    "e": "view.briovr.com/api/v1/worlds/oembed/"
+    "e": "//blackfire.io/oembed"
   },
   {
     "s": [
-      "www\\.bumper\\.com/oembed/bumper",
-      "www\\.bumper\\.com/oembed-s/bumper"
+      "//blogcast\\.host/embed/*",
+      "//blogcast\\.host/embedly/*"
     ],
-    "e": "www.bumper.com/oembed/bumper"
+    "e": "//blogcast.host/oembed"
   },
   {
     "s": [
-      "iframe\\.mediadelivery\\.net/*",
-      "video\\.bunnycdn\\.com/*"
+      "//bsky\\.app/profile/*/post/*"
     ],
-    "e": "video.bunnycdn.com/OEmbed"
+    "e": "//embed.bsky.app/oembed"
   },
   {
     "s": [
-      "buttondown\\.email/*"
+      "//www\\.bookingmood\\.com/embed/*/*"
     ],
-    "e": "buttondown.email/embed"
+    "e": "//bookingmood.com/api/oembed"
   },
   {
     "s": [
-      "cmc\\.byzart\\.eu/files/*"
+      "//www\\.bornetube\\.dk/media/*",
+      "//www\\.bornetube\\.dk/video/*"
     ],
-    "e": "cmc.byzart.eu/oembed/"
-  },
-  {
-    "s": [
-      "cacoo\\.com/diagrams/*"
-    ],
-    "e": "cacoo.com/oembed.json"
-  },
-  {
-    "s": [
-      "www\\.canva\\.com/design/*/view"
-    ],
-    "e": "www.canva.com/_oembed"
-  },
-  {
-    "s": [
-      "minesweeper\\.today/*"
-    ],
-    "e": "minesweeper.today/api/oembed"
-  },
-  {
-    "s": [
-      "www\\.castmake-ai\\.com/c/*/episodes/*"
-    ],
-    "e": "castmake-ai.com/api/embed"
-  },
-  {
-    "s": [
-      "img\\.catbo\\.at/*"
-    ],
-    "e": "img.catbo.at/oembed.json"
-  },
-  {
-    "s": [
-      "embeds\\.celero\\.io/*"
-    ],
-    "e": "api.celero.io/api/oembed"
-  },
-  {
-    "s": [
-      "view\\.ceros\\.com/*"
-    ],
-    "e": "view.ceros.com/oembed"
-  },
-  {
-    "s": [
-      "chainflix\\.net/video/*",
-      "chainflix\\.net/video/embed/*",
-      "*\\.chainflix\\.net/video/*",
-      "*\\.chainflix\\.net/video/embed/*"
-    ],
-    "e": "www.chainflix.net/video/oembed"
-  },
-  {
-    "s": [
-      "public\\.chartblocks\\.com/c/*"
-    ],
-    "e": "embed.chartblocks.com/1.0/oembed"
-  },
-  {
-    "s": [
-      "chirb\\.it/*"
-    ],
-    "e": "chirb.it/oembed.json"
-  },
-  {
-    "s": [
-      "chroco\\.ooo/mypage/*",
-      "chroco\\.ooo/story/*"
-    ],
-    "e": "chroco.ooo/embed"
-  },
-  {
-    "s": [
-      "www\\.circuitlab\\.com/circuit/*"
-    ],
-    "e": "www.circuitlab.com/circuit/oembed/"
-  },
-  {
-    "s": [
-      "www\\.clipland\\.com/v/*"
-    ],
-    "e": "www.clipland.com/api/oembed"
-  },
-  {
-    "s": [
-      "clyp\\.it/*",
-      "clyp\\.it/playlist/*"
-    ],
-    "e": "api.clyp.it/oembed/"
-  },
-  {
-    "s": [
-      "app\\.ilovecoco\\.video/*/embed"
-    ],
-    "e": "app.ilovecoco.video/api/oembed.json"
-  },
-  {
-    "s": [
-      "codehs\\.com/editor/share_abacus/*"
-    ],
-    "e": "codehs.com/api/sharedprogram/1/oembed/"
-  },
-  {
-    "s": [
-      "codepen\\.io/*"
-    ],
-    "e": "codepen.io/api/oembed"
-  },
-  {
-    "s": [
-      "codepoints\\.net/*",
-      "www\\.codepoints\\.net/*"
-    ],
-    "e": "codepoints.net/api/v1/oembed"
-  },
-  {
-    "s": [
-      "codesandbox\\.io/s/*",
-      "codesandbox\\.io/embed/*"
-    ],
-    "e": "codesandbox.io/oembed"
-  },
-  {
-    "s": [
-      "www\\.collegehumor\\.com/video/*"
-    ],
-    "e": "www.collegehumor.com/oembed.json"
-  },
-  {
-    "s": [
-      "commaful\\.com/play/*"
-    ],
-    "e": "commaful.com/api/oembed/"
-  },
-  {
-    "s": [
-      "coub\\.com/view/*",
-      "coub\\.com/embed/*"
-    ],
-    "e": "coub.com/api/oembed.json"
-  },
-  {
-    "s": [
-      "crowdranking\\.com/*/*"
-    ],
-    "e": "crowdranking.com/api/oembed.json"
-  },
-  {
-    "s": [
-      "crumb\\.sh/*"
-    ],
-    "e": "crumb.sh/oembed/"
-  },
-  {
-    "s": [
-      "cueup\\.io/user/*/sounds/*"
-    ],
-    "e": "gql.cueup.io/oembed"
-  },
-  {
-    "s": [
-      "*\\.curated\\.co/*"
-    ],
-    "e": "api.curated.co/oembed"
-  },
-  {
-    "s": [
-      "app\\.customerdb\\.com/share/*"
-    ],
-    "e": "app.customerdb.com/embed"
-  },
-  {
-    "s": [
-      "app\\.dadan\\.io/*",
-      "stage\\.dadan\\.io/*"
-    ],
-    "e": "app.dadan.io/api/video/oembed"
-  },
-  {
-    "s": [
-      "www\\.dailymotion\\.com/video/*",
-      "geo\\.dailymotion\\.com/player\\.html?video=*"
-    ],
-    "e": "www.dailymotion.com/services/oembed"
-  },
-  {
-    "s": [
-      "dalexni\\.com/i/*"
-    ],
-    "e": "dalexni.com/oembed/"
-  },
-  {
-    "s": [
-      "datawrapper\\.dwcdn\\.net/*"
-    ],
-    "e": "api.datawrapper.de/v3/oembed/"
-  },
-  {
-    "s": [
-      "*\\.deseret\\.com/*"
-    ],
-    "e": "embed.deseret.com/"
-  },
-  {
-    "s": [
-      "*\\.deviantart\\.com/art/*",
-      "*\\.deviantart\\.com/*#/d*",
-      "fav\\.me/*",
-      "sta\\.sh/*",
-      "*\\.deviantart\\.com/*/art/*"
-    ],
-    "e": "backend.deviantart.com/oembed"
-  },
-  {
-    "s": [
-      "www\\.ultimedia\\.com/central/video/edit/id/*/topic_id/*/",
-      "www\\.ultimedia\\.com/default/index/videogeneric/id/*/showtitle/1/viewnc/1",
-      "www\\.ultimedia\\.com/default/index/videogeneric/id/*"
-    ],
-    "e": "www.ultimedia.com/api/search/oembed"
-  },
-  {
-    "s": [
-      "*\\.docdroid\\.net/*",
-      "docdro\\.id/*",
-      "*\\.docdroid\\.com/*"
-    ],
-    "e": "www.docdroid.net/api/oembed"
-  },
-  {
-    "s": [
-      "docswell\\.com/s/*/*",
-      "www\\.docswell\\.com/s/*/*"
-    ],
-    "e": "www.docswell.com/service/oembed"
-  },
-  {
-    "s": [
-      "dotsub\\.com/view/*"
-    ],
-    "e": "dotsub.com/services/oembed"
-  },
-  {
-    "s": [
-      "www\\.dreambroker\\.com/channel/*/*"
-    ],
-    "e": "dreambroker.com/channel/oembed"
-  },
-  {
-    "s": [
-      "d\\.tube/v/*"
-    ],
-    "e": "api.d.tube/oembed"
-  },
-  {
-    "s": [
-      "app\\.echoeshq\\.com/embed/*"
-    ],
-    "e": "api.echoeshq.com/oembed"
+    "e": "//www.bornetube.dk/media/lasync/oembed/"
   },
   {
     "s": [],
-    "e": "www.edumedia-sciences.com/oembed.json"
+    "e": "//boxofficebuz.com/oembed"
+  },
+  {
+    "s": [
+      "//view\\.briovr\\.com/api/v1/worlds/oembed/*"
+    ],
+    "e": "//view.briovr.com/api/v1/worlds/oembed/"
+  },
+  {
+    "s": [
+      "//www\\.bumper\\.com/oembed/bumper",
+      "//www\\.bumper\\.com/oembed-s/bumper"
+    ],
+    "e": "//www.bumper.com/oembed/bumper"
+  },
+  {
+    "s": [
+      "//iframe\\.mediadelivery\\.net/*",
+      "//video\\.bunnycdn\\.com/*"
+    ],
+    "e": "//video.bunnycdn.com/OEmbed"
+  },
+  {
+    "s": [
+      "//buttondown\\.email/*"
+    ],
+    "e": "//buttondown.email/embed"
+  },
+  {
+    "s": [
+      "//cmc\\.byzart\\.eu/files/*"
+    ],
+    "e": "//cmc.byzart.eu/oembed/"
+  },
+  {
+    "s": [
+      "//cacoo\\.com/diagrams/*"
+    ],
+    "e": "//cacoo.com/oembed.json"
+  },
+  {
+    "s": [
+      "//www\\.canva\\.com/design/*/view"
+    ],
+    "e": "//www.canva.com/_oembed"
+  },
+  {
+    "s": [
+      "//minesweeper\\.today/*"
+    ],
+    "e": "//minesweeper.today/api/oembed"
+  },
+  {
+    "s": [
+      "//www\\.castmake-ai\\.com/c/*/episodes/*"
+    ],
+    "e": "//castmake-ai.com/api/embed"
+  },
+  {
+    "s": [
+      "//img\\.catbo\\.at/*"
+    ],
+    "e": "//img.catbo.at/oembed.json"
+  },
+  {
+    "s": [
+      "//embeds\\.celero\\.io/*"
+    ],
+    "e": "//api.celero.io/api/oembed"
+  },
+  {
+    "s": [
+      "//view\\.ceros\\.com/*"
+    ],
+    "e": "//view.ceros.com/oembed"
+  },
+  {
+    "s": [
+      "//chainflix\\.net/video/*",
+      "//chainflix\\.net/video/embed/*",
+      "//*\\.chainflix\\.net/video/*",
+      "//*\\.chainflix\\.net/video/embed/*"
+    ],
+    "e": "//www.chainflix.net/video/oembed"
+  },
+  {
+    "s": [
+      "//public\\.chartblocks\\.com/c/*"
+    ],
+    "e": "//embed.chartblocks.com/1.0/oembed"
+  },
+  {
+    "s": [
+      "//chirb\\.it/*"
+    ],
+    "e": "//chirb.it/oembed.json"
+  },
+  {
+    "s": [
+      "//chroco\\.ooo/mypage/*",
+      "//chroco\\.ooo/story/*"
+    ],
+    "e": "//chroco.ooo/embed"
+  },
+  {
+    "s": [
+      "//www\\.circuitlab\\.com/circuit/*"
+    ],
+    "e": "//www.circuitlab.com/circuit/oembed/"
+  },
+  {
+    "s": [
+      "//www\\.clipland\\.com/v/*"
+    ],
+    "e": "//www.clipland.com/api/oembed"
+  },
+  {
+    "s": [
+      "//clyp\\.it/*",
+      "//clyp\\.it/playlist/*"
+    ],
+    "e": "//api.clyp.it/oembed/"
+  },
+  {
+    "s": [
+      "//app\\.ilovecoco\\.video/*/embed"
+    ],
+    "e": "//app.ilovecoco.video/api/oembed.json"
+  },
+  {
+    "s": [
+      "//codehs\\.com/editor/share_abacus/*"
+    ],
+    "e": "//codehs.com/api/sharedprogram/1/oembed/"
+  },
+  {
+    "s": [
+      "//codepen\\.io/*"
+    ],
+    "e": "//codepen.io/api/oembed"
+  },
+  {
+    "s": [
+      "//codepoints\\.net/*",
+      "//www\\.codepoints\\.net/*"
+    ],
+    "e": "//codepoints.net/api/v1/oembed"
+  },
+  {
+    "s": [
+      "//codesandbox\\.io/s/*",
+      "//codesandbox\\.io/embed/*"
+    ],
+    "e": "//codesandbox.io/oembed"
+  },
+  {
+    "s": [
+      "//www\\.collegehumor\\.com/video/*"
+    ],
+    "e": "//www.collegehumor.com/oembed.json"
+  },
+  {
+    "s": [
+      "//commaful\\.com/play/*"
+    ],
+    "e": "//commaful.com/api/oembed/"
+  },
+  {
+    "s": [
+      "//coub\\.com/view/*",
+      "//coub\\.com/embed/*"
+    ],
+    "e": "//coub.com/api/oembed.json"
+  },
+  {
+    "s": [
+      "//crowdranking\\.com/*/*"
+    ],
+    "e": "//crowdranking.com/api/oembed.json"
+  },
+  {
+    "s": [
+      "//crumb\\.sh/*"
+    ],
+    "e": "//crumb.sh/oembed/"
+  },
+  {
+    "s": [
+      "//cueup\\.io/user/*/sounds/*"
+    ],
+    "e": "//gql.cueup.io/oembed"
+  },
+  {
+    "s": [
+      "//*\\.curated\\.co/*"
+    ],
+    "e": "//api.curated.co/oembed"
+  },
+  {
+    "s": [
+      "//app\\.customerdb\\.com/share/*"
+    ],
+    "e": "//app.customerdb.com/embed"
+  },
+  {
+    "s": [
+      "//app\\.dadan\\.io/*",
+      "//stage\\.dadan\\.io/*"
+    ],
+    "e": "//app.dadan.io/api/video/oembed"
+  },
+  {
+    "s": [
+      "//www\\.dailymotion\\.com/video/*",
+      "//geo\\.dailymotion\\.com/player\\.html?video=*"
+    ],
+    "e": "//www.dailymotion.com/services/oembed"
+  },
+  {
+    "s": [
+      "//dalexni\\.com/i/*"
+    ],
+    "e": "//dalexni.com/oembed/"
+  },
+  {
+    "s": [
+      "//datawrapper\\.dwcdn\\.net/*"
+    ],
+    "e": "//api.datawrapper.de/v3/oembed/"
+  },
+  {
+    "s": [
+      "//*\\.deseret\\.com/*"
+    ],
+    "e": "//embed.deseret.com/"
+  },
+  {
+    "s": [
+      "//*\\.deviantart\\.com/art/*",
+      "//*\\.deviantart\\.com/*#/d*",
+      "//fav\\.me/*",
+      "//sta\\.sh/*",
+      "//*\\.deviantart\\.com/*/art/*"
+    ],
+    "e": "//backend.deviantart.com/oembed"
+  },
+  {
+    "s": [
+      "//www\\.ultimedia\\.com/central/video/edit/id/*/topic_id/*/",
+      "//www\\.ultimedia\\.com/default/index/videogeneric/id/*/showtitle/1/viewnc/1",
+      "//www\\.ultimedia\\.com/default/index/videogeneric/id/*"
+    ],
+    "e": "//www.ultimedia.com/api/search/oembed"
+  },
+  {
+    "s": [
+      "//*\\.docdroid\\.net/*",
+      "//docdro\\.id/*",
+      "//*\\.docdroid\\.com/*"
+    ],
+    "e": "//www.docdroid.net/api/oembed"
+  },
+  {
+    "s": [
+      "//docswell\\.com/s/*/*",
+      "//www\\.docswell\\.com/s/*/*"
+    ],
+    "e": "//www.docswell.com/service/oembed"
+  },
+  {
+    "s": [
+      "//dotsub\\.com/view/*"
+    ],
+    "e": "//dotsub.com/services/oembed"
+  },
+  {
+    "s": [
+      "//www\\.dreambroker\\.com/channel/*/*"
+    ],
+    "e": "//dreambroker.com/channel/oembed"
+  },
+  {
+    "s": [
+      "//d\\.tube/v/*"
+    ],
+    "e": "//api.d.tube/oembed"
+  },
+  {
+    "s": [
+      "//app\\.echoeshq\\.com/embed/*"
+    ],
+    "e": "//api.echoeshq.com/oembed"
   },
   {
     "s": [],
-    "e": "www.edumedia-sciences.com/oembed.xml"
-  },
-  {
-    "s": [
-      "egliseinfo\\.catholique\\.fr/*"
-    ],
-    "e": "egliseinfo.catholique.fr/api/oembed"
-  },
-  {
-    "s": [
-      "embedery\\.com/widget/*"
-    ],
-    "e": "embedery.com/api/oembed"
-  },
-  {
-    "s": [
-      "ethfiddle\\.com/*"
-    ],
-    "e": "ethfiddle.com/services/oembed/"
-  },
-  {
-    "s": [
-      "evt\\.live/*",
-      "evt\\.live/*/*",
-      "live\\.eventlive\\.pro/*",
-      "live\\.eventlive\\.pro/*/*"
-    ],
-    "e": "evt.live/api/oembed"
-  },
-  {
-    "s": [
-      "app\\.everviz\\.com/embed/*"
-    ],
-    "e": "api.everviz.com/oembed"
-  },
-  {
-    "s": [
-      "app\\.ex\\.co/stories/*",
-      "www\\.playbuzz\\.com/*"
-    ],
-    "e": "oembed.ex.co/item"
-  },
-  {
-    "s": [
-      "eyrie\\.io/board/*",
-      "eyrie\\.io/sparkfun/*"
-    ],
-    "e": "eyrie.io/v1/oembed"
-  },
-  {
-    "s": [
-      "www\\.facebook\\.com/*/posts/*",
-      "www\\.facebook\\.com/*/activity/*",
-      "www\\.facebook\\.com/*/photos/*",
-      "www\\.facebook\\.com/photo\\.php?fbid=*",
-      "www\\.facebook\\.com/photos/*",
-      "www\\.facebook\\.com/permalink\\.php?story_fbid=*",
-      "www\\.facebook\\.com/media/set?set=*",
-      "www\\.facebook\\.com/questions/*",
-      "www\\.facebook\\.com/notes/*/*/*"
-    ],
-    "e": "graph.facebook.com/v16.0/oembed_post"
-  },
-  {
-    "s": [
-      "www\\.facebook\\.com/*/videos/*",
-      "www\\.facebook\\.com/video\\.php?id=*",
-      "www\\.facebook\\.com/video\\.php?v=*"
-    ],
-    "e": "graph.facebook.com/v16.0/oembed_video"
-  },
-  {
-    "s": [
-      "www\\.facebook\\.com/*"
-    ],
-    "e": "graph.facebook.com/v16.0/oembed_page"
-  },
-  {
-    "s": [
-      "app\\.getfader\\.com/projects/*/publish"
-    ],
-    "e": "app.getfader.com/api/oembed"
-  },
-  {
-    "s": [
-      "faithlifetv\\.com/items/*",
-      "faithlifetv\\.com/items/resource/*/*",
-      "faithlifetv\\.com/media/*",
-      "faithlifetv\\.com/media/assets/*",
-      "faithlifetv\\.com/media/resource/*/*"
-    ],
-    "e": "faithlifetv.com/api/oembed"
-  },
-  {
-    "s": [
-      "www\\.figma\\.com/file/*"
-    ],
-    "e": "www.figma.com/api/oembed"
-  },
-  {
-    "s": [
-      "*\\.fireworktv\\.com/*",
-      "*\\.fireworktv\\.com/embed/*/v/*"
-    ],
-    "e": "www.fireworktv.com/oembed"
-  },
-  {
-    "s": [
-      "www\\.fite\\.tv/watch/*"
-    ],
-    "e": "www.fite.tv/oembed"
-  },
-  {
-    "s": [
-      "flat\\.io/score/*",
-      "*\\.flat\\.io/score/*"
-    ],
-    "e": "flat.io/services/oembed"
-  },
-  {
-    "s": [
-      "*\\.flickr\\.com/photos/*",
-      "flic\\.kr/p/*",
-      "flic\\.kr/s/*",
-      "*\\.*\\.flickr\\.com/*/*"
-    ],
-    "e": "www.flickr.com/services/oembed/"
-  },
-  {
-    "s": [
-      "public\\.flourish\\.studio/visualisation/*",
-      "public\\.flourish\\.studio/story/*"
-    ],
-    "e": "app.flourish.studio/api/v1/oembed"
-  },
-  {
-    "s": [
-      "flowhub\\.org/f/*",
-      "flowhub\\.org/s/*"
-    ],
-    "e": "flowhub.org/o/embed"
-  },
-  {
-    "s": [
-      "fooday\\.app/*/reviews/*",
-      "fooday\\.app/*/spots/*"
-    ],
-    "e": "fooday.app/oembed"
-  },
-  {
-    "s": [
-      "fiso\\.foxsports\\.com\\.au/isomorphic-widget/*"
-    ],
-    "e": "fiso.foxsports.com.au/oembed"
-  },
-  {
-    "s": [
-      "framatube\\.org/w/*"
-    ],
-    "e": "framatube.org/services/oembed"
-  },
-  {
-    "s": [
-      "framebuzz\\.com/v/*"
-    ],
-    "e": "framebuzz.com/oembed/"
-  },
-  {
-    "s": [
-      "framer\\.com/share/*",
-      "framer\\.com/embed/*"
-    ],
-    "e": "api.framer.com/web/oembed"
-  },
-  {
-    "s": [
-      "*\\.geograph\\.org\\.uk/*",
-      "*\\.geograph\\.co\\.uk/*",
-      "*\\.geograph\\.ie/*",
-      "*\\.wikimedia\\.org/*_geograph\\.org\\.uk_*"
-    ],
-    "e": "api.geograph.org.uk/api/oembed"
-  },
-  {
-    "s": [
-      "*\\.geograph\\.org\\.gg/*",
-      "*\\.geograph\\.org\\.je/*",
-      "channel-islands\\.geograph\\.org/*",
-      "channel-islands\\.geographs\\.org/*",
-      "*\\.channel\\.geographs\\.org/*"
-    ],
-    "e": "www.geograph.org.gg/api/oembed"
-  },
-  {
-    "s": [
-      "geo-en\\.hlipp\\.de/*",
-      "geo\\.hlipp\\.de/*",
-      "germany\\.geograph\\.org/*"
-    ],
-    "e": "geo.hlipp.de/restapi.php/api/oembed"
-  },
-  {
-    "s": [
-      "gty\\.im/*"
-    ],
-    "e": "embed.gettyimages.com/oembed"
-  },
-  {
-    "s": [
-      "www\\.gifnote\\.com/play/*"
-    ],
-    "e": "www.gifnote.com/services/oembed"
-  },
-  {
-    "s": [
-      "giphy\\.com/gifs/*",
-      "giphy\\.com/clips/*",
-      "gph\\.is/*",
-      "media\\.giphy\\.com/media/*/giphy\\.gif"
-    ],
-    "e": "giphy.com/services/oembed"
+    "e": "//www.edumedia-sciences.com/oembed.json"
   },
   {
     "s": [],
-    "e": "gloria.tv/oembed/"
+    "e": "//www.edumedia-sciences.com/oembed.xml"
   },
   {
     "s": [
-      "view\\.gmetri\\.com/*",
-      "*\\.gmetri\\.com/*"
+      "//egliseinfo\\.catholique\\.fr/*"
     ],
-    "e": "embed.gmetri.com/oembed/"
+    "e": "//egliseinfo.catholique.fr/api/oembed"
   },
   {
     "s": [
-      "app\\.gong\\.io/call?id=*"
+      "//embedery\\.com/widget/*"
     ],
-    "e": "app.gong.io/oembed"
+    "e": "//embedery.com/api/oembed"
   },
   {
     "s": [
-      "grain\\.co/highlight/*",
-      "grain\\.co/share/*",
-      "grain\\.com/share/*"
+      "//ethfiddle\\.com/*"
     ],
-    "e": "api.grain.com/_/api/oembed"
+    "e": "//ethfiddle.com/services/oembed/"
   },
   {
     "s": [
-      "gtchannel\\.com/watch/*"
+      "//evt\\.live/*",
+      "//evt\\.live/*/*",
+      "//live\\.eventlive\\.pro/*",
+      "//live\\.eventlive\\.pro/*/*"
     ],
-    "e": "api.luminery.com/oembed"
+    "e": "//evt.live/api/oembed"
   },
   {
     "s": [
-      "gumlet\\.tv/watch/*",
-      "www\\.gumlet\\.com/watch/*",
-      "play\\.gumlet\\.io/embed/*"
+      "//app\\.everviz\\.com/embed/*"
     ],
-    "e": "api.gumlet.com/v1/oembed"
+    "e": "//api.everviz.com/oembed"
   },
   {
     "s": [
-      "gyazo\\.com/*"
+      "//app\\.ex\\.co/stories/*",
+      "//www\\.playbuzz\\.com/*"
     ],
-    "e": "api.gyazo.com/api/oembed"
+    "e": "//oembed.ex.co/item"
   },
   {
     "s": [
-      "core\\.hash\\.ai/@*"
+      "//eyrie\\.io/board/*",
+      "//eyrie\\.io/sparkfun/*"
     ],
-    "e": "api.hash.ai/oembed"
+    "e": "//eyrie.io/v1/oembed"
   },
   {
     "s": [
-      "hearthis\\.at/*/*/",
-      "hearthis\\.at/*/set/*/"
+      "//www\\.facebook\\.com/*/posts/*",
+      "//www\\.facebook\\.com/*/activity/*",
+      "//www\\.facebook\\.com/*/photos/*",
+      "//www\\.facebook\\.com/photo\\.php?fbid=*",
+      "//www\\.facebook\\.com/photos/*",
+      "//www\\.facebook\\.com/permalink\\.php?story_fbid=*",
+      "//www\\.facebook\\.com/media/set?set=*",
+      "//www\\.facebook\\.com/questions/*",
+      "//www\\.facebook\\.com/notes/*/*/*"
     ],
-    "e": "hearthis.at/oembed/?format=json"
+    "e": "//graph.facebook.com/v16.0/oembed_post"
   },
   {
     "s": [
-      "helenenglish\\.education/widget*"
+      "//www\\.facebook\\.com/*/videos/*",
+      "//www\\.facebook\\.com/video\\.php?id=*",
+      "//www\\.facebook\\.com/video\\.php?v=*"
     ],
-    "e": "helenenglish.education/embed"
+    "e": "//graph.facebook.com/v16.0/oembed_video"
   },
   {
     "s": [
-      "heyzine\\.com/flip-book/*",
-      "*\\.hflip\\.co/*",
-      "*\\.aflip\\.in/*"
+      "//www\\.facebook\\.com/*"
     ],
-    "e": "heyzine.com/api1/oembed"
+    "e": "//graph.facebook.com/v16.0/oembed_page"
   },
   {
     "s": [
-      "player\\.hihaho\\.com/*"
+      "//app\\.getfader\\.com/projects/*/publish"
     ],
-    "e": "player.hihaho.com/services/oembed"
+    "e": "//app.getfader.com/api/oembed"
   },
   {
     "s": [
-      "*\\.hippovideo\\.io/*"
+      "//faithlifetv\\.com/items/*",
+      "//faithlifetv\\.com/items/resource/*/*",
+      "//faithlifetv\\.com/media/*",
+      "//faithlifetv\\.com/media/assets/*",
+      "//faithlifetv\\.com/media/resource/*/*"
     ],
-    "e": "www.hippovideo.io/services/oembed"
+    "e": "//faithlifetv.com/api/oembed"
   },
   {
     "s": [
-      "homey\\.app/f/*",
-      "homey\\.app/*/flow/*"
+      "//www\\.figma\\.com/file/*"
     ],
-    "e": "homey.app/api/oembed/flow"
+    "e": "//www.figma.com/api/oembed"
   },
   {
     "s": [
-      "*\\.hopvue\\.com/*"
+      "//*\\.fireworktv\\.com/*",
+      "//*\\.fireworktv\\.com/embed/*/v/*"
     ],
-    "e": "portal.hopvue.com/api/oembed/"
+    "e": "//www.fireworktv.com/oembed"
   },
   {
     "s": [
-      "huffduffer\\.com/*/*"
+      "//www\\.fite\\.tv/watch/*"
     ],
-    "e": "huffduffer.com/oembed"
+    "e": "//www.fite.tv/oembed"
   },
   {
     "s": [
-      "www\\.hulu\\.com/watch/*"
+      "//flat\\.io/score/*",
+      "//*\\.flat\\.io/score/*"
     ],
-    "e": "www.hulu.com/api/oembed.json"
+    "e": "//flat.io/services/oembed"
   },
   {
     "s": [
-      "icosa\\.gallery/view/*"
+      "//*\\.flickr\\.com/photos/*",
+      "//flic\\.kr/p/*",
+      "//flic\\.kr/s/*",
+      "//*\\.*\\.flickr\\.com/*/*"
     ],
-    "e": "api.icosa.gallery/v1/oembed"
+    "e": "//www.flickr.com/services/oembed/"
   },
   {
     "s": [
-      "oembed\\.ideamapper\\.com/*"
+      "//public\\.flourish\\.studio/visualisation/*",
+      "//public\\.flourish\\.studio/story/*"
     ],
-    "e": "oembed.ideamapper.com/oembed"
+    "e": "//app.flourish.studio/api/v1/oembed"
   },
   {
     "s": [
-      "*\\.idomoo\\.com/*"
+      "//flowhub\\.org/f/*",
+      "//flowhub\\.org/s/*"
     ],
-    "e": "oembed.idomoo.com/oembed"
+    "e": "//flowhub.org/o/embed"
   },
   {
     "s": [
-      "www\\.ifixit\\.com/Guide/View/*"
+      "//fooday\\.app/*/reviews/*",
+      "//fooday\\.app/*/spots/*"
     ],
-    "e": "www.ifixit.com/Embed"
+    "e": "//fooday.app/oembed"
   },
   {
     "s": [
-      "ifttt\\.com/recipes/*"
+      "//fiso\\.foxsports\\.com\\.au/isomorphic-widget/*"
     ],
-    "e": "www.ifttt.com/oembed/"
+    "e": "//fiso.foxsports.com.au/oembed"
   },
   {
     "s": [
-      "www\\.iheart\\.com/podcast/*/*"
+      "//framatube\\.org/w/*"
     ],
-    "e": "www.iheart.com/oembed"
+    "e": "//framatube.org/services/oembed"
   },
   {
     "s": [
-      "qr\\.imenupro\\.com/*"
+      "//framebuzz\\.com/v/*"
     ],
-    "e": "qr.imenupro.com/api/oembed"
+    "e": "//framebuzz.com/oembed/"
   },
   {
     "s": [
-      "incredible\\.dev/watch/*"
+      "//framer\\.com/share/*",
+      "//framer\\.com/embed/*"
     ],
-    "e": "oembed.incredible.dev/oembed"
+    "e": "//api.framer.com/web/oembed"
   },
   {
     "s": [
-      "player\\.indacolive\\.com/player/jwp/clients/*"
+      "//*\\.geograph\\.org\\.uk/*",
+      "//*\\.geograph\\.co\\.uk/*",
+      "//*\\.geograph\\.ie/*",
+      "//*\\.wikimedia\\.org/*_geograph\\.org\\.uk_*"
     ],
-    "e": "player.indacolive.com/services/oembed"
+    "e": "//api.geograph.org.uk/api/oembed"
   },
   {
     "s": [
-      "infogram\\.com/*"
+      "//*\\.geograph\\.org\\.gg/*",
+      "//*\\.geograph\\.org\\.je/*",
+      "//channel-islands\\.geograph\\.org/*",
+      "//channel-islands\\.geographs\\.org/*",
+      "//*\\.channel\\.geographs\\.org/*"
     ],
-    "e": "infogram.com/oembed"
+    "e": "//www.geograph.org.gg/api/oembed"
   },
   {
     "s": [
-      "*\\.infoveave\\.net/E/*",
-      "*\\.infoveave\\.net/P/*"
+      "//geo-en\\.hlipp\\.de/*",
+      "//geo\\.hlipp\\.de/*",
+      "//germany\\.geograph\\.org/*"
     ],
-    "e": "infoveave.net/services/oembed/"
+    "e": "//geo.hlipp.de/restapi.php/api/oembed"
   },
   {
     "s": [
-      "www\\.injurymap\\.com/exercises/*"
+      "//gty\\.im/*"
     ],
-    "e": "www.injurymap.com/services/oembed"
+    "e": "//embed.gettyimages.com/oembed"
   },
   {
     "s": [
-      "www\\.inoreader\\.com/oembed/"
+      "//www\\.gifnote\\.com/play/*"
     ],
-    "e": "www.inoreader.com/oembed/api/"
+    "e": "//www.gifnote.com/services/oembed"
   },
   {
     "s": [
-      "*\\.inphood\\.com/*"
+      "//giphy\\.com/gifs/*",
+      "//giphy\\.com/clips/*",
+      "//gph\\.is/*",
+      "//media\\.giphy\\.com/media/*/giphy\\.gif"
     ],
-    "e": "api.inphood.com/oembed"
-  },
-  {
-    "s": [
-      "insighttimer\\.com/*"
-    ],
-    "e": "widgets.insighttimer.com/services/oembed"
-  },
-  {
-    "s": [
-      "instagram\\.com/*/p/*",
-      "www\\.instagram\\.com/*/p/*",
-      "instagram\\.com/p/*",
-      "instagr\\.am/p/*",
-      "www\\.instagram\\.com/p/*",
-      "www\\.instagr\\.am/p/*",
-      "instagram\\.com/tv/*",
-      "instagr\\.am/tv/*",
-      "www\\.instagram\\.com/tv/*",
-      "www\\.instagr\\.am/tv/*",
-      "www\\.instagram\\.com/reel/*",
-      "instagram\\.com/reel/*",
-      "instagr\\.am/reel/*"
-    ],
-    "e": "graph.facebook.com/v16.0/instagram_oembed"
-  },
-  {
-    "s": [
-      "ppa\\.insticator\\.com/embed-unit/*"
-    ],
-    "e": "www.insticator.com/oembed"
-  },
-  {
-    "s": [
-      "issuu\\.com/*/docs/*"
-    ],
-    "e": "issuu.com/oembed"
-  },
-  {
-    "s": [
-      "samay\\.itabtechinfosys\\.com/*"
-    ],
-    "e": "samay.itabtechinfosys.com/oembed/"
-  },
-  {
-    "s": [
-      "play\\.itemis\\.io/*"
-    ],
-    "e": "create.storage.api.itemis.io/api/embed"
-  },
-  {
-    "s": [
-      "jovian\\.ml/*",
-      "jovian\\.ml/viewer*",
-      "*\\.jovian\\.ml/*",
-      "jovian\\.ai/*",
-      "jovian\\.ai/viewer*",
-      "*\\.jovian\\.ai/*",
-      "jovian\\.com/*",
-      "jovian\\.com/viewer*",
-      "*\\.jovian\\.com/*"
-    ],
-    "e": "api.jovian.com/oembed.json"
-  },
-  {
-    "s": [
-      "tv\\.kakao\\.com/channel/*/cliplink/*",
-      "tv\\.kakao\\.com/m/channel/*/cliplink/*",
-      "tv\\.kakao\\.com/channel/v/*",
-      "tv\\.kakao\\.com/channel/*/livelink/*",
-      "tv\\.kakao\\.com/m/channel/*/livelink/*",
-      "tv\\.kakao\\.com/channel/l/*"
-    ],
-    "e": "tv.kakao.com/oembed"
-  },
-  {
-    "s": [
-      "www\\.kickstarter\\.com/projects/*"
-    ],
-    "e": "www.kickstarter.com/services/oembed"
-  },
-  {
-    "s": [
-      "www\\.kidoju\\.com/en/x/*/*",
-      "www\\.kidoju\\.com/fr/x/*/*"
-    ],
-    "e": "www.kidoju.com/api/oembed"
-  },
-  {
-    "s": [
-      "halaman\\.email/form/*",
-      "aplikasi\\.kirim\\.email/form/*"
-    ],
-    "e": "halaman.email/service/oembed"
-  },
-  {
-    "s": [
-      "kit\\.co/*/*"
-    ],
-    "e": "embed.kit.co/oembed"
-  },
-  {
-    "s": [
-      "www\\.kitchenbowl\\.com/recipe/*"
-    ],
-    "e": "www.kitchenbowl.com/oembed"
-  },
-  {
-    "s": [
-      "app\\.kmdr\\.sh/h/*",
-      "app\\.kmdr\\.sh/history/*"
-    ],
-    "e": "api.kmdr.sh/services/oembed"
-  },
-  {
-    "s": [
-      "jdr\\.knacki\\.info/meuh/*"
-    ],
-    "e": "jdr.knacki.info/oembed"
-  },
-  {
-    "s": [
-      "knowledgepad\\.co/#/knowledge/*"
-    ],
-    "e": "api.spoonacular.com/knowledge/oembed"
-  },
-  {
-    "s": [
-      "*\\.kooapp\\.com/koo/*"
-    ],
-    "e": "embed.kooapp.com/services/oembed"
-  },
-  {
-    "s": [
-      "kurozora\\.app/episodes/*",
-      "kurozora\\.app/songs/*"
-    ],
-    "e": "kurozora.app/oembed"
-  },
-  {
-    "s": [
-      "learningapps\\.org/*"
-    ],
-    "e": "learningapps.org/oembed.php"
-  },
-  {
-    "s": [
-      "umotion-test\\.univ-lemans\\.fr/video/*"
-    ],
-    "e": "umotion-test.univ-lemans.fr/oembed"
-  },
-  {
-    "s": [
-      "pod\\.univ-lille\\.fr/video/*"
-    ],
-    "e": "pod.univ-lille.fr/video/oembed"
-  },
-  {
-    "s": [
-      "place\\.line\\.me/businesses/*"
-    ],
-    "e": "place.line.me/oembed"
-  },
-  {
-    "s": [
-      "linkstackz\\.com/irf/*",
-      "linkstackz\\.com/post/*"
-    ],
-    "e": "api.linkstackz.com/oembed"
-  },
-  {
-    "s": [
-      "livestream\\.com/accounts/*/events/*",
-      "livestream\\.com/accounts/*/events/*/videos/*",
-      "livestream\\.com/*/events/*",
-      "livestream\\.com/*/events/*/videos/*",
-      "livestream\\.com/*/*",
-      "livestream\\.com/*/*/videos/*"
-    ],
-    "e": "livestream.com/oembed"
-  },
-  {
-    "s": [
-      "loom\\.com/i/*",
-      "loom\\.com/share/*"
-    ],
-    "e": "www.loom.com/v1/oembed"
-  },
-  {
-    "s": [
-      "lottiefiles\\.com/*",
-      "*\\.lottiefiles\\.com/*",
-      "*\\.lottie\\.host/*",
-      "lottie\\.host/*"
-    ],
-    "e": "embed.lottiefiles.com/oembed"
-  },
-  {
-    "s": [
-      "app\\.ludus\\.one/*"
-    ],
-    "e": "app.ludus.one/oembed"
-  },
-  {
-    "s": [
-      "*\\.lumiere\\.is/v/*"
-    ],
-    "e": "admin.lumiere.is/api/services/oembed"
-  },
-  {
-    "s": [
-      "mathembed\\.com/latex?inputText=*"
-    ],
-    "e": "mathembed.com/oembed"
+    "e": "//giphy.com/services/oembed"
   },
   {
     "s": [],
-    "e": "my.matterport.com/api/v1/models/oembed/"
+    "e": "//gloria.tv/oembed/"
   },
   {
     "s": [
-      "me\\.me/i/*"
+      "//view\\.gmetri\\.com/*",
+      "//*\\.gmetri\\.com/*"
     ],
-    "e": "me.me/oembed"
+    "e": "//embed.gmetri.com/oembed/"
   },
   {
     "s": [
-      "mdstrm\\.com/embed/*",
-      "mdstrm\\.com/live-stream/*",
-      "mdstrm\\.com/image/*"
+      "//app\\.gong\\.io/call?id=*"
     ],
-    "e": "mdstrm.com/oembed"
+    "e": "//app.gong.io/oembed"
   },
   {
     "s": [
-      "medienarchiv\\.zhdk\\.ch/entries/*"
+      "//grain\\.co/highlight/*",
+      "//grain\\.co/share/*",
+      "//grain\\.com/share/*"
     ],
-    "e": "medienarchiv.zhdk.ch/oembed.json"
+    "e": "//api.grain.com/_/api/oembed"
   },
   {
     "s": [
-      "mermaid\\.ink/img/*",
-      "mermaid\\.ink/svg/*"
+      "//gtchannel\\.com/watch/*"
     ],
-    "e": "mermaid.ink/services/oembed"
+    "e": "//api.luminery.com/oembed"
   },
   {
     "s": [
-      "*\\.microsoftstream\\.com/video/*",
-      "*\\.microsoftstream\\.com/channel/*"
+      "//gumlet\\.tv/watch/*",
+      "//www\\.gumlet\\.com/watch/*",
+      "//play\\.gumlet\\.io/embed/*"
     ],
-    "e": "web.microsoftstream.com/oembed"
+    "e": "//api.gumlet.com/v1/oembed"
   },
   {
     "s": [
-      "www\\.minervaknows\\.com/featured-recipes/*",
-      "www\\.minervaknows\\.com/themes/*",
-      "www\\.minervaknows\\.com/themes/*/recipes/*",
-      "app\\.minervaknows\\.com/recipes/*",
-      "app\\.minervaknows\\.com/recipes/*/follow"
+      "//gyazo\\.com/*"
     ],
-    "e": "oembed.minervaknows.com"
+    "e": "//api.gyazo.com/api/oembed"
   },
   {
     "s": [
-      "miro\\.com/app/board/*"
+      "//core\\.hash\\.ai/@*"
     ],
-    "e": "miro.com/api/v1/oembed"
+    "e": "//api.hash.ai/oembed"
   },
   {
     "s": [
-      "www\\.mixcloud\\.com/*/*/"
+      "//hearthis\\.at/*/*/",
+      "//hearthis\\.at/*/set/*/"
     ],
-    "e": "www.mixcloud.com/oembed/"
+    "e": "//hearthis.at/oembed/?format=json"
   },
   {
     "s": [
-      "mixpanel\\.com/*",
-      "*\\.mixpanel\\.com/*"
+      "//helenenglish\\.education/widget*"
     ],
-    "e": "mixpanel.com/api/app/embed/oembed/"
+    "e": "//helenenglish.education/embed"
   },
   {
     "s": [
-      "www\\.mobypicture\\.com/user/*/view/*",
-      "moby\\.to/*"
+      "//heyzine\\.com/flip-book/*",
+      "//*\\.hflip\\.co/*",
+      "//*\\.aflip\\.in/*"
     ],
-    "e": "api.mobypicture.com/oEmbed"
+    "e": "//heyzine.com/api1/oembed"
   },
   {
     "s": [
-      "musicboxmaniacs\\.com/explore/melody/*"
+      "//player\\.hihaho\\.com/*"
     ],
-    "e": "musicboxmaniacs.com/embed/"
+    "e": "//player.hihaho.com/services/oembed"
   },
   {
     "s": [
-      "mybeweeg\\.com/w/*"
+      "//*\\.hippovideo\\.io/*"
     ],
-    "e": "mybeweeg.com/services/oembed"
+    "e": "//www.hippovideo.io/services/oembed"
   },
   {
     "s": [
-      "mysqlexplain\\.com/explain/*",
-      "embed\\.mysqlexplain\\.com/explain/*"
+      "//homey\\.app/f/*",
+      "//homey\\.app/*/flow/*"
     ],
-    "e": "api.mysqlexplain.com/v2/oembed.json"
+    "e": "//homey.app/api/oembed/flow"
   },
   {
     "s": [
-      "namchey\\.com/embeds/*"
+      "//*\\.hopvue\\.com/*"
     ],
-    "e": "namchey.com/api/oembed"
+    "e": "//portal.hopvue.com/api/oembed/"
   },
   {
     "s": [
-      "*\\.nanoo\\.tv/link/*",
-      "nanoo\\.tv/link/*",
-      "*\\.nanoo\\.pro/link/*",
-      "nanoo\\.pro/link/*",
-      "media\\.zhdk\\.ch/signatur/*",
-      "new\\.media\\.zhdk\\.ch/signatur/*"
+      "//huffduffer\\.com/*/*"
     ],
-    "e": "www.nanoo.tv/services/oembed"
+    "e": "//huffduffer.com/oembed"
   },
   {
     "s": [
-      "www\\.nb\\.no/items/*"
+      "//www\\.hulu\\.com/watch/*"
     ],
-    "e": "api.nb.no/catalog/v1/oembed"
+    "e": "//www.hulu.com/api/oembed.json"
   },
   {
     "s": [
-      "naturalatlas\\.com/*",
-      "naturalatlas\\.com/*/*",
-      "naturalatlas\\.com/*/*/*",
-      "naturalatlas\\.com/*/*/*/*"
+      "//icosa\\.gallery/view/*"
     ],
-    "e": "naturalatlas.com/oembed.json"
+    "e": "//api.icosa.gallery/v1/oembed"
   },
   {
     "s": [
-      "ndla\\.no/*",
-      "ndla\\.no/article/*",
-      "ndla\\.no/audio/*",
-      "ndla\\.no/concept/*",
-      "ndla\\.no/image/*",
-      "ndla\\.no/video/*"
+      "//oembed\\.ideamapper\\.com/*"
     ],
-    "e": "ndla.no/oembed"
+    "e": "//oembed.ideamapper.com/oembed"
   },
   {
     "s": [
-      "nebula\\.tv/videos/*"
+      "//*\\.idomoo\\.com/*"
     ],
-    "e": "nebula.tv/api/oembed"
+    "e": "//oembed.idomoo.com/oembed"
   },
   {
     "s": [
-      "beta\\.nebula\\.tv/videos/*"
+      "//www\\.ifixit\\.com/Guide/View/*"
     ],
-    "e": "beta.nebula.tv/api/oembed"
+    "e": "//www.ifixit.com/Embed"
   },
   {
     "s": [
-      "cloud\\.needle\\.tools/-/assets/*/file",
-      "cloud\\.needle\\.tools/view?file=*",
-      "*\\.needle\\.run/*"
+      "//ifttt\\.com/recipes/*"
     ],
-    "e": "cloud.needle.tools/oembed"
+    "e": "//www.ifttt.com/oembed/"
   },
   {
     "s": [
-      "*\\.neetorecord\\.com/watch/*"
+      "//www\\.iheart\\.com/podcast/*/*"
     ],
-    "e": "api.neetorecord.com/api/v1/oembed"
+    "e": "//www.iheart.com/oembed"
   },
   {
     "s": [
-      "*\\.nfb\\.ca/film/*"
+      "//qr\\.imenupro\\.com/*"
     ],
-    "e": "www.nfb.ca/remote/services/oembed/"
+    "e": "//qr.imenupro.com/api/oembed"
   },
   {
     "s": [
-      "nopaste\\.ml/*"
+      "//incredible\\.dev/watch/*"
     ],
-    "e": "oembed.nopaste.ml"
+    "e": "//oembed.incredible.dev/oembed"
   },
   {
     "s": [
-      "observablehq\\.com/@*/*",
-      "observablehq\\.com/d/*",
-      "observablehq\\.com/embed/*"
+      "//player\\.indacolive\\.com/player/jwp/clients/*"
     ],
-    "e": "api.observablehq.com/oembed"
+    "e": "//player.indacolive.com/services/oembed"
   },
   {
     "s": [
-      "www\\.odds\\.com\\.au/*",
-      "odds\\.com\\.au/*"
+      "//infogram\\.com/*"
     ],
-    "e": "www.odds.com.au/api/oembed/"
+    "e": "//infogram.com/oembed"
   },
   {
     "s": [
-      "song\\.link/*",
-      "album\\.link/*",
-      "artist\\.link/*",
-      "playlist\\.link/*",
-      "pods\\.link/*",
-      "mylink\\.page/*",
-      "odesli\\.co/*"
+      "//*\\.infoveave\\.net/E/*",
+      "//*\\.infoveave\\.net/P/*"
     ],
-    "e": "song.link/oembed"
+    "e": "//infoveave.net/services/oembed/"
   },
   {
     "s": [
-      "odysee\\.com/*/*",
-      "odysee\\.com/*"
+      "//www\\.injurymap\\.com/exercises/*"
     ],
-    "e": "odysee.com/$/oembed"
+    "e": "//www.injurymap.com/services/oembed"
   },
   {
     "s": [
-      "official\\.fm/tracks/*",
-      "official\\.fm/playlists/*"
+      "//www\\.inoreader\\.com/oembed/"
     ],
-    "e": "official.fm/services/oembed.json"
+    "e": "//www.inoreader.com/oembed/api/"
   },
   {
     "s": [
-      "omniscope\\.me/*"
+      "//*\\.inphood\\.com/*"
     ],
-    "e": "omniscope.me/_global_/oembed/json"
+    "e": "//api.inphood.com/oembed"
   },
   {
     "s": [
-      "omny\\.fm/shows/*"
+      "//insighttimer\\.com/*"
     ],
-    "e": "omny.fm/oembed"
+    "e": "//widgets.insighttimer.com/services/oembed"
   },
   {
     "s": [
-      "orbitvu\\.co/001/*/ov3601/view",
-      "orbitvu\\.co/001/*/ov3601/*/view",
-      "orbitvu\\.co/001/*/ov3602/*/view",
-      "orbitvu\\.co/001/*/2/orbittour/*/view",
-      "orbitvu\\.co/001/*/1/2/orbittour/*/view"
+      "//instagram\\.com/*/p/*",
+      "//www\\.instagram\\.com/*/p/*",
+      "//instagram\\.com/p/*",
+      "//instagr\\.am/p/*",
+      "//www\\.instagram\\.com/p/*",
+      "//www\\.instagr\\.am/p/*",
+      "//instagram\\.com/tv/*",
+      "//instagr\\.am/tv/*",
+      "//www\\.instagram\\.com/tv/*",
+      "//www\\.instagr\\.am/tv/*",
+      "//www\\.instagram\\.com/reel/*",
+      "//instagram\\.com/reel/*",
+      "//instagr\\.am/reel/*"
     ],
-    "e": "orbitvu.co/service/oembed"
+    "e": "//graph.facebook.com/v16.0/instagram_oembed"
   },
   {
     "s": [
-      "origits\\.com/v/*"
+      "//ppa\\.insticator\\.com/embed-unit/*"
     ],
-    "e": "origits.net/oembed"
+    "e": "//www.insticator.com/oembed"
   },
   {
     "s": [
-      "origits\\.com/v/*"
+      "//issuu\\.com/*/docs/*"
     ],
-    "e": "origits.com/oembed"
+    "e": "//issuu.com/oembed"
   },
   {
     "s": [
-      "outplayed\\.tv/media/*"
+      "//samay\\.itabtechinfosys\\.com/*"
     ],
-    "e": "outplayed.tv/oembed"
+    "e": "//samay.itabtechinfosys.com/oembed/"
   },
   {
     "s": [
-      "overflow\\.io/s/*",
-      "overflow\\.io/embed/*"
+      "//play\\.itemis\\.io/*"
     ],
-    "e": "overflow.io/services/oembed"
+    "e": "//create.storage.api.itemis.io/api/embed"
   },
   {
     "s": [
-      "www\\.oz\\.com/*/video/*"
+      "//jovian\\.ml/*",
+      "//jovian\\.ml/viewer*",
+      "//*\\.jovian\\.ml/*",
+      "//jovian\\.ai/*",
+      "//jovian\\.ai/viewer*",
+      "//*\\.jovian\\.ai/*",
+      "//jovian\\.com/*",
+      "//jovian\\.com/viewer*",
+      "//*\\.jovian\\.com/*"
     ],
-    "e": "core.oz.com/oembed"
+    "e": "//api.jovian.com/oembed.json"
   },
   {
     "s": [
-      "padlet\\.com/*"
+      "//tv\\.kakao\\.com/channel/*/cliplink/*",
+      "//tv\\.kakao\\.com/m/channel/*/cliplink/*",
+      "//tv\\.kakao\\.com/channel/v/*",
+      "//tv\\.kakao\\.com/channel/*/livelink/*",
+      "//tv\\.kakao\\.com/m/channel/*/livelink/*",
+      "//tv\\.kakao\\.com/channel/l/*"
     ],
-    "e": "padlet.com/oembed/"
+    "e": "//tv.kakao.com/oembed"
   },
   {
     "s": [
-      "*\\.tv\\.pandavideo\\.com\\.br/embed/?v=*",
-      "*\\.tv\\.pandavideo\\.com\\.br/*/playlist\\.m3u8",
-      "dashboard\\.pandavideo\\.com\\.br/#/videos/*"
+      "//www\\.kickstarter\\.com/projects/*"
     ],
-    "e": "api-v2.pandavideo.com.br/oembed"
+    "e": "//www.kickstarter.com/services/oembed"
   },
   {
     "s": [
-      "pastery\\.net/*",
-      "www\\.pastery\\.net/*"
+      "//www\\.kidoju\\.com/en/x/*/*",
+      "//www\\.kidoju\\.com/fr/x/*/*"
     ],
-    "e": "www.pastery.net/oembed"
+    "e": "//www.kidoju.com/api/oembed"
   },
   {
     "s": [
-      "peertube\\.tv/w/*"
+      "//halaman\\.email/form/*",
+      "//aplikasi\\.kirim\\.email/form/*"
     ],
-    "e": "peertube.tv/services/oembed"
+    "e": "//halaman.email/service/oembed"
   },
   {
     "s": [
-      "www\\.picturelfy\\.com/p/*"
+      "//kit\\.co/*/*"
     ],
-    "e": "api.picturelfy.com/service/oembed/"
+    "e": "//embed.kit.co/oembed"
   },
   {
     "s": [
-      "piggy\\.to/@*/*",
-      "piggy\\.to/view/*"
+      "//www\\.kitchenbowl\\.com/recipe/*"
     ],
-    "e": "piggy.to/oembed"
+    "e": "//www.kitchenbowl.com/oembed"
   },
   {
     "s": [
-      "*\\.builder\\.pikasso\\.xyz/embed/*"
+      "//app\\.kmdr\\.sh/h/*",
+      "//app\\.kmdr\\.sh/history/*"
     ],
-    "e": "builder.pikasso.xyz/api/oembed"
+    "e": "//api.kmdr.sh/services/oembed"
+  },
+  {
+    "s": [
+      "//jdr\\.knacki\\.info/meuh/*"
+    ],
+    "e": "//jdr.knacki.info/oembed"
+  },
+  {
+    "s": [
+      "//knowledgepad\\.co/#/knowledge/*"
+    ],
+    "e": "//api.spoonacular.com/knowledge/oembed"
+  },
+  {
+    "s": [
+      "//*\\.kooapp\\.com/koo/*"
+    ],
+    "e": "//embed.kooapp.com/services/oembed"
+  },
+  {
+    "s": [
+      "//kurozora\\.app/episodes/*",
+      "//kurozora\\.app/songs/*"
+    ],
+    "e": "//kurozora.app/oembed"
+  },
+  {
+    "s": [
+      "//learningapps\\.org/*"
+    ],
+    "e": "//learningapps.org/oembed.php"
+  },
+  {
+    "s": [
+      "//umotion-test\\.univ-lemans\\.fr/video/*"
+    ],
+    "e": "//umotion-test.univ-lemans.fr/oembed"
+  },
+  {
+    "s": [
+      "//pod\\.univ-lille\\.fr/video/*"
+    ],
+    "e": "//pod.univ-lille.fr/video/oembed"
+  },
+  {
+    "s": [
+      "//place\\.line\\.me/businesses/*"
+    ],
+    "e": "//place.line.me/oembed"
+  },
+  {
+    "s": [
+      "//linkstackz\\.com/irf/*",
+      "//linkstackz\\.com/post/*"
+    ],
+    "e": "//api.linkstackz.com/oembed"
+  },
+  {
+    "s": [
+      "//livestream\\.com/accounts/*/events/*",
+      "//livestream\\.com/accounts/*/events/*/videos/*",
+      "//livestream\\.com/*/events/*",
+      "//livestream\\.com/*/events/*/videos/*",
+      "//livestream\\.com/*/*",
+      "//livestream\\.com/*/*/videos/*"
+    ],
+    "e": "//livestream.com/oembed"
+  },
+  {
+    "s": [
+      "//loom\\.com/i/*",
+      "//loom\\.com/share/*"
+    ],
+    "e": "//www.loom.com/v1/oembed"
+  },
+  {
+    "s": [
+      "//lottiefiles\\.com/*",
+      "//*\\.lottiefiles\\.com/*",
+      "//*\\.lottie\\.host/*",
+      "//lottie\\.host/*"
+    ],
+    "e": "//embed.lottiefiles.com/oembed"
+  },
+  {
+    "s": [
+      "//app\\.ludus\\.one/*"
+    ],
+    "e": "//app.ludus.one/oembed"
+  },
+  {
+    "s": [
+      "//*\\.lumiere\\.is/v/*"
+    ],
+    "e": "//admin.lumiere.is/api/services/oembed"
+  },
+  {
+    "s": [
+      "//mathembed\\.com/latex?inputText=*"
+    ],
+    "e": "//mathembed.com/oembed"
   },
   {
     "s": [],
-    "e": "beta.pingvp.com.kpnis.nl/p/oembed.php"
+    "e": "//my.matterport.com/api/v1/models/oembed/"
   },
   {
     "s": [
-      "tools\\.pinpoll\\.com/embed/*"
+      "//me\\.me/i/*"
     ],
-    "e": "tools.pinpoll.com/oembed"
+    "e": "//me.me/oembed"
   },
   {
     "s": [
-      "www\\.pinterest\\.com/*"
+      "//mdstrm\\.com/embed/*",
+      "//mdstrm\\.com/live-stream/*",
+      "//mdstrm\\.com/image/*"
     ],
-    "e": "www.pinterest.com/oembed.json"
+    "e": "//mdstrm.com/oembed"
   },
   {
     "s": [
-      "player\\.pitchhub\\.com/en/public/player/*"
+      "//medienarchiv\\.zhdk\\.ch/entries/*"
     ],
-    "e": "player.pitchhub.com/en/public/oembed"
+    "e": "//medienarchiv.zhdk.ch/oembed.json"
   },
   {
     "s": [
-      "store\\.pixdor\\.com/place-marker-widget/*/show",
-      "store\\.pixdor\\.com/map/*/show"
+      "//mermaid\\.ink/img/*",
+      "//mermaid\\.ink/svg/*"
     ],
-    "e": "store.pixdor.com/oembed"
+    "e": "//mermaid.ink/services/oembed"
   },
   {
     "s": [
-      "app\\.plusdocs\\.com/*/snapshots/*",
-      "app\\.plusdocs\\.com/*/pages/edit/*",
-      "app\\.plusdocs\\.com/*/pages/share/*"
+      "//*\\.microsoftstream\\.com/video/*",
+      "//*\\.microsoftstream\\.com/channel/*"
     ],
-    "e": "app.plusdocs.com/oembed"
+    "e": "//web.microsoftstream.com/oembed"
   },
   {
     "s": [
-      "*\\.podbean\\.com/e/*"
+      "//www\\.minervaknows\\.com/featured-recipes/*",
+      "//www\\.minervaknows\\.com/themes/*",
+      "//www\\.minervaknows\\.com/themes/*/recipes/*",
+      "//app\\.minervaknows\\.com/recipes/*",
+      "//app\\.minervaknows\\.com/recipes/*/follow"
     ],
-    "e": "api.podbean.com/v1/oembed"
+    "e": "//oembed.minervaknows.com"
   },
   {
     "s": [
-      "*\\.polldaddy\\.com/s/*",
-      "*\\.polldaddy\\.com/poll/*",
-      "*\\.polldaddy\\.com/ratings/*"
+      "//miro\\.com/app/board/*"
     ],
-    "e": "polldaddy.com/oembed/"
+    "e": "//miro.com/api/v1/oembed"
   },
   {
     "s": [
-      "portfolium\\.com/entry/*"
+      "//www\\.mixcloud\\.com/*/*/"
     ],
-    "e": "api.portfolium.com/oembed"
+    "e": "//www.mixcloud.com/oembed/"
   },
   {
     "s": [
-      "present\\.do/decks/*"
+      "//mixpanel\\.com/*",
+      "//*\\.mixpanel\\.com/*"
     ],
-    "e": "gateway.cobalt.run/present/decks/oembed"
+    "e": "//mixpanel.com/api/app/embed/oembed/"
   },
   {
     "s": [
-      "prezi\\.com/v/*",
-      "*\\.prezi\\.com/v/*"
+      "//www\\.mobypicture\\.com/user/*/view/*",
+      "//moby\\.to/*"
     ],
-    "e": "prezi.com/v/oembed"
+    "e": "//api.mobypicture.com/oEmbed"
   },
   {
     "s": [
-      "qtpi\\.gg/fashion/*"
+      "//musicboxmaniacs\\.com/explore/melody/*"
     ],
-    "e": "qtpi.gg/fashion/oembed"
+    "e": "//musicboxmaniacs.com/embed/"
   },
   {
     "s": [
-      "quartr\\.com/*",
-      "web\\.quartr\\.com/*"
+      "//mybeweeg\\.com/w/*"
     ],
-    "e": "web.quartr.com/api/oembed"
+    "e": "//mybeweeg.com/services/oembed"
   },
   {
     "s": [
-      "www\\.quiz\\.biz/quizz-*\\.html"
+      "//mysqlexplain\\.com/explain/*",
+      "//embed\\.mysqlexplain\\.com/explain/*"
     ],
-    "e": "www.quiz.biz/api/oembed"
+    "e": "//api.mysqlexplain.com/v2/oembed.json"
   },
   {
     "s": [
-      "www\\.quizz\\.biz/quizz-*\\.html"
+      "//namchey\\.com/embeds/*"
     ],
-    "e": "www.quizz.biz/api/oembed"
+    "e": "//namchey.com/api/oembed"
   },
   {
     "s": [
-      "play\\.radiopublic\\.com/*",
-      "radiopublic\\.com/*",
-      "www\\.radiopublic\\.com/*",
-      "*\\.radiopublic\\.com/*"
+      "//*\\.nanoo\\.tv/link/*",
+      "//nanoo\\.tv/link/*",
+      "//*\\.nanoo\\.pro/link/*",
+      "//nanoo\\.pro/link/*",
+      "//media\\.zhdk\\.ch/signatur/*",
+      "//new\\.media\\.zhdk\\.ch/signatur/*"
     ],
-    "e": "oembed.radiopublic.com/oembed"
+    "e": "//www.nanoo.tv/services/oembed"
   },
   {
     "s": [
-      "raindrop\\.io/*",
-      "raindrop\\.io/*/*",
-      "raindrop\\.io/*/*/*",
-      "raindrop\\.io/*/*/*/*"
+      "//www\\.nb\\.no/items/*"
     ],
-    "e": "pub.raindrop.io/api/oembed"
+    "e": "//api.nb.no/catalog/v1/oembed"
   },
   {
     "s": [
-      "www\\.rcvis\\.com/v/*",
-      "www\\.rcvis\\.com/visualize=*",
-      "www\\.rcvis\\.com/ve/*",
-      "www\\.rcvis\\.com/visualizeEmbedded=*"
+      "//naturalatlas\\.com/*",
+      "//naturalatlas\\.com/*/*",
+      "//naturalatlas\\.com/*/*/*",
+      "//naturalatlas\\.com/*/*/*/*"
     ],
-    "e": "animatron.com/oembed"
+    "e": "//naturalatlas.com/oembed.json"
   },
   {
     "s": [
-      "reddit\\.com/r/*/comments/*/*",
-      "www\\.reddit\\.com/r/*/comments/*/*"
+      "//ndla\\.no/*",
+      "//ndla\\.no/article/*",
+      "//ndla\\.no/audio/*",
+      "//ndla\\.no/concept/*",
+      "//ndla\\.no/image/*",
+      "//ndla\\.no/video/*"
     ],
-    "e": "www.reddit.com/oembed"
+    "e": "//ndla.no/oembed"
   },
   {
     "s": [
-      "redlof-medien\\.de/*",
-      "www\\.redlof-medien\\.de/*"
+      "//nebula\\.tv/videos/*"
     ],
-    "e": "redlof-medien.de/wp-json/oembed/1.0/embed"
+    "e": "//nebula.tv/api/oembed"
   },
   {
     "s": [
-      "show\\.wexcreator\\.com/*",
-      "showroom\\.redlof-medien\\.de/*"
+      "//beta\\.nebula\\.tv/videos/*"
     ],
-    "e": "api.wexcreator.com/oembed/"
+    "e": "//beta.nebula.tv/api/oembed"
   },
   {
     "s": [
-      "rwire\\.com/*"
+      "//cloud\\.needle\\.tools/-/assets/*/file",
+      "//cloud\\.needle\\.tools/view?file=*",
+      "//*\\.needle\\.run/*"
     ],
-    "e": "publisher.releasewire.com/oembed/"
+    "e": "//cloud.needle.tools/oembed"
   },
   {
     "s": [
-      "repl\\.it/@*/*",
-      "replit\\.com/@*/*"
+      "//*\\.neetorecord\\.com/watch/*"
     ],
-    "e": "replit.com/data/oembed"
+    "e": "//api.neetorecord.com/api/v1/oembed"
   },
   {
     "s": [
-      "www\\.reverbnation\\.com/*",
-      "www\\.reverbnation\\.com/*/songs/*"
+      "//*\\.nfb\\.ca/film/*"
     ],
-    "e": "www.reverbnation.com/oembed"
+    "e": "//www.nfb.ca/remote/services/oembed/"
   },
   {
     "s": [
-      "roomshare\\.jp/post/*",
-      "roomshare\\.jp/en/post/*"
+      "//nopaste\\.ml/*"
     ],
-    "e": "roomshare.jp/en/oembed.json"
+    "e": "//oembed.nopaste.ml"
   },
   {
     "s": [
-      "roosterteeth\\.com/*"
+      "//observablehq\\.com/@*/*",
+      "//observablehq\\.com/d/*",
+      "//observablehq\\.com/embed/*"
     ],
-    "e": "roosterteeth.com/oembed"
+    "e": "//api.observablehq.com/oembed"
+  },
+  {
+    "s": [
+      "//www\\.odds\\.com\\.au/*",
+      "//odds\\.com\\.au/*"
+    ],
+    "e": "//www.odds.com.au/api/oembed/"
+  },
+  {
+    "s": [
+      "//song\\.link/*",
+      "//album\\.link/*",
+      "//artist\\.link/*",
+      "//playlist\\.link/*",
+      "//pods\\.link/*",
+      "//mylink\\.page/*",
+      "//odesli\\.co/*"
+    ],
+    "e": "//song.link/oembed"
+  },
+  {
+    "s": [
+      "//odysee\\.com/*/*",
+      "//odysee\\.com/*"
+    ],
+    "e": "//odysee.com/$/oembed"
+  },
+  {
+    "s": [
+      "//official\\.fm/tracks/*",
+      "//official\\.fm/playlists/*"
+    ],
+    "e": "//official.fm/services/oembed.json"
+  },
+  {
+    "s": [
+      "//omniscope\\.me/*"
+    ],
+    "e": "//omniscope.me/_global_/oembed/json"
+  },
+  {
+    "s": [
+      "//omny\\.fm/shows/*"
+    ],
+    "e": "//omny.fm/oembed"
+  },
+  {
+    "s": [
+      "//orbitvu\\.co/001/*/ov3601/view",
+      "//orbitvu\\.co/001/*/ov3601/*/view",
+      "//orbitvu\\.co/001/*/ov3602/*/view",
+      "//orbitvu\\.co/001/*/2/orbittour/*/view",
+      "//orbitvu\\.co/001/*/1/2/orbittour/*/view"
+    ],
+    "e": "//orbitvu.co/service/oembed"
+  },
+  {
+    "s": [
+      "//origits\\.com/v/*"
+    ],
+    "e": "//origits.net/oembed"
+  },
+  {
+    "s": [
+      "//origits\\.com/v/*"
+    ],
+    "e": "//origits.com/oembed"
+  },
+  {
+    "s": [
+      "//outplayed\\.tv/media/*"
+    ],
+    "e": "//outplayed.tv/oembed"
+  },
+  {
+    "s": [
+      "//overflow\\.io/s/*",
+      "//overflow\\.io/embed/*"
+    ],
+    "e": "//overflow.io/services/oembed"
+  },
+  {
+    "s": [
+      "//www\\.oz\\.com/*/video/*"
+    ],
+    "e": "//core.oz.com/oembed"
+  },
+  {
+    "s": [
+      "//padlet\\.com/*"
+    ],
+    "e": "//padlet.com/oembed/"
+  },
+  {
+    "s": [
+      "//*\\.tv\\.pandavideo\\.com\\.br/embed/?v=*",
+      "//*\\.tv\\.pandavideo\\.com\\.br/*/playlist\\.m3u8",
+      "//dashboard\\.pandavideo\\.com\\.br/#/videos/*"
+    ],
+    "e": "//api-v2.pandavideo.com.br/oembed"
+  },
+  {
+    "s": [
+      "//pastery\\.net/*",
+      "//www\\.pastery\\.net/*"
+    ],
+    "e": "//www.pastery.net/oembed"
+  },
+  {
+    "s": [
+      "//peertube\\.tv/w/*"
+    ],
+    "e": "//peertube.tv/services/oembed"
+  },
+  {
+    "s": [
+      "//www\\.picturelfy\\.com/p/*"
+    ],
+    "e": "//api.picturelfy.com/service/oembed/"
+  },
+  {
+    "s": [
+      "//piggy\\.to/@*/*",
+      "//piggy\\.to/view/*"
+    ],
+    "e": "//piggy.to/oembed"
+  },
+  {
+    "s": [
+      "//*\\.builder\\.pikasso\\.xyz/embed/*"
+    ],
+    "e": "//builder.pikasso.xyz/api/oembed"
   },
   {
     "s": [],
-    "e": "rumble.com/api/Media/oembed.json"
+    "e": "//beta.pingvp.com.kpnis.nl/p/oembed.php"
   },
   {
     "s": [
-      "embed\\.runkit\\.com/*,"
+      "//tools\\.pinpoll\\.com/embed/*"
     ],
-    "e": "embed.runkit.com/oembed"
+    "e": "//tools.pinpoll.com/oembed"
   },
   {
     "s": [
-      "octopus\\.saooti\\.com/main/pub/podcast/*"
+      "//www\\.pinterest\\.com/*"
     ],
-    "e": "octopus.saooti.com/oembed"
+    "e": "//www.pinterest.com/oembed.json"
   },
   {
     "s": [
-      "videos\\.sapo\\.pt/*"
+      "//player\\.pitchhub\\.com/en/public/player/*"
     ],
-    "e": "videos.sapo.pt/oembed"
+    "e": "//player.pitchhub.com/en/public/oembed"
   },
   {
     "s": [
-      "www\\.satcat\\.com/sats/*"
+      "//store\\.pixdor\\.com/place-marker-widget/*/show",
+      "//store\\.pixdor\\.com/map/*/show"
     ],
-    "e": "www.satcat.com/api/sats/oembed"
+    "e": "//store.pixdor.com/oembed"
   },
   {
     "s": [
-      "sbedit\\.net/*"
+      "//app\\.plusdocs\\.com/*/snapshots/*",
+      "//app\\.plusdocs\\.com/*/pages/edit/*",
+      "//app\\.plusdocs\\.com/*/pages/share/*"
     ],
-    "e": "sbedit.net/oembed/"
+    "e": "//app.plusdocs.com/oembed"
   },
   {
     "s": [
-      "getscenes\\.com/e/*",
-      "getscenes\\.com/event/*"
+      "//*\\.podbean\\.com/e/*"
     ],
-    "e": "getscenes.com/oembed"
+    "e": "//api.podbean.com/v1/oembed"
   },
   {
     "s": [
-      "console\\.screen9\\.com/*",
-      "*\\.screen9\\.tv/*"
+      "//*\\.polldaddy\\.com/s/*",
+      "//*\\.polldaddy\\.com/poll/*",
+      "//*\\.polldaddy\\.com/ratings/*"
     ],
-    "e": "api.screen9.com/oembed"
+    "e": "//polldaddy.com/oembed/"
   },
   {
     "s": [
-      "www\\.screencast\\.com/*"
+      "//portfolium\\.com/entry/*"
     ],
-    "e": "api.screencast.com/external/oembed"
+    "e": "//api.portfolium.com/oembed"
   },
   {
     "s": [
-      "www\\.screenr\\.com/*/"
+      "//present\\.do/decks/*"
     ],
-    "e": "www.screenr.com/api/oembed.json"
+    "e": "//gateway.cobalt.run/present/decks/oembed"
   },
   {
     "s": [
-      "www\\.scribblemaps\\.com/maps/view/*",
-      "scribblemaps\\.com/maps/view/*"
+      "//prezi\\.com/v/*",
+      "//*\\.prezi\\.com/v/*"
     ],
-    "e": "scribblemaps.com/api/services/oembed.json"
+    "e": "//prezi.com/v/oembed"
   },
   {
     "s": [
-      "www\\.scribd\\.com/doc/*"
+      "//qtpi\\.gg/fashion/*"
     ],
-    "e": "www.scribd.com/services/oembed/"
+    "e": "//qtpi.gg/fashion/oembed"
   },
   {
     "s": [
-      "embed\\.sendtonews\\.com/oembed/*"
+      "//quartr\\.com/*",
+      "//web\\.quartr\\.com/*"
     ],
-    "e": "embed.sendtonews.com/services/oembed"
+    "e": "//web.quartr.com/api/oembed"
   },
   {
     "s": [
-      "shared-file-kappa\\.vercel\\.app/file/*"
+      "//www\\.quiz\\.biz/quizz-*\\.html"
     ],
-    "e": "shared-file-kappa.vercel.app/file/api/oembed"
+    "e": "//www.quiz.biz/api/oembed"
   },
   {
     "s": [
-      "shopshare\\.tv/shopboard/*",
-      "shopshare\\.tv/shopcast/*"
+      "//www\\.quizz\\.biz/quizz-*\\.html"
     ],
-    "e": "shopshare.tv/api/shopcast/oembed"
+    "e": "//www.quizz.biz/api/oembed"
   },
   {
     "s": [
-      "www\\.shortnote\\.jp/view/notes/*"
+      "//play\\.radiopublic\\.com/*",
+      "//radiopublic\\.com/*",
+      "//www\\.radiopublic\\.com/*",
+      "//*\\.radiopublic\\.com/*"
     ],
-    "e": "www.shortnote.jp/oembed/"
+    "e": "//oembed.radiopublic.com/oembed"
   },
   {
     "s": [
-      "shoudio\\.com/*",
-      "shoud\\.io/*"
+      "//raindrop\\.io/*",
+      "//raindrop\\.io/*/*",
+      "//raindrop\\.io/*/*/*",
+      "//raindrop\\.io/*/*/*/*"
     ],
-    "e": "shoudio.com/api/oembed"
+    "e": "//pub.raindrop.io/api/oembed"
   },
   {
     "s": [
-      "app\\.getshow\\.io/iframe/*",
-      "*\\.getshow\\.io/share/*"
+      "//www\\.rcvis\\.com/v/*",
+      "//www\\.rcvis\\.com/visualize=*",
+      "//www\\.rcvis\\.com/ve/*",
+      "//www\\.rcvis\\.com/visualizeEmbedded=*"
     ],
-    "e": "api.getshow.io/oembed.json"
+    "e": "//animatron.com/oembed"
   },
   {
     "s": [
-      "showtheway\\.io/to/*"
+      "//reddit\\.com/r/*/comments/*/*",
+      "//www\\.reddit\\.com/r/*/comments/*/*"
     ],
-    "e": "showtheway.io/oembed"
+    "e": "//www.reddit.com/oembed"
   },
   {
     "s": [
-      "simplecast\\.com/s/*"
+      "//redlof-medien\\.de/*",
+      "//www\\.redlof-medien\\.de/*"
     ],
-    "e": "simplecast.com/oembed"
+    "e": "//redlof-medien.de/wp-json/oembed/1.0/embed"
   },
   {
     "s": [
-      "onsizzle\\.com/i/*"
+      "//show\\.wexcreator\\.com/*",
+      "//showroom\\.redlof-medien\\.de/*"
     ],
-    "e": "onsizzle.com/oembed"
+    "e": "//api.wexcreator.com/oembed/"
   },
   {
     "s": [
-      "sketchfab\\.com/*models/*",
-      "sketchfab\\.com/*/folders/*"
+      "//rwire\\.com/*"
     ],
-    "e": "sketchfab.com/oembed"
+    "e": "//publisher.releasewire.com/oembed/"
   },
   {
     "s": [
-      "www\\.skoletube\\.dk/media/*",
-      "www\\.skoletube\\.dk/video/*",
-      "www\\.studietube\\.dk/media/*",
-      "www\\.studietube\\.dk/video/*"
+      "//repl\\.it/@*/*",
+      "//replit\\.com/@*/*"
     ],
-    "e": "www.skoletube.dk/media/lasync/oembed/"
+    "e": "//replit.com/data/oembed"
   },
   {
     "s": [
-      "www\\.slideshare\\.net/*/*",
-      "fr\\.slideshare\\.net/*/*",
-      "de\\.slideshare\\.net/*/*",
-      "es\\.slideshare\\.net/*/*",
-      "pt\\.slideshare\\.net/*/*"
+      "//www\\.reverbnation\\.com/*",
+      "//www\\.reverbnation\\.com/*/songs/*"
     ],
-    "e": "www.slideshare.net/api/oembed/2"
+    "e": "//www.reverbnation.com/oembed"
   },
   {
     "s": [
-      "smashnotes\\.com/p/*",
-      "smashnotes\\.com/p/*/e/* - https://smashnotes\\.com/p/*/e/*/s/*"
+      "//roomshare\\.jp/post/*",
+      "//roomshare\\.jp/en/post/*"
     ],
-    "e": "smashnotes.com/services/oembed"
+    "e": "//roomshare.jp/en/oembed.json"
   },
   {
     "s": [
-      "open\\.smeme\\.com/*"
+      "//roosterteeth\\.com/*"
     ],
-    "e": "open.smeme.com/api/oembed"
+    "e": "//roosterteeth.com/oembed"
+  },
+  {
+    "s": [],
+    "e": "//rumble.com/api/Media/oembed.json"
   },
   {
     "s": [
-      "www\\.smrthi\\.com/book/*"
+      "//embed\\.runkit\\.com/*,"
     ],
-    "e": "www.smrthi.com/api/oembed"
+    "e": "//embed.runkit.com/oembed"
   },
   {
     "s": [
-      "*\\.smugmug\\.com/*"
+      "//octopus\\.saooti\\.com/main/pub/podcast/*"
     ],
-    "e": "api.smugmug.com/services/oembed/"
+    "e": "//octopus.saooti.com/oembed"
   },
   {
     "s": [
-      "www\\.socialexplorer\\.com/*/explore",
-      "www\\.socialexplorer\\.com/*/view",
-      "www\\.socialexplorer\\.com/*/edit",
-      "www\\.socialexplorer\\.com/*/embed"
+      "//videos\\.sapo\\.pt/*"
     ],
-    "e": "www.socialexplorer.com/services/oembed/"
+    "e": "//videos.sapo.pt/oembed"
   },
   {
     "s": [
-      "soundcloud\\.com/*",
-      "on\\.soundcloud\\.com/*",
-      "soundcloud\\.app\\.goog\\.gl/*"
+      "//www\\.satcat\\.com/sats/*"
     ],
-    "e": "soundcloud.com/oembed"
+    "e": "//www.satcat.com/api/sats/oembed"
   },
   {
     "s": [
-      "speakerdeck\\.com/*/*"
+      "//sbedit\\.net/*"
     ],
-    "e": "speakerdeck.com/oembed.json"
+    "e": "//sbedit.net/oembed/"
   },
   {
     "s": [
-      "open\\.spotify\\.com/*",
+      "//getscenes\\.com/e/*",
+      "//getscenes\\.com/event/*"
+    ],
+    "e": "//getscenes.com/oembed"
+  },
+  {
+    "s": [
+      "//console\\.screen9\\.com/*",
+      "//*\\.screen9\\.tv/*"
+    ],
+    "e": "//api.screen9.com/oembed"
+  },
+  {
+    "s": [
+      "//www\\.screencast\\.com/*"
+    ],
+    "e": "//api.screencast.com/external/oembed"
+  },
+  {
+    "s": [
+      "//www\\.screenr\\.com/*/"
+    ],
+    "e": "//www.screenr.com/api/oembed.json"
+  },
+  {
+    "s": [
+      "//www\\.scribblemaps\\.com/maps/view/*",
+      "//scribblemaps\\.com/maps/view/*"
+    ],
+    "e": "//scribblemaps.com/api/services/oembed.json"
+  },
+  {
+    "s": [
+      "//www\\.scribd\\.com/doc/*"
+    ],
+    "e": "//www.scribd.com/services/oembed/"
+  },
+  {
+    "s": [
+      "//embed\\.sendtonews\\.com/oembed/*"
+    ],
+    "e": "//embed.sendtonews.com/services/oembed"
+  },
+  {
+    "s": [
+      "//shared-file-kappa\\.vercel\\.app/file/*"
+    ],
+    "e": "//shared-file-kappa.vercel.app/file/api/oembed"
+  },
+  {
+    "s": [
+      "//shopshare\\.tv/shopboard/*",
+      "//shopshare\\.tv/shopcast/*"
+    ],
+    "e": "//shopshare.tv/api/shopcast/oembed"
+  },
+  {
+    "s": [
+      "//www\\.shortnote\\.jp/view/notes/*"
+    ],
+    "e": "//www.shortnote.jp/oembed/"
+  },
+  {
+    "s": [
+      "//shoudio\\.com/*",
+      "//shoud\\.io/*"
+    ],
+    "e": "//shoudio.com/api/oembed"
+  },
+  {
+    "s": [
+      "//app\\.getshow\\.io/iframe/*",
+      "//*\\.getshow\\.io/share/*"
+    ],
+    "e": "//api.getshow.io/oembed.json"
+  },
+  {
+    "s": [
+      "//showtheway\\.io/to/*"
+    ],
+    "e": "//showtheway.io/oembed"
+  },
+  {
+    "s": [
+      "//simplecast\\.com/s/*"
+    ],
+    "e": "//simplecast.com/oembed"
+  },
+  {
+    "s": [
+      "//onsizzle\\.com/i/*"
+    ],
+    "e": "//onsizzle.com/oembed"
+  },
+  {
+    "s": [
+      "//sketchfab\\.com/*models/*",
+      "//sketchfab\\.com/*/folders/*"
+    ],
+    "e": "//sketchfab.com/oembed"
+  },
+  {
+    "s": [
+      "//www\\.skoletube\\.dk/media/*",
+      "//www\\.skoletube\\.dk/video/*",
+      "//www\\.studietube\\.dk/media/*",
+      "//www\\.studietube\\.dk/video/*"
+    ],
+    "e": "//www.skoletube.dk/media/lasync/oembed/"
+  },
+  {
+    "s": [
+      "//www\\.slideshare\\.net/*/*",
+      "//fr\\.slideshare\\.net/*/*",
+      "//de\\.slideshare\\.net/*/*",
+      "//es\\.slideshare\\.net/*/*",
+      "//pt\\.slideshare\\.net/*/*"
+    ],
+    "e": "//www.slideshare.net/api/oembed/2"
+  },
+  {
+    "s": [
+      "//smashnotes\\.com/p/*",
+      "//smashnotes\\.com/p/*/e/* - https://smashnotes\\.com/p/*/e/*/s/*"
+    ],
+    "e": "//smashnotes.com/services/oembed"
+  },
+  {
+    "s": [
+      "//open\\.smeme\\.com/*"
+    ],
+    "e": "//open.smeme.com/api/oembed"
+  },
+  {
+    "s": [
+      "//www\\.smrthi\\.com/book/*"
+    ],
+    "e": "//www.smrthi.com/api/oembed"
+  },
+  {
+    "s": [
+      "//*\\.smugmug\\.com/*"
+    ],
+    "e": "//api.smugmug.com/services/oembed/"
+  },
+  {
+    "s": [
+      "//www\\.socialexplorer\\.com/*/explore",
+      "//www\\.socialexplorer\\.com/*/view",
+      "//www\\.socialexplorer\\.com/*/edit",
+      "//www\\.socialexplorer\\.com/*/embed"
+    ],
+    "e": "//www.socialexplorer.com/services/oembed/"
+  },
+  {
+    "s": [
+      "//soundcloud\\.com/*",
+      "//on\\.soundcloud\\.com/*",
+      "//soundcloud\\.app\\.goog\\.gl/*"
+    ],
+    "e": "//soundcloud.com/oembed"
+  },
+  {
+    "s": [
+      "//speakerdeck\\.com/*/*"
+    ],
+    "e": "//speakerdeck.com/oembed.json"
+  },
+  {
+    "s": [
+      "//open\\.spotify\\.com/*",
       "spotify:*",
-      "spotify\\.link/*"
+      "//spotify\\.link/*"
     ],
-    "e": "open.spotify.com/oembed"
+    "e": "//open.spotify.com/oembed"
   },
   {
     "s": [
-      "*\\.spotlightr\\.com/watch/*",
-      "*\\.spotlightr\\.com/publish/*",
-      "*\\.cdn\\.spotlightr\\.com/watch/*",
-      "*\\.cdn\\.spotlightr\\.com/publish/*"
+      "//*\\.spotlightr\\.com/watch/*",
+      "//*\\.spotlightr\\.com/publish/*",
+      "//*\\.cdn\\.spotlightr\\.com/watch/*",
+      "//*\\.cdn\\.spotlightr\\.com/publish/*"
     ],
-    "e": "api.spotlightr.com/getOEmbed"
+    "e": "//api.spotlightr.com/getOEmbed"
   },
   {
     "s": [
-      "*\\.spreaker\\.com/*"
+      "//*\\.spreaker\\.com/*"
     ],
-    "e": "api.spreaker.com/oembed"
+    "e": "//api.spreaker.com/oembed"
   },
   {
     "s": [
-      "sproutvideo\\.com/videos/*",
-      "*\\.vids\\.io/videos/*"
+      "//sproutvideo\\.com/videos/*",
+      "//*\\.vids\\.io/videos/*"
     ],
-    "e": "sproutvideo.com/oembed.json"
+    "e": "//sproutvideo.com/oembed.json"
   },
   {
     "s": [
-      "spyke\\.social/p/*",
-      "spyke\\.social/u/*",
-      "spyke\\.social/g/*",
-      "spyke\\.social/c/*",
-      "www\\.spyke\\.social/p/*",
-      "www\\.spyke\\.social/u/*",
-      "www\\.spyke\\.social/g/*",
-      "www\\.spyke\\.social/c/*"
+      "//spyke\\.social/p/*",
+      "//spyke\\.social/u/*",
+      "//spyke\\.social/g/*",
+      "//spyke\\.social/c/*",
+      "//www\\.spyke\\.social/p/*",
+      "//www\\.spyke\\.social/u/*",
+      "//www\\.spyke\\.social/g/*",
+      "//www\\.spyke\\.social/c/*"
     ],
-    "e": "api.spyke.social/embed/oembed"
+    "e": "//api.spyke.social/embed/oembed"
   },
   {
     "s": [
-      "purl\\.stanford\\.edu/*"
+      "//purl\\.stanford\\.edu/*"
     ],
-    "e": "purl.stanford.edu/embed.json"
+    "e": "//purl.stanford.edu/embed.json"
   },
   {
     "s": [
-      "streamable\\.com/*"
+      "//streamable\\.com/*"
     ],
-    "e": "api.streamable.com/oembed.json"
+    "e": "//api.streamable.com/oembed.json"
   },
   {
     "s": [
-      "s3m\\.io/*",
-      "23m\\.io/*"
+      "//s3m\\.io/*",
+      "//23m\\.io/*"
     ],
-    "e": "streamio.com/api/v1/oembed"
+    "e": "//streamio.com/api/v1/oembed"
   },
   {
     "s": [
-      "subscribi\\.io/api/oembed*"
+      "//subscribi\\.io/api/oembed*"
     ],
-    "e": "subscribi.io/api/oembed"
+    "e": "//subscribi.io/api/oembed"
   },
   {
     "s": [
-      "www\\.sudomemo\\.net/watch/*",
-      "flipnot\\.es/*"
+      "//www\\.sudomemo\\.net/watch/*",
+      "//flipnot\\.es/*"
     ],
-    "e": "www.sudomemo.net/oembed"
+    "e": "//www.sudomemo.net/oembed"
   },
   {
     "s": [
-      "supercut\\.video/share/*"
+      "//supercut\\.video/share/*"
     ],
-    "e": "supercut.video/oembed"
+    "e": "//supercut.video/oembed"
   },
   {
     "s": [
-      "www\\.sutori\\.com/story/*"
+      "//www\\.sutori\\.com/story/*"
     ],
-    "e": "www.sutori.com/api/oembed"
+    "e": "//www.sutori.com/api/oembed"
   },
   {
     "s": [
-      "sway\\.com/*",
-      "www\\.sway\\.com/*"
+      "//sway\\.com/*",
+      "//www\\.sway\\.com/*"
     ],
-    "e": "sway.com/api/v1.0/oembed"
+    "e": "//sway.com/api/v1.0/oembed"
   },
   {
     "s": [
-      "sway\\.office\\.com/*"
+      "//sway\\.office\\.com/*"
     ],
-    "e": "sway.office.com/api/v1.0/oembed"
+    "e": "//sway.office.com/api/v1.0/oembed"
   },
   {
     "s": [
-      "share\\.synthesia\\.io/*"
+      "//share\\.synthesia\\.io/*"
     ],
-    "e": "69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed"
+    "e": "//69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed"
   },
   {
     "s": [
-      "techpostcast\\.com/headline-topic-programs/*"
+      "//techpostcast\\.com/headline-topic-programs/*"
     ],
-    "e": "techpostcast.com/oembed/"
+    "e": "//techpostcast.com/oembed/"
   },
   {
     "s": [
-      "ted\\.com/talks/*",
-      "www\\.ted\\.com/talks/*"
+      "//ted\\.com/talks/*",
+      "//www\\.ted\\.com/talks/*"
     ],
-    "e": "www.ted.com/services/v1/oembed.json"
+    "e": "//www.ted.com/services/v1/oembed.json"
   },
   {
     "s": [
-      "hubspot-media-bridge\\.thedamconsultants\\.com/*"
+      "//hubspot-media-bridge\\.thedamconsultants\\.com/*"
     ],
-    "e": "hubspot-media-bridge.thedamconsultants.com/oembed/"
+    "e": "//hubspot-media-bridge.thedamconsultants.com/oembed/"
   },
   {
     "s": [
-      "www\\.nytimes\\.com/svc/oembed",
-      "nytimes\\.com/*",
-      "*\\.nytimes\\.com/*"
+      "//www\\.nytimes\\.com/svc/oembed",
+      "//nytimes\\.com/*",
+      "//*\\.nytimes\\.com/*"
     ],
-    "e": "www.nytimes.com/svc/oembed/json/"
+    "e": "//www.nytimes.com/svc/oembed/json/"
   },
   {
     "s": [
-      "theysaidso\\.com/image/*"
+      "//theysaidso\\.com/image/*"
     ],
-    "e": "theysaidso.com/extensions/oembed/"
+    "e": "//theysaidso.com/extensions/oembed/"
   },
   {
     "s": [
-      "www\\.tickcounter\\.com/widget/*",
-      "www\\.tickcounter\\.com/countdown/*",
-      "www\\.tickcounter\\.com/countup/*",
-      "www\\.tickcounter\\.com/ticker/*",
-      "www\\.tickcounter\\.com/clock/*",
-      "www\\.tickcounter\\.com/worldclock/*"
+      "//www\\.tickcounter\\.com/widget/*",
+      "//www\\.tickcounter\\.com/countdown/*",
+      "//www\\.tickcounter\\.com/countup/*",
+      "//www\\.tickcounter\\.com/ticker/*",
+      "//www\\.tickcounter\\.com/clock/*",
+      "//www\\.tickcounter\\.com/worldclock/*"
     ],
-    "e": "www.tickcounter.com/oembed"
+    "e": "//www.tickcounter.com/oembed"
   },
   {
     "s": [
-      "www\\.tiktok\\.com/*",
-      "www\\.tiktok\\.com/*/video/*"
+      "//www\\.tiktok\\.com/*",
+      "//www\\.tiktok\\.com/*/video/*"
     ],
-    "e": "www.tiktok.com/oembed"
+    "e": "//www.tiktok.com/oembed"
   },
   {
     "s": [
-      "tksn\\.me/*",
-      "*\\.tksn\\.me/*"
+      "//tksn\\.me/*",
+      "//*\\.tksn\\.me/*"
     ],
-    "e": "tksn.me/api/oembed/"
+    "e": "//tksn.me/api/oembed/"
   },
   {
     "s": [
-      "tonicaudio\\.com/take/*",
-      "tonicaudio\\.com/song/*",
-      "tnic\\.io/song/*",
-      "tnic\\.io/take/*"
+      "//tonicaudio\\.com/take/*",
+      "//tonicaudio\\.com/song/*",
+      "//tnic\\.io/song/*",
+      "//tnic\\.io/take/*"
     ],
-    "e": "tonicaudio.com/oembed"
+    "e": "//tonicaudio.com/oembed"
   },
   {
     "s": [
-      "www\\.toornament\\.com/tournaments/*/information",
-      "www\\.toornament\\.com/tournaments/*/registration/",
-      "www\\.toornament\\.com/tournaments/*/matches/schedule",
-      "www\\.toornament\\.com/tournaments/*/stages/*/"
+      "//www\\.toornament\\.com/tournaments/*/information",
+      "//www\\.toornament\\.com/tournaments/*/registration/",
+      "//www\\.toornament\\.com/tournaments/*/matches/schedule",
+      "//www\\.toornament\\.com/tournaments/*/stages/*/"
     ],
-    "e": "widget.toornament.com/oembed"
+    "e": "//widget.toornament.com/oembed"
   },
   {
     "s": [
-      "www\\.topy\\.se/image/*"
+      "//www\\.topy\\.se/image/*"
     ],
-    "e": "www.topy.se/oembed/"
+    "e": "//www.topy.se/oembed/"
   },
   {
     "s": [
-      "app-test\\.totango\\.com/*"
+      "//app-test\\.totango\\.com/*"
     ],
-    "e": "app-test.totango.com/oembed"
+    "e": "//app-test.totango.com/oembed"
   },
   {
     "s": [
-      "trackspace\\.upitup\\.com/*"
+      "//trackspace\\.upitup\\.com/*"
     ],
-    "e": "trackspace.upitup.com/oembed"
+    "e": "//trackspace.upitup.com/oembed"
   },
   {
     "s": [
-      "trinitymedia\\.ai/player/*",
-      "trinitymedia\\.ai/player/*/*",
-      "trinitymedia\\.ai/player/*/*/*"
+      "//trinitymedia\\.ai/player/*",
+      "//trinitymedia\\.ai/player/*/*",
+      "//trinitymedia\\.ai/player/*/*/*"
     ],
-    "e": "trinitymedia.ai/services/oembed"
+    "e": "//trinitymedia.ai/services/oembed"
   },
   {
     "s": [
-      "*\\.tumblr\\.com/post/*"
+      "//*\\.tumblr\\.com/post/*"
     ],
-    "e": "www.tumblr.com/oembed/1.0"
+    "e": "//www.tumblr.com/oembed/1.0"
   },
   {
     "s": [
-      "www\\.tuxx\\.be/*"
+      "//www\\.tuxx\\.be/*"
     ],
-    "e": "www.tuxx.be/services/oembed"
+    "e": "//www.tuxx.be/services/oembed"
   },
   {
     "s": [
-      "play\\.tvcf\\.co\\.kr/*",
-      "*\\.tvcf\\.co\\.kr/*"
+      "//play\\.tvcf\\.co\\.kr/*",
+      "//*\\.tvcf\\.co\\.kr/*"
     ],
-    "e": "play.tvcf.co.kr/rest/oembed"
+    "e": "//play.tvcf.co.kr/rest/oembed"
   },
   {
     "s": [
-      "twinmotion\\.unrealengine\\.com/presentation/*",
-      "twinmotion\\.unrealengine\\.com/panorama/*"
+      "//twinmotion\\.unrealengine\\.com/presentation/*",
+      "//twinmotion\\.unrealengine\\.com/panorama/*"
     ],
-    "e": "twinmotion.unrealengine.com/oembed"
+    "e": "//twinmotion.unrealengine.com/oembed"
   },
   {
     "s": [
-      "twitter\\.com/*",
-      "twitter\\.com/*/status/*",
-      "*\\.twitter\\.com/*/status/*"
+      "//twitter\\.com/*",
+      "//twitter\\.com/*/status/*",
+      "//*\\.twitter\\.com/*/status/*"
     ],
-    "e": "publish.twitter.com/oembed"
+    "e": "//publish.twitter.com/oembed"
   },
   {
     "s": [
-      "play\\.typecast\\.ai/s/*",
-      "play\\.typecast\\.ai/e/*",
-      "play\\.typecast\\.ai/*"
+      "//play\\.typecast\\.ai/s/*",
+      "//play\\.typecast\\.ai/e/*",
+      "//play\\.typecast\\.ai/*"
     ],
-    "e": "play.typecast.ai/oembed"
+    "e": "//play.typecast.ai/oembed"
   },
   {
     "s": [],
-    "e": "typlog.com/oembed"
+    "e": "//typlog.com/oembed"
   },
   {
     "s": [
-      "uapod\\.univ-antilles\\.fr/video/*"
+      "//uapod\\.univ-antilles\\.fr/video/*"
     ],
-    "e": "uapod.univ-antilles.fr/oembed"
+    "e": "//uapod.univ-antilles.fr/oembed"
   },
   {
     "s": [
-      "map\\.cam\\.ac\\.uk/*"
+      "//map\\.cam\\.ac\\.uk/*"
     ],
-    "e": "map.cam.ac.uk/oembed/"
+    "e": "//map.cam.ac.uk/oembed/"
   },
   {
     "s": [
-      "mediatheque\\.univ-paris1\\.fr/video/*"
+      "//mediatheque\\.univ-paris1\\.fr/video/*"
     ],
-    "e": "mediatheque.univ-paris1.fr/oembed"
+    "e": "//mediatheque.univ-paris1.fr/oembed"
   },
   {
     "s": [
-      "pod\\.u-pec\\.fr/video/*"
+      "//pod\\.u-pec\\.fr/video/*"
     ],
-    "e": "pod.u-pec.fr/oembed"
+    "e": "//pod.u-pec.fr/oembed"
   },
   {
     "s": [
-      "*\\.ustream\\.tv/*",
-      "*\\.ustream\\.com/*"
+      "//*\\.ustream\\.tv/*",
+      "//*\\.ustream\\.com/*"
     ],
-    "e": "www.ustream.tv/oembed"
+    "e": "//www.ustream.tv/oembed"
   },
   {
     "s": [
-      "*\\.ustudio\\.com/embed/*",
-      "*\\.ustudio\\.com/embed/*/*"
+      "//*\\.ustudio\\.com/embed/*",
+      "//*\\.ustudio\\.com/embed/*/*"
     ],
-    "e": "app.ustudio.com/api/v2/oembed"
+    "e": "//app.ustudio.com/api/v2/oembed"
   },
   {
     "s": [
-      "veer\\.tv/videos/*"
+      "//veer\\.tv/videos/*"
     ],
-    "e": "api.veer.tv/oembed"
+    "e": "//api.veer.tv/oembed"
   },
   {
     "s": [
-      "veervr\\.tv/videos/*"
+      "//veervr\\.tv/videos/*"
     ],
-    "e": "api.veervr.tv/oembed"
+    "e": "//api.veervr.tv/oembed"
   },
   {
     "s": [
-      "www\\.vevo\\.com/*"
+      "//www\\.vevo\\.com/*"
     ],
-    "e": "www.vevo.com/oembed"
+    "e": "//www.vevo.com/oembed"
   },
   {
     "s": [
-      "videfit\\.com/videos/*"
+      "//videfit\\.com/videos/*"
     ],
-    "e": "videfit.com/oembed"
+    "e": "//videfit.com/oembed"
   },
   {
     "s": [
-      "vidmount\\.com/*"
+      "//vidmount\\.com/*"
     ],
-    "e": "vidmount.com/oembed"
+    "e": "//vidmount.com/oembed"
   },
   {
     "s": [
-      "*\\.vidyard\\.com/*",
-      "*\\.hubs\\.vidyard\\.com/*"
+      "//*\\.vidyard\\.com/*",
+      "//*\\.hubs\\.vidyard\\.com/*"
     ],
-    "e": "api.vidyard.com/dashboard/v1.1/oembed"
+    "e": "//api.vidyard.com/dashboard/v1.1/oembed"
   },
   {
     "s": [
-      "vimeo\\.com/*",
-      "vimeo\\.com/album/*/video/*",
-      "vimeo\\.com/channels/*/*",
-      "vimeo\\.com/groups/*/videos/*",
-      "vimeo\\.com/ondemand/*/*",
-      "player\\.vimeo\\.com/video/*",
-      "vimeo\\.com/event/*/*"
+      "//vimeo\\.com/*",
+      "//vimeo\\.com/album/*/video/*",
+      "//vimeo\\.com/channels/*/*",
+      "//vimeo\\.com/groups/*/videos/*",
+      "//vimeo\\.com/ondemand/*/*",
+      "//player\\.vimeo\\.com/video/*",
+      "//vimeo\\.com/event/*/*"
     ],
-    "e": "vimeo.com/api/oembed.json"
+    "e": "//vimeo.com/api/oembed.json"
   },
   {
     "s": [
-      "share\\.viostream\\.com/*"
+      "//share\\.viostream\\.com/*"
     ],
-    "e": "play.viostream.com/oembed"
+    "e": "//play.viostream.com/oembed"
   },
   {
     "s": [
-      "www\\.viously\\.com/*/*"
+      "//www\\.viously\\.com/*/*"
     ],
-    "e": "www.viously.com/oembed"
+    "e": "//www.viously.com/oembed"
   },
   {
     "s": [
-      "vizdom\\.dev/link/*"
+      "//vizdom\\.dev/link/*"
     ],
-    "e": "vizdom.dev/api/v1/oembed"
+    "e": "//vizdom.dev/api/v1/oembed"
   },
   {
     "s": [
-      "vizydrop\\.com/shared/*"
+      "//vizydrop\\.com/shared/*"
     ],
-    "e": "vizydrop.com/oembed"
+    "e": "//vizydrop.com/oembed"
   },
   {
     "s": [
-      "vlipsy\\.com/*"
+      "//vlipsy\\.com/*"
     ],
-    "e": "vlipsy.com/oembed"
+    "e": "//vlipsy.com/oembed"
   },
   {
     "s": [
-      "www\\.vlive\\.tv/video/*"
+      "//www\\.vlive\\.tv/video/*"
     ],
-    "e": "www.vlive.tv/oembed"
+    "e": "//www.vlive.tv/oembed"
   },
   {
     "s": [
-      "*\\.vouchfor\\.com/*"
+      "//*\\.vouchfor\\.com/*"
     ],
-    "e": "embed.vouchfor.com/v1/oembed"
+    "e": "//embed.vouchfor.com/v1/oembed"
   },
   {
     "s": [
-      "article\\.voxsnap\\.com/*/*"
+      "//article\\.voxsnap\\.com/*/*"
     ],
-    "e": "data.voxsnap.com/oembed"
+    "e": "//data.voxsnap.com/oembed"
   },
   {
     "s": [
-      "waltrack\\.net/product/*"
+      "//waltrack\\.net/product/*"
     ],
-    "e": "waltrack.net/oembed"
+    "e": "//waltrack.net/oembed"
   },
   {
     "s": [
-      "watch\\.wave\\.video/*",
-      "embed\\.wave\\.video/*"
+      "//watch\\.wave\\.video/*",
+      "//embed\\.wave\\.video/*"
     ],
-    "e": "embed.wave.video/oembed"
+    "e": "//embed.wave.video/oembed"
   },
   {
     "s": [
-      "www\\.web3isgoinggreat\\.com/?id=*",
-      "www\\.web3isgoinggreat\\.com/single/*",
-      "www\\.web3isgoinggreat\\.com/embed/*"
+      "//www\\.web3isgoinggreat\\.com/?id=*",
+      "//www\\.web3isgoinggreat\\.com/single/*",
+      "//www\\.web3isgoinggreat\\.com/embed/*"
     ],
-    "e": "www.web3isgoinggreat.com/api/oembed"
+    "e": "//www.web3isgoinggreat.com/api/oembed"
   },
   {
     "s": [
-      "share\\.webcrumbs\\.org/*",
-      "tools\\.webcrumbs\\.org/*",
-      "www\\.webcrumbs\\.org/*"
+      "//share\\.webcrumbs\\.org/*",
+      "//tools\\.webcrumbs\\.org/*",
+      "//www\\.webcrumbs\\.org/*"
     ],
-    "e": "share.webcrumbs.org/"
+    "e": "//share.webcrumbs.org/"
   },
   {
     "s": [
-      "play\\.wecandeo\\.com/video/v/*"
+      "//play\\.wecandeo\\.com/video/v/*"
     ],
-    "e": "play.wecandeo.com/oembed/"
+    "e": "//play.wecandeo.com/oembed/"
   },
   {
     "s": [
-      "whimsical\\.com/*"
+      "//whimsical\\.com/*"
     ],
-    "e": "whimsical.com/api/oembed"
+    "e": "//whimsical.com/api/oembed"
   },
   {
     "s": [
-      "fast\\.wistia\\.com/embed/iframe/*",
-      "fast\\.wistia\\.com/embed/playlists/*",
-      "*\\.wistia\\.com/medias/*"
+      "//fast\\.wistia\\.com/embed/iframe/*",
+      "//fast\\.wistia\\.com/embed/playlists/*",
+      "//*\\.wistia\\.com/medias/*"
     ],
-    "e": "fast.wistia.com/oembed.json"
+    "e": "//fast.wistia.com/oembed.json"
   },
   {
     "s": [
-      "*\\.wizer\\.me/learn/*",
-      "*\\.wizer\\.me/preview/*"
+      "//*\\.wizer\\.me/learn/*",
+      "//*\\.wizer\\.me/preview/*"
     ],
-    "e": "app.wizer.me/api/oembed.json"
+    "e": "//app.wizer.me/api/oembed.json"
   },
   {
     "s": [
-      "wokwi\\.com/share/*"
+      "//wokwi\\.com/share/*"
     ],
-    "e": "wokwi.com/api/oembed"
+    "e": "//wokwi.com/api/oembed"
   },
   {
     "s": [
-      "*\\.wolframcloud\\.com/*"
+      "//*\\.wolframcloud\\.com/*"
     ],
-    "e": "www.wolframcloud.com/oembed"
+    "e": "//www.wolframcloud.com/oembed"
   },
   {
     "s": [
-      "wordpress\\.com/*",
-      "*\\.wordpress\\.com/*",
-      "*\\.*\\.wordpress\\.com/*",
-      "wp\\.me/*"
+      "//wordpress\\.com/*",
+      "//*\\.wordpress\\.com/*",
+      "//*\\.*\\.wordpress\\.com/*",
+      "//wp\\.me/*"
     ],
-    "e": "public-api.wordpress.com/oembed/"
+    "e": "//public-api.wordpress.com/oembed/"
   },
   {
     "s": [
-      "x\\.com/*",
-      "x\\.com/*/status/*",
-      "*\\.x\\.com/*/status/*"
+      "//x\\.com/*",
+      "//x\\.com/*/status/*",
+      "//*\\.x\\.com/*/status/*"
     ],
-    "e": "publish.x.com/oembed"
+    "e": "//publish.x.com/oembed"
   },
   {
     "s": [
-      "*\\.youtube\\.com/watch*",
-      "*\\.youtube\\.com/v/*",
-      "youtu\\.be/*",
-      "*\\.youtube\\.com/playlist?list=*",
-      "youtube\\.com/playlist?list=*",
-      "*\\.youtube\\.com/shorts*",
-      "youtube\\.com/shorts*",
-      "*\\.youtube\\.com/embed/*",
-      "*\\.youtube\\.com/live*",
-      "youtube\\.com/live*"
+      "//*\\.youtube\\.com/watch*",
+      "//*\\.youtube\\.com/v/*",
+      "//youtu\\.be/*",
+      "//*\\.youtube\\.com/playlist?list=*",
+      "//youtube\\.com/playlist?list=*",
+      "//*\\.youtube\\.com/shorts*",
+      "//youtube\\.com/shorts*",
+      "//*\\.youtube\\.com/embed/*",
+      "//*\\.youtube\\.com/live*",
+      "//youtube\\.com/live*"
     ],
-    "e": "www.youtube.com/oembed"
+    "e": "//www.youtube.com/oembed"
   },
   {
     "s": [
-      "www\\.yumpu\\.com/*/document/view/*/*"
+      "//www\\.yumpu\\.com/*/document/view/*/*"
     ],
-    "e": "www.yumpu.com/services/oembed"
+    "e": "//www.yumpu.com/services/oembed"
   },
   {
     "s": [
-      "app\\.zeplin\\.io/project/*/screen/*",
-      "app\\.zeplin\\.io/project/*/screen/*/version/*",
-      "app\\.zeplin\\.io/project/*/styleguide/components?coid=*",
-      "app\\.zeplin\\.io/styleguide/*/components?coid=*"
+      "//app\\.zeplin\\.io/project/*/screen/*",
+      "//app\\.zeplin\\.io/project/*/screen/*/version/*",
+      "//app\\.zeplin\\.io/project/*/styleguide/components?coid=*",
+      "//app\\.zeplin\\.io/styleguide/*/components?coid=*"
     ],
-    "e": "app.zeplin.io/embed"
+    "e": "//app.zeplin.io/embed"
   },
   {
     "s": [
-      "app\\.zingsoft\\.com/embed/*",
-      "app\\.zingsoft\\.com/view/*"
+      "//app\\.zingsoft\\.com/embed/*",
+      "//app\\.zingsoft\\.com/view/*"
     ],
-    "e": "app.zingsoft.com/oembed"
+    "e": "//app.zingsoft.com/oembed"
   },
   {
     "s": [
-      "*\\.znipe\\.tv/*"
+      "//*\\.znipe\\.tv/*"
     ],
-    "e": "api.znipe.tv/v3/oembed/"
+    "e": "//api.znipe.tv/v3/oembed/"
   },
   {
     "s": [
-      "srv2\\.zoomable\\.ca/viewer\\.php*"
+      "//srv2\\.zoomable\\.ca/viewer\\.php*"
     ],
-    "e": "srv2.zoomable.ca/oembed"
+    "e": "//srv2.zoomable.ca/oembed"
   }
 ]
