@@ -10,9 +10,7 @@ Extract oEmbed content from given URL.
 
 ## Demo
 
-- [Give it a try!](https://extractor-demos.pages.dev/oembed-extractor)
-- [Example FaaS](https://extractus.deno.dev/extract?apikey=rn0wbHos2e73W6ghQf705bdF&type=oembed&url=https://www.instagram.com/tv/CVlR5GFqF68/)
-
+- [Give it a try!](https://extractus-demo.vercel.app/oembed)
 
 ## Install & Usage
 

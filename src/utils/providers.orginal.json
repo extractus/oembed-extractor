@@ -1670,7 +1670,6 @@
       {
         "schemes": [
           "https://gumlet.tv/watch/*",
-          "https://www.gumlet.com/watch/*",
           "https://play.gumlet.io/embed/*"
         ],
         "url": "https://api.gumlet.com/v1/oembed",
@@ -1891,6 +1890,20 @@
           "http://ifttt.com/recipes/*"
         ],
         "url": "http://www.ifttt.com/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Ignite",
+    "provider_url": "https://ignite.video/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.videocdn.net/player/*",
+          "https://*.euvideocdn.com/player/*"
+        ],
+        "url": "https://app.ignitevideo.cloud/api/oembed",
         "discovery": true
       }
     ]
@@ -2442,6 +2455,19 @@
           "https://*.lumiere.is/v/*"
         ],
         "url": "https://admin.lumiere.is/api/services/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "marimo",
+    "provider_url": "https://marimo.io/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://marimo.app/*"
+        ],
+        "url": "https://marimo.app/oembed",
         "discovery": true
       }
     ]
