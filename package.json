@@ -1,5 +1,5 @@
 {
-  "version": "4.0.8",
+  "version": "4.0.9",
   "name": "@extractus/oembed-extractor",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://github.com/extractus/oembed-extractor",
@@ -25,22 +25,21 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "pretest": "npm run lint",
-    "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --verbose --coverage=true",
+    "test": "node --test --experimental-test-coverage",
     "eval": "node eval",
     "sync": "node sync",
     "reset": "node reset"
   },
   "dependencies": {
     "cross-fetch": "^4.1.0",
-    "linkedom": "^0.18.10"
+    "linkedom": "^0.18.12"
   },
   "devDependencies": {
-    "@eslint/js": "^9.26.0",
-    "eslint": "^9.26.0",
-    "globals": "^16.0.0",
+    "@eslint/js": "^9.34.0",
+    "eslint": "^9.34.0",
+    "globals": "^16.3.0",
     "https-proxy-agent": "^7.0.6",
-    "jest": "^29.7.0",
-    "nock": "^14.0.4"
+    "nock": "^14.0.10"
   },
   "keywords": [
     "oembed",
