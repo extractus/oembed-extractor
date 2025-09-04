@@ -1,4 +1,4 @@
-// provider data, synchronized at 2025-04-13T02:12:06.847Z
+// provider data, synchronized at 2025-05-04T13:26:33.140Z
 
 /* eslint-disable */ 
 
@@ -804,7 +804,6 @@ export const providers = [
   {
     "s": [
       "//gumlet\\.tv/watch/*",
-      "//www\\.gumlet\\.com/watch/*",
       "//play\\.gumlet\\.io/embed/*"
     ],
     "e": "//api.gumlet.com/v1/oembed"
@@ -908,6 +907,13 @@ export const providers = [
       "//ifttt\\.com/recipes/*"
     ],
     "e": "//www.ifttt.com/oembed/"
+  },
+  {
+    "s": [
+      "//*\\.videocdn\\.net/player/*",
+      "//*\\.euvideocdn\\.com/player/*"
+    ],
+    "e": "//app.ignitevideo.cloud/api/oembed"
   },
   {
     "s": [
@@ -1170,6 +1176,12 @@ export const providers = [
       "//*\\.lumiere\\.is/v/*"
     ],
     "e": "//admin.lumiere.is/api/services/oembed"
+  },
+  {
+    "s": [
+      "//marimo\\.app/*"
+    ],
+    "e": "//marimo.app/oembed"
   },
   {
     "s": [
