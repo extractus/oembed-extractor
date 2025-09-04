@@ -1,5 +1,7 @@
 // linker.test
-/* eslint-env jest */
+
+import { describe, it } from 'node:test'
+import assert from 'node:assert'
 
 import { isValid as isValidURL } from './linker.js'
 
@@ -39,9 +41,9 @@ describe('test isValidURL()', () => {
     },
   ]
   cases.forEach(({ url, expected }) => {
-    test(`isValidURL("${url}") must return "${expected}"`, () => {
+    it(`isValidURL("${url}") must return "${expected}"`, () => {
       const result = isValidURL(url)
-      expect(result).toEqual(expected)
+      assert.equal(result, expected)
     })
   })
 })

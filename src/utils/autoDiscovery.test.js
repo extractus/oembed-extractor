@@ -1,5 +1,7 @@
 // autoDiscovery.test
-/* eslint-env jest */
+
+import { describe, it } from 'node:test'
+import assert from 'node:assert'
 
 import nock from 'nock'
 
@@ -15,7 +17,7 @@ const parseUrl = (url) => {
 
 describe('test if autoDiscovery() works correctly', () => {
   const url = 'https://www.bitchute.com/video/8hXWnkvA8Ao/'
-  test(`check fetchEmbed("${url}")`, async () => {
+  it(`check fetchEmbed("${url}")`, async () => {
     const htmlFile = './test-data/bitchute.html'
     const jsonFile = './test-data/bitchute.json'
 
@@ -47,7 +49,7 @@ describe('test if autoDiscovery() works correctly', () => {
       })
 
     const result = await autoDiscovery(url, params)
-    expect(result).toBeTruthy()
+    assert.ok(result)
     nock.cleanAll()
   })
 })

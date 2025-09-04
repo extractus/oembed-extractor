@@ -6,7 +6,6 @@ Extract oEmbed content from given URL.
 [![NPM](https://badge.fury.io/js/@extractus%2Foembed-extractor.svg)](https://badge.fury.io/js/@extractus%2Foembed-extractor)
 ![CodeQL](https://github.com/extractus/oembed-extractor/workflows/CodeQL/badge.svg)
 [![CI test](https://github.com/extractus/oembed-extractor/workflows/ci-test/badge.svg)](https://github.com/extractus/oembed-extractor/actions)
-[![Coverage Status](https://coveralls.io/repos/github/extractus/oembed-extractor/badge.svg)](https://coveralls.io/github/extractus/oembed-extractor)
 
 ## Demo
 
@@ -44,9 +43,6 @@ import { extract } from 'npm:@extractus/oembed-extractor'
 ```ts
 import { extract } from "https://esm.sh/@extractus/oembed-extractor@latest"
 ```
-
-Please check [the examples](examples) for reference.
-
 
 ## APIs
 

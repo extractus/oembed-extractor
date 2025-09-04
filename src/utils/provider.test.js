@@ -1,5 +1,7 @@
 // provider.test
-/* eslint-env jest */
+
+import { describe, it } from 'node:test'
+import assert from 'node:assert'
 
 import provider from './provider.js'
 
@@ -20,22 +22,22 @@ describe('test if provider.find() works correctly', () => {
   ]
 
   cases.forEach(({ url, fetchEndpoint }) => {
-    test(`provider.find("${url}") must return "${fetchEndpoint}"`, () => {
+    it(`provider.find("${url}") must return "${fetchEndpoint}"`, () => {
       const foundedProvider = provider.find(url)
-      expect(foundedProvider.endpoint).toEqual(fetchEndpoint)
+      assert.equal(foundedProvider.endpoint, fetchEndpoint)
     })
   })
 
-  test('provider.find("{}") must return null', () => {
-    expect(provider.find({})).toEqual(null)
+  it('provider.find("{}") must return null', () => {
+    assert.equal(provider.find({}), null)
   })
 
-  test('provider.find("abcdef") must return null', () => {
-    expect(provider.find('abcdef')).toEqual(null)
+  it('provider.find("abcdef") must return null', () => {
+    assert.equal(provider.find('abcdef'), null)
   })
 
-  test('provider.find("https://somethingdoesnotexist.com") must return null', () => {
-    expect(provider.find('https://somethingdoesnotexist.com')).toEqual(null)
+  it('provider.find("https://somethingdoesnotexist.com") must return null', () => {
+    assert.equal(provider.find('https://somethingdoesnotexist.com'), null)
   })
 })
 
@@ -66,10 +68,10 @@ describe('test if provider set/get works correctly', () => {
       ],
     },
   ]
-  test('provider.set() & provider.get()', () => {
-    expect(provider.set(providerList)).toEqual(providerList.length)
+  it('provider.set() & provider.get()', () => {
+    assert.equal(provider.set(providerList), providerList.length)
     const newList = provider.get()
-    expect(newList.length).toEqual(providerList.length)
-    expect(newList[0].schemes[0]).toEqual(/\/\/store.alpha.com\/(.*)/i)
+    assert.equal(newList.length, providerList.length)
+    assert.equal((newList[0].schemes[0]).toString(), (/\/\/store.alpha.com\/(.*)/i).toString())
   })
 })
