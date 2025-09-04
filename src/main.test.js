@@ -1,5 +1,7 @@
-// main
-/* eslint-env jest */
+// main.test
+
+import { describe, it } from 'node:test'
+import assert from 'node:assert'
 
 import { HttpsProxyAgent } from 'https-proxy-agent'
 
@@ -93,11 +95,11 @@ describe('test extract(bad url)', () => {
   ]
 
   badSamples.forEach((url) => {
-    test(`testing extract bad url "${url}"`, async () => {
+    it(`testing extract bad url "${url}"`, async () => {
       try {
         await extract(url)
       } catch (err) {
-        expect(err).toBeTruthy()
+        assert.ok(err)
       }
     })
   })
@@ -168,7 +170,7 @@ describe('test if extract() with some popular providers', () => {
 
   cases.forEach(({ input, expected, checkFn }) => {
     const { url, file, params = {} } = input
-    test(`check fetchEmbed("${url}")`, async () => {
+    it(`check fetchEmbed("${url}")`, async () => {
       const provider = findProvider(url)
       const { baseUrl, path } = parseUrl(provider.endpoint)
 
@@ -190,15 +192,15 @@ describe('test if extract() with some popular providers', () => {
       } = params
 
       const result = await extract(url, { maxwidth, maxheight })
-      expect(result).toBeTruthy()
-      expect(checkFn(result)).toBe(true)
-      expect(result.provider_name).toEqual(expected.provider_name)
-      expect(result.type).toEqual(expected.type)
+      assert.ok(result)
+      assert.ok(checkFn(result))
+      assert.ok(result.provider_name === expected.provider_name)
+      assert.ok(result.type === expected.type)
       if (maxwidth > 0) {
-        expect(result.width).toBeLessThanOrEqual(expected.maxwidth)
+        assert.ok(result.width <= expected.maxwidth)
       }
       if (maxheight > 0) {
-        expect(result.height).toBeLessThanOrEqual(expected.maxheight)
+        assert.ok(result.height <= expected.maxheight)
       }
       nock.cleanAll()
     })
@@ -207,23 +209,23 @@ describe('test if extract() with some popular providers', () => {
 
 if (PROXY_SERVER !== '') {
   describe('test extract live oembed API via proxy server', () => {
-    test('check if extract method works with proxy server', async () => {
+    it('check if extract method works with proxy server', async () => {
       const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
       const result = await extract(url, {}, {
         agent: new HttpsProxyAgent(PROXY_SERVER),
       })
       console.log(result)
-      expect(result.success).toBeTruthy()
+      assert.ok(result.success)
     }, 10000)
   })
 }
 
-test('test .hasProvider() method', () => {
-  expect(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s')).toBe(true)
-  expect(hasProvider('https://trello.com/b/BO3bg7yn/notes')).toBe(false)
+it('test .hasProvider() method', () => {
+  assert.ok(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s'))
+  assert.ok(!hasProvider('https://trello.com/b/BO3bg7yn/notes'))
 })
 
-test('test .setProviderList() method', () => {
+it('test .setProviderList() method', () => {
   const customProviderOnly = [
     {
       provider_name: 'Example',
@@ -239,6 +241,6 @@ test('test .setProviderList() method', () => {
     },
   ]
   setProviderList(customProviderOnly)
-  expect(hasProvider('http://www.example.org/media/abcdef')).toBe(true)
-  expect(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s')).toBe(false)
+  assert.ok(hasProvider('http://www.example.org/media/abcdef'))
+  assert.ok(!hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s'))
 })

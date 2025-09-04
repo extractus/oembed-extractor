@@ -1,5 +1,7 @@
 // retrieve.test
-/* eslint-env jest */
+
+import { describe, it } from 'node:test'
+import assert from 'node:assert'
 
 import nock from 'nock'
 
@@ -14,18 +16,18 @@ const parseUrl = (url) => {
 }
 
 describe('test getJson() method', () => {
-  test('test getJson from good source', async () => {
+  it('test getJson from good source', async () => {
     const url = 'https://some.where/good/source'
     const { baseUrl, path } = parseUrl(url)
     nock(baseUrl).get(path).reply(200, { data: { name: 'oembed-parser' } }, {
       'Content-Type': 'application/json',
     })
     const result = await getJson(url)
-    expect(result.data.name).toEqual('oembed-parser')
+    assert.equal(result.data.name, 'oembed-parser')
     nock.cleanAll()
   })
 
-  test('test getJson using proxy', async () => {
+  it('test getJson using proxy', async () => {
     const url = 'https://some.where/good/source-with-proxy'
     const { baseUrl, path } = parseUrl(url)
     nock(baseUrl).get(path).reply(200, { data: { name: 'oembed-parser' } }, {
@@ -40,11 +42,11 @@ describe('test getJson() method', () => {
         target: 'https://proxy-server.com/api/proxy?url=',
       },
     })
-    expect(result.data.name).toEqual('oembed-parser')
+    assert.equal(result.data.name, 'oembed-parser')
     nock.cleanAll()
   })
 
-  test('test getJson invalid json reponsse', async () => {
+  it('test getJson invalid json reponsse', async () => {
     const url = 'https://some.where/bad/source'
     const { baseUrl, path } = parseUrl(url)
     nock(baseUrl).get(path).reply(200, 'this is not json string', {
@@ -53,7 +55,7 @@ describe('test getJson() method', () => {
     try {
       await getJson(url)
     } catch (err) {
-      expect(err).toBeTruthy()
+      assert.ok(err)
     }
     nock.cleanAll()
   })

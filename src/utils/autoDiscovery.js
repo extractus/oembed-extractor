@@ -8,6 +8,9 @@ export default async (url, params = {}, options = {}) => {
   const html = await getHtml(url, options)
   const doc = new DOMParser().parseFromString(html, 'text/html')
   const elm = doc.querySelector('link[type="application/json+oembed"]')
+  if (!elm) {
+    throw new Error('No oEmbed link found')
+  }
   const href = elm.getAttribute('href')
   const q = new URL(href)
   const { origin, pathname, searchParams } = q

@@ -1,4 +1,4 @@
-// provider data, synchronized at 2025-05-04T13:26:33.140Z
+// provider data, synchronized at 2025-09-04T09:00:29.575Z
 
 /* eslint-disable */ 
 
@@ -48,16 +48,6 @@ export const providers = [
       "//play\\.afreecatv\\.com/"
     ],
     "e": "//openapi.afreecatv.com/oembed/embedinfo"
-  },
-  {
-    "s": [
-      "//vod\\.sooplive\\.co\\.kr/player/",
-      "//v\\.afree\\.ca/ST/",
-      "//vod\\.sooplive\\.co\\.kr/ST/",
-      "//vod\\.sooplive\\.co\\.kr/PLAYER/STATION/",
-      "//play\\.sooplive\\.co\\.kr/"
-    ],
-    "e": "//openapi.sooplive.co.kr/oembed/embedinfo"
   },
   {
     "s": [
@@ -206,6 +196,12 @@ export const providers = [
   },
   {
     "s": [
+      "//beta\\.quellensuche\\.de/*"
+    ],
+    "e": "//beta.quellensuche.de/api/oembed"
+  },
+  {
+    "s": [
       "//cloud\\.biqapp\\.com/*"
     ],
     "e": "//biqapp.com/api/v1/video/oembed"
@@ -294,6 +290,13 @@ export const providers = [
       "//www\\.canva\\.com/design/*/view"
     ],
     "e": "//www.canva.com/_oembed"
+  },
+  {
+    "s": [
+      "//carbon\\.music/*",
+      "//www\\.carbon\\.music/*"
+    ],
+    "e": "//carbon.music/oembed"
   },
   {
     "s": [
@@ -585,6 +588,12 @@ export const providers = [
   },
   {
     "s": [
+      "//cdn\\.everwall\\.com/hubs/iframe/*"
+    ],
+    "e": "//cdn.everwall.com/hubs/oembed"
+  },
+  {
+    "s": [
       "//app\\.ex\\.co/stories/*",
       "//www\\.playbuzz\\.com/*"
     ],
@@ -649,6 +658,12 @@ export const providers = [
   },
   {
     "s": [
+      "//app\\.filestage\\.io/step/**"
+    ],
+    "e": "//app.filestage.io/oembed"
+  },
+  {
+    "s": [
       "//*\\.fireworktv\\.com/*",
       "//*\\.fireworktv\\.com/embed/*/v/*"
     ],
@@ -696,6 +711,12 @@ export const providers = [
       "//fooday\\.app/*/spots/*"
     ],
     "e": "//fooday.app/oembed"
+  },
+  {
+    "s": [
+      "//forms\\.form-data\\.com/*"
+    ],
+    "e": "//forms.form-data.com/api/oembed"
   },
   {
     "s": [
@@ -807,6 +828,12 @@ export const providers = [
       "//play\\.gumlet\\.io/embed/*"
     ],
     "e": "//api.gumlet.com/v1/oembed"
+  },
+  {
+    "s": [
+      "//gw2fashions\\.com/fashion/*"
+    ],
+    "e": "//gw2fashions.com/fashion/oembed"
   },
   {
     "s": [
@@ -1102,6 +1129,13 @@ export const providers = [
   },
   {
     "s": [
+      "//kubit\\.ai/*",
+      "//*\\.kubit\\.ai/*"
+    ],
+    "e": "//kubit.ai/services/oembed"
+  },
+  {
+    "s": [
       "//kurozora\\.app/episodes/*",
       "//kurozora\\.app/songs/*"
     ],
@@ -1209,7 +1243,8 @@ export const providers = [
   },
   {
     "s": [
-      "//medienarchiv\\.zhdk\\.ch/entries/*"
+      "//medienarchiv\\.zhdk\\.ch/entries/*",
+      "//zhdk\\.medienarchiv\\.ch/entries/*"
     ],
     "e": "//medienarchiv.zhdk.ch/oembed.json"
   },
@@ -1313,6 +1348,13 @@ export const providers = [
       "//naturalatlas\\.com/*/*/*/*"
     ],
     "e": "//naturalatlas.com/oembed.json"
+  },
+  {
+    "s": [
+      "//naver\\.me/*",
+      "//m\\.naver\\.com/shorts/*"
+    ],
+    "e": "//m.naver.com/shorts/oEmbed"
   },
   {
     "s": [
@@ -1585,6 +1627,12 @@ export const providers = [
       "//web\\.quartr\\.com/*"
     ],
     "e": "//web.quartr.com/api/oembed"
+  },
+  {
+    "s": [
+      "//quellensuche\\.de/*"
+    ],
+    "e": "//quellensuche.de/api/oembed"
   },
   {
     "s": [
@@ -1871,6 +1919,16 @@ export const providers = [
   },
   {
     "s": [
+      "//vod\\.sooplive\\.co\\.kr/player/",
+      "//v\\.afree\\.ca/ST/",
+      "//vod\\.sooplive\\.co\\.kr/ST/",
+      "//vod\\.sooplive\\.co\\.kr/PLAYER/STATION/",
+      "//play\\.sooplive\\.co\\.kr/"
+    ],
+    "e": "//openapi.sooplive.co.kr/oembed/embedinfo"
+  },
+  {
+    "s": [
       "//soundcloud\\.com/*",
       "//on\\.soundcloud\\.com/*",
       "//soundcloud\\.app\\.goog\\.gl/*"
@@ -1960,9 +2018,9 @@ export const providers = [
   },
   {
     "s": [
-      "//supercut\\.video/share/*"
+      "//supercut\\.ai/share/*"
     ],
-    "e": "//supercut.video/oembed"
+    "e": "//supercut.ai/oembed"
   },
   {
     "s": [
@@ -2295,11 +2353,9 @@ export const providers = [
   },
   {
     "s": [
-      "//share\\.webcrumbs\\.org/*",
-      "//tools\\.webcrumbs\\.org/*",
-      "//www\\.webcrumbs\\.org/*"
+      "//plugins\\.webcrumbs\\.dev/*"
     ],
-    "e": "//share.webcrumbs.org/"
+    "e": "//webcrumbs.dev/oembed"
   },
   {
     "s": [

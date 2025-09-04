@@ -99,23 +99,6 @@
     ]
   },
   {
-    "provider_name": "afreecaTV",
-    "provider_url": "https://www.sooplive.co.kr",
-    "endpoints": [
-      {
-        "schemes": [
-          "https://vod.sooplive.co.kr/player/",
-          "https://v.afree.ca/ST/",
-          "https://vod.sooplive.co.kr/ST/",
-          "https://vod.sooplive.co.kr/PLAYER/STATION/",
-          "https://play.sooplive.co.kr/"
-        ],
-        "url": "https://openapi.sooplive.co.kr/oembed/embedinfo",
-        "discovery": true
-      }
-    ]
-  },
-  {
     "provider_name": "Altium LLC",
     "provider_url": "https://altium.com",
     "endpoints": [
@@ -420,6 +403,22 @@
     ]
   },
   {
+    "provider_name": "Beta QuellenSuche",
+    "provider_url": "http://beta.quellensuche.de",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://beta.quellensuche.de/*"
+        ],
+        "url": "http://beta.quellensuche.de/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "biqnetwork",
     "provider_url": "https://biqapp.com/",
     "endpoints": [
@@ -619,6 +618,23 @@
         ],
         "url": "https://www.canva.com/_oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Carbon",
+    "provider_url": "https://carbon.music/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://carbon.music/*",
+          "https://www.carbon.music/*"
+        ],
+        "url": "https://carbon.music/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1243,6 +1259,19 @@
     ]
   },
   {
+    "provider_name": "Everwall",
+    "provider_url": "https://everwall.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://cdn.everwall.com/hubs/iframe/*"
+        ],
+        "url": "https://cdn.everwall.com/hubs/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Ex.Co",
     "provider_url": "https://ex.co",
     "endpoints": [
@@ -1353,6 +1382,23 @@
     ]
   },
   {
+    "provider_name": "Filestage",
+    "provider_url": "https://filestage.io/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.filestage.io/step/**"
+        ],
+        "url": "https://app.filestage.io/oembed",
+        "discovery": true,
+        "formats": [
+          "json",
+          "xml"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "Firework",
     "provider_url": "https://fireworktv.com/",
     "endpoints": [
@@ -1451,6 +1497,22 @@
           "https://fooday.app/*/spots/*"
         ],
         "url": "https://fooday.app/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Form-Data",
+    "provider_url": "https://form-data.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://forms.form-data.com/*"
+        ],
+        "url": "https://forms.form-data.com/api/oembed",
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -1673,6 +1735,19 @@
           "https://play.gumlet.io/embed/*"
         ],
         "url": "https://api.gumlet.com/v1/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "GW2 Fashions",
+    "provider_url": "https://gw2fashions.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://gw2fashions.com/fashion/*"
+        ],
+        "url": "https://gw2fashions.com/fashion/oembed",
         "discovery": true
       }
     ]
@@ -2301,6 +2376,20 @@
     ]
   },
   {
+    "provider_name": "Kubit",
+    "provider_url": "https://kubit.ai",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://kubit.ai/*",
+          "https://*.kubit.ai/*"
+        ],
+        "url": "https://kubit.ai/services/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Kurozora",
     "provider_url": "https://kurozora.app/",
     "endpoints": [
@@ -2532,7 +2621,8 @@
     "endpoints": [
       {
         "schemes": [
-          "https://medienarchiv.zhdk.ch/entries/*"
+          "https://medienarchiv.zhdk.ch/entries/*",
+          "https://zhdk.medienarchiv.ch/entries/*"
         ],
         "url": "https://medienarchiv.zhdk.ch/oembed.{format}",
         "discovery": true
@@ -2754,6 +2844,20 @@
         "formats": [
           "json"
         ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Naver Clip",
+    "provider_url": "https://m.naver.com/shorts",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://naver.me/*",
+          "https://m.naver.com/shorts/*"
+        ],
+        "url": "https://m.naver.com/shorts/oEmbed",
+        "discovery": true
       }
     ]
   },
@@ -3335,6 +3439,22 @@
         ],
         "url": "https://web.quartr.com/api/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "QuellenSuche",
+    "provider_url": "http://quellensuche.de",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://quellensuche.de/*"
+        ],
+        "url": "http://quellensuche.de/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3932,6 +4052,23 @@
     ]
   },
   {
+    "provider_name": "SOOP",
+    "provider_url": "https://www.sooplive.co.kr",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://vod.sooplive.co.kr/player/",
+          "https://v.afree.ca/ST/",
+          "https://vod.sooplive.co.kr/ST/",
+          "https://vod.sooplive.co.kr/PLAYER/STATION/",
+          "https://play.sooplive.co.kr/"
+        ],
+        "url": "https://openapi.sooplive.co.kr/oembed/embedinfo",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "SoundCloud",
     "provider_url": "http://soundcloud.com/",
     "endpoints": [
@@ -4129,13 +4266,13 @@
   },
   {
     "provider_name": "Supercut",
-    "provider_url": "https://supercut.video/",
+    "provider_url": "https://supercut.ai/",
     "endpoints": [
       {
         "schemes": [
-          "https://supercut.video/share/*"
+          "https://supercut.ai/share/*"
         ],
-        "url": "https://supercut.video/oembed",
+        "url": "https://supercut.ai/oembed",
         "discovery": true
       }
     ]
@@ -4850,11 +4987,13 @@
     "endpoints": [
       {
         "schemes": [
-          "https://share.webcrumbs.org/*",
-          "https://tools.webcrumbs.org/*",
-          "https://www.webcrumbs.org/*"
+          "https://plugins.webcrumbs.dev/*"
         ],
-        "url": "http://share.webcrumbs.org/",
+        "url": "https://webcrumbs.dev/oembed",
+        "formats": [
+          "json",
+          "xml"
+        ],
         "discovery": true
       }
     ]

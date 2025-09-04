@@ -1,5 +1,7 @@
 // fetchEmbed.test
-/* eslint-env jest */
+
+import { describe, it } from 'node:test'
+import assert from 'node:assert'
 
 import nock from 'nock'
 
@@ -91,7 +93,7 @@ describe('test if fetchEmbed() works correctly', () => {
 
   cases.forEach(({ input, expected }) => {
     const { url, file, params = {} } = input
-    test(`check fetchEmbed("${url}")`, async () => {
+    it(`check fetchEmbed("${url}")`, async () => {
       const endpoint = getEndpoint(url)
       const { baseUrl, path } = parseUrl(endpoint)
 
@@ -113,14 +115,14 @@ describe('test if fetchEmbed() works correctly', () => {
       } = params
 
       const result = await fetchEmbed(url, { maxwidth, maxheight }, endpoint)
-      expect(result).toBeTruthy()
-      expect(result.provider_name).toEqual(expected.provider_name)
-      expect(result.type).toEqual(expected.type)
+      assert.ok(result)
+      assert.equal(result.provider_name, expected.provider_name)
+      assert.equal(result.type, expected.type)
       if (maxwidth > 0) {
-        expect(result.width).toBeLessThanOrEqual(expected.maxwidth)
+        assert.ok(result.width <= expected.maxwidth)
       }
       if (maxheight > 0) {
-        expect(result.height).toBeLessThanOrEqual(expected.maxheight)
+        assert.ok(result.height <= expected.maxheight)
       }
       nock.cleanAll()
     })
