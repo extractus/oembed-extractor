@@ -4,6 +4,16 @@ import { DOMParser } from 'linkedom'
 
 import { getHtml, getJson } from './retrieve.js'
 
+/**
+ * Extract oEmbed data via auto-discovery by parsing the HTML page for a
+ * oEmbed link tag.
+ *
+ * @param {string} url - Resource URL to discover oEmbed for
+ * @param {object} [params={}] - Additional oEmbed query parameters
+ * @param {object} [options={}] - Fetch options (headers, proxy, agent, signal)
+ * @returns {Promise<object>} oEmbed response data
+ * @throws {Error} If no oEmbed link tag is found in the HTML
+ */
 export default async (url, params = {}, options = {}) => {
   const html = await getHtml(url, options)
   const doc = new DOMParser().parseFromString(html, 'text/html')
@@ -12,7 +22,7 @@ export default async (url, params = {}, options = {}) => {
     throw new Error('No oEmbed link found')
   }
   const href = elm.getAttribute('href')
-  const q = new URL(href)
+  const q = new URL(href, url)
   const { origin, pathname, searchParams } = q
   Object.keys(params).forEach((key) => {
     if (!searchParams.has(key)) {
