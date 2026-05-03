@@ -9,17 +9,21 @@ Extract oEmbed content from given URL.
 
 ## Demo
 
-- [Give it a try!](https://extractus-demo.vercel.app/oembed)
+- [Give it a try!](https://extractus.pwshub.com/oembed)
 
 ## Install & Usage
 
-### Node.js
+### Bun & Node.js
 
 ```bash
+# bun
+bun add @extractus/oembed-extractor
+
+# npm
 npm i @extractus/oembed-extractor
 
 # pnpm
-pnpm i @extractus/oembed-extractor
+pnpm install @extractus/oembed-extractor
 
 # yarn
 yarn add @extractus/oembed-extractor
@@ -36,12 +40,6 @@ console.log(result)
 
 ```ts
 import { extract } from 'npm:@extractus/oembed-extractor'
-```
-
-### Browser
-
-```ts
-import { extract } from "https://esm.sh/@extractus/oembed-extractor@latest"
 ```
 
 ## APIs

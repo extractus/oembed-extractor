@@ -1,4 +1,4 @@
-// provider data, synchronized at 2025-05-04T13:26:33.140Z
+// provider data, synchronized at 2026-05-03T05:39:11.041Z
 
 /* eslint-disable */ 
 
@@ -51,16 +51,6 @@ export const providers = [
   },
   {
     "s": [
-      "//vod\\.sooplive\\.co\\.kr/player/",
-      "//v\\.afree\\.ca/ST/",
-      "//vod\\.sooplive\\.co\\.kr/ST/",
-      "//vod\\.sooplive\\.co\\.kr/PLAYER/STATION/",
-      "//play\\.sooplive\\.co\\.kr/"
-    ],
-    "e": "//openapi.sooplive.co.kr/oembed/embedinfo"
-  },
-  {
-    "s": [
       "//altium\\.com/viewer/*"
     ],
     "e": "//viewer.altium.com/shell/oembed"
@@ -106,6 +96,18 @@ export const providers = [
       "//anniemusic\\.app/p/*"
     ],
     "e": "//api.anniemusic.app/api/v1/oembed"
+  },
+  {
+    "s": [
+      "//appforcestudio\\.com/playground/*"
+    ],
+    "e": "//us-central1-themerax-cc903.cloudfunctions.net/playgroundApi/oembed"
+  },
+  {
+    "s": [
+      "//podcasts\\.apple\\.com/*"
+    ],
+    "e": "//podcasts.apple.com/api/oembed"
   },
   {
     "s": [
@@ -174,6 +176,12 @@ export const providers = [
   },
   {
     "s": [
+      "//audius\\.co/*"
+    ],
+    "e": "//audius.co/oembed"
+  },
+  {
+    "s": [
       "//backtracks\\.fm/*/*/e/*",
       "//backtracks\\.fm/*/s/*/*",
       "//backtracks\\.fm/*/*/*/*/e/*/*",
@@ -203,6 +211,12 @@ export const providers = [
       "//www\\.behance\\.net/*/services/*/*"
     ],
     "e": "//www.behance.net/services/oembed"
+  },
+  {
+    "s": [
+      "//beta\\.quellensuche\\.de/*"
+    ],
+    "e": "//beta.quellensuche.de/api/oembed"
   },
   {
     "s": [
@@ -248,8 +262,18 @@ export const providers = [
     "e": "//www.bornetube.dk/media/lasync/oembed/"
   },
   {
-    "s": [],
-    "e": "//boxofficebuz.com/oembed"
+    "s": [
+      "//boxofficebuz\\.com/embed/video/*"
+    ],
+    "e": "//api.boxofficebuz.com/v2/oembed"
+  },
+  {
+    "s": [
+      "//players\\.brightcove\\.net/*/*/index\\.html?videoId=*",
+      "//players\\.brightcove\\.net/*/*/index\\.html?playlistId=*",
+      "//bcove\\.video/*"
+    ],
+    "e": "//oembed.brightcove.com/"
   },
   {
     "s": [
@@ -266,6 +290,7 @@ export const providers = [
   },
   {
     "s": [
+      "//player\\.mediadelivery\\.net/*",
       "//iframe\\.mediadelivery\\.net/*",
       "//video\\.bunnycdn\\.com/*"
     ],
@@ -294,6 +319,13 @@ export const providers = [
       "//www\\.canva\\.com/design/*/view"
     ],
     "e": "//www.canva.com/_oembed"
+  },
+  {
+    "s": [
+      "//carbon\\.music/*",
+      "//www\\.carbon\\.music/*"
+    ],
+    "e": "//carbon.music/oembed"
   },
   {
     "s": [
@@ -355,6 +387,16 @@ export const providers = [
   },
   {
     "s": [
+      "//www\\.circlezeroeight\\.com/features/*",
+      "//www\\.circlezeroeight\\.com/news/*",
+      "//www\\.circlezeroeight\\.com/sport/*",
+      "//www\\.circlezeroeight\\.com/style/*",
+      "//www\\.circlezeroeight\\.com/culture/*"
+    ],
+    "e": "//www.circlezeroeight.com/api/oembed"
+  },
+  {
+    "s": [
       "//www\\.circuitlab\\.com/circuit/*"
     ],
     "e": "//www.circuitlab.com/circuit/oembed/"
@@ -364,6 +406,12 @@ export const providers = [
       "//www\\.clipland\\.com/v/*"
     ],
     "e": "//www.clipland.com/api/oembed"
+  },
+  {
+    "s": [
+      "//clueso\\.site/*"
+    ],
+    "e": "//clueso.site/api/oembed"
   },
   {
     "s": [
@@ -481,6 +529,13 @@ export const providers = [
   },
   {
     "s": [
+      "//app\\.demofly\\.ai/s/*",
+      "//demofly\\.ai/s/*"
+    ],
+    "e": "//app.demofly.ai/api/oembed"
+  },
+  {
+    "s": [
       "//*\\.deseret\\.com/*"
     ],
     "e": "//embed.deseret.com/"
@@ -517,6 +572,12 @@ export const providers = [
       "//www\\.docswell\\.com/s/*/*"
     ],
     "e": "//www.docswell.com/service/oembed"
+  },
+  {
+    "s": [
+      "//www\\.documentcloud\\.org/documents/*"
+    ],
+    "e": "//api.www.documentcloud.org/api/oembed"
   },
   {
     "s": [
@@ -558,6 +619,18 @@ export const providers = [
   },
   {
     "s": [
+      "//elevenlabs\\.io/*"
+    ],
+    "e": "//elevenlabs.io/next/oembed"
+  },
+  {
+    "s": [
+      "//www\\.embases\\.com/e/*"
+    ],
+    "e": "//www.embases.com/api/oembed"
+  },
+  {
+    "s": [
       "//embedery\\.com/widget/*"
     ],
     "e": "//embedery.com/api/oembed"
@@ -582,6 +655,12 @@ export const providers = [
       "//app\\.everviz\\.com/embed/*"
     ],
     "e": "//api.everviz.com/oembed"
+  },
+  {
+    "s": [
+      "//cdn\\.everwall\\.com/hubs/iframe/*"
+    ],
+    "e": "//cdn.everwall.com/hubs/oembed"
   },
   {
     "s": [
@@ -643,9 +722,21 @@ export const providers = [
   },
   {
     "s": [
-      "//www\\.figma\\.com/file/*"
+      "//www\\.figma\\.com/file/*",
+      "//www\\.figma\\.com/design/*",
+      "//www\\.figma\\.com/board/*",
+      "//www\\.figma\\.com/slides/*",
+      "//www\\.figma\\.com/buzz/*",
+      "//www\\.figma\\.com/site/*",
+      "//www\\.figma\\.com/make/*"
     ],
     "e": "//www.figma.com/api/oembed"
+  },
+  {
+    "s": [
+      "//app\\.filestage\\.io/step/**"
+    ],
+    "e": "//app.filestage.io/oembed"
   },
   {
     "s": [
@@ -696,6 +787,12 @@ export const providers = [
       "//fooday\\.app/*/spots/*"
     ],
     "e": "//fooday.app/oembed"
+  },
+  {
+    "s": [
+      "//forms\\.form-data\\.com/*"
+    ],
+    "e": "//forms.form-data.com/api/oembed"
   },
   {
     "s": [
@@ -751,6 +848,13 @@ export const providers = [
   },
   {
     "s": [
+      "//geometryviewer\\.com/v/*",
+      "//www\\.geometryviewer\\.com/v/*"
+    ],
+    "e": "//geometryviewer.com/oembed"
+  },
+  {
+    "s": [
       "//gty\\.im/*"
     ],
     "e": "//embed.gettyimages.com/oembed"
@@ -789,6 +893,12 @@ export const providers = [
   },
   {
     "s": [
+      "//www\\.good-for-job\\.jp/slides/*"
+    ],
+    "e": "//www.good-for-job.jp/api/oembed"
+  },
+  {
+    "s": [
       "//grain\\.co/highlight/*",
       "//grain\\.co/share/*",
       "//grain\\.com/share/*"
@@ -807,6 +917,12 @@ export const providers = [
       "//play\\.gumlet\\.io/embed/*"
     ],
     "e": "//api.gumlet.com/v1/oembed"
+  },
+  {
+    "s": [
+      "//gw2fashions\\.com/fashion/*"
+    ],
+    "e": "//gw2fashions.com/fashion/oembed"
   },
   {
     "s": [
@@ -852,6 +968,19 @@ export const providers = [
       "//*\\.hippovideo\\.io/*"
     ],
     "e": "//www.hippovideo.io/services/oembed"
+  },
+  {
+    "s": [
+      "//cdn\\.hivo\\.com\\.au/*",
+      "//cdn\\.digital-assets\\.uq\\.edu\\.au/*",
+      "//cdn\\.southerndesigngroup\\.com/*",
+      "//freedom\\.hivocdn\\.com/*",
+      "//cdn\\.cockburn\\.wa\\.gov\\.au/*",
+      "//cdn\\.somnomed\\.com/*",
+      "//cdn\\.snowtunnel\\.com/*",
+      "//cdn\\.brenclosures\\.com\\.au/*"
+    ],
+    "e": "//app.hivo.com.au/api/drupal/oembed"
   },
   {
     "s": [
@@ -1034,6 +1163,13 @@ export const providers = [
   },
   {
     "s": [
+      "//play\\.juntos\\.live/solo/*",
+      "//play\\.juntos\\.live/host/quiz/*"
+    ],
+    "e": "//play.juntos.live/api/oembed"
+  },
+  {
+    "s": [
       "//tv\\.kakao\\.com/channel/*/cliplink/*",
       "//tv\\.kakao\\.com/m/channel/*/cliplink/*",
       "//tv\\.kakao\\.com/channel/v/*",
@@ -1102,10 +1238,33 @@ export const providers = [
   },
   {
     "s": [
+      "//kubit\\.ai/*",
+      "//*\\.kubit\\.ai/*"
+    ],
+    "e": "//kubit.ai/services/oembed"
+  },
+  {
+    "s": [
       "//kurozora\\.app/episodes/*",
       "//kurozora\\.app/songs/*"
     ],
     "e": "//kurozora.app/oembed"
+  },
+  {
+    "s": [
+      "//landofassets\\.com/*",
+      "//landofassets\\.com/*/assets",
+      "//landofassets\\.com/*/assets/*",
+      "//landofassets\\.com/*/assets/*/embed"
+    ],
+    "e": "//api.landofassets.com/oembed"
+  },
+  {
+    "s": [
+      "//laude\\.org/impact/*",
+      "//laude\\.org/im/*"
+    ],
+    "e": "//laude.org/api/oembed"
   },
   {
     "s": [
@@ -1140,14 +1299,9 @@ export const providers = [
   },
   {
     "s": [
-      "//livestream\\.com/accounts/*/events/*",
-      "//livestream\\.com/accounts/*/events/*/videos/*",
-      "//livestream\\.com/*/events/*",
-      "//livestream\\.com/*/events/*/videos/*",
-      "//livestream\\.com/*/*",
-      "//livestream\\.com/*/*/videos/*"
+      "//livid\\.com/watch/*"
     ],
-    "e": "//livestream.com/oembed"
+    "e": "//livid.com/oembed"
   },
   {
     "s": [
@@ -1209,7 +1363,8 @@ export const providers = [
   },
   {
     "s": [
-      "//medienarchiv\\.zhdk\\.ch/entries/*"
+      "//medienarchiv\\.zhdk\\.ch/entries/*",
+      "//zhdk\\.medienarchiv\\.ch/entries/*"
     ],
     "e": "//medienarchiv.zhdk.ch/oembed.json"
   },
@@ -1242,6 +1397,12 @@ export const providers = [
       "//miro\\.com/app/board/*"
     ],
     "e": "//miro.com/api/v1/oembed"
+  },
+  {
+    "s": [
+      "//miro\\.com/video-player/*"
+    ],
+    "e": "//miro.com/video-player/oembed"
   },
   {
     "s": [
@@ -1313,6 +1474,13 @@ export const providers = [
       "//naturalatlas\\.com/*/*/*/*"
     ],
     "e": "//naturalatlas.com/oembed.json"
+  },
+  {
+    "s": [
+      "//naver\\.me/*",
+      "//m\\.naver\\.com/shorts/*"
+    ],
+    "e": "//m.naver.com/shorts/oEmbed"
   },
   {
     "s": [
@@ -1473,6 +1641,13 @@ export const providers = [
   },
   {
     "s": [
+      "//app\\.parta\\.io/core/embed/*",
+      "//*\\.parta\\.io/core/embed/*"
+    ],
+    "e": "//app.parta.io/core/oembed"
+  },
+  {
+    "s": [
       "//pastery\\.net/*",
       "//www\\.pastery\\.net/*"
     ],
@@ -1534,6 +1709,12 @@ export const providers = [
   },
   {
     "s": [
+      "//plinth\\.it/model-viewer/*/*"
+    ],
+    "e": "//plinth.it/model-viewer/oembed"
+  },
+  {
+    "s": [
       "//app\\.plusdocs\\.com/*/snapshots/*",
       "//app\\.plusdocs\\.com/*/pages/edit/*",
       "//app\\.plusdocs\\.com/*/pages/share/*"
@@ -1575,6 +1756,12 @@ export const providers = [
   },
   {
     "s": [
+      "//programmingly\\.dev/snippets/*"
+    ],
+    "e": "//programmingly.dev/api/oembed"
+  },
+  {
+    "s": [
       "//qtpi\\.gg/fashion/*"
     ],
     "e": "//qtpi.gg/fashion/oembed"
@@ -1585,6 +1772,12 @@ export const providers = [
       "//web\\.quartr\\.com/*"
     ],
     "e": "//web.quartr.com/api/oembed"
+  },
+  {
+    "s": [
+      "//quellensuche\\.de/*"
+    ],
+    "e": "//quellensuche.de/api/oembed"
   },
   {
     "s": [
@@ -1680,7 +1873,10 @@ export const providers = [
     "e": "//roosterteeth.com/oembed"
   },
   {
-    "s": [],
+    "s": [
+      "//rumble\\.com/*",
+      "//rumble\\.com/shorts/*"
+    ],
     "e": "//rumble.com/api/Media/oembed.json"
   },
   {
@@ -1706,6 +1902,12 @@ export const providers = [
       "//www\\.satcat\\.com/sats/*"
     ],
     "e": "//www.satcat.com/api/sats/oembed"
+  },
+  {
+    "s": [
+      "//api\\.satoplayer\\.com/players/embed/*"
+    ],
+    "e": "//api.satoplayer.com/players/oembed"
   },
   {
     "s": [
@@ -1811,6 +2013,13 @@ export const providers = [
   },
   {
     "s": [
+      "//www\\.sketch\\.com/s/*",
+      "//www\\.sketch\\.com/preview/*"
+    ],
+    "e": "//graphql.sketch.cloud/embed/oembed"
+  },
+  {
+    "s": [
       "//sketchfab\\.com/*models/*",
       "//sketchfab\\.com/*/folders/*"
     ],
@@ -1868,6 +2077,16 @@ export const providers = [
       "//www\\.socialexplorer\\.com/*/embed"
     ],
     "e": "//www.socialexplorer.com/services/oembed/"
+  },
+  {
+    "s": [
+      "//vod\\.sooplive\\.com/player/",
+      "//v\\.afree\\.ca/ST/",
+      "//vod\\.sooplive\\.com/ST/",
+      "//vod\\.sooplive\\.com/PLAYER/STATION/",
+      "//play\\.sooplive\\.com/"
+    ],
+    "e": "//openapi.sooplive.com/oembed/embedinfo"
   },
   {
     "s": [
@@ -1954,15 +2173,16 @@ export const providers = [
   {
     "s": [
       "//www\\.sudomemo\\.net/watch/*",
+      "//archive\\.sudomemo\\.net/watch/*",
       "//flipnot\\.es/*"
     ],
     "e": "//www.sudomemo.net/oembed"
   },
   {
     "s": [
-      "//supercut\\.video/share/*"
+      "//supercut\\.ai/share/*"
     ],
-    "e": "//supercut.video/oembed"
+    "e": "//supercut.ai/oembed"
   },
   {
     "s": [
@@ -2004,6 +2224,13 @@ export const providers = [
   },
   {
     "s": [
+      "//www\\.tella\\.tv/video/*",
+      "//tella\\.video/*"
+    ],
+    "e": "//www.tella.tv/api/oembed"
+  },
+  {
+    "s": [
       "//hubspot-media-bridge\\.thedamconsultants\\.com/*"
     ],
     "e": "//hubspot-media-bridge.thedamconsultants.com/oembed/"
@@ -2029,7 +2256,9 @@ export const providers = [
       "//www\\.tickcounter\\.com/countup/*",
       "//www\\.tickcounter\\.com/ticker/*",
       "//www\\.tickcounter\\.com/clock/*",
-      "//www\\.tickcounter\\.com/worldclock/*"
+      "//www\\.tickcounter\\.com/worldclock/*",
+      "//www\\.tickcounter\\.com/embed/*",
+      "//www\\.tickcounter\\.com/full/*"
     ],
     "e": "//www.tickcounter.com/oembed"
   },
@@ -2090,6 +2319,13 @@ export const providers = [
       "//trinitymedia\\.ai/player/*/*/*"
     ],
     "e": "//trinitymedia.ai/services/oembed"
+  },
+  {
+    "s": [
+      "//trycli\\.com/e/*",
+      "//trycli\\.com/*/*"
+    ],
+    "e": "//trycli.com/api/oembed"
   },
   {
     "s": [
@@ -2295,11 +2531,9 @@ export const providers = [
   },
   {
     "s": [
-      "//share\\.webcrumbs\\.org/*",
-      "//tools\\.webcrumbs\\.org/*",
-      "//www\\.webcrumbs\\.org/*"
+      "//plugins\\.webcrumbs\\.dev/*"
     ],
-    "e": "//share.webcrumbs.org/"
+    "e": "//webcrumbs.dev/oembed"
   },
   {
     "s": [
@@ -2309,7 +2543,8 @@ export const providers = [
   },
   {
     "s": [
-      "//whimsical\\.com/*"
+      "//whimsical\\.com/*",
+      "//whimsical\\.com/*/*"
     ],
     "e": "//whimsical.com/api/oembed"
   },

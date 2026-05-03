@@ -3,6 +3,11 @@
 
 import { extract } from './src/main.js'
 
+/**
+ * Extract and log oEmbed data from a URL.
+ *
+ * @param {string} url - URL to extract oEmbed from
+ */
 const run = async (url) => {
   try {
     console.time('extract-oembed')
@@ -14,6 +19,12 @@ const run = async (url) => {
   }
 }
 
+/**
+ * Parse CLI arguments and run extraction.
+ *
+ * @param {Array} argv - Process argument array
+ * @returns {Promise|string} Extraction promise or info message
+ */
 const init = (argv) => {
   if (argv.length === 3) {
     const url = argv[2]

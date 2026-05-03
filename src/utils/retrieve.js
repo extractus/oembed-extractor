@@ -1,7 +1,16 @@
 // utils -> retrieve
 
-import fetch from 'cross-fetch'
-
+/**
+ * Fetch a resource through a proxy endpoint.
+ *
+ * @param {string} url - Target URL to fetch
+ * @param {object} [options={}] - Options containing proxy config and signal
+ * @param {object} [options.proxy] - Proxy configuration
+ * @param {string} options.proxy.target - Proxy base URL
+ * @param {object} [options.proxy.headers] - Headers to send to the proxy
+ * @param {object} [options.signal] - AbortSignal for request cancellation
+ * @returns {Promise<Response>} Fetch response object
+ */
 const profetch = async (url, options = {}) => {
   const { proxy = {}, signal = null } = options
   const {
@@ -15,6 +24,14 @@ const profetch = async (url, options = {}) => {
   return res
 }
 
+/**
+ * Fetch a URL and return the response body as text.
+ *
+ * @param {string} url - URL to fetch
+ * @param {object} [options={}] - Fetch options (headers, proxy, agent, signal)
+ * @returns {Promise<string>} Response body as text
+ * @throws {Error} If HTTP status is 400 or higher
+ */
 export const getHtml = async (url, options = {}) => {
   const {
     headers = {
@@ -36,6 +53,14 @@ export const getHtml = async (url, options = {}) => {
   return text
 }
 
+/**
+ * Fetch a URL and parse the response body as JSON.
+ *
+ * @param {string} url - URL to fetch
+ * @param {object} [options={}] - Fetch options (headers, proxy, agent, signal)
+ * @returns {Promise<object>} Parsed JSON response
+ * @throws {Error} If HTTP status is 400+ or response is not valid JSON
+ */
 export const getJson = async (url, options = {}) => {
   const {
     headers = {

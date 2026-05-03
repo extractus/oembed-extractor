@@ -16,3 +16,4 @@ yarn.lock
 pnpm-lock.yaml
 package-lock.json
 deno.lock
+bun.lock

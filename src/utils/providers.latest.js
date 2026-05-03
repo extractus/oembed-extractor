@@ -1,4 +1,4 @@
-// provider data, synchronized at 2025-09-04T09:00:29.575Z
+// provider data, synchronized at 2026-05-03T06:03:25.358Z
 
 /* eslint-disable */ 
 
@@ -99,6 +99,18 @@ export const providers = [
   },
   {
     "s": [
+      "//appforcestudio\\.com/playground/*"
+    ],
+    "e": "//us-central1-themerax-cc903.cloudfunctions.net/playgroundApi/oembed"
+  },
+  {
+    "s": [
+      "//podcasts\\.apple\\.com/*"
+    ],
+    "e": "//podcasts.apple.com/api/oembed"
+  },
+  {
+    "s": [
       "//storymaps\\.arcgis\\.com/stories/*"
     ],
     "e": "//storymaps.arcgis.com/oembed"
@@ -161,6 +173,12 @@ export const providers = [
       "//podcasts\\.audiomeans\\.fr/*"
     ],
     "e": "//podcasts.audiomeans.fr/services/oembed"
+  },
+  {
+    "s": [
+      "//audius\\.co/*"
+    ],
+    "e": "//audius.co/oembed"
   },
   {
     "s": [
@@ -244,8 +262,18 @@ export const providers = [
     "e": "//www.bornetube.dk/media/lasync/oembed/"
   },
   {
-    "s": [],
-    "e": "//boxofficebuz.com/oembed"
+    "s": [
+      "//boxofficebuz\\.com/embed/video/*"
+    ],
+    "e": "//api.boxofficebuz.com/v2/oembed"
+  },
+  {
+    "s": [
+      "//players\\.brightcove\\.net/*/*/index\\.html?videoId=*",
+      "//players\\.brightcove\\.net/*/*/index\\.html?playlistId=*",
+      "//bcove\\.video/*"
+    ],
+    "e": "//oembed.brightcove.com/"
   },
   {
     "s": [
@@ -262,6 +290,7 @@ export const providers = [
   },
   {
     "s": [
+      "//player\\.mediadelivery\\.net/*",
       "//iframe\\.mediadelivery\\.net/*",
       "//video\\.bunnycdn\\.com/*"
     ],
@@ -358,6 +387,16 @@ export const providers = [
   },
   {
     "s": [
+      "//www\\.circlezeroeight\\.com/features/*",
+      "//www\\.circlezeroeight\\.com/news/*",
+      "//www\\.circlezeroeight\\.com/sport/*",
+      "//www\\.circlezeroeight\\.com/style/*",
+      "//www\\.circlezeroeight\\.com/culture/*"
+    ],
+    "e": "//www.circlezeroeight.com/api/oembed"
+  },
+  {
+    "s": [
       "//www\\.circuitlab\\.com/circuit/*"
     ],
     "e": "//www.circuitlab.com/circuit/oembed/"
@@ -367,6 +406,12 @@ export const providers = [
       "//www\\.clipland\\.com/v/*"
     ],
     "e": "//www.clipland.com/api/oembed"
+  },
+  {
+    "s": [
+      "//clueso\\.site/*"
+    ],
+    "e": "//clueso.site/api/oembed"
   },
   {
     "s": [
@@ -484,6 +529,13 @@ export const providers = [
   },
   {
     "s": [
+      "//app\\.demofly\\.ai/s/*",
+      "//demofly\\.ai/s/*"
+    ],
+    "e": "//app.demofly.ai/api/oembed"
+  },
+  {
+    "s": [
       "//*\\.deseret\\.com/*"
     ],
     "e": "//embed.deseret.com/"
@@ -523,6 +575,12 @@ export const providers = [
   },
   {
     "s": [
+      "//www\\.documentcloud\\.org/documents/*"
+    ],
+    "e": "//api.www.documentcloud.org/api/oembed"
+  },
+  {
+    "s": [
       "//dotsub\\.com/view/*"
     ],
     "e": "//dotsub.com/services/oembed"
@@ -558,6 +616,18 @@ export const providers = [
       "//egliseinfo\\.catholique\\.fr/*"
     ],
     "e": "//egliseinfo.catholique.fr/api/oembed"
+  },
+  {
+    "s": [
+      "//elevenlabs\\.io/*"
+    ],
+    "e": "//elevenlabs.io/next/oembed"
+  },
+  {
+    "s": [
+      "//www\\.embases\\.com/e/*"
+    ],
+    "e": "//www.embases.com/api/oembed"
   },
   {
     "s": [
@@ -652,7 +722,13 @@ export const providers = [
   },
   {
     "s": [
-      "//www\\.figma\\.com/file/*"
+      "//www\\.figma\\.com/file/*",
+      "//www\\.figma\\.com/design/*",
+      "//www\\.figma\\.com/board/*",
+      "//www\\.figma\\.com/slides/*",
+      "//www\\.figma\\.com/buzz/*",
+      "//www\\.figma\\.com/site/*",
+      "//www\\.figma\\.com/make/*"
     ],
     "e": "//www.figma.com/api/oembed"
   },
@@ -772,6 +848,13 @@ export const providers = [
   },
   {
     "s": [
+      "//geometryviewer\\.com/v/*",
+      "//www\\.geometryviewer\\.com/v/*"
+    ],
+    "e": "//geometryviewer.com/oembed"
+  },
+  {
+    "s": [
       "//gty\\.im/*"
     ],
     "e": "//embed.gettyimages.com/oembed"
@@ -807,6 +890,12 @@ export const providers = [
       "//app\\.gong\\.io/call?id=*"
     ],
     "e": "//app.gong.io/oembed"
+  },
+  {
+    "s": [
+      "//www\\.good-for-job\\.jp/slides/*"
+    ],
+    "e": "//www.good-for-job.jp/api/oembed"
   },
   {
     "s": [
@@ -879,6 +968,19 @@ export const providers = [
       "//*\\.hippovideo\\.io/*"
     ],
     "e": "//www.hippovideo.io/services/oembed"
+  },
+  {
+    "s": [
+      "//cdn\\.hivo\\.com\\.au/*",
+      "//cdn\\.digital-assets\\.uq\\.edu\\.au/*",
+      "//cdn\\.southerndesigngroup\\.com/*",
+      "//freedom\\.hivocdn\\.com/*",
+      "//cdn\\.cockburn\\.wa\\.gov\\.au/*",
+      "//cdn\\.somnomed\\.com/*",
+      "//cdn\\.snowtunnel\\.com/*",
+      "//cdn\\.brenclosures\\.com\\.au/*"
+    ],
+    "e": "//app.hivo.com.au/api/drupal/oembed"
   },
   {
     "s": [
@@ -1061,6 +1163,13 @@ export const providers = [
   },
   {
     "s": [
+      "//play\\.juntos\\.live/solo/*",
+      "//play\\.juntos\\.live/host/quiz/*"
+    ],
+    "e": "//play.juntos.live/api/oembed"
+  },
+  {
+    "s": [
       "//tv\\.kakao\\.com/channel/*/cliplink/*",
       "//tv\\.kakao\\.com/m/channel/*/cliplink/*",
       "//tv\\.kakao\\.com/channel/v/*",
@@ -1143,6 +1252,22 @@ export const providers = [
   },
   {
     "s": [
+      "//landofassets\\.com/*",
+      "//landofassets\\.com/*/assets",
+      "//landofassets\\.com/*/assets/*",
+      "//landofassets\\.com/*/assets/*/embed"
+    ],
+    "e": "//api.landofassets.com/oembed"
+  },
+  {
+    "s": [
+      "//laude\\.org/impact/*",
+      "//laude\\.org/im/*"
+    ],
+    "e": "//laude.org/api/oembed"
+  },
+  {
+    "s": [
       "//learningapps\\.org/*"
     ],
     "e": "//learningapps.org/oembed.php"
@@ -1174,14 +1299,9 @@ export const providers = [
   },
   {
     "s": [
-      "//livestream\\.com/accounts/*/events/*",
-      "//livestream\\.com/accounts/*/events/*/videos/*",
-      "//livestream\\.com/*/events/*",
-      "//livestream\\.com/*/events/*/videos/*",
-      "//livestream\\.com/*/*",
-      "//livestream\\.com/*/*/videos/*"
+      "//livid\\.com/watch/*"
     ],
-    "e": "//livestream.com/oembed"
+    "e": "//livid.com/oembed"
   },
   {
     "s": [
@@ -1277,6 +1397,12 @@ export const providers = [
       "//miro\\.com/app/board/*"
     ],
     "e": "//miro.com/api/v1/oembed"
+  },
+  {
+    "s": [
+      "//miro\\.com/video-player/*"
+    ],
+    "e": "//miro.com/video-player/oembed"
   },
   {
     "s": [
@@ -1515,6 +1641,13 @@ export const providers = [
   },
   {
     "s": [
+      "//app\\.parta\\.io/core/embed/*",
+      "//*\\.parta\\.io/core/embed/*"
+    ],
+    "e": "//app.parta.io/core/oembed"
+  },
+  {
+    "s": [
       "//pastery\\.net/*",
       "//www\\.pastery\\.net/*"
     ],
@@ -1576,6 +1709,12 @@ export const providers = [
   },
   {
     "s": [
+      "//plinth\\.it/model-viewer/*/*"
+    ],
+    "e": "//plinth.it/model-viewer/oembed"
+  },
+  {
+    "s": [
       "//app\\.plusdocs\\.com/*/snapshots/*",
       "//app\\.plusdocs\\.com/*/pages/edit/*",
       "//app\\.plusdocs\\.com/*/pages/share/*"
@@ -1614,6 +1753,12 @@ export const providers = [
       "//*\\.prezi\\.com/v/*"
     ],
     "e": "//prezi.com/v/oembed"
+  },
+  {
+    "s": [
+      "//programmingly\\.dev/snippets/*"
+    ],
+    "e": "//programmingly.dev/api/oembed"
   },
   {
     "s": [
@@ -1728,7 +1873,10 @@ export const providers = [
     "e": "//roosterteeth.com/oembed"
   },
   {
-    "s": [],
+    "s": [
+      "//rumble\\.com/*",
+      "//rumble\\.com/shorts/*"
+    ],
     "e": "//rumble.com/api/Media/oembed.json"
   },
   {
@@ -1754,6 +1902,12 @@ export const providers = [
       "//www\\.satcat\\.com/sats/*"
     ],
     "e": "//www.satcat.com/api/sats/oembed"
+  },
+  {
+    "s": [
+      "//api\\.satoplayer\\.com/players/embed/*"
+    ],
+    "e": "//api.satoplayer.com/players/oembed"
   },
   {
     "s": [
@@ -1859,6 +2013,13 @@ export const providers = [
   },
   {
     "s": [
+      "//www\\.sketch\\.com/s/*",
+      "//www\\.sketch\\.com/preview/*"
+    ],
+    "e": "//graphql.sketch.cloud/embed/oembed"
+  },
+  {
+    "s": [
       "//sketchfab\\.com/*models/*",
       "//sketchfab\\.com/*/folders/*"
     ],
@@ -1919,13 +2080,13 @@ export const providers = [
   },
   {
     "s": [
-      "//vod\\.sooplive\\.co\\.kr/player/",
+      "//vod\\.sooplive\\.com/player/",
       "//v\\.afree\\.ca/ST/",
-      "//vod\\.sooplive\\.co\\.kr/ST/",
-      "//vod\\.sooplive\\.co\\.kr/PLAYER/STATION/",
-      "//play\\.sooplive\\.co\\.kr/"
+      "//vod\\.sooplive\\.com/ST/",
+      "//vod\\.sooplive\\.com/PLAYER/STATION/",
+      "//play\\.sooplive\\.com/"
     ],
-    "e": "//openapi.sooplive.co.kr/oembed/embedinfo"
+    "e": "//openapi.sooplive.com/oembed/embedinfo"
   },
   {
     "s": [
@@ -2012,6 +2173,7 @@ export const providers = [
   {
     "s": [
       "//www\\.sudomemo\\.net/watch/*",
+      "//archive\\.sudomemo\\.net/watch/*",
       "//flipnot\\.es/*"
     ],
     "e": "//www.sudomemo.net/oembed"
@@ -2062,6 +2224,13 @@ export const providers = [
   },
   {
     "s": [
+      "//www\\.tella\\.tv/video/*",
+      "//tella\\.video/*"
+    ],
+    "e": "//www.tella.tv/api/oembed"
+  },
+  {
+    "s": [
       "//hubspot-media-bridge\\.thedamconsultants\\.com/*"
     ],
     "e": "//hubspot-media-bridge.thedamconsultants.com/oembed/"
@@ -2087,7 +2256,9 @@ export const providers = [
       "//www\\.tickcounter\\.com/countup/*",
       "//www\\.tickcounter\\.com/ticker/*",
       "//www\\.tickcounter\\.com/clock/*",
-      "//www\\.tickcounter\\.com/worldclock/*"
+      "//www\\.tickcounter\\.com/worldclock/*",
+      "//www\\.tickcounter\\.com/embed/*",
+      "//www\\.tickcounter\\.com/full/*"
     ],
     "e": "//www.tickcounter.com/oembed"
   },
@@ -2148,6 +2319,13 @@ export const providers = [
       "//trinitymedia\\.ai/player/*/*/*"
     ],
     "e": "//trinitymedia.ai/services/oembed"
+  },
+  {
+    "s": [
+      "//trycli\\.com/e/*",
+      "//trycli\\.com/*/*"
+    ],
+    "e": "//trycli.com/api/oembed"
   },
   {
     "s": [
@@ -2365,7 +2543,8 @@ export const providers = [
   },
   {
     "s": [
-      "//whimsical\\.com/*"
+      "//whimsical\\.com/*",
+      "//whimsical\\.com/*/*"
     ],
     "e": "//whimsical.com/api/oembed"
   },

@@ -1,5 +1,5 @@
 {
-  "version": "4.0.9",
+  "version": "4.1.0",
   "name": "@extractus/oembed-extractor",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://github.com/extractus/oembed-extractor",
@@ -10,16 +10,9 @@
   "author": "@extractus",
   "main": "./src/main.js",
   "type": "module",
-  "imports": {
-    "cross-fetch": "./src/deno/cross-fetch.js"
-  },
-  "browser": {
-    "cross-fetch": "./src/deno/cross-fetch.js",
-    "linkedom": "./src/browser/linkedom.js"
-  },
   "types": "./index.d.ts",
   "engines": {
-    "node": ">= 18"
+    "node": ">= 20"
   },
   "scripts": {
     "lint": "eslint .",
@@ -31,15 +24,14 @@
     "reset": "node reset"
   },
   "dependencies": {
-    "cross-fetch": "^4.1.0",
     "linkedom": "^0.18.12"
   },
   "devDependencies": {
-    "@eslint/js": "^9.34.0",
-    "eslint": "^9.34.0",
-    "globals": "^16.3.0",
-    "https-proxy-agent": "^7.0.6",
-    "nock": "^14.0.10"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.3.0",
+    "globals": "^17.6.0",
+    "https-proxy-agent": "^9.0.0",
+    "nock": "^14.0.14"
   },
   "keywords": [
     "oembed",

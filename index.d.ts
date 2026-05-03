@@ -5,162 +5,189 @@
 //                 Marc McIntosh <https://github.com/MarcMcIntosh>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+/**
+ * An oEmbed provider endpoint definition as used in the provider registry.
+ */
 export interface Endpoint {
-    schemes?: string[];
-    url: string;
-    formats?: string[]; // "json" "xml"
-    discovery?: boolean;
-}
-
-export interface Provider {
-    "provider_name": string;
-    "provider_url": string;
-    "endpoints": Endpoint[];
-}
-
-export interface FindProviderResult {
-    "fetchEndpoint": string;
-    "provider_name": string;
-    "provider_url": string;
+  /** URL scheme patterns that match resources for this provider */
+  schemes?: string[]
+  /** The oEmbed API endpoint URL */
+  url: string
+  /** Supported response formats, e.g. "json", "xml" */
+  formats?: string[]
+  /** Whether auto-discovery is supported */
+  discovery?: boolean
 }
 
 /**
- * Basic data structure of every oembed response see https://oembed.com/
+ * A provider entry from the oEmbed registry.
+ */
+export interface Provider {
+  /** Human-readable provider name */
+  provider_name: string
+  /** Provider's homepage URL */
+  provider_url: string
+  /** List of API endpoints for this provider */
+  endpoints: Endpoint[]
+}
+
+/**
+ * Result returned by findProvider().
+ */
+export interface FindProviderResult {
+  /** Matched oEmbed API endpoint URL */
+  endpoint: string
+  /** Regex patterns used to match this URL */
+  schemes: RegExp[]
+  /** The original queried URL */
+  url: string
+}
+
+/**
+ * Basic fields present in every oEmbed response.
+ * See https://oembed.com/
  */
 export interface OembedData {
-    type: 'rich' | 'video' | 'photo' | 'link';
-    version: string;
-    /** A text title, describing the resource. */
-    title?: string;
-    /** The name of the author/owner of the resource. */
-    author_name?: string;
-    /** A URL for the author/owner of the resource. */
-    author_url?: string;
-    /** The name of the resource provider. */
-    provider_name?: string;
-    /** The url of the resource provider. */
-    provider_url?: string;
-    /** The suggested cache lifetime for this resource, in seconds. Consumers may choose to use this value or not. */
-    cache_age?: string | number;
-    /**
-     * A URL to a thumbnail image representing the resource.
-     * The thumbnail must respect any maxwidth and maxheight parameters.
-     * If this parameter is present, thumbnail_width and thumbnail_height must also be present.
-     */
-    thumbnail_url?: string;
-    /**
-     * The width of the optional thumbnail.
-     * If this parameter is present, thumbnail_url and thumbnail_height must also be present.
-     */
-    thumbnail_width?: number;
-    /**
-     * The height of the optional thumbnail.
-     * If this parameter is present, thumbnail_url and thumbnail_width must also be present.
-     */
-    thumbnail_height?: number;
+  /** Resource type: rich, video, photo, or link */
+  type: 'rich' | 'video' | 'photo' | 'link'
+  /** oEmbed version number */
+  version: string
+  /** A text title describing the resource */
+  title?: string
+  /** Name of the author/owner of the resource */
+  author_name?: string
+  /** URL for the author/owner of the resource */
+  author_url?: string
+  /** Name of the resource provider */
+  provider_name?: string
+  /** URL of the resource provider */
+  provider_url?: string
+  /** Suggested cache lifetime in seconds */
+  cache_age?: string | number
+  /** URL to a thumbnail image representing the resource */
+  thumbnail_url?: string
+  /** Width of the optional thumbnail in pixels */
+  thumbnail_width?: number
+  /** Height of the optional thumbnail in pixels */
+  thumbnail_height?: number
+  /** How the oEmbed data was retrieved: "provider-api" or "auto-discovery" */
+  method?: string
 }
 
+/**
+ * oEmbed response for type "link".
+ */
 export interface LinkTypeData extends OembedData {
-    readonly type: 'link';
+  readonly type: 'link'
 }
 
+/**
+ * oEmbed response for type "photo".
+ */
 export interface PhotoTypeData extends OembedData {
-    readonly type: 'photo';
-    /**
-     * The source URL of the image. Consumers should be able to insert this URL into an <img> element.
-     * Only HTTP and HTTPS URLs are valid.
-     */
-    url: string;
-    /** The width in pixels of the image specified in the url parameter. */
-    width: number;
-    /** The height in pixels of the image specified in the url parameter. */
-    height: number;
+  readonly type: 'photo'
+  /** Source URL of the image */
+  url: string
+  /** Width of the image in pixels */
+  width: number
+  /** Height of the image in pixels */
+  height: number
 }
 
+/**
+ * oEmbed response for type "video".
+ */
 export interface VideoTypeData extends OembedData {
-    readonly type: 'video';
-    /**
-     * The HTML required to embed a video player.
-     * The HTML should have no padding or margins.
-     * Consumers may wish to load the HTML in an off-domain iframe to avoid XSS vulnerabilities.
-     */
-    html: string;
-    /** The width in pixels required to display the HTML. */
-    width: number;
-    /** The height in pixels required to display the HTML. */
-    height: number;
+  readonly type: 'video'
+  /** HTML required to embed a video player */
+  html: string
+  /** Width required to display the HTML in pixels */
+  width: number
+  /** Height required to display the HTML in pixels */
+  height: number
 }
 
+/**
+ * oEmbed response for type "rich".
+ */
 export interface RichTypeData extends OembedData {
-    readonly type: 'rich';
-    /**
-     * The HTML required to display the resource.
-     * The HTML should have no padding or margins.
-     * Consumers may wish to load the HTML in an off-domain iframe to avoid XSS vulnerabilities.
-     * The markup should be valid XHTML 1.0 Basic.
-     */
-    html: string;
-    /** The width in pixels required to display the HTML. */
-    width: number;
-    /** The height in pixels required to display the HTML. */
-    height: number;
+  readonly type: 'rich'
+  /** HTML required to display the resource */
+  html: string
+  /** Width required to display the HTML in pixels */
+  width: number
+  /** Height required to display the HTML in pixels */
+  height: number
 }
 
+/**
+ * Optional parameters passed to extract().
+ */
 export interface Params {
-  /**
-   * max width of embed size
-   * Default: null
-   */
+  /** Max width of embed size */
   maxwidth?: number
-  /**
-   * max height of embed size
-   * Default: null
-   */
+  /** Max height of embed size */
   maxheight?: number
-  /**
-   * theme for the embed, such as "dark" or "light"
-   * Default: null
-   */
+  /** Theme for the embed, e.g. "dark" or "light" */
   theme?: string
-  /**
-   * language for the embed, e.g. "en", "fr", "vi", etc
-   * Default: null
-   */
+  /** Language for the embed, e.g. "en", "fr", "vi" */
   lang?: string
 }
 
+/**
+ * Configuration for proxy-based requests.
+ */
 export interface ProxyConfig {
-  target?: string;
-  headers?: Record<string, string>;
+  /** Base URL of the proxy server */
+  target?: string
+  /** Headers to send to the proxy (e.g. Proxy-Authorization) */
+  headers?: Record<string, string>
 }
 
+/**
+ * Advanced fetch options for extract().
+ */
 export interface FetchOptions {
-  /**
-   * list of request headers
-   * default: null
-   */
-  headers?: Record<string, string>;
-  /**
-   * the values to configure proxy
-   * default: null
-   */
-  proxy?: ProxyConfig;
-  /**
-   * http proxy agent
-   * default: null
-   */
-  agent?: object;
-  /**
-   * signal to terminate request
-   * default: null
-   */
-  signal?: object;
+  /** Custom request headers */
+  headers?: Record<string, string>
+  /** Proxy configuration */
+  proxy?: ProxyConfig
+  /** HTTP proxy agent (e.g. HttpsProxyAgent) */
+  agent?: object
+  /** AbortSignal to cancel the request */
+  signal?: AbortSignal
 }
 
-export function extract(url: string, params?: Params, fetchOptions?: FetchOptions): Promise<OembedData>;
+/**
+ * Extract oEmbed data from a given URL.
+ *
+ * @param url - URL of a valid oEmbed resource
+ * @param params - Optional parameters (maxwidth, maxheight, etc.)
+ * @param fetchOptions - Advanced fetch options (headers, proxy, agent, signal)
+ * @returns Promise resolving to oEmbed data
+ */
+export function extract(url: string, params?: Params, fetchOptions?: FetchOptions): Promise<OembedData>
 
+/**
+ * Check if a URL is supported by any registered provider.
+ *
+ * @param url - URL to check
+ * @returns True if a matching provider exists
+ */
 export function hasProvider(url: string): boolean
 
-export function findProvider(url: string): FindProviderResult
+/**
+ * Find the provider that matches a given URL.
+ *
+ * @param url - URL to look up
+ * @returns Provider info or undefined if not found
+ */
+export function findProvider(url: string): FindProviderResult | null
 
-export function setProviderList(providers: Provider[]): void
+/**
+ * Replace the provider list with a custom set of providers.
+ *
+ * @param providers - List of providers in oEmbed registry format
+ * @returns Number of providers in the new list
+ */
+export function setProviderList(providers: Provider[]): number
