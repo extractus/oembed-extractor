@@ -28,7 +28,7 @@ const profetch = async (url, options = {}) => {
  * Fetch a URL and return the response body as text.
  *
  * @param {string} url - URL to fetch
- * @param {object} [options={}] - Fetch options (headers, proxy, agent, signal)
+ * @param {object} [options={}] - Fetch options (headers, proxy, signal)
  * @returns {Promise<string>} Response body as text
  * @throws {Error} If HTTP status is 400 or higher
  */
@@ -38,11 +38,10 @@ export const getHtml = async (url, options = {}) => {
       'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0',
     },
     proxy = null,
-    agent = null,
     signal = null,
   } = options
 
-  const res = proxy ? await profetch(url, { proxy, signal }) : await fetch(url, { headers, agent, signal })
+  const res = proxy ? await profetch(url, { proxy, signal }) : await fetch(url, { headers, signal })
 
   const status = res.status
   if (status >= 400) {
@@ -57,7 +56,7 @@ export const getHtml = async (url, options = {}) => {
  * Fetch a URL and parse the response body as JSON.
  *
  * @param {string} url - URL to fetch
- * @param {object} [options={}] - Fetch options (headers, proxy, agent, signal)
+ * @param {object} [options={}] - Fetch options (headers, proxy, signal)
  * @returns {Promise<object>} Parsed JSON response
  * @throws {Error} If HTTP status is 400+ or response is not valid JSON
  */
@@ -67,11 +66,10 @@ export const getJson = async (url, options = {}) => {
       'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0',
     },
     proxy = null,
-    agent = null,
     signal = null,
   } = options
 
-  const res = proxy ? await profetch(url, { proxy, signal }) : await fetch(url, { headers, agent, signal })
+  const res = proxy ? await profetch(url, { proxy, signal }) : await fetch(url, { headers, signal })
 
   const status = res.status
   if (status >= 400) {

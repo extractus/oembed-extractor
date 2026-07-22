@@ -152,8 +152,6 @@ export interface FetchOptions {
   headers?: Record<string, string>
   /** Proxy configuration */
   proxy?: ProxyConfig
-  /** HTTP proxy agent (e.g. HttpsProxyAgent) */
-  agent?: object
   /** AbortSignal to cancel the request */
   signal?: AbortSignal
 }
@@ -163,7 +161,7 @@ export interface FetchOptions {
  *
  * @param url - URL of a valid oEmbed resource
  * @param params - Optional parameters (maxwidth, maxheight, etc.)
- * @param fetchOptions - Advanced fetch options (headers, proxy, agent, signal)
+ * @param fetchOptions - Advanced fetch options (headers, proxy, signal)
  * @returns Promise resolving to oEmbed data
  */
 export function extract(url: string, params?: Params, fetchOptions?: FetchOptions): Promise<OembedData>

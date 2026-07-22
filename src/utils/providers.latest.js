@@ -1,4 +1,4 @@
-// provider data, synchronized at 2026-05-03T06:03:25.358Z
+// provider data, synchronized at 2026-07-22T03:45:47.831Z
 
 /* eslint-disable */ 
 
@@ -117,12 +117,6 @@ export const providers = [
   },
   {
     "s": [
-      "//app\\.archivos\\.digital/app/view/*"
-    ],
-    "e": "//app.archivos.digital/oembed/"
-  },
-  {
-    "s": [
       "//*\\.studio\\.assemblrworld\\.com/creation/*",
       "//studio\\.assemblrworld\\.com/creation/*",
       "//*\\.app-edu\\.assemblrworld\\.com/Creation/*",
@@ -196,12 +190,6 @@ export const providers = [
     "e": "//balsamiq.cloud/oembed"
   },
   {
-    "s": [
-      "//beams\\.fm/*"
-    ],
-    "e": "//api.beams.fm/oEmbed"
-  },
-  {
     "s": [],
     "e": "//www.beautiful.ai/api/oembed"
   },
@@ -220,9 +208,10 @@ export const providers = [
   },
   {
     "s": [
-      "//cloud\\.biqapp\\.com/*"
+      "//biqapp\\.net/f/*",
+      "//www\\.biqapp\\.net/f/*"
     ],
-    "e": "//biqapp.com/api/v1/video/oembed"
+    "e": "//biqapp.net/api/oembed"
   },
   {
     "s": [],
@@ -277,12 +266,6 @@ export const providers = [
   },
   {
     "s": [
-      "//view\\.briovr\\.com/api/v1/worlds/oembed/*"
-    ],
-    "e": "//view.briovr.com/api/v1/worlds/oembed/"
-  },
-  {
-    "s": [
       "//www\\.bumper\\.com/oembed/bumper",
       "//www\\.bumper\\.com/oembed-s/bumper"
     ],
@@ -329,9 +312,11 @@ export const providers = [
   },
   {
     "s": [
-      "//minesweeper\\.today/*"
+      "//carbonvoice\\.app/s/*",
+      "//carbonvoice\\.app/m/*",
+      "//carbonvoice\\.app/c/*"
     ],
-    "e": "//minesweeper.today/api/oembed"
+    "e": "//carbonvoice.app/api/oembed"
   },
   {
     "s": [
@@ -359,24 +344,15 @@ export const providers = [
   },
   {
     "s": [
-      "//chainflix\\.net/video/*",
-      "//chainflix\\.net/video/embed/*",
-      "//*\\.chainflix\\.net/video/*",
-      "//*\\.chainflix\\.net/video/embed/*"
+      "//chanceindex\\.com/odds/*"
     ],
-    "e": "//www.chainflix.net/video/oembed"
+    "e": "//chanceindex.com/api/oembed"
   },
   {
     "s": [
       "//public\\.chartblocks\\.com/c/*"
     ],
     "e": "//embed.chartblocks.com/1.0/oembed"
-  },
-  {
-    "s": [
-      "//chirb\\.it/*"
-    ],
-    "e": "//chirb.it/oembed.json"
   },
   {
     "s": [
@@ -403,6 +379,12 @@ export const providers = [
   },
   {
     "s": [
+      "//clipform\\.io/*"
+    ],
+    "e": "//api.clipform.io/v1/oembed"
+  },
+  {
+    "s": [
       "//www\\.clipland\\.com/v/*"
     ],
     "e": "//www.clipland.com/api/oembed"
@@ -419,12 +401,6 @@ export const providers = [
       "//clyp\\.it/playlist/*"
     ],
     "e": "//api.clyp.it/oembed/"
-  },
-  {
-    "s": [
-      "//app\\.ilovecoco\\.video/*/embed"
-    ],
-    "e": "//app.ilovecoco.video/api/oembed.json"
   },
   {
     "s": [
@@ -460,6 +436,13 @@ export const providers = [
   },
   {
     "s": [
+      "//coloringmonster\\.com/coloring-page/*",
+      "//coloringmonster\\.com/monsterpieces/*"
+    ],
+    "e": "//coloringmonster.com/oembed"
+  },
+  {
+    "s": [
       "//commaful\\.com/play/*"
     ],
     "e": "//commaful.com/api/oembed/"
@@ -470,12 +453,6 @@ export const providers = [
       "//coub\\.com/embed/*"
     ],
     "e": "//coub.com/api/oembed.json"
-  },
-  {
-    "s": [
-      "//crowdranking\\.com/*/*"
-    ],
-    "e": "//crowdranking.com/api/oembed.json"
   },
   {
     "s": [
@@ -494,12 +471,6 @@ export const providers = [
       "//*\\.curated\\.co/*"
     ],
     "e": "//api.curated.co/oembed"
-  },
-  {
-    "s": [
-      "//app\\.customerdb\\.com/share/*"
-    ],
-    "e": "//app.customerdb.com/embed"
   },
   {
     "s": [
@@ -599,9 +570,10 @@ export const providers = [
   },
   {
     "s": [
-      "//app\\.echoeshq\\.com/embed/*"
+      "//ecency\\.com/@*/*",
+      "//ecency\\.com/*/@*/*"
     ],
-    "e": "//api.echoeshq.com/oembed"
+    "e": "//ecency.com/api/oembed"
   },
   {
     "s": [],
@@ -664,20 +636,6 @@ export const providers = [
   },
   {
     "s": [
-      "//app\\.ex\\.co/stories/*",
-      "//www\\.playbuzz\\.com/*"
-    ],
-    "e": "//oembed.ex.co/item"
-  },
-  {
-    "s": [
-      "//eyrie\\.io/board/*",
-      "//eyrie\\.io/sparkfun/*"
-    ],
-    "e": "//eyrie.io/v1/oembed"
-  },
-  {
-    "s": [
       "//www\\.facebook\\.com/*/posts/*",
       "//www\\.facebook\\.com/*/activity/*",
       "//www\\.facebook\\.com/*/photos/*",
@@ -706,12 +664,6 @@ export const providers = [
   },
   {
     "s": [
-      "//app\\.getfader\\.com/projects/*/publish"
-    ],
-    "e": "//app.getfader.com/api/oembed"
-  },
-  {
-    "s": [
       "//faithlifetv\\.com/items/*",
       "//faithlifetv\\.com/items/resource/*/*",
       "//faithlifetv\\.com/media/*",
@@ -719,6 +671,12 @@ export const providers = [
       "//faithlifetv\\.com/media/resource/*/*"
     ],
     "e": "//faithlifetv.com/api/oembed"
+  },
+  {
+    "s": [
+      "//haus\\.fazen\\.co/embed/music/*"
+    ],
+    "e": "//haus.fazen.co/api/oembed"
   },
   {
     "s": [
@@ -821,30 +779,9 @@ export const providers = [
   },
   {
     "s": [
-      "//*\\.geograph\\.org\\.uk/*",
-      "//*\\.geograph\\.co\\.uk/*",
-      "//*\\.geograph\\.ie/*",
-      "//*\\.wikimedia\\.org/*_geograph\\.org\\.uk_*"
+      "//fritube\\.ch/v/*"
     ],
-    "e": "//api.geograph.org.uk/api/oembed"
-  },
-  {
-    "s": [
-      "//*\\.geograph\\.org\\.gg/*",
-      "//*\\.geograph\\.org\\.je/*",
-      "//channel-islands\\.geograph\\.org/*",
-      "//channel-islands\\.geographs\\.org/*",
-      "//*\\.channel\\.geographs\\.org/*"
-    ],
-    "e": "//www.geograph.org.gg/api/oembed"
-  },
-  {
-    "s": [
-      "//geo-en\\.hlipp\\.de/*",
-      "//geo\\.hlipp\\.de/*",
-      "//germany\\.geograph\\.org/*"
-    ],
-    "e": "//geo.hlipp.de/restapi.php/api/oembed"
+    "e": "//fritube.ch/services/oembed"
   },
   {
     "s": [
@@ -907,12 +844,6 @@ export const providers = [
   },
   {
     "s": [
-      "//gtchannel\\.com/watch/*"
-    ],
-    "e": "//api.luminery.com/oembed"
-  },
-  {
-    "s": [
       "//gumlet\\.tv/watch/*",
       "//play\\.gumlet\\.io/embed/*"
     ],
@@ -942,12 +873,6 @@ export const providers = [
       "//hearthis\\.at/*/set/*/"
     ],
     "e": "//hearthis.at/oembed/?format=json"
-  },
-  {
-    "s": [
-      "//helenenglish\\.education/widget*"
-    ],
-    "e": "//helenenglish.education/embed"
   },
   {
     "s": [
@@ -988,12 +913,6 @@ export const providers = [
       "//homey\\.app/*/flow/*"
     ],
     "e": "//homey.app/api/oembed/flow"
-  },
-  {
-    "s": [
-      "//*\\.hopvue\\.com/*"
-    ],
-    "e": "//portal.hopvue.com/api/oembed/"
   },
   {
     "s": [
@@ -1055,12 +974,6 @@ export const providers = [
       "//qr\\.imenupro\\.com/*"
     ],
     "e": "//qr.imenupro.com/api/oembed"
-  },
-  {
-    "s": [
-      "//incredible\\.dev/watch/*"
-    ],
-    "e": "//oembed.incredible.dev/oembed"
   },
   {
     "s": [
@@ -1143,9 +1056,9 @@ export const providers = [
   },
   {
     "s": [
-      "//play\\.itemis\\.io/*"
+      "//jawafdehi\\.org/case/*"
     ],
-    "e": "//create.storage.api.itemis.io/api/embed"
+    "e": "//api.jawafdehi.org/oembed/"
   },
   {
     "s": [
@@ -1170,27 +1083,15 @@ export const providers = [
   },
   {
     "s": [
-      "//tv\\.kakao\\.com/channel/*/cliplink/*",
-      "//tv\\.kakao\\.com/m/channel/*/cliplink/*",
-      "//tv\\.kakao\\.com/channel/v/*",
-      "//tv\\.kakao\\.com/channel/*/livelink/*",
-      "//tv\\.kakao\\.com/m/channel/*/livelink/*",
-      "//tv\\.kakao\\.com/channel/l/*"
+      "//www\\.justspin\\.cc/workouts/*"
     ],
-    "e": "//tv.kakao.com/oembed"
+    "e": "//www.justspin.cc/api/oembed"
   },
   {
     "s": [
       "//www\\.kickstarter\\.com/projects/*"
     ],
     "e": "//www.kickstarter.com/services/oembed"
-  },
-  {
-    "s": [
-      "//www\\.kidoju\\.com/en/x/*/*",
-      "//www\\.kidoju\\.com/fr/x/*/*"
-    ],
-    "e": "//www.kidoju.com/api/oembed"
   },
   {
     "s": [
@@ -1213,28 +1114,16 @@ export const providers = [
   },
   {
     "s": [
-      "//app\\.kmdr\\.sh/h/*",
-      "//app\\.kmdr\\.sh/history/*"
-    ],
-    "e": "//api.kmdr.sh/services/oembed"
-  },
-  {
-    "s": [
-      "//jdr\\.knacki\\.info/meuh/*"
-    ],
-    "e": "//jdr.knacki.info/oembed"
-  },
-  {
-    "s": [
       "//knowledgepad\\.co/#/knowledge/*"
     ],
     "e": "//api.spoonacular.com/knowledge/oembed"
   },
   {
     "s": [
-      "//*\\.kooapp\\.com/koo/*"
+      "//kommodo\\.ai/recordings/*",
+      "//kommodo\\.ai/guides/*"
     ],
-    "e": "//embed.kooapp.com/services/oembed"
+    "e": "//kommodo.ai/api/oembed"
   },
   {
     "s": [
@@ -1274,12 +1163,6 @@ export const providers = [
   },
   {
     "s": [
-      "//umotion-test\\.univ-lemans\\.fr/video/*"
-    ],
-    "e": "//umotion-test.univ-lemans.fr/oembed"
-  },
-  {
-    "s": [
       "//pod\\.univ-lille\\.fr/video/*"
     ],
     "e": "//pod.univ-lille.fr/video/oembed"
@@ -1296,6 +1179,15 @@ export const providers = [
       "//linkstackz\\.com/post/*"
     ],
     "e": "//api.linkstackz.com/oembed"
+  },
+  {
+    "s": [
+      "//livecodes\\.io/",
+      "//livecodes\\.io/?*",
+      "//*\\.livecodes\\.io/",
+      "//*\\.livecodes\\.io/?*"
+    ],
+    "e": "//livecodes.io/oembed"
   },
   {
     "s": [
@@ -1381,16 +1273,6 @@ export const providers = [
       "//*\\.microsoftstream\\.com/channel/*"
     ],
     "e": "//web.microsoftstream.com/oembed"
-  },
-  {
-    "s": [
-      "//www\\.minervaknows\\.com/featured-recipes/*",
-      "//www\\.minervaknows\\.com/themes/*",
-      "//www\\.minervaknows\\.com/themes/*/recipes/*",
-      "//app\\.minervaknows\\.com/recipes/*",
-      "//app\\.minervaknows\\.com/recipes/*/follow"
-    ],
-    "e": "//oembed.minervaknows.com"
   },
   {
     "s": [
@@ -1527,9 +1409,14 @@ export const providers = [
   },
   {
     "s": [
-      "//nopaste\\.ml/*"
+      "//nouncify\\.com/i/*",
+      "//nouncify\\.com/brand/*",
+      "//nouncify\\.com/e/*",
+      "//sandbox\\.nouncify\\.com/i/*",
+      "//sandbox\\.nouncify\\.com/brand/*",
+      "//sandbox\\.nouncify\\.com/e/*"
     ],
-    "e": "//oembed.nopaste.ml"
+    "e": "//nouncify.com/api/oembed"
   },
   {
     "s": [
@@ -1608,6 +1495,13 @@ export const providers = [
   },
   {
     "s": [
+      "//embed\\.orizn\\.app/frame/*",
+      "//embed\\.orizn\\.app/widgets/*"
+    ],
+    "e": "//embed.orizn.app/api/oembed"
+  },
+  {
+    "s": [
       "//outplayed\\.tv/media/*"
     ],
     "e": "//outplayed.tv/oembed"
@@ -1618,12 +1512,6 @@ export const providers = [
       "//overflow\\.io/embed/*"
     ],
     "e": "//overflow.io/services/oembed"
-  },
-  {
-    "s": [
-      "//www\\.oz\\.com/*/video/*"
-    ],
-    "e": "//core.oz.com/oembed"
   },
   {
     "s": [
@@ -1638,6 +1526,13 @@ export const providers = [
       "//dashboard\\.pandavideo\\.com\\.br/#/videos/*"
     ],
     "e": "//api-v2.pandavideo.com.br/oembed"
+  },
+  {
+    "s": [
+      "//app\\.parler\\.com/post/*",
+      "//app\\.parler\\.com/b/*"
+    ],
+    "e": "//app.parler.com/oembed"
   },
   {
     "s": [
@@ -1658,29 +1553,6 @@ export const providers = [
       "//peertube\\.tv/w/*"
     ],
     "e": "//peertube.tv/services/oembed"
-  },
-  {
-    "s": [
-      "//www\\.picturelfy\\.com/p/*"
-    ],
-    "e": "//api.picturelfy.com/service/oembed/"
-  },
-  {
-    "s": [
-      "//piggy\\.to/@*/*",
-      "//piggy\\.to/view/*"
-    ],
-    "e": "//piggy.to/oembed"
-  },
-  {
-    "s": [
-      "//*\\.builder\\.pikasso\\.xyz/embed/*"
-    ],
-    "e": "//builder.pikasso.xyz/api/oembed"
-  },
-  {
-    "s": [],
-    "e": "//beta.pingvp.com.kpnis.nl/p/oembed.php"
   },
   {
     "s": [
@@ -1743,12 +1615,6 @@ export const providers = [
   },
   {
     "s": [
-      "//present\\.do/decks/*"
-    ],
-    "e": "//gateway.cobalt.run/present/decks/oembed"
-  },
-  {
-    "s": [
       "//prezi\\.com/v/*",
       "//*\\.prezi\\.com/v/*"
     ],
@@ -1759,6 +1625,15 @@ export const providers = [
       "//programmingly\\.dev/snippets/*"
     ],
     "e": "//programmingly.dev/api/oembed"
+  },
+  {
+    "s": [
+      "//www\\.pyzia\\.app/dashboard?*",
+      "//pyzia\\.app/dashboard?*",
+      "//www\\.pyzia\\.app/embed/chart?*",
+      "//pyzia\\.app/embed/chart?*"
+    ],
+    "e": "//www.pyzia.app/api/oembed"
   },
   {
     "s": [
@@ -1790,24 +1665,6 @@ export const providers = [
       "//www\\.quizz\\.biz/quizz-*\\.html"
     ],
     "e": "//www.quizz.biz/api/oembed"
-  },
-  {
-    "s": [
-      "//play\\.radiopublic\\.com/*",
-      "//radiopublic\\.com/*",
-      "//www\\.radiopublic\\.com/*",
-      "//*\\.radiopublic\\.com/*"
-    ],
-    "e": "//oembed.radiopublic.com/oembed"
-  },
-  {
-    "s": [
-      "//raindrop\\.io/*",
-      "//raindrop\\.io/*/*",
-      "//raindrop\\.io/*/*/*",
-      "//raindrop\\.io/*/*/*/*"
-    ],
-    "e": "//pub.raindrop.io/api/oembed"
   },
   {
     "s": [
@@ -1861,6 +1718,12 @@ export const providers = [
   },
   {
     "s": [
+      "//risky\\.biz/*"
+    ],
+    "e": "//risky.biz/oembed"
+  },
+  {
+    "s": [
       "//roomshare\\.jp/post/*",
       "//roomshare\\.jp/en/post/*"
     ],
@@ -1881,9 +1744,18 @@ export const providers = [
   },
   {
     "s": [
-      "//embed\\.runkit\\.com/*,"
+      "//www\\.rushes\\.cc/video/*",
+      "//www\\.rushes\\.cc/embed/*",
+      "//rushes\\.cc/video/*",
+      "//rushes\\.cc/embed/*"
     ],
-    "e": "//embed.runkit.com/oembed"
+    "e": "//api.rushes.cc/oembed"
+  },
+  {
+    "s": [
+      "//app2\\.sagenverse\\.com/embed/*"
+    ],
+    "e": "//app2.sagenverse.com/oembed"
   },
   {
     "s": [
@@ -1914,13 +1786,6 @@ export const providers = [
       "//sbedit\\.net/*"
     ],
     "e": "//sbedit.net/oembed/"
-  },
-  {
-    "s": [
-      "//getscenes\\.com/e/*",
-      "//getscenes\\.com/event/*"
-    ],
-    "e": "//getscenes.com/oembed"
   },
   {
     "s": [
@@ -1965,19 +1830,6 @@ export const providers = [
       "//shared-file-kappa\\.vercel\\.app/file/*"
     ],
     "e": "//shared-file-kappa.vercel.app/file/api/oembed"
-  },
-  {
-    "s": [
-      "//shopshare\\.tv/shopboard/*",
-      "//shopshare\\.tv/shopcast/*"
-    ],
-    "e": "//shopshare.tv/api/shopcast/oembed"
-  },
-  {
-    "s": [
-      "//www\\.shortnote\\.jp/view/notes/*"
-    ],
-    "e": "//www.shortnote.jp/oembed/"
   },
   {
     "s": [
@@ -2027,6 +1879,13 @@ export const providers = [
   },
   {
     "s": [
+      "//skhema\\.com/embed/e/*",
+      "//skhema\\.com/embed/c/*"
+    ],
+    "e": "//skhema.com/api/oembed"
+  },
+  {
+    "s": [
       "//www\\.skoletube\\.dk/media/*",
       "//www\\.skoletube\\.dk/video/*",
       "//www\\.studietube\\.dk/media/*",
@@ -2050,12 +1909,6 @@ export const providers = [
       "//smashnotes\\.com/p/*/e/* - https://smashnotes\\.com/p/*/e/*/s/*"
     ],
     "e": "//smashnotes.com/services/oembed"
-  },
-  {
-    "s": [
-      "//open\\.smeme\\.com/*"
-    ],
-    "e": "//open.smeme.com/api/oembed"
   },
   {
     "s": [
@@ -2166,9 +2019,9 @@ export const providers = [
   },
   {
     "s": [
-      "//subscribi\\.io/api/oembed*"
+      "//streetartcities\\.com/markers/*"
     ],
-    "e": "//subscribi.io/api/oembed"
+    "e": "//oembed.streetartcities.com/oembed"
   },
   {
     "s": [
@@ -2205,6 +2058,12 @@ export const providers = [
   },
   {
     "s": [
+      "//synthcamp\\.net/r/*"
+    ],
+    "e": "//synthcamp.net/api/oembed"
+  },
+  {
+    "s": [
       "//share\\.synthesia\\.io/*"
     ],
     "e": "//69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed"
@@ -2218,7 +2077,8 @@ export const providers = [
   {
     "s": [
       "//ted\\.com/talks/*",
-      "//www\\.ted\\.com/talks/*"
+      "//www\\.ted\\.com/talks/*",
+      "//embed\\.ted\\.com/talks/*"
     ],
     "e": "//www.ted.com/services/v1/oembed.json"
   },
@@ -2228,6 +2088,12 @@ export const providers = [
       "//tella\\.video/*"
     ],
     "e": "//www.tella.tv/api/oembed"
+  },
+  {
+    "s": [
+      "//rest-prod\\.tenet\\.textexpander\\.com/share/*"
+    ],
+    "e": "//rest-prod.tenet.textexpander.com/oembed"
   },
   {
     "s": [
@@ -2275,6 +2141,12 @@ export const providers = [
       "//*\\.tksn\\.me/*"
     ],
     "e": "//tksn.me/api/oembed/"
+  },
+  {
+    "s": [
+      "//tlexdr\\.com/episode/*"
+    ],
+    "e": "//tlexdr.com/oembed"
   },
   {
     "s": [
@@ -2413,18 +2285,6 @@ export const providers = [
   },
   {
     "s": [
-      "//veer\\.tv/videos/*"
-    ],
-    "e": "//api.veer.tv/oembed"
-  },
-  {
-    "s": [
-      "//veervr\\.tv/videos/*"
-    ],
-    "e": "//api.veervr.tv/oembed"
-  },
-  {
-    "s": [
       "//www\\.vevo\\.com/*"
     ],
     "e": "//www.vevo.com/oembed"
@@ -2434,6 +2294,13 @@ export const providers = [
       "//videfit\\.com/videos/*"
     ],
     "e": "//videfit.com/oembed"
+  },
+  {
+    "s": [
+      "//vidlink\\.it/videos/*",
+      "//www\\.vidlink\\.it/videos/*"
+    ],
+    "e": "//www.vidlink.it/api/oembed"
   },
   {
     "s": [
@@ -2477,12 +2344,6 @@ export const providers = [
       "//vizdom\\.dev/link/*"
     ],
     "e": "//vizdom.dev/api/v1/oembed"
-  },
-  {
-    "s": [
-      "//vizydrop\\.com/shared/*"
-    ],
-    "e": "//vizydrop.com/oembed"
   },
   {
     "s": [
@@ -2531,15 +2392,16 @@ export const providers = [
   },
   {
     "s": [
-      "//plugins\\.webcrumbs\\.dev/*"
-    ],
-    "e": "//webcrumbs.dev/oembed"
-  },
-  {
-    "s": [
       "//play\\.wecandeo\\.com/video/v/*"
     ],
     "e": "//play.wecandeo.com/oembed/"
+  },
+  {
+    "s": [
+      "//www\\.wewtalk\\.com/voice/*",
+      "//wewtalk\\.com/voice/*"
+    ],
+    "e": "//www.wewtalk.com/api/oembed"
   },
   {
     "s": [
@@ -2552,7 +2414,8 @@ export const providers = [
     "s": [
       "//fast\\.wistia\\.com/embed/iframe/*",
       "//fast\\.wistia\\.com/embed/playlists/*",
-      "//*\\.wistia\\.com/medias/*"
+      "//*\\.wistia\\.com/medias/*",
+      "//*\\.wistia\\.com/s/*"
     ],
     "e": "//fast.wistia.com/oembed.json"
   },
@@ -2583,6 +2446,13 @@ export const providers = [
       "//wp\\.me/*"
     ],
     "e": "//public-api.wordpress.com/oembed/"
+  },
+  {
+    "s": [
+      "//worldeventtrading\\.com/predictions/*",
+      "//www\\.worldeventtrading\\.com/predictions/*"
+    ],
+    "e": "//www.worldeventtrading.com/api/oembed"
   },
   {
     "s": [
