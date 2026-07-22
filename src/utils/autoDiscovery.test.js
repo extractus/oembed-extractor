@@ -48,7 +48,7 @@ describe('test if autoDiscovery() works correctly', () => {
         'Content-Type': 'application/json',
       })
 
-    const result = await autoDiscovery(url, params)
+    const result = await autoDiscovery(url, params, globalThis.fetch)
     assert.ok(result)
     nock.cleanAll()
   })

@@ -3,60 +3,51 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert'
 
-import nock from 'nock'
-
 import { getJson } from './retrieve.js'
 
-const parseUrl = (url) => {
-  const re = new URL(url)
-  return {
-    baseUrl: `${re.protocol}//${re.host}`,
-    path: re.pathname,
+const mockFetch = (data) => {
+  return async () => {
+    return new Response(JSON.stringify(data), {
+      status: 200,
+      headers: { 'content-type': 'application/json' },
+    })
   }
 }
 
 describe('test getJson() method', () => {
-  it('test getJson from good source', async () => {
-    const url = 'https://some.where/good/source'
-    const { baseUrl, path } = parseUrl(url)
-    nock(baseUrl).get(path).reply(200, { data: { name: 'oembed-parser' } }, {
-      'Content-Type': 'application/json',
-    })
-    const result = await getJson(url)
+  it('test getJson with custom fetcher', async () => {
+    const fetcher = mockFetch({ data: { name: 'oembed-parser' } })
+    const result = await getJson('https://some.where/good/source', fetcher)
     assert.equal(result.data.name, 'oembed-parser')
-    nock.cleanAll()
   })
 
-  it('test getJson using proxy', async () => {
-    const url = 'https://some.where/good/source-with-proxy'
-    const { baseUrl, path } = parseUrl(url)
-    nock(baseUrl).get(path).reply(200, { data: { name: 'oembed-parser' } }, {
-      'Content-Type': 'application/json',
-    })
-    nock('https://proxy-server.com')
-      .get('/api/proxy?url=https%3A%2F%2Fsome.where%2Fgood%2Fsource-with-proxy')
-      .reply(200, { data: { name: 'oembed-parser' } })
-
-    const result = await getJson(url, {
-      proxy: {
-        target: 'https://proxy-server.com/api/proxy?url=',
-      },
-    })
+  it('test getJson with proxy fetcher', async () => {
+    const fetcher = async (url) => {
+      assert.ok(url.includes('proxy-server.com'))
+      return new Response(JSON.stringify({ data: { name: 'oembed-parser' } }), {
+        status: 200,
+        headers: { 'content-type': 'application/json' },
+      })
+    }
+    const proxyFetcher = async (url) => {
+      const proxyTarget = 'https://proxy-server.com/api/proxy?url='
+      return fetcher(proxyTarget + encodeURIComponent(url))
+    }
+    const result = await getJson('https://some.where/good/source', proxyFetcher)
     assert.equal(result.data.name, 'oembed-parser')
-    nock.cleanAll()
   })
 
-  it('test getJson invalid json reponsse', async () => {
-    const url = 'https://some.where/bad/source'
-    const { baseUrl, path } = parseUrl(url)
-    nock(baseUrl).get(path).reply(200, 'this is not json string', {
-      'Content-Type': 'application/json',
-    })
+  it('test getJson invalid json response', async () => {
+    const fetcher = async () => {
+      return new Response('this is not json string', {
+        status: 200,
+        headers: { 'content-type': 'application/json' },
+      })
+    }
     try {
-      await getJson(url)
+      await getJson('https://some.where/bad/source', fetcher)
     } catch (err) {
       assert.ok(err)
     }
-    nock.cleanAll()
   })
 })

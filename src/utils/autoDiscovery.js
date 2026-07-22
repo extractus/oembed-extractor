@@ -10,12 +10,12 @@ import { getHtml, getJson } from './retrieve.js'
  *
  * @param {string} url - Resource URL to discover oEmbed for
  * @param {object} [params={}] - Additional oEmbed query parameters
- * @param {object} [options={}] - Fetch options (headers, proxy, agent, signal)
+ * @param {Function} fetcher - Custom fetch function (url) => Promise<Response>
  * @returns {Promise<object>} oEmbed response data
  * @throws {Error} If no oEmbed link tag is found in the HTML
  */
-export default async (url, params = {}, options = {}) => {
-  const html = await getHtml(url, options)
+export default async (url, params = {}, fetcher) => {
+  const html = await getHtml(url, fetcher)
   const doc = new DOMParser().parseFromString(html, 'text/html')
   const elm = doc.querySelector('link[type="application/json+oembed"]')
   if (!elm) {
@@ -30,7 +30,7 @@ export default async (url, params = {}, options = {}) => {
     }
   })
   const link = `${origin}${pathname}?${searchParams.toString()}`
-  const body = await getJson(link, options)
+  const body = await getJson(link, fetcher)
   body.method = 'auto-discovery'
   return body
 }

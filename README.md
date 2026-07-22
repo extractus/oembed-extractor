@@ -53,7 +53,7 @@ Load and extract oembed data.
 ```ts
 extract(String url)
 extract(String url, Object params)
-extract(String url, Object params, Object fetchOptions)
+extract(String url, Object params, Function fetcher)
 ```
 
 #### Parameters
@@ -76,82 +76,74 @@ Here are several popular params:
 Note that some params are supported by these providers but not by the others.
 Please see the provider's oEmbed API docs carefully for exact information.
 
-##### `fetchOptions` *optional*
+##### `fetcher` *optional*
 
-`fetchOptions` is an object that can have the following properties:
+A custom fetch function with the signature `(url: string) => Promise<Response>`.
+Use this to customize HTTP behavior: proxy, headers, TLS, authentication, timeouts, etc.
 
-- `headers`: to set request headers
-- `proxy`: another endpoint to forward the request to
-- `signal`: AbortController signal or AbortSignal timeout to terminate the request
+Defaults to `globalThis.fetch`.
 
-You can use this param to set request headers to fetch.
-
-For example:
+**Node.js** (with proxy via undici):
 
 ```js
 import { extract } from '@extractus/oembed-extractor'
+import { fetch, ProxyAgent } from 'undici'
 
-const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
-extract(url, null, {
-  headers: {
-    'user-agent': 'Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1'
-  }
-})
+const dispatcher = new ProxyAgent('http://proxy.example.com:8080')
+const myFetcher = (url) => fetch(url, { dispatcher })
+
+const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk', {}, myFetcher)
 ```
 
-You can also specify a proxy endpoint to load remote content, instead of fetching directly.
-
-For example:
+**Bun** (with proxy):
 
 ```js
 import { extract } from '@extractus/oembed-extractor'
 
-const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
-extract(url, null, {
-  headers: {
-    'user-agent': 'Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1'
-  },
+const myFetcher = (url) => fetch(url, {
   proxy: {
-    target: 'https://your-secret-proxy.io/loadJson?url=',
-    headers: {
-      'Proxy-Authorization': 'Bearer YWxhZGRpbjpvcGVuc2VzYW1l...'
-    }
-  }
+    url: 'http://proxy.example.com:8080',
+  },
 })
+
+const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk', {}, myFetcher)
 ```
 
-With the above setting, request will be forwarded to `https://your-secret-proxy.io/loadJson?url={OEMBED_ENDPOINT}`.
-
-By default, there is no request timeout. You can use the option `signal` to cancel request at the right time.
-
-The common way is to use AbortControler:
+**Deno** (with proxy):
 
 ```js
-const controller = new AbortController()
+import { extract } from 'npm:@extractus/oembed-extractor'
 
-// stop after 5 seconds
-setTimeout(() => {
-  controller.abort()
-}, 5000)
-
-const oembed = await extract(url, null, {
-  signal: controller.signal,
+const client = Deno.createHttpClient({
+  proxy: { url: 'http://localhost:8080' },
 })
+const myFetcher = (url) => fetch(url, { client })
+
+const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk', {}, myFetcher)
 ```
 
-A newer solution is AbortSignal's `timeout()` static method:
+**Custom headers**:
 
 ```js
-// stop after 5 seconds
-const oembed = await extract(url, null, {
+const myFetcher = (url) => fetch(url, {
+  headers: {
+    'user-agent': 'MyBot/1.0',
+    'authorization': 'Bearer token123',
+  },
+})
+
+const result = await extract(url, {}, myFetcher)
+```
+
+**Request timeout**:
+
+```js
+const myFetcher = (url) => fetch(url, {
   signal: AbortSignal.timeout(5000),
 })
+
+const result = await extract(url, {}, myFetcher)
 ```
-
-For more info:
-
-- [AbortController constructor](https://developer.mozilla.org/en-US/docs/Web/API/AbortController)
-- [AbortSignal: timeout() static method](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout_static)
 
 
 ### `.setProviderList()`

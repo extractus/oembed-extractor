@@ -31,10 +31,10 @@ const getFacebookGraphToken = () => {
  * @param {string} url - Original resource URL
  * @param {object} [params={}] - oEmbed parameters (maxwidth, maxheight, etc.)
  * @param {string} [endpoint=''] - Provider oEmbed API endpoint
- * @param {object} [options={}] - Fetch options (headers, proxy, agent, signal)
+ * @param {Function} fetcher - Custom fetch function (url) => Promise<Response>
  * @returns {Promise<object>} oEmbed response data
  */
-export default async (url, params = {}, endpoint = '', options = {}) => { // eslint-disable-line
+export default async (url, params = {}, endpoint = '', fetcher) => { // eslint-disable-line
   const query = {
     url,
     format: 'json',
@@ -54,7 +54,7 @@ export default async (url, params = {}, endpoint = '', options = {}) => { // esl
 
   const queryParams = new URLSearchParams(query).toString()
   const link = endpoint + '?' + queryParams
-  const body = await getJson(link, options)
+  const body = await getJson(link, fetcher)
   body.method = 'provider-api'
   return body
 }
