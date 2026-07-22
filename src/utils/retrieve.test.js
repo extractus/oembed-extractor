@@ -23,7 +23,8 @@ describe('test getJson() method', () => {
 
   it('test getJson with proxy fetcher', async () => {
     const fetcher = async (url) => {
-      assert.ok(url.includes('proxy-server.com'))
+      const { hostname } = new URL(url)
+      assert.equal(hostname, 'proxy-server.com')
       return new Response(JSON.stringify({ data: { name: 'oembed-parser' } }), {
         status: 200,
         headers: { 'content-type': 'application/json' },
