@@ -3,8 +3,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert'
 
-import { HttpsProxyAgent } from 'https-proxy-agent'
-
 import nock from 'nock'
 
 import {
@@ -13,9 +11,6 @@ import {
   findProvider,
   setProviderList
 } from './main.js'
-
-const env = process.env || {}
-const PROXY_SERVER = env.PROXY_SERVER || ''
 
 const required = [
   'type',
@@ -206,19 +201,6 @@ describe('test if extract() with some popular providers', () => {
     })
   })
 })
-
-if (PROXY_SERVER !== '') {
-  describe('test extract live oembed API via proxy server', () => {
-    it('check if extract method works with proxy server', async () => {
-      const url = 'https://codepen.io/ndaidong/pen/LYmLKBw'
-      const result = await extract(url, {}, {
-        agent: new HttpsProxyAgent(PROXY_SERVER),
-      })
-      console.log(result)
-      assert.ok(result.success)
-    }, 10000)
-  })
-}
 
 it('test .hasProvider() method', () => {
   assert.ok(hasProvider('https://www.youtube.com/watch?v=ciS8aCrX-9s'))

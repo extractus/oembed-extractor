@@ -135,38 +135,20 @@ export interface Params {
 }
 
 /**
- * Configuration for proxy-based requests.
+ * Custom fetch function. Receives a URL and returns a Response promise.
+ * Use this to customize HTTP behavior (proxy, headers, TLS, etc.).
  */
-export interface ProxyConfig {
-  /** Base URL of the proxy server */
-  target?: string
-  /** Headers to send to the proxy (e.g. Proxy-Authorization) */
-  headers?: Record<string, string>
-}
-
-/**
- * Advanced fetch options for extract().
- */
-export interface FetchOptions {
-  /** Custom request headers */
-  headers?: Record<string, string>
-  /** Proxy configuration */
-  proxy?: ProxyConfig
-  /** HTTP proxy agent (e.g. HttpsProxyAgent) */
-  agent?: object
-  /** AbortSignal to cancel the request */
-  signal?: AbortSignal
-}
+export type Fetcher = (url: string) => Promise<Response>
 
 /**
  * Extract oEmbed data from a given URL.
  *
  * @param url - URL of a valid oEmbed resource
  * @param params - Optional parameters (maxwidth, maxheight, etc.)
- * @param fetchOptions - Advanced fetch options (headers, proxy, agent, signal)
+ * @param fetcher - Custom fetch function. Defaults to globalThis.fetch.
  * @returns Promise resolving to oEmbed data
  */
-export function extract(url: string, params?: Params, fetchOptions?: FetchOptions): Promise<OembedData>
+export function extract(url: string, params?: Params, fetcher?: Fetcher): Promise<OembedData>
 
 /**
  * Check if a URL is supported by any registered provider.

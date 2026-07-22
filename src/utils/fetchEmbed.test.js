@@ -114,7 +114,7 @@ describe('test if fetchEmbed() works correctly', () => {
         maxheight = 0,
       } = params
 
-      const result = await fetchEmbed(url, { maxwidth, maxheight }, endpoint)
+      const result = await fetchEmbed(url, { maxwidth, maxheight }, endpoint, globalThis.fetch)
       assert.ok(result)
       assert.equal(result.provider_name, expected.provider_name)
       assert.equal(result.type, expected.type)
