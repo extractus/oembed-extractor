@@ -1,6 +1,6 @@
 {
   "name": "@extractus/oembed-extractor",
-  "version": "5.0.1",
+  "version": "6.0.0-rc0",
   "description": "Get oEmbed data from given URL.",
   "homepage": "https://github.com/extractus/oembed-extractor",
   "repository": {
