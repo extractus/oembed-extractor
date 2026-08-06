@@ -3,6 +3,9 @@ logs
 *.log
 *.debug
 
+# Build output
+npm/
+
 # Runtime data
 *.pid
 *.seed
