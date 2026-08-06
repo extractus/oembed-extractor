@@ -1,0 +1,41 @@
+// utils/autoDiscovery.ts
+
+import { DOMParser } from "linkedom";
+
+import { getHtml, getJson } from "./retrieve.ts";
+import type { Fetcher } from "./retrieve.ts";
+
+/**
+ * Extract oEmbed data via auto-discovery by parsing the HTML page for a
+ * oEmbed link tag.
+ *
+ * @param url - Resource URL to discover oEmbed for
+ * @param params - Additional oEmbed query parameters
+ * @param fetcher - Custom fetch function (url) => Promise<Response>
+ * @returns oEmbed response data
+ * @throws If no oEmbed link tag is found in the HTML
+ */
+export default async (
+  url: string,
+  params: Record<string, string> = {},
+  fetcher: Fetcher,
+): Promise<Record<string, unknown>> => {
+  const html = await getHtml(url, fetcher);
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const elm = doc.querySelector('link[type="application/json+oembed"]');
+  if (!elm) {
+    throw new Error("No oEmbed link found");
+  }
+  const href = elm.getAttribute("href");
+  const q = new URL(href, url);
+  const { origin, pathname, searchParams } = q;
+  Object.keys(params).forEach((key) => {
+    if (!searchParams.has(key)) {
+      searchParams.append(key, params[key]);
+    }
+  });
+  const link = `${origin}${pathname}?${searchParams.toString()}`;
+  const body = await getJson(link, fetcher);
+  body.method = "auto-discovery";
+  return body;
+};

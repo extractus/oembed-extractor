@@ -272,6 +272,32 @@
     ]
   },
   {
+    "provider_name": "Atlantis Data Solutions",
+    "provider_url": "https://atlantisdatasolutions.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://atlantisdatasolutions.com/*/*",
+          "https://atlantisdatasolutions.com/embed/chart/*/*",
+          "https://atlantisdatasolutions.com/yield-curves",
+          "https://atlantisdatasolutions.com/sovereign-yield-curves",
+          "https://atlantisdatasolutions.com/screener",
+          "https://atlantisdatasolutions.com/bubble-chart-screener",
+          "https://atlantisdatasolutions.com/embed/yield-curve",
+          "https://atlantisdatasolutions.com/embed/sovereign-curve",
+          "https://atlantisdatasolutions.com/embed/screener",
+          "https://atlantisdatasolutions.com/embed/europe-screener",
+          "https://atlantisdatasolutions.com/embed/rankings/*"
+        ],
+        "url": "https://atlantisdatasolutions.com/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "audio.com",
     "provider_url": "https://audio.com/",
     "endpoints": [
@@ -697,6 +723,22 @@
     ]
   },
   {
+    "provider_name": "Castle",
+    "provider_url": "https://castle.xyz",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://castle.xyz/d/*"
+        ],
+        "url": "https://castle.xyz/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "castmake",
     "provider_url": "https://www.castmake-ai.com",
     "endpoints": [
@@ -1028,6 +1070,22 @@
           "json"
         ],
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "d.calculators",
+    "provider_url": "https://dcalculators.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://dcalculators.com/*/*/*/"
+        ],
+        "url": "https://dcalculators.com/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1651,6 +1709,23 @@
         ],
         "url": "https://api.framer.com/web/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "FrameRate",
+    "provider_url": "https://framerate.tv/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://framerate.tv/watch/*"
+        ],
+        "url": "https://framerate.tv/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -2735,6 +2810,26 @@
         ],
         "url": "https://web.microsoftstream.com/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Mirame360",
+    "provider_url": "https://mirame360.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://mirame360.com/embed/*",
+          "https://mirame360.com/embed/tour/*",
+          "https://mirame360.com/video/url/*",
+          "https://mirame360.com/tour/*",
+          "https://mirame360.com/user/*/media/*"
+        ],
+        "url": "https://mirame360.com/api/oembed/",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4047,6 +4142,22 @@
     ]
   },
   {
+    "provider_name": "Slidesfly",
+    "provider_url": "https://slidesfly.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://slidesfly.xyz/d/*"
+        ],
+        "url": "https://slidesfly.com/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "SlideShare",
     "provider_url": "http://www.slideshare.net/",
     "endpoints": [
@@ -4284,6 +4395,26 @@
     ]
   },
   {
+    "provider_name": "StemFM",
+    "provider_url": "https://stem.fm",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://stem.fm/session/*",
+          "https://www.stem.fm/session/*",
+          "https://stem.fm/s/*",
+          "https://www.stem.fm/s/*"
+        ],
+        "url": "https://www.stem.fm/oembed",
+        "discovery": true,
+        "formats": [
+          "json",
+          "xml"
+        ]
+      }
+    ]
+  },
+  {
     "provider_name": "Streamable",
     "provider_url": "https://streamable.com/",
     "endpoints": [
@@ -4457,6 +4588,25 @@
         ],
         "url": "https://www.ted.com/services/v1/oembed.{format}",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Tegula",
+    "provider_url": "https://tegula.io",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://tegula.io/m/*",
+          "https://www.tegula.io/m/*",
+          "https://tegula.io/cat.html?model=*",
+          "https://www.tegula.io/cat.html?model=*"
+        ],
+        "url": "https://tegula.io/api/oembed/",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4788,11 +4938,38 @@
     ]
   },
   {
+    "provider_name": "Typecel",
+    "provider_url": "https://app.typecel.io",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.typecel.io/*/*",
+          "https://app.typecel.io/embed/*/*"
+        ],
+        "url": "https://app.typecel.io/api/oembed",
+        "discovery": false
+      }
+    ]
+  },
+  {
     "provider_name": "Typlog",
     "provider_url": "https://typlog.com",
     "endpoints": [
       {
         "url": "https://typlog.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "u-poll",
+    "provider_url": "https://u-poll.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://u-poll.com/p/*"
+        ],
+        "url": "https://u-poll.com/oembed",
         "discovery": true
       }
     ]

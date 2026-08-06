@@ -1,59 +1,98 @@
-
-# oembed-extractor
+# @extractus/oembed-extractor
 
 Extract oEmbed content from given URL.
 
-[![NPM](https://badge.fury.io/js/@extractus%2Foembed-extractor.svg)](https://badge.fury.io/js/@extractus%2Foembed-extractor)
-![CodeQL](https://github.com/extractus/oembed-extractor/workflows/CodeQL/badge.svg)
-[![CI test](https://github.com/extractus/oembed-extractor/workflows/ci-test/badge.svg)](https://github.com/extractus/oembed-extractor/actions)
+[![JSR](https://jsr.io/badges/@extractus/oembed-extractor)](https://jsr.io/@extractus/oembed-extractor)
+[![npm version](https://badge.fury.io/js/@extractus%2Foembed-extractor.svg)](https://badge.fury.io/js/@extractus%2Foembed-extractor)
+![CI test](https://github.com/extractus/oembed-extractor/workflows/ci-test/badge.svg)
 
-## Demo
-
-- [Give it a try!](https://extractus.pwshub.com/oembed)
-
-## Install & Usage
-
-### Bun & Node.js
-
-```bash
-# bun
-bun add @extractus/oembed-extractor
-
-# npm
-npm i @extractus/oembed-extractor
-
-# pnpm
-pnpm install @extractus/oembed-extractor
-
-# yarn
-yarn add @extractus/oembed-extractor
-```
-
-```ts
-import { extract } from '@extractus/oembed-extractor'
-
-const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk')
-console.log(result)
-```
+## Install
 
 ### Deno
 
+```bash
+deno add jsr:@extractus/oembed-extractor
+```
+
+### Node.js / Bun
+
+```bash
+pnpm add jsr:@extractus/oembed-extractor
+# or
+npx jsr add @extractus/oembed-extractor
+# or
+bunx jsr add @extractus/oembed-extractor
+```
+
+Alternatively, install from npm:
+
+```bash
+npm install @extractus/oembed-extractor
+# or
+bun add @extractus/oembed-extractor
+```
+
+## Usage
+
 ```ts
-import { extract } from 'npm:@extractus/oembed-extractor'
+import { extract } from "jsr:@extractus/oembed-extractor";
+
+const data = await extract("https://www.youtube.com/watch?v=x2bqscVkGxk");
+console.log(data);
 ```
 
 ## APIs
 
-### `.extract()`
+- [`extract()`](#extract)
+- [`findProvider()`](#findprovider)
+- [`hasProvider()`](#hasprovider)
+- [`setProviderList()`](#setproviderlist)
 
-Load and extract oembed data.
+---
+
+### `extract()`
+
+Load and extract oEmbed data from a URL.
 
 #### Syntax
 
 ```ts
-extract(String url)
-extract(String url, Object params)
-extract(String url, Object params, Function fetcher)
+extract(url: string): Promise<OembedData>
+extract(url: string, params?: Params): Promise<OembedData>
+extract(url: string, params?: Params, fetcher?: Fetcher): Promise<OembedData>
+```
+
+Example:
+
+```ts
+import { extract } from "jsr:@extractus/oembed-extractor";
+
+try {
+  const result = await extract("https://www.youtube.com/watch?v=x2bqscVkGxk");
+  console.log(result);
+} catch (err) {
+  console.error(err);
+}
+```
+
+The result is an `OembedData` object:
+
+```ts
+interface OembedData {
+  type: "rich" | "video" | "photo" | "link";
+  version: string;
+  title?: string;
+  author_name?: string;
+  author_url?: string;
+  provider_name?: string;
+  provider_url?: string;
+  cache_age?: string | number;
+  thumbnail_url?: string;
+  thumbnail_width?: number;
+  thumbnail_height?: number;
+  method?: string;
+  [key: string]: unknown;
+}
 ```
 
 #### Parameters
@@ -64,17 +103,15 @@ URL of a valid oEmbed resource, e.g. `https://www.youtube.com/watch?v=x2bqscVkGx
 
 ##### `params` *optional*
 
-Optional argument `params` can be useful when you want to specify some additional customizations.
+| Property | Type | Description |
+|---|---|---|
+| `maxwidth` | `number` | Max width of embed size |
+| `maxheight` | `number` | Max height of embed size |
+| `theme` | `string` | e.g. `"dark"` or `"light"` |
+| `lang` | `string` | e.g. `"en"`, `"fr"`, `"vi"` |
 
-Here are several popular params:
-
-- `maxwidth`: max width of embed size
-- `maxheight`: max height of embed size
-- `theme`: e.g, `dark` or `light`
-- `lang`: e.g, 'en', 'fr', 'cn', 'vi', etc
-
-Note that some params are supported by these providers but not by the others.
-Please see the provider's oEmbed API docs carefully for exact information.
+Note that some params are supported by some providers but not others.
+See the provider's oEmbed API docs for exact information.
 
 ##### `fetcher` *optional*
 
@@ -83,164 +120,179 @@ Use this to customize HTTP behavior: proxy, headers, TLS, authentication, timeou
 
 Defaults to `globalThis.fetch`.
 
+**Deno** (with proxy):
+
+```ts
+import { extract } from "@extractus/oembed-extractor";
+
+const client = Deno.createHttpClient({
+  proxy: { url: "http://proxy.example.com:8080" },
+});
+const myFetcher = (url: string) => fetch(url, { client });
+
+const result = await extract("https://www.youtube.com/watch?v=x2bqscVkGxk", {}, myFetcher);
+```
+
 **Node.js** (with proxy via undici):
 
-```js
-import { extract } from '@extractus/oembed-extractor'
-import { fetch, ProxyAgent } from 'undici'
+```ts
+import { extract } from "@extractus/oembed-extractor";
+import { fetch, ProxyAgent } from "undici";
 
-const dispatcher = new ProxyAgent('http://proxy.example.com:8080')
-const myFetcher = (url) => fetch(url, { dispatcher })
+const dispatcher = new ProxyAgent("http://proxy.example.com:8080");
+const myFetcher = (url: string) => fetch(url, { dispatcher });
 
-const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk', {}, myFetcher)
+const result = await extract("https://www.youtube.com/watch?v=x2bqscVkGxk", {}, myFetcher);
 ```
 
 **Bun** (with proxy):
 
-```js
-import { extract } from '@extractus/oembed-extractor'
+```ts
+import { extract } from "@extractus/oembed-extractor";
 
-const myFetcher = (url) => fetch(url, {
-  proxy: {
-    url: 'http://proxy.example.com:8080',
-  },
-})
+const myFetcher = (url: string) =>
+  fetch(url, {
+    proxy: "http://proxy.example.com:8080",
+  });
 
-const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk', {}, myFetcher)
-```
-
-**Deno** (with proxy):
-
-```js
-import { extract } from 'npm:@extractus/oembed-extractor'
-
-const client = Deno.createHttpClient({
-  proxy: { url: 'http://localhost:8080' },
-})
-const myFetcher = (url) => fetch(url, { client })
-
-const result = await extract('https://www.youtube.com/watch?v=x2bqscVkGxk', {}, myFetcher)
+const result = await extract("https://www.youtube.com/watch?v=x2bqscVkGxk", {}, myFetcher);
 ```
 
 **Custom headers**:
 
-```js
-const myFetcher = (url) => fetch(url, {
-  headers: {
-    'user-agent': 'MyBot/1.0',
-    'authorization': 'Bearer token123',
-  },
-})
+```ts
+const myFetcher = (url: string) =>
+  fetch(url, {
+    headers: {
+      "user-agent": "MyBot/1.0",
+      authorization: "Bearer token123",
+    },
+  });
 
-const result = await extract(url, {}, myFetcher)
+const result = await extract(url, {}, myFetcher);
 ```
 
 **Request timeout**:
 
-```js
-const myFetcher = (url) => fetch(url, {
-  signal: AbortSignal.timeout(5000),
-})
+```ts
+const myFetcher = (url: string) =>
+  fetch(url, {
+    signal: AbortSignal.timeout(5000),
+  });
 
-const result = await extract(url, {}, myFetcher)
+const result = await extract(url, {}, myFetcher);
 ```
 
+---
 
-### `.setProviderList()`
+### `findProvider()`
 
-Apply a list of providers to use, overriding the [default](src/utils/providers.orginal.json).
+Find the provider that matches a given URL.
 
 #### Syntax
 
 ```ts
-setProviderList(Array providers)
+findProvider(url: string): FindResult | null
 ```
 
-#### Parameters
+Example:
 
-##### `providers` *required*
+```ts
+import { findProvider } from "jsr:@extractus/oembed-extractor";
 
-List of providers to apply.
+const provider = findProvider("https://www.youtube.com/watch?v=x2bqscVkGxk");
+console.log(provider?.endpoint); // "https://www.youtube.com/oembed"
+```
 
-For example:
+---
 
-```js
-import { setProviderList } from '@extractus/oembed-extractor'
+### `hasProvider()`
 
-const providers = [
+Check if a URL is supported by any registered provider.
+
+#### Syntax
+
+```ts
+hasProvider(url: string): boolean
+```
+
+Example:
+
+```ts
+import { hasProvider } from "jsr:@extractus/oembed-extractor";
+
+hasProvider("https://www.youtube.com/watch?v=x2bqscVkGxk"); // true
+hasProvider("https://example.com/unknown"); // false
+```
+
+---
+
+### `setProviderList()`
+
+Replace the provider list with a custom set of providers, overriding the [default](src/utils/providers.original.json).
+
+#### Syntax
+
+```ts
+setProviderList(providers: Provider[]): number
+```
+
+Example:
+
+```ts
+import { setProviderList } from "jsr:@extractus/oembed-extractor";
+
+const count = setProviderList([
   {
-    provider_name: 'Alpha',
-    provider_url: 'https://alpha.com',
+    provider_name: "Alpha",
+    provider_url: "https://alpha.com",
     endpoints: [
-      // endpoint definition here
-    ]
+      {
+        schemes: ["https://store.alpha.com/*"],
+        url: "https://api.alpha.com/oembed",
+      },
+    ],
   },
-  {
-    provider_name: 'Beta',
-    provider_url: 'https://beta.com',
-    endpoints: [
-      // endpoint definition here
-    ]
-  }
-]
-
-setProviderList(providers)
+]);
 ```
 
 Default list of resource providers is synchronized from [oembed.com](http://oembed.com/providers.json).
 
-If you want to modify providers list, please make pull request on [iamcal/oembed](https://github.com/iamcal/oembed) then create issue/pr here to ask for sync.
+If you want to modify the providers list, please make a pull request on [iamcal/oembed](https://github.com/iamcal/oembed) then create an issue/pr here to ask for sync.
 
+---
 
-## Facebook and Instagram
-
-In order to work with the links from Facebook and Instagram, you need a [reviewed Facebook's app](https://developers.facebook.com/docs/app-review) with [oEmbed Read](https://developers.facebook.com/docs/features-reference/oembed-read) permission.
-
-When seeing a link from Facebook or Instagram, `oembed-parser` will look for environment variables `FACEBOOK_APP_ID` and `FACEBOOK_CLIENT_TOKEN` to retrieve oembed data using your app credentials.
-
-For example:
-
-```bash
-export FACEBOOK_APP_ID=your_app_id
-export FACEBOOK_CLIENT_TOKEN=your_client_token
-
-npm run eval https://www.instagram.com/tv/CVlR5GFqF68/
-```
-
-
-## Test
+## Development
 
 ```bash
 git clone https://github.com/extractus/oembed-extractor.git
 cd oembed-extractor
-npm i
-npm test
-```
 
-![oembed-extractor unit test](https://i.imgur.com/Nr5BgUx.png)
+# run tests
+deno test --allow-all
 
+# lint
+deno lint
 
-## Quick evaluation
+# build npm package
+deno run -A ./scripts/build_npm.ts
 
-```bash
-git clone https://github.com/extractus/oembed-extractor.git
-cd oembed-extractor
-npm i
-npm run eval {URL_TO_PARSE_OEMBED}
+# sync providers from oembed.com
+deno task sync
 ```
 
 ## License
-The MIT License (MIT)
 
+The MIT License (MIT)
 
 ## Support the project
 
-If you find value from this open source project, you can support in the following ways:
+This project is maintained in my spare time. If you find it helpful, there are a few simple ways to support its continued development:
 
-- Give it a star ⭐
-- Buy me a coffee: https://paypal.me/ndaidong 🍵
-- Subscribe [oEmbed Parser service](https://rapidapi.com/pwshub-pwshub-default/api/oembed-parser/) on RapidAPI 😉
+* ⭐ Star this repository to help more people discover it.
+* ☕ Buy me a coffee: https://paypal.me/ndaidong
+* 🚀 Subscribe to the [oEmbed Parser service](https://rapidapi.com/pwshub-pwshub-default/api/oembed-parser/) on RapidAPI.
 
-Thank you.
+Every bit of support helps keep this project actively maintained. Thank you! ❤️
 
 ---

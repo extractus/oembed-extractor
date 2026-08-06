@@ -1,0 +1,43 @@
+{
+  "name": "@extractus/oembed-extractor",
+  "version": "5.0.1",
+  "description": "Get oEmbed data from given URL.",
+  "homepage": "https://github.com/extractus/oembed-extractor",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/extractus/oembed-extractor.git"
+  },
+  "author": "@extractus",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "tasks": {
+    "test": "deno test --allow-all",
+    "lint": "deno lint",
+    "build": "deno run -A ./scripts/build_npm.ts",
+    "sync": "deno run -A ./scripts/sync.ts"
+  },
+  "imports": {
+    "@deno/dnt": "jsr:@deno/dnt@^0.43.2",
+    "@std/assert": "jsr:@std/assert@1.0.12",
+    "linkedom": "npm:linkedom@^0.18.13"
+  },
+  "lint": {
+    "include": ["src/", "mod.ts", "scripts/"],
+    "exclude": ["npm/"],
+    "rules": {
+      "tags": ["recommended"],
+      "exclude": ["no-explicit-any"]
+    }
+  },
+  "fmt": {
+    "include": ["src/", "mod.ts", "scripts/"],
+    "exclude": ["npm/"]
+  },
+  "test": {
+    "include": ["tests/"]
+  },
+  "publish": {
+    "include": ["LICENSE", "README.md", "mod.ts", "src/"],
+    "exclude": ["tests/", "scripts/"]
+  }
+}

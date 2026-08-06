@@ -1,8 +1,0 @@
-node_modules
-coverage
-.github
-pnpm-lock.yaml
-examples
-test-data
-src/utils/providers.orginal.json
-src/utils/providers.prev.js
