@@ -55,7 +55,7 @@ const sync = async (): Promise<void> => {
         "",
         "/** Simplified provider entry with scheme patterns and endpoint. */",
         "export interface SimplifiedProvider {",
-        "  /** Scheme patterns (protocol-relative, regex-escaped) */",
+        "  /** Scheme patterns (protocol-relative globs with * wildcards) */",
         "  s: string[];",
         "  /** Endpoint URL (protocol-relative, format=json) */",
         "  e: string;",
