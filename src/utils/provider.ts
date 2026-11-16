@@ -18,20 +18,39 @@ export interface FindResult {
 }
 
 /**
+ * Escape regex metacharacters so scheme text is matched literally.
+ * The `*` wildcard is intentionally left untouched.
+ *
+ * @param text - Host or path portion of a scheme
+ * @returns Text safe to embed in a RegExp
+ */
+const escapeRegex = (text: string): string => {
+  return text.replace(/[.+?^${}()|[\]\\]/g, "\\$&");
+};
+
+/**
  * Convert a scheme string into a RegExp for URL matching.
  *
- * @param scheme - Scheme pattern with wildcards
+ * The scheme is treated as an oEmbed glob (spec 2.1): `*` is the only
+ * wildcard and every other character is literal. Provider data may ship
+ * with backslash-escaped dots, so escapes are normalized away first.
+ * The pattern is split into host and path so host wildcards cannot
+ * cross into the path, then anchored so it must match the whole URL.
+ *
+ * @param scheme - Protocol-relative scheme pattern, e.g. `//*.x.com/*`
  * @returns Compiled regular expression
  */
 const toRegExp = (scheme = ""): RegExp => {
-  return new RegExp(
-    scheme
-      .replace(/\\./g, ".")
-      .replace(/\*/g, "(.*)")
-      .replace(/\?/g, "\\?")
-      .replace(/,$/g, ""),
-    "i",
-  );
+  const raw = scheme.replace(/\\(.)/g, "$1");
+  const body = raw.startsWith("//") ? raw.slice(2) : raw;
+  const slash = body.indexOf("/");
+  const host = slash === -1 ? body : body.slice(0, slash);
+  const path = slash === -1 ? "" : body.slice(slash);
+  const hostRe = escapeRegex(host).replace(/\*/g, "[^/]*");
+  const pathRe = path === ""
+    ? "(?:/.*)?"
+    : escapeRegex(path).replace(/\*/g, ".*");
+  return new RegExp(`^(?:https?:)?//${hostRe}${pathRe}$`, "i");
 };
 
 /**
@@ -42,16 +61,6 @@ const toRegExp = (scheme = ""): RegExp => {
  */
 const uniquify = (arr: string[]): string[] => {
   return [...new Set(arr)];
-};
-
-/**
- * Escape dots in a scheme string for regex use.
- *
- * @param scheme - Scheme string
- * @returns Scheme with escaped dots
- */
-const undotted = (scheme = ""): string => {
-  return scheme.replace(/\./g, "\\.");
 };
 
 /**
@@ -80,7 +89,7 @@ export const simplify = (
         const schemes = (endpoint.schemes as string[]) || [];
         const url = endpoint.url as string;
         const patterns = schemes.length > 0
-          ? uniquify(schemes.map(removeProtocol).map(undotted))
+          ? uniquify(schemes.map(removeProtocol))
           : [];
 
         return {
@@ -138,9 +147,9 @@ export const set = (providers: Record<string, unknown>[]): number => {
 };
 
 /**
- * Match a URL against a provider's schemes; fall back to domain comparison when no schemes exist.
+ * Match a normalized URL against a provider's schemes; fall back to domain comparison when no schemes exist.
  *
- * @param url - URL to match
+ * @param url - Normalized URL (from `URL#href`) to match
  * @param endpoint - Provider endpoint URL
  * @param schemes - RegExp schemes to test against
  * @returns True if URL matches the provider
@@ -156,7 +165,7 @@ const compare = (
     return domain === endpointDomain;
   }
   return schemes.some((scheme) => {
-    return url.match(scheme);
+    return scheme.test(url);
   });
 };
 
@@ -171,11 +180,14 @@ export const find = (url = ""): FindResult | null => {
     return null;
   }
 
+  // Match against the normalized form so whitespace, letter case and
+  // default ports cannot bypass the anchored scheme patterns.
+  const normalized = new URL(url).href;
   const providers = get();
 
   for (let i = 0; i < providers.length; i++) {
     const { endpoint, schemes } = providers[i];
-    const isMatched = compare(url, endpoint, schemes);
+    const isMatched = compare(normalized, endpoint, schemes);
     if (isMatched) {
       return {
         schemes,
